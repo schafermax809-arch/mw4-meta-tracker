@@ -45,13 +45,25 @@ export function parseArticle(html, url) {
     }
   });
   const headings = [...new Set(body.find('h2,h3,h4,h5').map((_, el) => clean($(el).text())).get())];
+  const camoCandidates = [];
+  // Retain names and hashes, never the full copyrighted challenge description.
+  // A newly named section or changed requirements become separate review findings.
+  let camoSection = null;
+  for (const block of blocks) {
+    if (/^h[2-5]$/.test(block.tag)) {
+      if (camoSection) camoCandidates.push({ id: slug(camoSection.name), name: camoSection.name, requirementsHash: hash(camoSection.text) });
+      camoSection = /camo|camouflage/i.test(block.text) ? { name: block.text, text: '' } : null;
+    } else if (camoSection) camoSection.text += `${block.tag}:${block.text}\n`;
+  }
+  if (camoSection) camoCandidates.push({ id: slug(camoSection.name), name: camoSection.name, requirementsHash: hash(camoSection.text) });
+  const distinctCamos = [...new Map(camoCandidates.map(c => [c.id, c])).values()];
   // These are review signals, never invented requirements or automatic tier changes.
   const signals = {
     weapons: /weapon|attachment|balance|recoil|damage|tuning/i.test(text),
     camos: /camo|camouflage|challenge/i.test(text),
     builds: /loadout|gunsmith|build|attachment/i.test(text)
   };
-  return { url, hash: hash(`${title}\n${dateText}\n${text}`), title, publishedAt, kind: new URL(url).pathname.includes('/patchnotes/') ? 'patch' : 'guide', catalog, headings: headings.filter(h => /weapon|camo|challenge|attachment|tuning/i.test(h)).slice(0, 30), signals };
+  return { url, hash: hash(`${title}\n${dateText}\n${text}`), title, publishedAt, kind: new URL(url).pathname.includes('/patchnotes/') ? 'patch' : 'guide', catalog, camoCandidates: distinctCamos, headings: headings.filter(h => /weapon|camo|challenge|attachment|tuning/i.test(h)).slice(0, 30), signals };
 }
 
 export function createFetcher(config, fetchImpl = fetch) {

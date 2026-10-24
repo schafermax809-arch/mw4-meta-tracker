@@ -6,7 +6,7 @@ export function propose(current, docs, { now = new Date().toISOString(), previou
   const documents = Object.fromEntries(Object.entries(current.documents));
   const changedDocs = docs.filter(d => current.documents[d.url]?.hash !== d.hash);
   if (!changedDocs.length && !operations.length) return null;
-  for (const d of docs) documents[d.url] = { hash: d.hash, title: d.title, publishedAt: d.publishedAt, kind: d.kind };
+  for (const d of docs) documents[d.url] = { hash: d.hash, title: d.title, publishedAt: d.publishedAt, kind: d.kind, camoCandidates: d.camoCandidates ?? current.documents[d.url]?.camoCandidates ?? [] };
   const fingerprint = hash({ documents, operations });
   const at = previous?.fingerprint === fingerprint ? previous.detectedAt : now;
   let next = structuredClone(current);
@@ -32,7 +32,15 @@ export function propose(current, docs, { now = new Date().toISOString(), previou
   const review = {
     schemaVersion: 1, fingerprint, detectedAt: at, baseStateHash: hash(current),
     policy: 'REVIEW_REQUIRED', operations,
-    documents: changedDocs.map(d => ({ url: d.url, hash: d.hash, previousHash: current.documents[d.url]?.hash ?? null, title: d.title, publishedAt: d.publishedAt, kind: d.kind, signals: d.signals, headings: d.headings, catalogCandidates: d.catalog.filter(w => !current.weapons.some(old => old.id === w.id)) })),
+    documents: changedDocs.map(d => ({
+      url: d.url, hash: d.hash, previousHash: current.documents[d.url]?.hash ?? null, title: d.title, publishedAt: d.publishedAt, kind: d.kind, signals: d.signals, headings: d.headings,
+      catalogCandidates: d.catalog.filter(w => !current.weapons.some(old => old.id === w.id)),
+      catalogConflicts: d.catalog.filter(w => current.weapons.some(old => old.id === w.id && (old.name !== w.name || old.weaponClass !== w.weaponClass))),
+      camoChanges: (d.camoCandidates ?? []).flatMap(c => {
+        const old = current.documents[d.url]?.camoCandidates?.find(o => o.id === c.id);
+        return old?.requirementsHash === c.requirementsHash ? [] : [{ ...c, change: old ? 'requirements-changed' : 'new-section', previousHash: old?.requirementsHash ?? null }];
+      })
+    })),
     changedWeaponIds: changes.map(c => c.weaponId),
     unresolved: ['Meta-Tiers und Aufsätze werden nicht aus Patchtexten abgeleitet.', 'Camo-Signale sind Prüfhinweise; konkrete Anforderungen nur nach Quellenprüfung eintragen.']
   };

@@ -72,10 +72,14 @@ export function validateState(state) {
   assert(state.lastChangedWeaponIds.every(i => weaponIds.has(i)), 'Unknown changed weapon');
   keys(state.documents, Object.keys(state.documents), 'documents');
   for (const [url, doc] of Object.entries(state.documents)) {
-    urls([url]); keys(doc, ['hash', 'title', 'publishedAt', 'kind'], 'document');
+    urls([url]); keys(doc, ['hash', 'title', 'publishedAt', 'kind', 'camoCandidates'], 'document');
     assert(/^[a-f0-9]{64}$/.test(doc.hash), 'Invalid document hash'); str(doc.title, 'document title');
     if (doc.publishedAt !== null) assert(/^\d{4}-\d{2}-\d{2}$/.test(doc.publishedAt) && Number.isFinite(Date.parse(doc.publishedAt)), 'Invalid publication date');
     assert(['patch', 'guide'].includes(doc.kind), 'Invalid document kind');
+    if (doc.camoCandidates !== undefined) {
+      assert(Array.isArray(doc.camoCandidates), 'Invalid Camo discovery baseline'); unique(doc.camoCandidates.map(c => c.id), 'Camo discovery');
+      for (const c of doc.camoCandidates) { keys(c, ['id', 'name', 'requirementsHash'], 'Camo candidate'); id(c.id); str(c.name, 'Camo candidate name', 150); assert(/^[a-f0-9]{64}$/.test(c.requirementsHash), 'Invalid Camo requirements hash'); }
+    }
   }
   unique(state.changelog.map(e => e.id), 'changelog');
   for (const e of state.changelog) {

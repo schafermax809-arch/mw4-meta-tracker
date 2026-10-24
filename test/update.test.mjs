@@ -84,6 +84,23 @@ test('parser rejects wrong games and changed layouts', () => {
   assert.throws(() => parseArticle(html('Data', 'Warzone patch notes'), url), /Wrong game/);
   assert.throws(() => parseArticle('<h1>Modern Warfare 4</h1>', url), /layout changed/);
 });
+test('new Camo sections and changed challenge requirements become separate review findings', () => {
+  const first = parseArticle(html('<h3>Gold Camo</h3><p>Test requirement 50 kills.</p>'), url);
+  const base = propose(empty(), [first], { now }).state;
+  const revised = parseArticle(html('<h3>Gold Camo</h3><p>Test requirement 60 kills.</p><h3>New Event Camo</h3><p>Test event requirement.</p>'), url);
+  const result = propose(base, [revised], { now });
+  const changes = result.review.documents[0].camoChanges;
+  assert.equal(changes.find(c => c.id === 'gold-camo').change, 'requirements-changed');
+  assert.equal(changes.find(c => c.id === 'new-event-camo').change, 'new-section');
+  assert.equal(base.weapons.length, 0); assert.equal(result.state.weapons.length, 0);
+});
+test('Camo discovery baseline detects unchanged definitions without false additions', () => {
+  const first = parseArticle(html('<h3>Gold Camo</h3><p>Test requirement.</p>'), url);
+  const base = propose(empty(), [first], { now }).state;
+  const revised = { ...first, hash: hash('unrelated-content-change') };
+  const result = propose(base, [revised], { now });
+  assert.deepEqual(result.review.documents[0].camoChanges, []);
+});
 test('discovery rejects foreign origins and other games', () => {
   const links = extractLinks(`<a href="${url}">MW4</a><a href="https://evil.example/blog/modern-warfare-4">foreign</a><a href="/patchnotes/2026/10/black-ops-7">BO7</a>`, url, ['https://www.callofduty.com']);
   assert.deepEqual(links, [url]);

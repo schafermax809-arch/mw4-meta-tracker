@@ -6,55 +6,200 @@
       "hash": "4e16723c9ffe25df60573d0e234609d73e47e3a661f19ae4299df67461be99c0",
       "title": "Modern Warfare 4 Launches October 23 as a Standalone Release",
       "publishedAt": "2026-10-15",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": []
     },
     "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-campaign-early-access-live-now": {
       "hash": "0d0314e63507759e954f4f9684a5f0c075593f8f52ec6c9d27096d4e9118526c",
       "title": "Modern Warfare 4: Campaign Early Access Now Live",
       "publishedAt": "2026-10-16",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": []
     },
     "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-deep-dive-hajin": {
       "hash": "add7ef259a36f33986e7c46ce2f64e7636d3a03161deee80fd55c7751ab79b4a",
       "title": "DMZ Deep Dive, Part 1: Tour of Duty – Hajin Environments and Threats, Full Intel Guide",
       "publishedAt": "2026-10-05",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": []
     },
     "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-how-to-play-forward-operating-base-guide": {
       "hash": "bd8772a051cb4e344c2bde5a713759879bb0dbc01c3698c0b133584866be888f",
       "title": "DMZ Deep Dive, Part 2: How to Play – Forward Operating Base (FOB) Full Intel Guide",
       "publishedAt": "2026-10-09",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": []
     },
     "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class": {
       "hash": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
       "title": "Ready for Launch: All Modern Warfare 4 Operators, Weapons, Equipment, and Multiplayer Create-a-Class Features",
       "publishedAt": "2026-10-19",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": []
     },
     "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-live-worldwide-now": {
       "hash": "87a631209d4ce82115bf8ece1a56694ae62ac1416c461c05386c0b2701896330",
       "title": "Call of Duty: Modern Warfare 4 is Live Worldwide — Play Now!",
       "publishedAt": "2026-10-23",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": []
     },
     "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-maps-modes": {
       "hash": "a36b5c5bed7a075059d9ac98f03550cc6a730998ba872907e7ca2a8c6560dab2",
       "title": "Ready for Launch: Multiplayer Maps and Modes Confirmed",
       "publishedAt": "2026-10-21",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": []
     },
     "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige": {
       "hash": "1af56fbcfef96426e4d437c98ef3e8c940713d0c57ffd9ae4173db0c85a02470",
       "title": "Ready for Launch: Modern Warfare 4 Progression and Prestige",
       "publishedAt": "2026-10-19",
-      "kind": "guide"
+      "kind": "guide",
+      "camoCandidates": [
+        {
+          "id": "weapon-camos",
+          "name": "Weapon Camos",
+          "requirementsHash": "269573fa2c9473a7fca903f7d38d2e27e698dc8f93f28970e201f7b4de52a343"
+        },
+        {
+          "id": "military-camos",
+          "name": "Military Camos",
+          "requirementsHash": "c2e95ded7919616acf6c8038e164070c83c6135314304626d2207e2301bd8f11"
+        },
+        {
+          "id": "special-camos",
+          "name": "Special Camos",
+          "requirementsHash": "223ef216e5639f762dfa308acc64f9c879c215f60986e8edf6eb224d2f588e97"
+        },
+        {
+          "id": "completionist-camos",
+          "name": "Completionist Camos",
+          "requirementsHash": "34f8e5a8d85ff021377e935fa33a97bb3818203487e72c3ffe84be370e5d6480"
+        },
+        {
+          "id": "gold-completionist-camo",
+          "name": "Gold Completionist Camo",
+          "requirementsHash": "323a8079ae32ced38d09aa28269594d704997b7d0e5e29ada198463afd8478e8"
+        },
+        {
+          "id": "platinum-completionist-camo",
+          "name": "Platinum Completionist Camo",
+          "requirementsHash": "15f9cd639b449be146495a812cbc7519bfd93644bee103ff7fce3b70aaea368c"
+        },
+        {
+          "id": "harmonic-break-completionist-camo",
+          "name": "Harmonic Break Completionist Camo",
+          "requirementsHash": "6448b96dd5471bae674fe22f74086ea234cbaf95f837510e854bfa35da5a8f1e"
+        },
+        {
+          "id": "divergence-completionist-camo",
+          "name": "Divergence Completionist Camo",
+          "requirementsHash": "082fd76bb7132d6aee108c4ac763064da430e832f59639400a369999468ff49d"
+        },
+        {
+          "id": "mode-mastery-camos",
+          "name": "Mode Mastery Camos",
+          "requirementsHash": "359c3a8bd2807e40aa8e855a2c42a21db7ba958c8ce798708dce703e978dcc1d"
+        },
+        {
+          "id": "multiplayer-mastery-camos",
+          "name": "Multiplayer Mastery Camos",
+          "requirementsHash": "d7874338bd8fd60b3fb6997a9a5325d05fb74a635ee09f2549c51fffb17bc346"
+        },
+        {
+          "id": "mastery-1-mercurial-drift-mastery-camo",
+          "name": "Mastery 1: Mercurial Drift Mastery Camo",
+          "requirementsHash": "4d061a44fcc9aedb7cea4188e46082197c0da5c54464c495542f572c6ae06574"
+        },
+        {
+          "id": "mastery-2-polyatomic-reforged-mastery-camo",
+          "name": "Mastery 2: Polyatomic Reforged Mastery Camo",
+          "requirementsHash": "5faaeb2e75e095490315f6f51f69cc70dd9da3ae599fbfc51834d552c63739b8"
+        },
+        {
+          "id": "mastery-3-orion-reforged-mastery-camo",
+          "name": "Mastery 3: Orion Reforged Mastery Camo",
+          "requirementsHash": "def875584286a661bc5f79ddd84b24ce900e034eec76c3892bfb1bb7513123be"
+        },
+        {
+          "id": "dmz-mastery-camos",
+          "name": "DMZ Mastery Camos",
+          "requirementsHash": "b98e5a58c5d233f5d204624978bb26c4447b36e41d3b2a571364ef33b93b4e3f"
+        },
+        {
+          "id": "mastery-1-chiral-mastery-camo",
+          "name": "Mastery 1: Chiral Mastery Camo",
+          "requirementsHash": "2f0ba3e72ac58e6771ce096fedf32bed0df28884928ea4eca291d94e57b0dca7"
+        },
+        {
+          "id": "mastery-2-ripple-tide-mastery-camo",
+          "name": "Mastery 2: Ripple Tide Mastery Camo",
+          "requirementsHash": "51a3b7ada3bbd36c2667b2da412ad0cfeaebd0b0f9b7bd66f6b4c84622d89989"
+        },
+        {
+          "id": "mastery-3-helio-mastery-camo",
+          "name": "Mastery 3: Helio Mastery Camo",
+          "requirementsHash": "ae521ffab3afd2a9031db98af9a9dde745edff3d360a3036765b945837ebc20f"
+        },
+        {
+          "id": "call-of-duty-warzone-mastery-camos",
+          "name": "Call of Duty: Warzone Mastery Camos",
+          "requirementsHash": "9eda4f0692640f88722ee38fde82795007e857d1dbb9cb17ac578d8fa00e8ac5"
+        },
+        {
+          "id": "mastery-1-parallax-mastery-camo",
+          "name": "Mastery 1: Parallax Mastery Camo",
+          "requirementsHash": "0aa4dddb4b06ceff97e73d1d1925d5ad95caed0c22df9e5e9414fef1df1ce918"
+        },
+        {
+          "id": "mastery-2-damascus-reforged-mastery-camo",
+          "name": "Mastery 2: Damascus Reforged Mastery Camo",
+          "requirementsHash": "0aa4dddb4b06ceff97e73d1d1925d5ad95caed0c22df9e5e9414fef1df1ce918"
+        },
+        {
+          "id": "mastery-3-empyros-mastery-camo",
+          "name": "Mastery 3: Empyros Mastery Camo",
+          "requirementsHash": "29869ccecffa8d9a51f35d29b4f04c4136a8d95e85d5b22c356334b6efe27dcc"
+        },
+        {
+          "id": "weapon-prestige-and-weapon-prestige-camos",
+          "name": "Weapon Prestige and Weapon Prestige Camos",
+          "requirementsHash": "2175dc1412ab04b0b99435dd775e76ee057284312fdea9733326c7b8b171e53d"
+        },
+        {
+          "id": "pyroclast-camo",
+          "name": "Pyroclast Camo",
+          "requirementsHash": "aa1266cf9b7a37926c97c9fd9adff01d2a00a135d0a512fb57293601935b89d7"
+        },
+        {
+          "id": "pyroclast-terminus-camo",
+          "name": "Pyroclast Terminus Camo",
+          "requirementsHash": "16ae6dc8ef2deee46cc9b5a2e9f305f0715b37071247f09295dbcf78e97e15f6"
+        },
+        {
+          "id": "pyroclast-scatter-camo",
+          "name": "Pyroclast Scatter Camo",
+          "requirementsHash": "4bfd4b7071d1f45007e4ca8e039d122386c8f1049f01646ce73334f52c803224"
+        },
+        {
+          "id": "pyroclast-cascade-camo",
+          "name": "Pyroclast Cascade Camo",
+          "requirementsHash": "7bb7d32812fe85caa721653ce0aec755a5b1d317205c53d229ea33a6bbe76e15"
+        },
+        {
+          "id": "dmz-beta-serpentine-camo-unlocked-set",
+          "name": "DMZ Beta “Serpentine Camo Unlocked” Set",
+          "requirementsHash": "da55c4f6776bedf2ee74f547f5fbe12d36913eeb220f8dd629229f5d4f6be797"
+        }
+      ]
     },
     "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes": {
       "hash": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
       "title": "Call of Duty: Modern Warfare 4 Launch Patch Notes",
       "publishedAt": "2026-10-23",
-      "kind": "patch"
+      "kind": "patch",
+      "camoCandidates": []
     }
   }
 }
