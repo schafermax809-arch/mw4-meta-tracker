@@ -2,18 +2,23 @@ import { hash, canonical } from "./model.mjs";
 import { validateDatabase } from "../../public/engine/database.js";
 import { optimize, OBJECTIVES } from "../../public/engine/optimizer.js";
 import { hydrateCommunityValues } from "../../public/engine/community-values.js";
+import { hydrateAttachmentCatalog } from "../../public/engine/attachment-catalog.js";
 export function recompute(
   db,
   patch = db.patchRevision,
   communityValues = null,
+  attachmentCatalog = null,
 ) {
-  const runtime = communityValues
+  let runtime = communityValues
     ? hydrateCommunityValues(db, communityValues, patch)
     : db;
+  if (attachmentCatalog)
+    runtime = hydrateAttachmentCatalog(runtime, attachmentCatalog, patch);
   return {
     schemaVersion: 1,
     databaseHash: hash(db),
     communityValuesHash: communityValues?.hash ?? null,
+    attachmentCatalogHash: attachmentCatalog?.hash ?? null,
     patchRevision: patch,
     weapons: runtime.weapons.map((w) => ({
       weaponId: w.id,

@@ -1,12 +1,12 @@
 # MW4 Gunsmith: recherchierte Datenbasis
 
-Stand: 24. Oktober 2026. Modern Warfare 4 (2026), Multiplayer. Berücksichtigter offizieller Patch-Fingerabdruck: 95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02.
+Stand: 25. Oktober 2026 (Europe/Berlin). Modern Warfare 4 (2026), Multiplayer. Berücksichtigter offizieller Patch-Fingerabdruck: 95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02.
 
 ## Verfügbare Daten
 
 33 Waffen, 161 offizielle Angaben: 95 RPM-/Magazin-/Reserveangaben und 66 Waffenlevel-/Spielerlevelangaben. Zusätzlich wurden 32 öffentlich zugängliche Community-Waffenprofile aufgenommen: 328 Spezifikationsangaben (einschließlich Feuerart/Apex-Text), 155 Menübewertungen auf einer Skala von 0–100 und 163 veröffentlichte Kopf-/Körper-Schadensintervalle. Diese Angaben sind als Community gekennzeichnet und sofort sichtbar. Ratings werden nicht als HP, Meter oder Geschwindigkeit ausgegeben.
 
-Der zusammengeführte Katalog enthält 150 dokumentierte Aufsätze mit Quelle und Verifizierungsstatus. Zu den 31 Quellenvarianten kommen zwei redaktionelle M4-Builds. 32 Kombinationen erfüllen die aktuellen Slot-/Apex-Regeln. Nicht passende Originalkombinationen bleiben im Quellenpanel sichtbar, können aber nicht als gültiger Build übernommen werden. Vier aktuelle M4-Varianten sind nutzbar: Balanced, Mid/long range, Close range und Low level.
+Der vollständige freigegebene Import enthält 686 Aufsatznamen, 33 Waffenprofile und 41 Multiplayer-Builds. Im zusammengeführten Laufzeitdatensatz bleiben außerdem historische und zuvor gespeicherte Aufsatz-IDs erhalten. Nicht alle veröffentlichten Builds erfüllen die bekannten Apex-Sonderregeln; solche Kombinationen werden nicht als gültige Empfehlung übernommen.
 
 Der Quellen-TTK-Rechner arbeitet mit dem Schadensprofil und der Feuerrate derselben Quelle, ab erstem Treffer und ohne Aufsatzeffekte. Distanzgrenzen werden nicht extrapoliert. Burst, unbekannte Schussfolge sowie fehlende Profile liefern kein vorgetäuschtes Ergebnis. Präzise numerische Aufsatzeffekte und der vollständige Standardkatalog bleiben unvollständig. Der Optimizer liefert dann eine passende veröffentlichte Quellenempfehlung und benennt die Grenze seiner Berechnung.
 
@@ -16,34 +16,34 @@ Die Zahlen zählen Quellenangaben; Überschneidungen/Widersprüche werden nicht 
 
 | Waffe                | Offizielle Angaben | Community-Spezifikationen | Ratings | Schadensintervalle | Aufsätze | Nutzbare Quellenbuilds |
 | -------------------- | -----------------: | ------------------------: | ------: | -----------------: | -------: | ---------------------: |
-| Han 86               |                  5 |                        10 |       5 |                  4 |        6 |                      1 |
-| M4                   |                  5 |                        10 |       5 |                  4 |       19 |                      6 |
-| Hyeon Burst          |                  5 |                        10 |       5 |                  6 |        9 |                      2 |
-| Patriot XMR          |                  5 |                        10 |       5 |                  6 |       11 |                      3 |
-| Kastov 762           |                  5 |                        10 |       5 |                  6 |       15 |                      3 |
-| Oden                 |                  5 |                        10 |       5 |                  6 |        1 |                      0 |
-| Axion                |                  5 |                        11 |       5 |                  6 |        1 |                      0 |
-| Cronen Squall        |                  5 |                        11 |       5 |                  6 |        1 |                      0 |
-| ISO Nightshade       |                  5 |                        10 |       5 |                  8 |       15 |                      6 |
-| VEL 46               |                  5 |                        10 |       5 |                  8 |       10 |                      2 |
-| Wz.55 Striga         |                  5 |                        11 |       5 |                  8 |        1 |                      0 |
-| PPSh-41              |                  5 |                        10 |       5 |                  8 |       14 |                      2 |
-| X-58 Nyx             |                  5 |                        10 |       5 |                  8 |        7 |                      2 |
-| Rezi 12              |                  5 |                        10 |       5 |                  0 |        6 |                      1 |
-| Warlord              |                  5 |                        11 |       5 |                  0 |        1 |                      0 |
-| Finn LMG             |                  5 |                        11 |       5 |                  6 |        1 |                      0 |
-| Type 73              |                  5 |                        10 |       5 |                  6 |        6 |                      1 |
-| APOC-338             |                  5 |                        11 |       5 |                  6 |        1 |                      0 |
-| MAR-9                |                  5 |                        10 |       5 |                  6 |        6 |                      1 |
-| Oris 8.6             |                  5 |                        11 |       5 |                  8 |        1 |                      0 |
-| Mosin-Nagant         |                  5 |                        11 |       5 |                  6 |        1 |                      0 |
-| KG-7 Vulcan          |                  5 |                        10 |       5 |                  2 |        6 |                      1 |
-| Astaroth .57         |                  5 |                        11 |       5 |                  4 |        1 |                      0 |
-| Signal 50            |                  5 |                        11 |       5 |                  6 |        1 |                      0 |
-| Sang 9mm             |                  5 |                        10 |       0 |                  7 |        1 |                      0 |
-| Krait P68            |                  4 |                        10 |       5 |                  8 |        6 |                      1 |
-| .50 GS               |                  5 |                        11 |       5 |                  6 |        1 |                      0 |
-| Mojave .357          |                  5 |                        11 |       5 |                  8 |        1 |                      0 |
+| Han 86               |                  5 |                        10 |       5 |                  4 |       31 |                      3 |
+| M4                   |                  5 |                        10 |       5 |                  4 |       71 |                      9 |
+| Hyeon Burst          |                  5 |                        10 |       5 |                  6 |       25 |                      4 |
+| Patriot XMR          |                  5 |                        10 |       5 |                  6 |       26 |                      5 |
+| Kastov 762           |                  5 |                        10 |       5 |                  6 |       38 |                      5 |
+| Oden                 |                  5 |                        10 |       5 |                  6 |       23 |                      2 |
+| Axion                |                  5 |                        11 |       5 |                  6 |       20 |                      2 |
+| Cronen Squall        |                  5 |                        11 |       5 |                  6 |       19 |                      2 |
+| ISO Nightshade       |                  5 |                        10 |       5 |                  8 |       24 |                      8 |
+| VEL 46               |                  5 |                        10 |       5 |                  8 |       17 |                      4 |
+| Wz.55 Striga         |                  5 |                        11 |       5 |                  8 |       22 |                      2 |
+| PPSh-41              |                  5 |                        10 |       5 |                  8 |       15 |                      4 |
+| X-58 Nyx             |                  5 |                        10 |       5 |                  8 |       16 |                      4 |
+| Rezi 12              |                  5 |                        10 |       5 |                  0 |       33 |                      2 |
+| Warlord              |                  5 |                        11 |       5 |                  0 |       22 |                      1 |
+| Finn LMG             |                  5 |                        11 |       5 |                  6 |       22 |                      1 |
+| Type 73              |                  5 |                        10 |       5 |                  6 |       20 |                      2 |
+| APOC-338             |                  5 |                        11 |       5 |                  6 |       20 |                      1 |
+| MAR-9                |                  5 |                        10 |       5 |                  6 |       20 |                      2 |
+| Oris 8.6             |                  5 |                        11 |       5 |                  8 |       19 |                      1 |
+| Mosin-Nagant         |                  5 |                        11 |       5 |                  6 |       14 |                      1 |
+| KG-7 Vulcan          |                  5 |                        10 |       5 |                  2 |       29 |                      2 |
+| Astaroth .57         |                  5 |                        11 |       5 |                  4 |       21 |                      1 |
+| Signal 50            |                  5 |                        11 |       5 |                  6 |       19 |                      1 |
+| Sang 9mm             |                  5 |                        10 |       0 |                  7 |       26 |                      1 |
+| Krait P68            |                  4 |                        10 |       5 |                  8 |       25 |                      2 |
+| .50 GS               |                  5 |                        11 |       5 |                  6 |       28 |                      1 |
+| Mojave .357          |                  5 |                        11 |       5 |                  8 |       21 |                      1 |
 | PILA                 |                  5 |                         9 |       5 |                  0 |        0 |                      0 |
 | RPG-8                |                  5 |                         9 |       5 |                  0 |        0 |                      0 |
 | JOKR                 |                  5 |                         9 |       5 |                  0 |        0 |                      0 |
@@ -96,3 +96,13 @@ Der öffentliche esports.gg-RSS-Feed ist für eine tägliche Discovery konfiguri
 ## So werden Lücken geschlossen
 
 Neue Zahlen dürfen auch als veröffentlichte Community-Angaben aufgenommen werden; Quelle, Datum, Modus, Einheit und Unsicherheit müssen dabei sichtbar bleiben. Für den Status verified sind zusätzlich eine belastbare Messmethode und der bestätigte Patch nötig. Relative Effekte als Faktor (z. B. 0,9), absolute Effekte als add in der Stat-Einheit oder als set erfassen. Qualitative Vor-/Nachteile bleiben Text und fließen nicht als erfundene Zahlen in die Zielfunktion ein. Vollständigkeit und Kombinationsregeln erst nach tatsächlicher Prüfung auf true setzen. Jede Freigabe erzeugt einen Vorher/Nachher-Eintrag und neue Berechnungsergebnisse. Details: GUNSMITH-ARCHITEKTUR.md.
+
+## Nachrecherche: fehlende Aufsätze
+
+25. Oktober 2026 (Europe/Berlin): Der Katalog bleibt ausdrücklich unvollständig. Quellenbuilds ersetzen keine vollständige Waffen-Kompatibilitätsliste. [Offizieller Inner-Circuit-Bauplan](https://www.callofduty.com/blog/2026/09/call-of-duty-modern-warfare-4-preorder-bonus-inner-circuit-m4-blueprint): drei zusätzliche M4-Namen und die originale Fünfer-Konfiguration aufgenommen, qualitative Effekte ohne geschätzte Prozentwerte. [Metka Gunsmith-Anleitung](https://metka.gg/en/guides/attachments-and-apex/): SZ Micro D-3 und die drei ausdrücklich genannten Waffen-Zuordnungen ergänzt. Die Community-Bezeichnung FTAC Dominion Compensator und der offizielle Name FTAC Dominion Muzzle werden ohne eindeutigen Alias-Beleg nicht durch eine ID-Änderung zusammengelegt.
+
+## Freigegebener vollständiger Aufsatzimport
+
+Der Nutzer hat am 25. Oktober 2026 die Freigabe zur Übernahme von WarzoneLoadout.games bestätigt und keine gesonderte Quellenanzeige gewünscht. config/attachment-catalog-source.json dokumentiert diese Grundlage. public/data/attachment-catalog.json bewahrt die globalen 686 Datensätze und die vollständig abgerufenen 33 Waffenprofile mit Original-URLs, Slot-/Waffenzuordnung, Typ und Freischaltlevel sowie 41 Build-Varianten. Keine Bilder oder redaktionellen Artikeltexte werden übernommen. Der tägliche Workflow ruft die öffentlichen Seiten mit robots.txt-Prüfung, Allowlist und Abrufabstand ab und legt Änderungen zur Freigabe vor.
+
+Die Tabelle zählt nun die Einträge der veröffentlichten Waffenlisten; zusätzliche historische Datensätze können im Gunsmith eingeblendet werden. Die Datenquelle führt teilweise Namensvarianten oder frühere Konversionen; der Import ist vollständig bezüglich des veröffentlichten Datensatzes und kein unabhängiger Nachweis, dass jeder Eintrag aktuell im Spiel freigeschaltet ist.

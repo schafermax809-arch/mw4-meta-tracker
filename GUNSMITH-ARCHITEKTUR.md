@@ -27,6 +27,12 @@ Ein neuer offizieller Patch bindet Community-Werte nicht automatisch neu. Der Re
 
 ## Stat-Vertrag
 
+Der freigegebene vollständige Aufsatzimport liegt in public/data/attachment-catalog.json: 686 globale Aufsatzdatensätze, die veröffentlichten Listen aller 33 Waffen und 41 Multiplayer-Builds. scripts/lib/attachment-catalog.mjs parst nur öffentlich dargestellte HTML-Listen, vergleicht sämtliche angekündigten Zeilen-/Slot-Zähler und bricht bei Lücken ab. Es führt keine fremden Skripte aus und verwendet keine privaten Endpunkte. config/attachment-catalog-source.json hält die vom Nutzer bestätigte Freigabe, Allowlist, Abrufabstand und Patchzuordnung fest.
+
+public/engine/attachment-catalog.js ergänzt die Laufzeitkopie nach den Community-Werten. Vorhandene Aufsatz-IDs bleiben erhalten; zusätzliche historische Namen können im Slotdialog eingeblendet werden. Neue Einträge werden als reported geführt. Die veröffentlichte Freischaltwaffe wird nicht als universelle Kompatibilität interpretiert. Aktive Auswahl und Builds verwenden die explizite Waffenliste bzw. den veröffentlichten Build; bekannte Apex-Blockaden bleiben wirksam. Numerische Effekte werden bei fehlenden Messwerten nicht erfunden. Der neue interne Katalog unter Intel bietet Suche und Slotfilter über alle Einträge. Entsprechend dem Nutzerwunsch gibt es im Waffenmenü keine gesonderte Anzeige der Datenquelle; Metadaten und Herkunft bleiben für Pflege und Updates im Datensatz.
+
+Der tägliche Workflow prüft diesen Katalog zusätzlich und übernimmt Änderungen erst über einen Review-PR. calculated.json ist jetzt außerdem an attachmentCatalogHash gebunden. Unveränderte Inhalte erzeugen keinen Commit und keinen neuen Datumsstempel; Fehler erhalten den veröffentlichten Stand und den persönlichen Fortschritt.
+
 Ein Basiswert hat `value`, `unit`, `sourceIds`, `patchRevision`, `status`. Ein Modifikator hat `stat`, `operation`, `value`, `unit`, `order`, `sourceIds`, `patchRevision`.
 
 - `add`: absolute Änderung in der Einheit des Werts, etwa ms.

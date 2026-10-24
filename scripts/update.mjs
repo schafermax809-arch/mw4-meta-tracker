@@ -4,6 +4,11 @@ import {
 } from "./lib/community-values.mjs";
 import { validateCommunityValues } from "../public/engine/community-values.js";
 import { hash } from "./lib/model.mjs";
+import {
+  collectAttachmentCatalog,
+  proposeCatalogRefresh,
+} from "./lib/attachment-catalog.mjs";
+import { validateAttachmentCatalog } from "../public/engine/attachment-catalog.js";
 import { collectResearch } from "./lib/research.mjs";
 import { proposeGunsmith } from "./lib/gunsmith-update.mjs";
 import { mkdir, writeFile, appendFile } from "node:fs/promises";
@@ -48,7 +53,18 @@ try {
     result?.state ?? current,
   );
   const valuesChanged = hash(newValues) !== hash(oldValues);
-  const changed = Boolean(result || engineResult || valuesChanged);
+  const oldCatalog = await readJson("public/data/attachment-catalog.json");
+  const newCatalog = validateAttachmentCatalog(
+    await collectAttachmentCatalog(
+      await readJson("config/attachment-catalog-source.json"),
+      result?.state ?? current,
+    ),
+    result?.state ?? current,
+  );
+  const catalogChanged = newCatalog.hash !== oldCatalog.hash;
+  const changed = Boolean(
+    result || engineResult || valuesChanged || catalogChanged,
+  );
   if (engineResult) {
     await atomicJson(
       "work/candidate/data/gunsmith.json",
@@ -100,6 +116,7 @@ try {
       ),
     );
   if (changed) {
+    await atomicJson("work/candidate/data/attachment-catalog.json", newCatalog);
     await atomicJson("work/candidate/data/community-values.json", newValues);
     if (!result && !engineResult) {
       for (const [name, value] of [
@@ -130,7 +147,9 @@ try {
       });
       await writeFile(
         "work/pr-body.md",
-        "## Neue MW4-Community-Werte\n\n" +
+        (valuesChanged
+          ? "## Neue MW4-Community-Werte\n\n"
+          : "## MW4-Aufsatzkatalog aktualisiert\n\n") +
           changedPages.length +
           " geänderte Waffen-Seiten. Zahlen bleiben als Community-Angaben gekennzeichnet. Offizielle Werte und persönlicher Camo-Fortschritt bleiben erhalten. reviews/gunsmith-pending.json enthält Vorher/Nachher.\n",
       );
@@ -141,7 +160,7 @@ try {
       newValues,
       { previous: previousGunsmith },
     );
-    const finalDb = refresh?.database ?? engineResult?.database ?? db;
+    let finalDb = refresh?.database ?? engineResult?.database ?? db;
     if (refresh) {
       const changedWeaponIds = [
         ...new Set([
@@ -159,12 +178,38 @@ try {
       };
       await atomicJson("work/candidate/reviews/gunsmith-pending.json", review);
     }
+    const catalogRefresh = proposeCatalogRefresh(
+      finalDb,
+      oldCatalog,
+      newCatalog,
+      { previous: previousGunsmith },
+    );
+    if (catalogRefresh) {
+      finalDb = catalogRefresh.database;
+      const prior = await readJson(
+        "work/candidate/reviews/gunsmith-pending.json",
+      );
+      const ids = [
+        ...new Set([
+          ...(prior.changedWeaponIds ?? []),
+          ...catalogRefresh.review.changedWeaponIds,
+        ]),
+      ];
+      finalDb.history[0].changedWeaponIds = ids;
+      await atomicJson("work/candidate/data/gunsmith.json", finalDb);
+      await atomicJson("work/candidate/reviews/gunsmith-pending.json", {
+        ...prior,
+        ...catalogRefresh.review,
+        changedWeaponIds: ids,
+      });
+    }
     await atomicJson(
       "work/candidate/data/calculated.json",
       (await import("./lib/gunsmith-update.mjs")).recompute(
         finalDb,
         result?.state.patchRevision ?? current.patchRevision,
         newValues,
+        newCatalog,
       ),
     );
   }
@@ -176,6 +221,9 @@ try {
       hash: p.hash,
     })),
     communityValuesChanged: valuesChanged,
+    attachmentCatalogChanged: catalogChanged,
+    attachmentCatalogEntries: newCatalog.catalog.length,
+    attachmentCatalogProfiles: newCatalog.profiles.length,
     researchSources: research.map((d) => ({ url: d.url, hash: d.hash })),
     manualSources: db.sources
       .filter((s) => s.automation !== "allowed")
@@ -211,6 +259,11 @@ try {
     await appendFile(
       "work/pr-body.md",
       "\n### Community-Werte\n\nÖffentliche Waffenprofile wurden ebenfalls aktualisiert. Prüfe die Vorher-/Nachher-Werte in reviews/gunsmith-pending.json und public/data/community-values.json. Offizielle Basiswerte behalten Vorrang; Community-Werte bleiben gekennzeichnet.\n",
+    );
+  if (changed && catalogChanged)
+    await appendFile(
+      "work/pr-body.md",
+      `\n### Aufsatzkatalog\n\n${newCatalog.catalog.length} Einträge und ${newCatalog.profiles.length} Waffenprofile. Vollständige Listen und Build-Änderungen in reviews/gunsmith-pending.json prüfen. Persönlicher Fortschritt bleibt unverändert.\n`,
     );
   if (process.env.GITHUB_OUTPUT)
     await appendFile(process.env.GITHUB_OUTPUT, `changed=${changed}\n`);

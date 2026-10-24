@@ -8,6 +8,7 @@ import { calculateStats, timeToKill } from "./engine/calculator.js";
 import { objectiveWeights } from "./engine/optimizer.js";
 import { analyzeCommunity } from "./engine/community.js";
 import { communityTTK } from "./engine/community-values.js";
+import { privateCatalogSource } from "./engine/attachment-catalog.js";
 const fmt = (v) => Number(v.toFixed(3)).toLocaleString("de-DE");
 export function statTable(db, weaponId, refs, patch) {
   const c = calculateStats(db, weaponId, refs, patch),
@@ -123,6 +124,7 @@ export function compareStats(db, weaponId, left, right, patch) {
 }
 function sourceLinks(db, ids, box) {
   for (const id of [...new Set(ids)]) {
+    if (privateCatalogSource(id)) continue;
     const s = db.sources.find((s) => s.id === id);
     if (s)
       box.append(
@@ -217,6 +219,7 @@ export function renderCommunity(db, weapon, box, actions) {
   const refs = node("details");
   refs.append(node("summary", "Quellenzugang und Recherchegrenzen"));
   for (const s of db.sources.filter((s) => s.kind !== "official")) {
+    if (privateCatalogSource(s.id)) continue;
     const p = node("p");
     p.append(
       external(s.title, s.url),
@@ -703,7 +706,9 @@ export function renderDataCoverage(db, weapon, box, patch) {
     ),
   );
   for (const n of w.notes) details.append(node("p", n));
-  for (const n of w.coverage.missing) details.append(node("p", `Offen: ${n}`));
+  for (const n of w.coverage.missing)
+    if (!(w.coverage.reportedCatalogComplete && /Aufsatzkatalog/i.test(n)))
+      details.append(node("p", `Offen: ${n}`));
   details.append(
     node(
       "p",
@@ -723,7 +728,15 @@ export function renderDataCoverage(db, weapon, box, patch) {
       node("td", c.name),
       node("td", `${c.currentValues}/${c.baseValues}`),
       node("td", String(c.attachments)),
-      node("td", c.catalogComplete ? "vollständig / N/A" : "unvollständig"),
+      node(
+        "td",
+        c.catalogComplete
+          ? "vollständig / N/A"
+          : db.weapons.find((w) => w.id === c.weaponId)?.coverage
+                .reportedCatalogComplete
+            ? "Veröffentlichte Liste erfasst · Effekte offen"
+            : "unvollständig",
+      ),
     );
     table.append(r);
   }

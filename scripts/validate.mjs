@@ -21,10 +21,20 @@ const { validateCommunityValues } = await import(
   "../public/engine/community-values.js"
 );
 validateCommunityValues(community, meta);
+const { validateAttachmentCatalog } = await import(
+  "../public/engine/attachment-catalog.js"
+);
+const attachmentCatalog = validateAttachmentCatalog(
+  await readJson(process.argv[6] || "public/data/attachment-catalog.json"),
+  meta,
+);
+const { hash: catalogHash, ...catalogContent } = attachmentCatalog;
 if (
   calculated.databaseHash !== hash(db) ||
   calculated.patchRevision !== meta.patchRevision ||
   calculated.communityValuesHash !== community.hash ||
+  calculated.attachmentCatalogHash !== catalogHash ||
+  catalogHash !== hash(catalogContent) ||
   community.hash !== hash(community.pages)
 )
   throw Error("Calculated results stale: run npm run recompute");

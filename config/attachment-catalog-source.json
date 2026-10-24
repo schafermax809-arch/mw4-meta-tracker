@@ -1,0 +1,13 @@
+{
+  "allowedOrigins": ["https://warzoneloadout.games"],
+  "timeoutMs": 20000,
+  "maxBytes": 2000000,
+  "requestDelayMs": 1500,
+  "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+  "permission": {
+    "status": "user-confirmed",
+    "confirmedOn": "2026-10-25",
+    "basis": "The user confirmed permission to reuse WarzoneLoadout data in this project and requested no source attribution in the weapon UI. Provenance is retained in data and update records.",
+    "termsUrl": "https://warzoneloadout.games/terms"
+  }
+}

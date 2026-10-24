@@ -3,6 +3,11 @@ import {
   hydrateCommunityValues,
 } from "./engine/community-values.js";
 import {
+  validateAttachmentCatalog,
+  hydrateAttachmentCatalog,
+  privateCatalogSource,
+} from "./engine/attachment-catalog.js";
+import {
   loadProgress,
   saveProgress,
   validateProgress,
@@ -128,6 +133,11 @@ const drafts = new Map(),
   editingIds = new Map(),
   draftNames = new Map();
 let viewer = null;
+const latestDataUpdate = () =>
+  gunsmithDb &&
+  Date.parse(gunsmithDb.reviewedAt) > Date.parse(state.lastSuccessfulUpdate)
+    ? gunsmithDb.reviewedAt
+    : state.lastSuccessfulUpdate;
 const latestWeaponUpdate = () => {
   const entry = gunsmithDb?.history[0];
   return entry &&
@@ -361,7 +371,7 @@ function renderArsenal() {
     "Meta-Tier",
     [
       ["", "ALLE META-TIERS"],
-      ...["S", "A", "B", "C"].map((t) => [t, `TIER ${t}`]),
+      ...["S", "A", "B", "C", "D"].map((t) => [t, `TIER ${t}`]),
       ["unknown", "NICHT VERIFIZIERT"],
     ],
     filters.tier,
@@ -705,14 +715,27 @@ function renderWeapon(weapon, tab) {
     gunsmithDb &&
     ["optimizer", "attachments", "community", "comparison"].includes(tab)
   ) {
-    const known = gunsmithDb.attachments.filter((a) =>
-      a.weaponIds.includes(weapon.id),
+    const catalogIds = gunsmithDb.weapons.find(
+      (w) => w.id === weapon.id,
+    )?.catalogAttachmentIds;
+    const known = gunsmithDb.attachments.filter(
+      (a) =>
+        a.weaponIds.includes(weapon.id) &&
+        (!catalogIds || catalogIds.includes(a.id)),
     );
     const picker = node("select");
     picker.setAttribute("aria-label", "Aufsatzkategorie öffnen");
     const first = node(
       "option",
-      "AUFSATZDATENBANK · " + known.length + " EINTRÄGE",
+      "AUFSATZDATENBANK · " +
+        known.length +
+        " EINTRÄGE" +
+        (gunsmithDb?.weapons.find((w) => w.id === weapon.id)?.coverage
+          .catalogComplete ||
+        gunsmithDb?.weapons.find((w) => w.id === weapon.id)?.coverage
+          .reportedCatalogComplete
+          ? ""
+          : " · TEILBESTAND"),
     );
     first.value = "";
     picker.append(first);
@@ -732,6 +755,10 @@ function renderWeapon(weapon, tab) {
     });
     picker.className = "stage-attachment-picker";
     title.append(picker);
+    if (gunsmithDb.attachmentCatalog)
+      title.append(
+        button("Alle Aufsätze", () => go("intel/catalog"), "button subtle"),
+      );
   }
   stage.append(title, visual, renderStats(weapon));
   screen.append(stage);
@@ -957,7 +984,7 @@ function renderAttachments(weapon, content) {
     content.append(statTable(gunsmithDb, weapon.id, refs, state.patchRevision));
   renderBuildWorkspace(weapon, content);
 }
-function openAttachmentEditor(weapon, slot) {
+function openAttachmentEditor(weapon, slot, includeAdditional = false) {
   $("#attachment-title").textContent = SLOT_NAMES[slot] || slot;
   const box = $("#attachment-content");
   box.replaceChildren();
@@ -988,8 +1015,32 @@ function openAttachmentEditor(weapon, slot) {
       ),
     );
   const compatible = state.attachments.filter(
-    (a) => a.slot === slot && a.weaponIds.includes(weapon.id),
+    (a) =>
+      a.slot === slot &&
+      a.weaponIds.includes(weapon.id) &&
+      (includeAdditional ||
+        !gunsmithDb?.weapons.find((w) => w.id === weapon.id)
+          ?.catalogAttachmentIds ||
+        gunsmithDb.weapons
+          .find((w) => w.id === weapon.id)
+          .catalogAttachmentIds.includes(a.id)),
   );
+  if (
+    gunsmithDb?.weapons.find((w) => w.id === weapon.id)?.catalogAttachmentIds
+  ) {
+    const label = node("label", null, "check-control"),
+      check = node("input");
+    check.type = "checkbox";
+    check.checked = includeAdditional;
+    check.addEventListener("change", () =>
+      openAttachmentEditor(weapon, slot, check.checked),
+    );
+    label.append(
+      check,
+      node("span", "Zusätzliche und historische Einträge anzeigen"),
+    );
+    box.append(label);
+  }
   if (!compatible.length)
     box.append(
       empty(
@@ -1045,6 +1096,7 @@ function openAttachmentEditor(weapon, slot) {
       );
     if (gunsmithDb && a.sourceIds)
       for (const id of a.sourceIds) {
+        if (privateCatalogSource(id)) continue;
         const source = gunsmithDb.sources.find((s) => s.id === id);
         if (source)
           box.append(
@@ -2178,6 +2230,7 @@ function renderIntel(tab = "status") {
     ["status", "Patch & Quellen"],
     ["changelog", "Änderungsverlauf"],
     ["gunsmith", "Gunsmith-Datenbasis"],
+    ["catalog", "Aufsatzkatalog"],
     ["storage", "Mein Speicher"],
     ["credits", "Bildnachweise"],
   ]) {
@@ -2186,6 +2239,10 @@ function renderIntel(tab = "status") {
     nav.append(a);
   }
   screen.append(nav);
+  if (tab === "catalog") {
+    renderAttachmentCatalog();
+    return;
+  }
   if (tab === "changelog") {
     renderChangelog();
     return;
@@ -2201,12 +2258,17 @@ function renderIntel(tab = "status") {
         "p",
         gunsmithDb.weapons.length +
           " Waffen · " +
-          gunsmithDb.attachments.length +
-          " dokumentierte Aufsätze · letzte Prüfung " +
+          (gunsmithDb.attachmentCatalog
+            ? gunsmithDb.attachmentCatalog.catalog.length +
+              " Einträge im veröffentlichten Aufsatzkatalog"
+            : gunsmithDb.attachments.length +
+              " dokumentierte Aufsatz-Zuordnungen") +
+          " · letzte Aktualisierung " +
           date(gunsmithDb.reviewedAt),
       ),
     );
     for (const source of gunsmithDb.sources) {
+      if (privateCatalogSource(source.id)) continue;
       const item = node("article", null, "intel-panel");
       item.append(
         external(source.title + " ↗", source.url),
@@ -2239,7 +2301,7 @@ function renderIntel(tab = "status") {
     node("h3", state.patchVersion || "Patch-Version unbekannt"),
     node(
       "p",
-      `Letztes erfolgreich übernommenes Datenupdate: ${date(state.lastSuccessfulUpdate)} · ${date(state.lastSuccessfulUpdate, { hour: "2-digit", minute: "2-digit" })} Uhr.`,
+      `Letztes erfolgreich übernommenes Datenupdate: ${date(latestDataUpdate())} · ${date(latestDataUpdate(), { hour: "2-digit", minute: "2-digit" })} Uhr.`,
     ),
     node(
       "p",
@@ -2309,6 +2371,83 @@ function renderIntel(tab = "status") {
   right.append(sources);
   layout.append(left, right);
   screen.append(layout);
+}
+function renderAttachmentCatalog() {
+  const data = gunsmithDb?.attachmentCatalog;
+  if (!data) {
+    screen.append(
+      empty(
+        "Aufsatzkatalog nicht geladen",
+        "Die bisherigen Builds und dein Fortschritt bleiben verfügbar.",
+      ),
+    );
+    return;
+  }
+  screen.append(
+    node(
+      "h3",
+      `${data.catalog.length} AUFSÄTZE · ${data.profiles.length} WAFFEN`,
+    ),
+  );
+  const controls = node("div", null, "filters"),
+    search = node("input"),
+    slot = node("select"),
+    count = node("p", null, "stats-note");
+  search.type = "search";
+  search.placeholder = "Name oder Freischaltwaffe suchen";
+  search.setAttribute("aria-label", "Aufsatzkatalog durchsuchen");
+  search.className = "filter-select";
+  search.style.maxWidth = "100%";
+  slot.setAttribute("aria-label", "Aufsatzslot filtern");
+  slot.className = "filter-select";
+  for (const key of ["", ...new Set(data.catalog.map((a) => a.slot))]) {
+    const option = node(
+      "option",
+      key ? (SLOT_NAMES[key] ?? key) : "Alle Slots",
+    );
+    option.value = key;
+    slot.append(option);
+  }
+  const wrap = node("div", null, "stat-table-wrap"),
+    table = node("table", null, "comparison-table");
+  wrap.append(table);
+  const update = () => {
+    table.replaceChildren();
+    const h = node("tr");
+    for (const s of ["AUFSATZ", "SLOT", "FREISCHALTUNG ÜBER", "WAFFENLEVEL"])
+      h.append(node("th", s));
+    table.append(h);
+    const q = search.value.toLowerCase().trim();
+    const rows = data.catalog.filter(
+      (a) =>
+        (!slot.value || a.slot === slot.value) &&
+        (!q || (a.name + " " + a.unlockWeapon).toLowerCase().includes(q)),
+    );
+    count.textContent = rows.length + " / " + data.catalog.length + " Einträge";
+    for (const a of rows) {
+      const row = node("tr");
+      for (const s of [
+        a.name,
+        SLOT_NAMES[a.slot] ?? a.slot,
+        a.unlockWeapon,
+        a.unlockLevel ?? "Unbekannt",
+      ])
+        row.append(node("td", String(s)));
+      table.append(row);
+    }
+  };
+  search.addEventListener("input", update);
+  slot.addEventListener("change", update);
+  controls.append(search, slot);
+  screen.append(
+    controls,
+    count,
+    notice(
+      "Die Freischaltwaffe ist keine vollständige Kompatibilitätsliste. Kompatible Auswahl und bekannte Sonderregeln findest du direkt im Gunsmith der jeweiligen Waffe.",
+    ),
+    wrap,
+  );
+  update();
 }
 function renderChangelog() {
   if (gunsmithDb) {
@@ -2554,7 +2693,7 @@ function render() {
   $("#data-status").replaceChildren(
     node(
       "span",
-      `DATENSTAND ${date(state.lastSuccessfulUpdate)} · PATCH ${state.patchRevision?.slice(0, 8) || "—"}`,
+      `DATENSTAND ${date(latestDataUpdate())} · PATCH ${state.patchRevision?.slice(0, 8) || "—"}`,
     ),
     node("span", "↗"),
   );
@@ -2744,6 +2883,20 @@ try {
         );
     } catch (e) {
       toast("Community-Werte konnten nicht geladen werden: " + e.message);
+    }
+    try {
+      const r = await fetch(
+        new URL("./data/attachment-catalog.json", import.meta.url),
+        { cache: "no-cache" },
+      );
+      if (!r.ok) throw Error("Katalog nicht erreichbar");
+      gunsmithDb = hydrateAttachmentCatalog(
+        gunsmithDb,
+        validateAttachmentCatalog(await r.json(), state),
+        state.patchRevision,
+      );
+    } catch (e) {
+      toast("Aufsatzkatalog konnte nicht geladen werden: " + e.message);
     }
     state.attachments = [
       ...new Map(

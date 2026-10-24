@@ -114,7 +114,11 @@ export function optimize(
           )
           .map((c) => c.note)
           .join(" ");
-        return { ...b, title: notes, goalMatch: pattern?.test(notes) ?? false };
+        return {
+          ...b,
+          title: notes,
+          goalMatch: pattern?.test(b.label ?? "") ?? false,
+        };
       })
       .sort(
         (a, b) =>

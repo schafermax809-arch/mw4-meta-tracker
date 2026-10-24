@@ -2,6 +2,7 @@ import { readJson, atomicJson } from "./lib/io.mjs";
 import { hash, canonical } from "./lib/model.mjs";
 import { validateDatabase } from "../public/engine/database.js";
 import { validateCommunityValues } from "../public/engine/community-values.js";
+import { validateAttachmentCatalog } from "../public/engine/attachment-catalog.js";
 import { recompute } from "./lib/gunsmith-update.mjs";
 export function applyGunsmithReview(
   current,
@@ -91,6 +92,10 @@ if (
       meta.patchRevision,
       validateCommunityValues(
         await readJson("public/data/community-values.json"),
+        meta,
+      ),
+      validateAttachmentCatalog(
+        await readJson("public/data/attachment-catalog.json"),
         meta,
       ),
     );
