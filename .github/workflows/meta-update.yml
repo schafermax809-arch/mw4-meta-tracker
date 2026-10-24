@@ -38,6 +38,7 @@ jobs:
           mkdir -p work
           if git fetch origin automation/meta-update; then
             git show origin/automation/meta-update:reviews/pending.json > work/previous-review.json
+            git show origin/automation/meta-update:reviews/gunsmith-pending.json > work/previous-gunsmith-review.json || rm -f work/previous-gunsmith-review.json
           fi
       - name: Fetch, compare and validate sources
         id: update
@@ -45,10 +46,14 @@ jobs:
       - name: Promote only validated candidate files
         if: steps.update.outputs.changed == 'true'
         run: |
-          node scripts/validate.mjs work/candidate/data/meta.json
+          node scripts/validate.mjs work/candidate/data/meta.json work/candidate/data/gunsmith.json work/candidate/data/calculated.json
           mkdir -p reviews
           cp work/candidate/data/meta.json public/data/meta.json
           cp work/candidate/reviews/pending.json reviews/pending.json
+          cp work/candidate/reviews/gunsmith-pending.json reviews/gunsmith-pending.json
+          cp work/candidate/data/gunsmith.json public/data/gunsmith.json
+          cp work/candidate/data/research.json public/data/research.json
+          cp work/candidate/data/calculated.json public/data/calculated.json
           npm run validate
           npm test
           npm run build
@@ -56,7 +61,7 @@ jobs:
         if: steps.update.outputs.changed == 'true'
         shell: bash
         run: |
-          git add -- public/data/meta.json reviews/pending.json
+          git add -- public/data/meta.json public/data/gunsmith.json public/data/research.json public/data/calculated.json reviews/pending.json reviews/gunsmith-pending.json
           if git diff --cached --quiet; then exit 0; fi
           TREE=$(git write-tree)
           PR=$(gh pr list --head automation/meta-update --base "$BASE_BRANCH" --state open --json number --jq '.[0].number // empty')

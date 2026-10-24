@@ -1,0 +1,926 @@
+{
+  "schemaVersion": 1,
+  "officialWeapons": [
+    {
+      "id": "han-86",
+      "name": "Han 86",
+      "levels": 72,
+      "magazine": 30,
+      "reserve": 90,
+      "rpm": 740,
+      "rateLabel": "740 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": {
+        "id": "han-x20-skybreaker",
+        "name": "Han X20 Skybreaker",
+        "blocks": [
+          "Optic",
+          "Stock",
+          "Barrel"
+        ],
+        "descriptionHash": "f8fd88df65eac30d368996470ed23abac600bd2a2d19d2f05d3bf6bc2bfe3d4b"
+      }
+    },
+    {
+      "id": "m4",
+      "name": "M4",
+      "levels": 72,
+      "magazine": 30,
+      "reserve": 90,
+      "rpm": 810,
+      "rateLabel": "810 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 14.",
+      "apex": {
+        "id": "m4-hurricane",
+        "name": "M4 Hurricane",
+        "blocks": [
+          "Barrel",
+          "Magazine"
+        ],
+        "descriptionHash": "3d0f877d2466b1a2f2baf8dc6f04cfa3b63ba42a7730e6114e2441a0686b136a"
+      }
+    },
+    {
+      "id": "hyeon-burst",
+      "name": "Hyeon Burst",
+      "levels": 68,
+      "magazine": 30,
+      "reserve": 90,
+      "rpm": 375,
+      "rateLabel": "375 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 21.",
+      "apex": {
+        "id": "hyeon-hyperburst",
+        "name": "Hyeon Hyperburst",
+        "blocks": [],
+        "descriptionHash": "bd6b74090961e0f138479bd03219d181e946e455953db7f4dd5230d349db31bd"
+      }
+    },
+    {
+      "id": "patriot-xmr",
+      "name": "Patriot XMR",
+      "levels": 72,
+      "magazine": 25,
+      "reserve": 100,
+      "rpm": 645,
+      "rateLabel": "645 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 27.",
+      "apex": {
+        "id": "patriot-xmr-volt",
+        "name": "Patriot XMR Volt",
+        "blocks": [
+          "Barrel"
+        ],
+        "descriptionHash": "7017e73cec86c998b97198d8f1ab8e7f326432000ae2a8a10f922e304f004531"
+      }
+    },
+    {
+      "id": "kastov-762",
+      "name": "Kastov 762",
+      "levels": 68,
+      "magazine": 30,
+      "reserve": 90,
+      "rpm": 600,
+      "rateLabel": "600 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 34.",
+      "apex": {
+        "id": "kastov-arc",
+        "name": "Kastov ARC",
+        "blocks": [
+          "Barrel"
+        ],
+        "descriptionHash": "b34bf7150118c504d6d73e59d1af327ef75630e5afa68bf3843b964d6f4ebd98"
+      }
+    },
+    {
+      "id": "oden",
+      "name": "Oden",
+      "levels": 65,
+      "magazine": 20,
+      "reserve": 60,
+      "rpm": 413,
+      "rateLabel": "413 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Comb",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 39.",
+      "apex": {
+        "id": "oden-sentinel",
+        "name": "Oden Sentinel",
+        "blocks": [
+          "Barrel",
+          "Muzzle"
+        ],
+        "descriptionHash": "d4e6a34b381301bfadc0efbf4b095bd80d85dc59d1b63599d4808aa73805943c"
+      }
+    },
+    {
+      "id": "axion",
+      "name": "Axion",
+      "levels": 69,
+      "magazine": 30,
+      "reserve": 90,
+      "rpm": 705,
+      "rateLabel": "705 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 52.",
+      "apex": {
+        "id": "axion-clearcut",
+        "name": "Axion Clearcut",
+        "blocks": [
+          "Optic",
+          "Laser",
+          "Underbarrel",
+          "Stock",
+          "Rear Grip"
+        ],
+        "descriptionHash": "37198e7ba6941d955365712b33459b7a43039c8fd0a709ab900e59365f9b308b"
+      }
+    },
+    {
+      "id": "cronen-squall",
+      "name": "Cronen Squall",
+      "levels": 67,
+      "magazine": 20,
+      "reserve": 80,
+      "rpm": 673,
+      "rateLabel": "673 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 55.",
+      "apex": {
+        "id": "cronen-maelstrom",
+        "name": "Cronen Maelstrom",
+        "blocks": [
+          "Laser",
+          "Underbarrel"
+        ],
+        "descriptionHash": "07170043cab1d4f32727989bfe71bf6c3f8e761ba09846de25802d8ad4c42a7f"
+      }
+    },
+    {
+      "id": "iso-nightshade",
+      "name": "ISO Nightshade",
+      "levels": 64,
+      "magazine": 30,
+      "reserve": 90,
+      "rpm": 923,
+      "rateLabel": "923 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": {
+        "id": "iso-trace",
+        "name": "ISO Trace",
+        "blocks": [
+          "Optic",
+          "Ammunition"
+        ],
+        "descriptionHash": "f192232c43793234e976d780e41e97e9af7ce9cab7b0b7c6ffd0d59ff09ed9c9"
+      }
+    },
+    {
+      "id": "vel-46",
+      "name": "VEL 46",
+      "levels": 60,
+      "magazine": 40,
+      "reserve": 120,
+      "rpm": 952,
+      "rateLabel": "952 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 13.",
+      "apex": {
+        "id": "vel-46-snap",
+        "name": "VEL 46 Snap",
+        "blocks": [
+          "Stock"
+        ],
+        "descriptionHash": "e424e0d9ec9d0ef54b619f93aea36f308e020bbae9fd8338391e319fb42af1e9"
+      }
+    },
+    {
+      "id": "wz-55-striga",
+      "name": "Wz.55 Striga",
+      "levels": 60,
+      "magazine": 25,
+      "reserve": 75,
+      "rpm": 651,
+      "rateLabel": "651 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 21.",
+      "apex": {
+        "id": "wz-55-striga-rampage",
+        "name": "WZ.55 Striga Rampage",
+        "blocks": [
+          "Optic",
+          "Stock",
+          "Underbarrel"
+        ],
+        "descriptionHash": "3bf61cd97bd0f601738d27e95426f7ff590960590def9673835e0098a90a7b45"
+      }
+    },
+    {
+      "id": "ppsh-41",
+      "name": "PPSh-41",
+      "levels": 62,
+      "magazine": 71,
+      "reserve": 71,
+      "rpm": 1110,
+      "rateLabel": "1110 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Stock",
+        "Laser",
+        "Fire Mods"
+      ],
+      "unlock": "Unlocked at Player Level 27.",
+      "apex": {
+        "id": "ppsh-41-ember",
+        "name": "PPSh-41 Ember",
+        "blocks": [
+          "Barrel",
+          "Underbarrel",
+          "Magazine"
+        ],
+        "descriptionHash": "f8ede223af7b074ac394910ec2d729fb29de10f8d6c71e8a55201ad94ed73932"
+      }
+    },
+    {
+      "id": "x-58-nyx",
+      "name": "X-58 Nyx",
+      "levels": 53,
+      "magazine": 40,
+      "reserve": 120,
+      "rpm": 800,
+      "rateLabel": "800 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 34.",
+      "apex": {
+        "id": "x-58-void",
+        "name": "X-58 Void",
+        "blocks": [
+          "Barrel",
+          "Ammunition"
+        ],
+        "descriptionHash": "08320c53b9809b31f981142279ca782cad54dbd16a32b5481ec4d09530fd1fc1"
+      }
+    },
+    {
+      "id": "rezi-12",
+      "name": "Rezi 12",
+      "levels": 60,
+      "magazine": 6,
+      "reserve": 24,
+      "rpm": 150,
+      "rateLabel": "150 RPM",
+      "slots": [
+        "Optic",
+        "Bolt",
+        "Muzzle",
+        "Guard",
+        "Barrel",
+        "Underbarrel",
+        "Rear Grip",
+        "Comb",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": {
+        "id": "rezi-12-enforcer",
+        "name": "Rezi 12 Enforcer",
+        "blocks": [],
+        "descriptionHash": "01f3b704f6a0a52a792e8fb7cf0819879104f65feb3fac6dc3c902a11b4edc7e"
+      }
+    },
+    {
+      "id": "warlord",
+      "name": "Warlord",
+      "levels": 60,
+      "magazine": 14,
+      "reserve": 42,
+      "rpm": 105,
+      "rateLabel": "105 RPM",
+      "slots": [
+        "Optic",
+        "Bolt",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 32.",
+      "apex": {
+        "id": "warlord-lumen",
+        "name": "Warlord Lumen",
+        "blocks": [
+          "Optic",
+          "Laser"
+        ],
+        "descriptionHash": "7a1fec5a4bf64f37bb55a3c90ad67cb3d6f3da80f79abc98cc1b504c62e4dba6"
+      }
+    },
+    {
+      "id": "finn-lmg",
+      "name": "FiNN LMG",
+      "levels": 59,
+      "magazine": 100,
+      "reserve": 100,
+      "rpm": 587,
+      "rateLabel": "587 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": {
+        "id": "finn-adverse",
+        "name": "FiNN Adverse",
+        "blocks": [],
+        "descriptionHash": "14ee6482cc834a6d565bf77db4508c92d00b778b14d9f847a9c801b5fd62f8d7"
+      }
+    },
+    {
+      "id": "type-73",
+      "name": "Type 73",
+      "levels": 65,
+      "magazine": 60,
+      "reserve": 60,
+      "rpm": 821,
+      "rateLabel": "821 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 9.",
+      "apex": {
+        "id": "type-73-assault",
+        "name": "Type 73 Assault",
+        "blocks": [
+          "Magazine",
+          "Ammunition"
+        ],
+        "descriptionHash": "12326151a494df6706298b8e0fe578d743721b6310cf1d6e7f7af74098eb7b7d"
+      }
+    },
+    {
+      "id": "apoc-338",
+      "name": "APOC-338",
+      "levels": 56,
+      "magazine": 50,
+      "reserve": 100,
+      "rpm": 554,
+      "rateLabel": "554 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 44.",
+      "apex": {
+        "id": "apoc-338-praetor",
+        "name": "APOC-338 Praetor",
+        "blocks": [
+          "Magazine"
+        ],
+        "descriptionHash": "5d99c7e07e2ccae95f8a004fc1ca2712dc8d5e3f3a757981c8b2e465b1561335"
+      }
+    },
+    {
+      "id": "mar-9",
+      "name": "MAR-9",
+      "levels": 73,
+      "magazine": 20,
+      "reserve": 60,
+      "rpm": 315,
+      "rateLabel": "315 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Trigger Action",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": {
+        "id": "mar-9-auto",
+        "name": "MAR-9 Auto",
+        "blocks": [
+          "Trigger Action"
+        ],
+        "descriptionHash": "14ac128570de3f5353a13c6e707bc3321b21ffbe0e90dfffd05d52c1798d83a5"
+      }
+    },
+    {
+      "id": "oris-8-6",
+      "name": "Oris 8.6",
+      "levels": 70,
+      "magazine": 10,
+      "reserve": 30,
+      "rpm": 89,
+      "rateLabel": "89 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Bolt",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 11.",
+      "apex": {
+        "id": "oris-8-6-razor",
+        "name": "Oris 8.6 Razor",
+        "blocks": [
+          "Underbarrel"
+        ],
+        "descriptionHash": "4583cb023f2bc6bd0f30b44435a80e2332afe22abbec4abf7ae82fb936bb72f1"
+      }
+    },
+    {
+      "id": "mosin-nagant",
+      "name": "Mosin-Nagant",
+      "levels": 69,
+      "magazine": 5,
+      "reserve": 15,
+      "rpm": 44,
+      "rateLabel": "44 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Bolt",
+        "Underbarrel",
+        "Magazine",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 36.",
+      "apex": {
+        "id": "mosin-harpoon",
+        "name": "Mosin Harpoon",
+        "blocks": [
+          "Barrel",
+          "Muzzle"
+        ],
+        "descriptionHash": "474e10b1adb644d0231f57f79756e21bdec6bb1658d6eb45b2f0c4fec56da9a1"
+      }
+    },
+    {
+      "id": "kg-7-vulcan",
+      "name": "KG-7 Vulcan",
+      "levels": 75,
+      "magazine": 10,
+      "reserve": 20,
+      "rpm": 41,
+      "rateLabel": "41 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Bolt",
+        "Underbarrel",
+        "Magazine",
+        "Comb",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": {
+        "id": "kg-7-drillcharge",
+        "name": "KG-7 Drillcharge",
+        "blocks": [],
+        "descriptionHash": "e7ddaf1b60e284d10fff6e19768a1c615c7c7ad2991778ae4212006315d198b2"
+      }
+    },
+    {
+      "id": "astaroth-57",
+      "name": "Astaroth .57",
+      "levels": 54,
+      "magazine": 3,
+      "reserve": 9,
+      "rpm": 34,
+      "rateLabel": "34 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 10.",
+      "apex": {
+        "id": "astaroth-57-infiltrator",
+        "name": "Astaroth .57 Infiltrator",
+        "blocks": [
+          "Optic"
+        ],
+        "descriptionHash": "121bb927faa05fb60c31ad2577354ddf06641d64c9f8998ee3a48257c903983a"
+      }
+    },
+    {
+      "id": "signal-50",
+      "name": "Signal 50",
+      "levels": 74,
+      "magazine": 7,
+      "reserve": 21,
+      "rpm": 111,
+      "rateLabel": "111 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 35.",
+      "apex": {
+        "id": "signal-inferno",
+        "name": "Signal Inferno",
+        "blocks": [
+          "Ammunition"
+        ],
+        "descriptionHash": "227e1ec11f2eca51fb3a9c6c0fbd4cf5b51655a7b14cb4fbfe43c7a3d61fbade"
+      }
+    },
+    {
+      "id": "sang-9mm",
+      "name": "SANG 9mm",
+      "levels": 38,
+      "magazine": 13,
+      "reserve": 39,
+      "rpm": 370,
+      "rateLabel": "370 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Magazine",
+        "Rear Grip",
+        "Trigger Action",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": {
+        "id": "sang-breach",
+        "name": "SANG Breach",
+        "blocks": [
+          "Laser"
+        ],
+        "descriptionHash": "02e96c9dc01b5a5a4d871dfe4785b38b1d1ffe266bf4ac7d7d36886504a386d5"
+      }
+    },
+    {
+      "id": "krait-p68",
+      "name": "Krait P68",
+      "levels": 38,
+      "magazine": 10,
+      "reserve": 40,
+      "rpm": null,
+      "rateLabel": "260 BPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Trigger Action",
+        "Magazine",
+        "Rear Grip",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 7.",
+      "apex": {
+        "id": "krait-p68-commando",
+        "name": "Krait P68 Commando",
+        "blocks": [],
+        "descriptionHash": "a0125c7be82f409cc60a359313b5ecb37734cf37d31cf5a05b208db4cd06d9d5"
+      }
+    },
+    {
+      "id": "50-gs",
+      "name": ".50 GS",
+      "levels": 37,
+      "magazine": 7,
+      "reserve": 21,
+      "rpm": 166,
+      "rateLabel": "166 RPM",
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Trigger Action",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 41.",
+      "apex": {
+        "id": "gs-magna",
+        "name": "GS Magna",
+        "blocks": [
+          "Trigger Action"
+        ],
+        "descriptionHash": "d91b6f487a5aeda9d4fc8e3e71cb9e9bd97de4d759048f8049aded79f19f08b5"
+      }
+    },
+    {
+      "id": "mojave-357",
+      "name": "Mojave .357",
+      "levels": 44,
+      "magazine": 8,
+      "reserve": 32,
+      "rpm": 141,
+      "rateLabel": "141 RPM",
+      "slots": [
+        "Optic",
+        "Cylinder",
+        "Muzzle",
+        "Barrel",
+        "Trigger Action",
+        "Rear Grip",
+        "Laser",
+        "Ammunition"
+      ],
+      "unlock": "Unlocked at Player Level 48.",
+      "apex": {
+        "id": "mojave-lawless",
+        "name": "Mojave Lawless",
+        "blocks": [
+          "Trigger Action"
+        ],
+        "descriptionHash": "8c32598ffcd7a5745c6a6f136e041f81f1ac97b91ca73ff5ddbb09d668ae1376"
+      }
+    },
+    {
+      "id": "pila",
+      "name": "PILA",
+      "levels": 46,
+      "magazine": 1,
+      "reserve": 1,
+      "rpm": 8,
+      "rateLabel": "8 RPM",
+      "slots": [],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": null
+    },
+    {
+      "id": "rpg-8",
+      "name": "RPG-8",
+      "levels": 46,
+      "magazine": 1,
+      "reserve": 1,
+      "rpm": 20,
+      "rateLabel": "20 RPM",
+      "slots": [],
+      "unlock": "Unlocked at Player Level 23.",
+      "apex": null
+    },
+    {
+      "id": "jokr",
+      "name": "JOKR",
+      "levels": 46,
+      "magazine": 1,
+      "reserve": 1,
+      "rpm": 13,
+      "rateLabel": "13 RPM",
+      "slots": [],
+      "unlock": "Unlocked at Player Level 43.",
+      "apex": null
+    },
+    {
+      "id": "pm-40-anvil",
+      "name": "PM-40 Anvil",
+      "levels": 46,
+      "magazine": 3,
+      "reserve": 6,
+      "rpm": 38,
+      "rateLabel": "38 RPM",
+      "slots": [],
+      "unlock": "Unlocked at Player Level 54.",
+      "apex": null
+    },
+    {
+      "id": "fss-carbon-edge-1095",
+      "name": "FSS Carbon Edge 1095",
+      "levels": 46,
+      "magazine": null,
+      "reserve": null,
+      "rpm": null,
+      "rateLabel": null,
+      "slots": [],
+      "unlock": "Unlocked at Player Level 4.",
+      "apex": null
+    }
+  ],
+  "officialDocuments": {
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-intel-modern-warfare-4-launch-xbox-game-pass": "4e16723c9ffe25df60573d0e234609d73e47e3a661f19ae4299df67461be99c0",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-campaign-early-access-live-now": "0d0314e63507759e954f4f9684a5f0c075593f8f52ec6c9d27096d4e9118526c",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-deep-dive-hajin": "add7ef259a36f33986e7c46ce2f64e7636d3a03161deee80fd55c7751ab79b4a",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-how-to-play-forward-operating-base-guide": "bd8772a051cb4e344c2bde5a713759879bb0dbc01c3698c0b133584866be888f",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-live-worldwide-now": "87a631209d4ce82115bf8ece1a56694ae62ac1416c461c05386c0b2701896330",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-maps-modes": "a36b5c5bed7a075059d9ac98f03550cc6a730998ba872907e7ca2a8c6560dab2",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige": "1af56fbcfef96426e4d437c98ef3e8c940713d0c57ffd9ae4173db0c85a02470",
+    "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+  },
+  "documents": [
+    {
+      "url": "https://esports.gg/guides/call-of-duty/all-prestige-rewards-in-modern-warfare-4-how-to-earn-them/",
+      "title": "All Prestige rewards in Modern Warfare 4 & how to earn them",
+      "publishedAt": "2026-10-23",
+      "kind": "discovery",
+      "hash": "1a9c8590cf2f17432fd5cca304ef64ddffeb7c7148d0e06217977ec9a7a2b809"
+    },
+    {
+      "url": "https://esports.gg/guides/call-of-duty/best-mar-9-loadout-in-modern-warfare-4-multiplayer/",
+      "title": "Best MAR-9 loadout in Modern Warfare 4 multiplayer",
+      "publishedAt": "2026-10-23",
+      "kind": "discovery",
+      "hash": "3ba95eef690e636a8e7d9ef7223ccba953ab6c909076e055733a957e556b7a32"
+    },
+    {
+      "url": "https://esports.gg/guides/call-of-duty/best-type-73-loadout-in-modern-warfare-4-multiplayer/",
+      "title": "Best Type 73 loadout in Modern Warfare 4 multiplayer",
+      "publishedAt": "2026-10-23",
+      "kind": "discovery",
+      "hash": "d8c3cb93627c07b3d3531a3b1cadd34c1da35a9472861985297a2d7b9f16ef60"
+    },
+    {
+      "url": "https://esports.gg/guides/call-of-duty/how-to-unlock-the-code-blurple-discord-nitro-skin-in-mw4/",
+      "title": "How to unlock the ‘Code Blurple’ Discord Nitro skin in MW4",
+      "publishedAt": "2026-10-23",
+      "kind": "discovery",
+      "hash": "4fbec0368a4713c39bc53bc0e73c3c9c11c75ebafd2d365c325548017da0fe55"
+    }
+  ]
+}

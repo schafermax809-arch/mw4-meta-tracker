@@ -1,3 +1,4 @@
+import {extractWeaponFacts} from "./weapon-source.mjs";
 import { load } from 'cheerio';
 import robotsParser from 'robots-parser';
 import { hash, slug, CLASSES } from './model.mjs';
@@ -63,7 +64,7 @@ export function parseArticle(html, url) {
     camos: /camo|camouflage|challenge/i.test(text),
     builds: /loadout|gunsmith|build|attachment/i.test(text)
   };
-  return { url, hash: hash(`${title}\n${dateText}\n${text}`), title, publishedAt, kind: new URL(url).pathname.includes('/patchnotes/') ? 'patch' : 'guide', catalog, camoCandidates: distinctCamos, headings: headings.filter(h => /weapon|camo|challenge|attachment|tuning/i.test(h)).slice(0, 30), signals };
+  return { weaponFacts: url.includes("launch-multiplayer-operators-weapons-equipment-create-a-class") ? extractWeaponFacts(html) : [], url, hash: hash(`${title}\n${dateText}\n${text}`), title, publishedAt, kind: new URL(url).pathname.includes('/patchnotes/') ? 'patch' : 'guide', catalog, camoCandidates: distinctCamos, headings: headings.filter(h => /weapon|camo|challenge|attachment|tuning/i.test(h)).slice(0, 30), signals };
 }
 
 export function createFetcher(config, fetchImpl = fetch) {

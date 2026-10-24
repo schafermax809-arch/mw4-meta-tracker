@@ -1,113 +1,74 @@
-# MW4 Intel · automatische Meta-Updates
+# MW4 Intel · Gunsmith, Camo-Tracker und tägliche Quellenprüfung
 
-Statische Website und tägliche GitHub-Actions-Prüfung für **Call of Duty: Modern Warfare 4 (2026), Multiplayer**. Der Auftrag „12. Automatische Meta-Updates“ ist hier als neues, eigenständiges Projekt umgesetzt. Die übrigen Funktionen des umfangreichen Website-Briefings sind nicht vollständig Teil dieses Projekts.
+Statische Website für **Call of Duty: Modern Warfare 4 (2026), Multiplayer**. GitHub Pages, ohne Server und ohne kostenpflichtige APIs.
 
-## Betrieb
+- [Website](https://schafermax809-arch.github.io/mw4-meta-tracker/)
+- [GitHub Actions](https://github.com/schafermax809-arch/mw4-meta-tracker/actions)
+- [Update-Vorschläge](https://github.com/schafermax809-arch/mw4-meta-tracker/pulls)
+- [Recherchierte Datenbasis und Abdeckung jeder Waffe](DATENBASIS.md)
+- [Engine, Datenvertrag, Berechnung und Review-Anleitung](GUNSMITH-ARCHITEKTUR.md)
 
-### Waffenmenü und Gunsmith
+## Was enthalten ist
 
-Die Oberfläche ist als zusammenhängendes Ingame-Menü gestaltet: vertikale Waffenklassen auf Desktop, kompakte Auswahl auf Mobilgeräten, kantige Waffen-Kacheln, orange Auswahl und eine große Waffenansicht. Die sechs Gunsmith-Untermenüs sind **Aufsätze, Meta-Build, Camo-Build, Tarnungen, Herausforderungen und Tracker**. Tierlist, Grind Planner, Quellen, Changelog und Speicherverwaltung verwenden dieselbe Menüstruktur. Es gibt keine separate Dashboard-Oberfläche mehr.
+Das Ingame-Menü integriert Waffenklassen, Suche/Filter, Favoriten, Tierlist, Grind Planner, Meta-/Camo-Builds und Camo-Tracking. Der Gunsmith hat META, COMMUNITY, OPTIMIZER, CAMO-BUILDS, EIGENER BUILD und VERGLEICH; Tarnungen, Herausforderungen und Tracker bleiben direkt erreichbar. Navigation per Hash ohne Seitenreload, Desktop-Tastatur, Touch-Menüs und responsive Ansichten.
 
-Navigation erfolgt ohne Seitenneuladungen per URL-Hash, inklusive Zurück/Vorwärts im Browser. Alte Verweise auf `#weapons`, `#overview`, `#sources` und `#changelog` funktionieren weiterhin. Mit den Pfeiltasten wechselst du in der Waffenbibliothek die Auswahl, Enter öffnet den Gunsmith, F schaltet einen Favoriten, / öffnet die Suche und Escape führt zurück. Im Gunsmith wechseln Q/E die Waffe und 1–6 das Untermenü; die Tab-Leiste unterstützt auch Pfeiltasten, Pos1 und Ende. Eingabefelder und native Dialoge behalten ihre normale Tastaturbedienung. Animationen beachten `prefers-reduced-motion`.
+Alle 33 Launch-Waffen wurden systematisch recherchiert. Die neue Datenbasis enthält 95 offizielle Basiswerte, 28 dokumentierte Apex-Aufsätze, 13 zusätzliche M4-Standardaufsätze (davon vier historische Beta-Referenzen), zwei kleine numerische Apex-Magazinangaben und zwei unterschiedliche redaktionelle M4-Builds. Quellen, Modus, Datum, Patch, Einheiten, Freischaltung und Verifizierungsstatus stehen in JSON und in der UI. Ein Apex ist separat von den fünf Standard-Slots und kann Slots blockieren. Bei ungeklärter Live-Verfügbarkeit bleibt er als Dokumentation sichtbar und nicht auswählbar.
 
-Der Camo-Speicherschlüssel und das Import-/Exportformat bleiben unverändert. Favoriten liegen separat unter `mw4-intel:preferences:v1`, eigene Builds unter `mw4-intel:custom-builds:v1`. Die neue UI migriert oder überschreibt bestehende Zähler nicht. Der Planner berücksichtigt ausschließlich bestätigte, offene Ziele und deren Voraussetzungen. Er behauptet keinen vollständigen Mastery-Fortschritt, wenn Camo-Daten fehlen.
+**Der gesamte Standard-Aufsatzkatalog, sämtliche numerischen Effekte und exakte Schadensprofile konnten nicht mit zulässigen, zugänglichen Quellen verifiziert werden. Es gibt deshalb derzeit für keine Waffe ein zertifiziertes mathematisches Meta-Optimum.** Die Engine ist implementiert und mit getrennten synthetischen Testfällen geprüft; sie gibt bei fehlenden Spieldaten ausdrücklich unbekannt / begrenzt / nicht verfügbar aus. Sie erfindet keine Werte oder Builds. DATENBASIS.md dokumentiert jede Waffe und alle Recherchegrenzen.
 
-Eigene Builds können benannt, gespeichert, bearbeitet, gelöscht, als JSON exportiert/importiert und über einen Link geteilt werden. Ein geteilter Build wird zunächst nur als Entwurf geöffnet; der Link enthält keine Camo-Zähler. Beim Laden älterer Konfigurationen werden entfernte oder inkompatible Aufsätze markiert, ohne die gespeicherte Konfiguration zu löschen. Der Vergleich zeigt Aufsatzunterschiede; fehlende Leistungsdaten bleiben unbekannt.
+## Berechnung und Bedienung
 
-**Grenzen der vorhandenen Spieldaten:** Es sind weiterhin keine verifizierten Aufsatznamen oder Meta-Builds hinterlegt. Die Slot-Typen wurden separat aus dem offiziellen Waffenartikel übernommen (`public/data/presentation.json`). Nicht belegte Slot-Limits bleiben `null`; deshalb darf der Editor keine angeblich gültigen Kombinationen erfinden. Neue Aufsätze werden erst nach Bestätigung von Limit, Kompatibilität und Sonderregeln auswählbar. Ein Basis-Build ohne Aufsätze kann gespeichert werden. Bei einem neuen Patch werden Slot-Regeln, ältere Builds und Werte wieder prüfbedürftig.
+Der Stat-Rechner unterstützt explizite absolute Änderungen, Faktoren, gesetzte Werte, Reihenfolgen, Interaktionen und exakte Konfigurations-Snapshots. Nur vollständige, verifizierte Regeln erzeugen aktuelle Zahlen und absolute/prozentuale Deltas. TTK/STK benötigen Körperzonenschäden, Distanzintervalle, verifizierte Schussfolge und ein bestätigtes Gesundheitsszenario. Nicht modellierte Burst-/Pellet- oder modifizierte Schadensprofile werden abgelehnt.
 
-Die Statistikfunktion nutzt ausschließlich verifizierte Messwerte einer **exakten Aufsatzkombination für den aktuellen Patch**. Sie addiert keine geratenen Prozentwerte. Vorgesehene Daten: `presentation.weapons[weaponId].statistics = { patchRevision, sourceUrls, snapshots: [{ attachments, values: { damage: { value, unit, scaleMax? }, ... } }] }`. `scaleMax` darf nur für eine ebenfalls belegte Skala angegeben werden. Ohne passenden Snapshot bleibt die Anzeige „Nicht verifiziert“.
+Der Optimierer sucht alle gültigen Kombinationen bei überschaubarem Raum, sonst begrenzt per Beam-Suche im Web Worker. Ziele: Meta, Longshot, Headshot, Hipfire, Multikill und eigene Slider-Gewichte. Leere Slots sind erlaubt. Klassengewichte, Bewertungsformel, Suchbudget und Unsicherheiten sind offen dokumentiert. Ein vollständiges Optimum wird nur bei vollständiger Datenabdeckung behauptet. Community vergleicht unabhängige Quellen, trennt alte Patches/Modi und macht Widersprüche sichtbar; Stimmen und Likes ersetzen keine Messungen. Hybrid verlangt tatsächliche Übereinstimmung von berechenbarem Kandidat und aktueller Community-Evidenz.
 
-Three.js, GLTFLoader und OrbitControls werden lokal gebündelt und erst bei einer registrierten, lizenzierten GLB-/GLTF-Datei geladen. Ein Asset benötigt `model`, `license` und `sourceUrl` im zugehörigen `asset`-Eintrag. Mit einem solchen Asset aktiviert die UI Drehung, Zoom, Verschieben, Touch-Gesten und Kamera-Reset. Aktuell sind **keine verifizierten MW4-3D-Modelle oder modularen Aufsatzmodelle vorhanden**. Es wird daher keine 3D-Inspektion oder visuelle Aufsatzänderung vorgetäuscht. Stattdessen gibt es ehrlich bezeichnete 2D-Fotos für drei reale Waffentypen. Für die übrigen Waffen und Camos bleibt die Vorschau als fehlend markiert. Lizenzdetails: `public/ASSET-LICENSES.md` sowie Intel → Bildnachweise.
+Eigene und Community-Builds lassen sich übernehmen, speichern, bearbeiten, vergleichen, importieren/exportieren und per Unicode-sicherem Link teilen. Der Vergleich enthält Basiswaffe, aktuellen Entwurf, gespeicherte Builds und aktuelle Empfehlungen. Verfügbare Zahlen bekommen Vergleichsbalken und Deltas; fehlende Messwerte bleiben unbekannt.
 
-Die Tests unter `test/gunsmith.test.mjs` prüfen Fortschrittsübernahme, Voraussetzungen, Filter, Planner, getrennte Speicherbereiche, Aufsatzlimits, Kompatibilität, Slot-Blockierungen, veraltete Regeln, gespeicherte Builds, Unicode-Links und exakte Statistik-Snapshots. Die bisherigen Update-Tests laufen unverändert weiter.
+Pfeiltasten navigieren Waffen, Enter öffnet den Gunsmith, F setzt Favoriten, / öffnet die Suche, Escape geht zurück. Q/E wechseln Waffen, 1–9 Untermenüs. Tab-Leiste mit Pfeilen, Pos1 und Ende. Formulare behalten ihre normale Tastaturbedienung; Animationen beachten reduced-motion.
 
-- Website: https://schafermax809-arch.github.io/mw4-meta-tracker/
-- Läufe und Fehlerberichte: https://github.com/schafermax809-arch/mw4-meta-tracker/actions
-- Vorgeschlagene Updates: https://github.com/schafermax809-arch/mw4-meta-tracker/pulls
-- Täglich **05:17 UTC**, also **06:17 Uhr im deutschen Winter / 07:17 Uhr im Sommer**. GitHub kann geplante Läufe verzögern. Manuelles Starten: Actions → Daily verified meta review → Run workflow.
-- Das öffentliche Repository und GitHub Pages benötigen keine kostenpflichtige Daten-API. GitHub-Nutzungsgrenzen gelten weiterhin. In öffentlichen Repositories kann GitHub geplante Workflows nach 60 Tagen ohne Repository-Aktivität deaktivieren; dann im Actions-Tab wieder aktivieren.
+## Persönlicher Speicher
 
-## Was tatsächlich automatisch passiert
+Der bestehende Camo-Schlüssel **mw4-intel:camo-progress:v1** und das Importformat bleiben unverändert. Favoriten: mw4-intel:preferences:v1; eigene Builds: mw4-intel:custom-builds:v1. Metadaten- und Gunsmith-Updates greifen niemals auf persönliche Camo-Zähler zu. Fehlerhafte Speicherdateien werden nicht stillschweigend zurückgesetzt. Importe/Resets benötigen eine bewusste Aktion in der UI. Alte Builds bleiben bei neuen Patches erhalten und werden bei Bedarf als prüfbedürftig markiert.
 
-1. Offizielle Patchnotes- und Blog-Indexseiten werden einmal je Lauf abgerufen. Bereits bekannte Kernartikel werden ebenfalls geprüft. Discovery beginnt mit dem Launchmonat Oktober 2026; frühere Beta- und Mobile-Artikel werden ausgeschlossen.
-2. `robots.txt`, HTTPS und die erlaubten Ursprünge werden geprüft. Timeouts, begrenzte Wiederholungen, eine maximale Artikelzahl und ein Größenlimit verhindern unkontrollierte Abrufe. Umleitungen, fehlende Artikelinhalte, unlesbare Quellen und geänderte Index-Layouts brechen den Lauf ab. Es gibt keine Anmeldung und keine undokumentierte private API.
-3. Ein SHA-256 über den redaktionellen Artikelinhalt erkennt auch Änderungen unter derselben URL. Navigation, Skripte und Seitenfuß gehören nicht zum Fingerabdruck.
-4. Explizite Waffenklassen mit unmittelbar folgenden Waffenlisten ergeben **Vorschläge für neue Waffen**. Bestehende Einträge werden dabei niemals durch Textinterpretation überschrieben. Neue benannte Camo-Abschnitte und geänderte Anforderungen werden mit separaten Fingerabdrücken im Prüfbericht als `camoChanges` ausgewiesen. Das sind Prüfhinweise, noch keine automatisch bestätigten Anforderungen. Konflikte bei vorhandenen Waffen stehen unter `catalogConflicts`; konkrete Ziele und Tier-Einstufungen werden nicht geraten.
-5. Nur wenn Quellenrevisionen oder geprüfte Operationen abweichen, entstehen validierte Kandidaten unter `work/candidate/`. Der tägliche Prüflauf schreibt zunächst ausschließlich in diesen temporären Bereich.
-6. Nach Tests und Validierung erzeugt der Workflow einen Commit auf `automation/meta-update` und einen Pull Request. **Erst dein Merge gibt den vorgeschlagenen Datenstand frei.** Es gibt kein Auto-Merge. Ein identischer offener Vorschlag erzeugt keinen weiteren Commit. Weitere Funde aktualisieren einen ausschließlich vom Bot bearbeiteten PR ohne Umschreiben seiner Historie. Ein offener PR mit manuellen Änderungen wird bewahrt; neuere Funde stehen dann im Artefakt des Prüflaufs. Bitte den offenen PR zeitnah bearbeiten.
-7. Ein Merge nach `main` startet die erneute Validierung und veröffentlicht ausschließlich `public/` auf GitHub Pages. Update-Skript, Konfiguration, Tests und Abhängigkeiten landen nicht auf der Website.
+## Automatische Updates
 
-**Bewusste Grenze:** Eine frei dokumentierte offizielle API für MW4-Meta-Ranglisten oder optimale Aufsätze wurde bei der Einrichtung nicht gefunden. Ein Balance-Patch beweist keine Tier-Einstufung. Deshalb erfolgt die Übernahme grundsätzlich über einen Review-PR. Der Startkatalog enthält 33 offiziell belegte Waffen; Meta-Tiers und Builds sind zunächst unbekannt. Für Han 86 sind die acht konkret dokumentierten Military-Camo-Levelziele erfasst. Weitere konkrete Camo-Ziele bleiben bis zur Prüfung unbekannt. Das Projekt behauptet keinen vollständigen, aktuell verifizierten Meta-Datensatz.
+Die GitHub Action läuft täglich **05:17 UTC** (06:17 Uhr Winter / 07:17 Uhr Sommer in Deutschland), auch bei ausgeschaltetem PC. GitHub kann Zeitpläne verzögern. Manuelles Starten über Actions → Daily verified meta review. GitHub kann geplante Workflows in inaktiven öffentlichen Repositories nach 60 Tagen deaktivieren; gegebenenfalls dort wieder aktivieren.
 
-## Einmalige GitHub-Einstellungen
+Offizielle Patchnotes-/Blog-Indexseiten und bekannte Kernartikel werden mit robots.txt, HTTPS-Allowlist, Größenlimit, Rate-Limit, Timeout und begrenzten Wiederholungen geprüft. SHA-256 des redaktionellen Inhalts erkennt auch Revisionen unter derselben URL. Explizit beschriftete neue Waffen-/Basisfakten werden getrennt von qualitativen Hinweisen erfasst. Der erlaubte öffentliche esports.gg-RSS-Feed entdeckt zusätzliche MW4-Quellen. Er ist ein begrenztes aktuelles Fenster, kein vollständiges Archiv.
 
-Falls diese Einstellungen noch nicht aktiviert sind:
+**CODMunity und Reddit werden wegen fehlender Sammlungserlaubnis nicht automatisiert gesammelt.** HTTP-Sperren und undokumentierte private Endpunkte werden nicht umgangen. Die Website behauptet keinen täglichen Reddit-Check. Manuelle Quellen und Zugriffslücken werden im Actions-Bericht sowie in der Datenbasis ausgewiesen. Die Community-Analyse arbeitet mit geprüften strukturierten Empfehlungen, nicht mit unbelegten KI-Zusammenfassungen.
 
-1. **Settings → Pages → Source: GitHub Actions.**
-2. **Settings → Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests** aktivieren. Der Workflow nutzt ausschließlich das automatische `GITHUB_TOKEN` mit expliziten Repository-Berechtigungen; es wird kein persönliches Token benötigt. Der Bot genehmigt und merged keine PRs.
-3. Die beiden Workflows müssen auf dem Standardbranch `main` liegen. „Daily verified meta review“ einmal manuell ausführen.
-4. Von `GITHUB_TOKEN` erzeugte PRs können eine gesonderte Freigabe ihrer PR-Workflows benötigen. Die Tests werden bereits im täglichen Workflow ausgeführt, bevor ein Commit entsteht; die Pages-Pipeline prüft beim Merge erneut.
+Änderungen werden zunächst in work/candidate vorbereitet und validiert. Der feste Branch automation/meta-update bekommt bei tatsächlichen Änderungen einen Commit und einen Review-PR. Erst ein Merge veröffentlicht den Datensatz. Identische offene Vorschläge erzeugen keinen weiteren Commit. Manuelle Änderungen am offenen Bot-Branch werden geschützt. Fehler lassen den veröffentlichten Stand unverändert; Reports und Kandidaten bleiben 30 Tage als Actions-Artefakt verfügbar. Der Workflow hat ausdrücklich contents:write und pull-requests:write; GitHub-Einstellung zum Erstellen von PRs muss erlaubt bleiben.
 
-Optional den Branchschutz für `main` mit manueller PR-Freigabe und erfolgreichen Checks konfigurieren. Das ist keine Voraussetzung für den Update-Lauf, verhindert aber versehentliche Direktänderungen durch andere Maintainer.
+Der Kandidat enthält meta.json, gunsmith.json, research.json, calculated.json und die beiden Review-Dateien. Der Workflow prüft Daten, Berechnungsfingerabdruck, Tests und Build vor dem Commit. Neue Patchnotes stempeln alte Messwerte nicht automatisch als aktuell. Geprüfte Änderungen erzeugen vollständige Vorher-/Nachher-Historie und neue Optimierer-Ergebnisse.
 
-## Quellen und Nutzungsregeln
+## Dateien und Freigabe
 
-Konfiguration: [`config/sources.json`](config/sources.json). Bei der Einrichtung am 24.10.2026 wurden die [öffentlichen Patchnotes](https://www.callofduty.com/patchnotes), der [offizielle Waffenartikel](https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class), der [offizielle Fortschrittsartikel](https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige) und die [Nutzungsbedingungen](https://www.activision.com/legal/terms-of-use) geprüft. Die Quelle ist als redaktionelle Informationsquelle eingebunden, nicht als lizenzierte Daten-API. `robots.txt` erlaubte zum Einrichtungszeitpunkt öffentliche Abrufe und wird bei jedem Lauf erneut ausgewertet. Eine robots-Erlaubnis ersetzt keine Lizenz.
+public/data/meta.json bleibt der strikte Kernkatalog mit Camo-Definitionen, Tiers und klassischen verifizierten Builds. public/data/gunsmith.json ist der separate recherchierte Waffen-/Aufsatzdatensatz; research.json enthält Discovery-Baselines, calculated.json die an Datenbankhash/Patch gebundenen Ergebnisse. presentation.json bleibt das Asset-Register. Persönliche Werte befinden sich in keiner dieser Dateien.
 
-Gespeichert werden sachliche Waffenbezeichnungen, konkret geprüfte Anforderungen, Links, Titel und Hashes. Keine vollständigen Artikel, fremden Bilder oder Videos. Die niedrige Abrufrate, Quellen-Whitelist und Fehlerbehandlung sind bewusst konservativ. Vor zusätzlichen Quellen deren Nutzungsbedingungen und Weiterverwendungsrechte prüfen, die Whitelist ausdrücklich erweitern und einen eigenen Parser samt Tests hinzufügen. Private Spielerdaten-Endpunkte und kostenpflichtige Dienste sind nicht Bestandteil dieses Systems. Es werden keine Drittanbieter-Websites ohne geprüfte Erlaubnis gescrapt.
+Kernkatalog-Änderungen: reviews/approved.json mit baseStateHash, documents und operations. Erlaubte Operationen sind upsert-weapon und upsert-attachment mit vollständigen Datensätzen und abgerufenen Quellenbelegen. Keine Löschung, kein Fortschritt. Ausführen mit npm run apply-review -- --input reviews/approved.json; anschließend npm run recompute, Tests, Validierung und Build.
 
-## Datenmodell und Freigabe eigener Meta-Builds
+Gunsmith-Änderungen: reviews/gunsmith-approved.json mit baseHash, patchRevision sowie vollständigen Quellen-/Waffen-/Aufsatz-/Community-Datensätzen. npm run apply-gunsmith-review -- --input reviews/gunsmith-approved.json schreibt nach Validierung Historie und neue Ergebnisse. Genaue Felder, Basishash-Befehl und Berechnungsregeln: GUNSMITH-ARCHITEKTUR.md. Alle Freigaben im Review-Branch prüfen und erst danach mergen.
 
-`public/data/meta.json` ist die einzige veröffentlichte Dateneinheit. Sie enthält Waffen, Aufsätze, Camo-Definitionen, vollständige Änderungsbelege sowie Metadaten. Der strikte Validator verwirft unbekannte Felder einschließlich persönlicher Fortschrittsfelder, doppelte IDs, ungültige Ziele, zyklische Camo-Voraussetzungen, unbekannte Aufsätze und inkompatible Slot-/Waffenzuordnungen.
-
-Ein Tier besitzt eine `tierRevision`, ein Build eine `patchRevision`. Bei einem neuen Patch bleiben alte Empfehlungen erhalten, werden in der Website aber als erneut prüfbedürftig dargestellt und nicht als aktuelle Meta gezählt. Die Revision muss nach inhaltlicher Prüfung gezielt aktualisiert werden. Modusangaben verhindern, dass DMZ- oder Warzone-Empfehlungen versehentlich als Multiplayer-Builds erscheinen.
-
-Für manuelle geprüfte Änderungen auf einem Review-Branch:
-
-1. `reviews/approved.json` anlegen. Das Format ist `{ "baseStateHash": "SHA256 des aktuellen kanonischen Datensatzes", "documents": [...], "operations": [...] }`.
-2. Den Basishash ausgeben: `node --input-type=module -e "import {readJson} from './scripts/lib/io.mjs'; import {hash} from './scripts/lib/model.mjs'; console.log(hash(await readJson('public/data/meta.json')))"`.
-3. `documents` enthält die geprüften Dokumente mit `url`, `hash`, `title`, `publishedAt` (`YYYY-MM-DD` oder `null`), `kind` (`patch` oder `guide`). Verwende die echten Dokument-Fingerabdrücke aus `meta.json` bzw. `reviews/pending.json`.
-4. Eine Operation hat `{ "type": "upsert-weapon", "value": <vollständiger Waffeneintrag> }` oder `upsert-attachment`. Quellen-URLs des Eintrags müssen in `documents` vorkommen. Waffeneinträge enthalten `id`, `name`, `weaponClass`, `tier`, `tierRevision`, `builds`, `camos`, `sourceUrls`. Builds enthalten `id`, `mode`, `kind`, `attachments`, `notes`, `sourceUrls`, `patchRevision`; jede Aufsatzreferenz enthält `slot` und `attachmentId`. Camos enthalten `id`, `name`, `mode`, `requirement`, `target`, `unit`, `dependsOn`, `sourceUrls`.
-5. `npm run apply-review -- --input reviews/approved.json`, dann `npm test && npm run validate && npm run build`. Diff prüfen, committen und per PR freigeben.
-
-Ein vollständiges synthetisches Beispiel mit Aufsatz- und Camo-Zuordnungen steht im Test `test/update.test.mjs`; diese Testdaten werden niemals veröffentlicht. Operationen sind ausschließlich ein Werkzeug für Maintainer. Sie werden nicht von einer Website oder einer ungeprüften Fremd-API übernommen. Es gibt keine Löschoperation; stabile Waffen- und Camo-IDs bleiben erhalten.
-
-## Zeitstempel, Patchstand und Verlauf
-
-- `lastSuccessfulUpdate`: Zeitpunkt des erfolgreich vorbereiteten, nach Merge übernommenen Datenstands. Ein unveränderter oder fehlgeschlagener Prüflauf verändert ihn nicht. Der Prüfzeitpunkt jedes Laufs steht separat im Actions-Artefakt `meta-update-report`.
-- `patchVersion`: Titel und Datum der berücksichtigten offiziellen Patchnotes. Wenn keine offizielle nummerierte Spielversion genannt wird, erfindet das System keine Buildnummer.
-- `patchRevision`: SHA-256 des redaktionellen Quellenstands. Auch ein Hotfix unter derselben URL wird dadurch erkannt.
-- `lastChangedAt` / `lastChangedWeaponIds`: letztes tatsächliches Waffenupdate. Reine Quellenprüfungen ersetzen diese Liste nicht.
-- `changelog`: alle übernommenen Revisionen; pro geänderter Waffe Felder und vollständiger Vorher-/Nachher-Eintrag. Der erste Eintrag ist ausdrücklich als Ersteinrichtung erkennbar.
-
-## Camo-Fortschritt und Ausfallsicherheit
-
-Persönlicher Fortschritt liegt ausschließlich unter `localStorage['mw4-intel:camo-progress:v1']`. Die Update-Skripte haben keinen Browserzugriff und veröffentlichen keine persönlichen Werte. Änderungen an Herausforderungen verändern gespeicherte Zähler niemals; auch IDs, die nicht mehr angezeigt werden, bleiben im Export erhalten. Die Anzeige begrenzt lediglich einen Balken auf 100 %. Fortschritt lässt sich im Waffendialog exportieren und nach ausdrücklicher Bestätigung importieren. Ungültige Imports und Speicherfehler überschreiben keine bisherigen Werte. Bei blockiertem oder beschädigtem Speicher wird nicht automatisch neu initialisiert.
-
-Alle Kandidaten werden vollständig im Speicher geprüft und erst dann atomar als eine JSON-Datei in einen temporären Pfad geschrieben. Netzwerkfehler und Datenfehler beenden den Lauf mit Fehlerstatus und behalten den bisherigen Stand. Commit und Push erfolgen erst nach Validierung, Tests und statischem Build. Parallel laufende Updates werden durch eine Concurrency-Gruppe serialisiert. Ein fehlgeschlagenes Deployment lässt die letzte funktionierende Pages-Version bestehen. Frühere veröffentlichte Daten sind zusätzlich über Git und den Changelog wiederherstellbar.
-
-Rollback: einen eigenen Branch vom aktuellen `main` erstellen, den fehlerhaften Daten-Commit mit `git revert <sha>` rückgängig machen und als PR mergen. Dabei bleiben spätere Änderungen nachvollziehbar. Das ändert keinen lokalen Camo-Fortschritt.
-
-## Lokal entwickeln
+## Lokal starten und prüfen
 
 Node.js 24 oder neuer:
 
-```sh
+~~~sh
 npm ci --ignore-scripts
 npm test
+npm run recompute
 npm run validate
-npm run update       # prüft Quellen; schreibt ausschließlich work/, keine Veröffentlichung
-npm run build        # statische Website in dist/
-npm start            # http://127.0.0.1:4173
-```
+npm run build
+npm start
+~~~
 
-Die Website arbeitet mit relativen URLs, funktioniert daher auch unter dem GitHub-Pages-Unterpfad. Keine Serverfunktionen oder Laufzeit-Secrets. Google Fonts ist optional; bei fehlender Verbindung greifen lokale Systemschriften. Nur `dist/` wird veröffentlicht.
+Lokale Website: http://127.0.0.1:4173. Der statische Build liegt in dist/. GitHub Pages veröffentlicht über .github/workflows/pages.yml. Keine Secrets oder kostenpflichtigen Dienste erforderlich.
 
-## Referenzen zur GitHub-Konfiguration
+## Bilder und 3D
 
-- [Geplante Workflows und deren Grenzen](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
-- [Workflows mit GITHUB_TOKEN auslösen](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow)
-- [GitHub Pages mit eigenem Workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages-to-deploy-your-site)
+Three.js/GLTFLoader/OrbitControls werden lokal gebündelt und nur bei registriertem lizenziertem Modell geladen. Aktuell gibt es keine verifizierten MW4-3D- oder Camo-Assets. Drei unveränderte, lizenzierte Fotos realer Waffentypen sind ausdrücklich als Referenzfoto gekennzeichnet; fehlende Spielrender und Camo-Vorschauen werden nicht nachgebildet. Keine vorgetäuschte visuelle Aufsatzänderung. Nachweise: public/ASSET-LICENSES.md und Intel → Bildnachweise.
 
-Alle verwendeten Actions sind auf überprüfte Commit-SHAs festgelegt; Updates daran bewusst prüfen.
+## Zeitstempel
+
+lastSuccessfulUpdate im Kernkatalog bezeichnet den letzten übernommenen geänderten Quellenstand; ein unveränderter Lauf verändert ihn nicht. checkedAt jedes Actions-Laufs steht im Run-Report. patchRevision ist ein SHA-256-Fingerabdruck der offiziellen Patchnotes, keine offizielle numerische Buildversion. Gunsmith führt zusätzlich reviewedAt, Quellen-/Wertepatches und history mit betroffenen Waffen und Vorher-/Nachher-Daten.

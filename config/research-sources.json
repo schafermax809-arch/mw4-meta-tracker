@@ -1,0 +1,15 @@
+{
+  "allowedOrigins": [
+    "https://esports.gg"
+  ],
+  "feeds": [
+    "https://esports.gg/feed/"
+  ],
+  "watch": [],
+  "timeoutMs": 20000,
+  "maxBytes": 3000000,
+  "requestDelayMs": 1500,
+  "termsUrl": "https://esports.gg/terms-of-use/",
+  "reviewedOn": "2026-10-24",
+  "policy": "Personal non-commercial tracker. Once-daily public RSS metadata and article fingerprints only; no article republication, no images. robots.txt checked each run. Recommendations always require review. Reddit and CODMunity are not scraped. RSS is a recent window, not an exhaustive archive. Known article watch is disabled because the public request returned HTTP 403; no bypass. Only the working public feed is polled."
+}

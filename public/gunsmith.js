@@ -1,3 +1,4 @@
+import { calculateStats } from "./engine/calculator.js";
 export const BUILDS_KEY = "mw4-intel:custom-builds:v1";
 const validId = (value) =>
   typeof value === "string" && /^[a-z0-9-]{1,100}$/.test(value);
@@ -106,7 +107,7 @@ export function buildIssues(
     issues.push("Das Aufsatzlimit dieser Waffe ist noch nicht verifiziert.");
   if (
     Number.isInteger(rules?.maxAttachments) &&
-    refs.length > rules.maxAttachments
+    refs.filter((r) => r.slot !== "Apex").length > rules.maxAttachments
   )
     issues.push(`Maximal ${rules.maxAttachments} Aufsätze zulässig.`);
   const slots = new Set();
@@ -119,8 +120,16 @@ export function buildIssues(
       issues.push(
         `${ref.attachmentId}: entfernt, unbekannt oder nicht kompatibel.`,
       );
-    if (rules?.slots && !rules.slots.includes(ref.slot))
+    if (
+      rules?.slots &&
+      !rules.slots.includes(ref.slot) &&
+      !(ref.slot === "Apex" && rules.apexSeparate)
+    )
       issues.push(`${ref.slot}: nicht für diese Waffe freigegeben.`);
+    if (a && "availability" in a && a.availability !== true)
+      issues.push(`${a.name}: aktuelle Verfügbarkeit nicht bestätigt.`);
+    if (a && "patchRevision" in a && a.patchRevision !== patchRevision)
+      issues.push(`${a.name}: Patchstand nicht aktuell.`);
     if (a?.blocks?.some((slot) => refs.some((other) => other.slot === slot)))
       issues.push(`${a.name}: blockierter Slot ist belegt.`);
     if (
@@ -153,6 +162,8 @@ export function setAttachment(
 
 // Values are shown only for an exact, reviewed combination. No guessed multipliers.
 export function verifiedStats(weaponId, refs, catalog, patchRevision) {
+  if (Array.isArray(catalog?.weapons))
+    return calculateStats(catalog, weaponId, refs, patchRevision).values;
   const record = catalog?.weapons?.[weaponId]?.statistics;
   if (
     !record ||

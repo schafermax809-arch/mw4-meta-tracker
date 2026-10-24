@@ -1002,6 +1002,238 @@ p {
   padding: 10px 5px;
   position: relative;
 }
+.real-stat-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px;
+  padding: 7px 0;
+  border-bottom: 1px solid #56615044;
+  font-size: 12px;
+}
+.real-stat-line span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.real-stat-line strong {
+  max-width: 70px;
+}
+.detail-stage {
+  height: 360px;
+}
+.stage-attachment-picker {
+  display: block;
+  width: 100%;
+  font-size: 11px;
+  background: #16201b;
+  border: 1px solid #657153;
+  color: #d1d8c3;
+  padding: 10px 5px;
+  margin: 16px 0;
+}
+.recommendation-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.recommendation-strip > div {
+  border: 1px solid #485541;
+  border-top: 2px solid var(--orange);
+  padding: 18px;
+  background: #131e17;
+}
+.recommendation-strip p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #aab5a1;
+  min-height: 60px;
+}
+.real-stat-line strong {
+  font-variant-numeric: tabular-nums;
+  color: #e1e4d6;
+  font-weight: 500;
+}
+.real-stat-line small {
+  grid-column: 1/-1;
+  color: #929d8e;
+}
+.optimizer-heading {
+  border-left: 3px solid var(--orange);
+  padding: 8px 15px;
+  margin: 18px 0;
+}
+.optimizer-heading h3 {
+  font:
+    500 30px "Barlow Condensed",
+    sans-serif;
+  margin: 5px 0;
+}
+.optimizer-config,
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 16px 0;
+}
+.optimizer-config select {
+  background: #19221e;
+  color: #e5e7db;
+  border: 1px solid #626b58;
+  padding: 12px;
+  max-width: 100%;
+}
+.weight-sliders {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px 28px;
+  border-block: 1px solid #455044;
+  padding: 18px 0;
+}
+.weight-row {
+  display: grid;
+  grid-template-columns: minmax(80px, 1fr) minmax(50px, 1fr) 28px;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+.weight-row input {
+  accent-color: var(--orange);
+  width: 100%;
+  min-height: 30px;
+}
+.weight-row output {
+  font-variant-numeric: tabular-nums;
+  color: var(--orange);
+  text-align: right;
+}
+.stat-table-wrap {
+  overflow: auto;
+  max-width: 100%;
+  margin-top: 20px;
+}
+.stat-table-wrap th {
+  text-align: left;
+}
+.stat-table-wrap td {
+  font-variant-numeric: tabular-nums;
+}
+.stat-improved td,
+.positive {
+  color: #9dc68c;
+}
+.stat-worse td,
+.negative {
+  color: #e3ac85;
+}
+.data-coverage {
+  border: 1px solid #475040;
+  background: #11191488;
+  padding: 14px;
+  margin-top: 22px;
+}
+.data-coverage summary,
+details summary {
+  cursor: pointer;
+  font:
+    500 15px "Barlow Condensed",
+    sans-serif;
+  letter-spacing: 1px;
+  padding: 8px 0;
+}
+.data-coverage p,
+details p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #b4bca9;
+}
+.numeric-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.comparison-metric {
+  padding: 12px;
+  border: 1px solid #43503d;
+  background: #111a14;
+}
+.comparison-metric strong,
+.comparison-metric span {
+  display: block;
+  margin: 5px 0;
+  font-size: 12px;
+}
+.comparison-track {
+  height: 4px;
+  margin: 7px 0;
+  background: #394335;
+}
+.comparison-track i {
+  display: block;
+  height: 100%;
+  background: #929d7c;
+}
+.comparison-track + .comparison-track i {
+  background: var(--orange);
+}
+.optimizer-result {
+  margin: 25px 0;
+}
+.scenario-line {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+.scenario-line input,
+.ttk-scenario select {
+  max-width: 160px;
+  background: #172019;
+  color: #e4e7db;
+  border: 1px solid #59634d;
+  padding: 10px;
+}
+.historic-diff {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  max-height: 450px;
+  overflow: auto;
+}
+@media (max-width: 600px) {
+  .detail-stage:before {
+    left: 0;
+    right: 0;
+  }
+}
+.recurring-list {
+  border-left: 2px solid #566448;
+  padding: 5px 15px;
+}
+@media (max-width: 900px) {
+  .weight-sliders,
+  .numeric-comparison {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .weight-sliders,
+  .numeric-comparison,
+  .recommendation-strip {
+    grid-template-columns: 1fr;
+  }
+  .weight-row {
+    grid-template-columns: 130px minmax(50px, 1fr) 30px;
+  }
+  .optimizer-config select {
+    width: 100%;
+  }
+  .action-row .button {
+    flex: 1 1 140px;
+  }
+}
 .detail-tab:hover {
   background: #2c3a30c4;
   color: #f1f3e8;

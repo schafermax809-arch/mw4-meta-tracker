@@ -1,0 +1,4363 @@
+{
+  "schemaVersion": 1,
+  "gameId": "cod-mw4-2026",
+  "mode": "multiplayer",
+  "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+  "reviewedAt": "2026-10-24T20:40:00.000Z",
+  "sources": [
+    {
+      "id": "official-weapons",
+      "url": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+      "title": "Offizielle Launch-Waffenübersicht",
+      "kind": "official",
+      "publishedAt": "2026-10-19",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "allowed",
+      "termsUrl": "https://www.activision.com/legal/terms-of-use",
+      "note": "Explizite Basiswerte und Apex-Namen. Keine vollständige Standard-Aufsatzliste.",
+      "independenceGroup": "activision"
+    },
+    {
+      "id": "official-patch",
+      "url": "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes",
+      "title": "Launch-Patchnotes, geprüft einschließlich 23. Oktober",
+      "kind": "official",
+      "publishedAt": "2026-10-23",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "allowed",
+      "termsUrl": "https://www.activision.com/legal/terms-of-use",
+      "note": "MP und DMZ separat getunt; nicht näher benannte saisonale Beta-Aufsätze derzeit zurückgehalten.",
+      "independenceGroup": "activision"
+    },
+    {
+      "id": "iw-interview",
+      "url": "https://www.windowscentral.com/gaming/call-of-duty/infinity-ward-multiplayer-team-interview-call-of-duty-modern-warfare-4",
+      "title": "Entwicklerinterview: fünf Standard-Aufsätze",
+      "kind": "reference",
+      "publishedAt": "2026-05-28",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Primäres Entwicklerinterview; fünf Standard-Slots, Apex laut offizieller Launch-Quelle separat.",
+      "independenceGroup": "iw-interview"
+    },
+    {
+      "id": "esports-m4",
+      "url": "https://esports.gg/guides/call-of-duty/best-m4-loadout-in-modern-warfare-4-multiplayer/",
+      "title": "M4 Multiplayer-Loadout",
+      "kind": "editorial",
+      "publishedAt": "2026-10-21",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Redaktionelle Empfehlung, keine dokumentierten isolierten Stat-Messungen.",
+      "independenceGroup": "esports-gg"
+    },
+    {
+      "id": "insider-m4",
+      "url": "https://insider-gaming.com/best-m4-loadout-modern-warfare-4/",
+      "title": "M4 Launch-Loadout",
+      "kind": "editorial",
+      "publishedAt": "2026-10-23",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Redaktionelle Empfehlung. Nur Aufsatznamen/Slots übernommen; veraltete Perk-Zuordnungen nicht übernommen.",
+      "independenceGroup": "insider-gaming"
+    },
+    {
+      "id": "dot-beta",
+      "url": "https://dotesports.com/call-of-duty/guides/best-m4-loadout-mw4",
+      "title": "M4 Beta-Loadout",
+      "kind": "editorial",
+      "publishedAt": "2026-08-22",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Beta: für Launch-Patch ausgeschlossen.",
+      "independenceGroup": "gamurs"
+    },
+    {
+      "id": "codmunity",
+      "url": "https://codmunity.gg/weapon/mw4/m4?game=mw4",
+      "title": "CODMunity Waffen-/Attachment-Tabellen",
+      "kind": "reference",
+      "publishedAt": null,
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": "https://codmunity.gg/legal/codmunity/terms",
+      "note": "Kein Import: Nutzungsbedingungen untersagen automatisierte Datensammlung. Tabellen bezeichnen Attachment-Stats zudem als Warzone-Werte; keine Übernahme als MP-Werte.",
+      "independenceGroup": "codmunity"
+    },
+    {
+      "id": "warzoneloadout",
+      "url": "https://warzoneloadout.games/mw4",
+      "title": "WarzoneLoadout MW4 Multiplayer",
+      "kind": "reference",
+      "publishedAt": "2026-10-23",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Referenz zur Quellenprüfung; CODMunity-Verbund ist keine zweite unabhängige Bestätigung.",
+      "independenceGroup": "codmunity"
+    },
+    {
+      "id": "wzranked",
+      "url": "https://wzranked.com/",
+      "title": "wzranked / ggranked",
+      "kind": "reference",
+      "publishedAt": null,
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": "https://wzranked.com/legal/terms",
+      "note": "MW4-Verweis führt zu ggranked. Kein dokumentierter, freigegebener MW4-Stat-API-Vertrag gefunden.",
+      "independenceGroup": "onetwodata"
+    },
+    {
+      "id": "tgd",
+      "url": "https://www.truegamedata.com/",
+      "title": "TrueGameData",
+      "kind": "reference",
+      "publishedAt": null,
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "unavailable",
+      "termsUrl": null,
+      "note": "Öffentlich abgerufene Startseite liefert keine auslesbare MW4-Datenbank; kein privater Endpoint verwendet.",
+      "independenceGroup": "tgd"
+    },
+    {
+      "id": "reddit-mw",
+      "url": "https://www.reddit.com/r/ModernWarfare/",
+      "title": "Reddit r/ModernWarfare",
+      "kind": "community",
+      "publishedAt": null,
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Abruf nicht verfügbar; Subreddit-Titel allein ist kein Nachweis für MW4. Keine API-Freigabe für automatisierte Analyse.",
+      "independenceGroup": "reddit-mw"
+    },
+    {
+      "id": "reddit-comp",
+      "url": "https://www.reddit.com/r/CoDCompetitive/comments/1vusy98/mw4_first_impressions/",
+      "title": "MW4 Beta: erste Eindrücke",
+      "kind": "community",
+      "publishedAt": "2026-08-21",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": "https://support.reddithelp.com/hc/en-us/articles/360043512931-Don-t-break-the-site",
+      "note": "Gefundene Diskussion betrifft Beta; keine Launch-Messwerte und kein reproduzierbarer Build-Test. Automatische Sammlung ohne autorisierte Vereinbarung nicht erlaubt; RSS-Unterstützung wird beendet.",
+      "independenceGroup": "reddit-comp"
+    },
+    {
+      "id": "reddit-cod",
+      "url": "https://www.reddit.com/r/CallOfDuty/",
+      "title": "Reddit r/CallOfDuty",
+      "kind": "community",
+      "publishedAt": null,
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Diskussionen geprüft; kein belastbarer aktueller Attachment-Messdatensatz. Upvotes sind keine Evidenz.",
+      "independenceGroup": "reddit-cod"
+    },
+    {
+      "id": "youtube",
+      "url": "https://www.youtube.com/",
+      "title": "YouTube / systematische Waffentests",
+      "kind": "test",
+      "publishedAt": null,
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "unavailable",
+      "termsUrl": null,
+      "note": "Suche gedrosselt; kein zugänglicher, reproduzierbarer Launch-Messdatensatz verifiziert. Keine Videos als getestet ausgegeben.",
+      "independenceGroup": "youtube"
+    },
+    {
+      "id": "dexerto",
+      "url": "https://www.dexerto.com/wikis/modern-warfare-4/weapon-tier-list/",
+      "title": "MW4 Launch-Tierlist",
+      "kind": "editorial",
+      "publishedAt": "2026-10-23",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "automation": "manual-only",
+      "termsUrl": null,
+      "note": "Redaktionelle Tier-Einstufung, keine mathematische Optimierung. Nicht als objektive Meta in den Kernkatalog übernommen.",
+      "independenceGroup": "dexerto"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "han-86",
+      "name": "Han 86",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 740,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 30,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 90,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "m4",
+      "name": "M4",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 810,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 30,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 90,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 14.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "hyeon-burst",
+      "name": "Hyeon Burst",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 375,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 30,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 90,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 21.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "patriot-xmr",
+      "name": "Patriot XMR",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 645,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 25,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 100,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 27.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "kastov-762",
+      "name": "Kastov 762",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 600,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 30,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 90,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 34.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "oden",
+      "name": "Oden",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 413,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 20,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 60,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Comb",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 39.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "axion",
+      "name": "Axion",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 705,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 30,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 90,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 52.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "cronen-squall",
+      "name": "Cronen Squall",
+      "weaponClass": "assault-rifle",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 673,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 20,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 80,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 55.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "iso-nightshade",
+      "name": "ISO Nightshade",
+      "weaponClass": "smg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 923,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 30,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 90,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "vel-46",
+      "name": "VEL 46",
+      "weaponClass": "smg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 952,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 40,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 120,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 13.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "wz-55-striga",
+      "name": "Wz.55 Striga",
+      "weaponClass": "smg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 651,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 25,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 75,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 21.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "ppsh-41",
+      "name": "PPSh-41",
+      "weaponClass": "smg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 1110,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 71,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 71,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Stock",
+          "Laser",
+          "Fire Mods"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 27.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "x-58-nyx",
+      "name": "X-58 Nyx",
+      "weaponClass": "smg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 800,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 40,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 120,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 34.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "rezi-12",
+      "name": "Rezi 12",
+      "weaponClass": "shotgun",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 150,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 6,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 24,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Bolt",
+          "Muzzle",
+          "Guard",
+          "Barrel",
+          "Underbarrel",
+          "Rear Grip",
+          "Comb",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "warlord",
+      "name": "Warlord",
+      "weaponClass": "shotgun",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 105,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 14,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 42,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Bolt",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 32.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "finn-lmg",
+      "name": "Finn LMG",
+      "weaponClass": "lmg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 587,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 100,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 100,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "type-73",
+      "name": "Type 73",
+      "weaponClass": "lmg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 821,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 60,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 60,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 9.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "apoc-338",
+      "name": "APOC-338",
+      "weaponClass": "lmg",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 554,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 50,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 100,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 44.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "mar-9",
+      "name": "MAR-9",
+      "weaponClass": "marksman",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 315,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 20,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 60,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Trigger Action",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "oris-8-6",
+      "name": "Oris 8.6",
+      "weaponClass": "marksman",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 89,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 10,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 30,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Bolt",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 11.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "mosin-nagant",
+      "name": "Mosin-Nagant",
+      "weaponClass": "marksman",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 44,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 5,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 15,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Bolt",
+          "Underbarrel",
+          "Magazine",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 36.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "kg-7-vulcan",
+      "name": "KG-7 Vulcan",
+      "weaponClass": "sniper",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 41,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 10,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 20,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Bolt",
+          "Underbarrel",
+          "Magazine",
+          "Comb",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "astaroth-57",
+      "name": "Astaroth .57",
+      "weaponClass": "sniper",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 34,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 3,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 9,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 10.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "signal-50",
+      "name": "Signal 50",
+      "weaponClass": "sniper",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 111,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 7,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 21,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 35.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "sang-9mm",
+      "name": "Sang 9mm",
+      "weaponClass": "pistol",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 370,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 13,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 39,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Magazine",
+          "Rear Grip",
+          "Trigger Action",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "krait-p68",
+      "name": "Krait P68",
+      "weaponClass": "pistol",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "magazine": {
+          "value": 10,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 40,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Trigger Action",
+          "Magazine",
+          "Rear Grip",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Quelle nennt „260 BPM“; Einheit BPM wird nicht ungeprüft in RPM umgedeutet.",
+        "Offizieller Eintrag: Unlocked at Player Level 7.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "50-gs",
+      "name": ".50 GS",
+      "weaponClass": "pistol",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 166,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 7,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 21,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Trigger Action",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 41.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "mojave-357",
+      "name": "Mojave .357",
+      "weaponClass": "pistol",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 141,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 8,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 32,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [
+          "Optic",
+          "Cylinder",
+          "Muzzle",
+          "Barrel",
+          "Trigger Action",
+          "Rear Grip",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": 5,
+        "apexSeparate": true,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons",
+          "iw-interview"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": false,
+        "compatibilityComplete": false,
+        "modifiersComplete": false,
+        "stackingVerified": false,
+        "missing": [
+          "Vollständiger Standard-Aufsatzkatalog",
+          "Numerische Effekte und Stapelregeln",
+          "Schadensprofil/Körperzonen",
+          "ADS/STF/Bewegung/Rückstoß/Nachladen",
+          "Longshot-Klassendistanz"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 48.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "pila",
+      "name": "PILA",
+      "weaponClass": "launcher",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 8,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 1,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 1,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [],
+        "maxAttachments": 0,
+        "apexSeparate": false,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": true,
+        "compatibilityComplete": true,
+        "modifiersComplete": true,
+        "stackingVerified": true,
+        "missing": [
+          "Schadens-/Bewegungsdaten; kein Standard-Gunsmith laut offizieller Übersicht"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "rpg-8",
+      "name": "RPG-8",
+      "weaponClass": "launcher",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 20,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 1,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 1,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [],
+        "maxAttachments": 0,
+        "apexSeparate": false,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": true,
+        "compatibilityComplete": true,
+        "modifiersComplete": true,
+        "stackingVerified": true,
+        "missing": [
+          "Schadens-/Bewegungsdaten; kein Standard-Gunsmith laut offizieller Übersicht"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 23.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "jokr",
+      "name": "JOKR",
+      "weaponClass": "launcher",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 13,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 1,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 1,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [],
+        "maxAttachments": 0,
+        "apexSeparate": false,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": true,
+        "compatibilityComplete": true,
+        "modifiersComplete": true,
+        "stackingVerified": true,
+        "missing": [
+          "Schadens-/Bewegungsdaten; kein Standard-Gunsmith laut offizieller Übersicht"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 43.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "pm-40-anvil",
+      "name": "PM-40 Anvil",
+      "weaponClass": "launcher",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {
+        "rpm": {
+          "value": 38,
+          "unit": "RPM",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "magazine": {
+          "value": 3,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        },
+        "reserve": {
+          "value": 6,
+          "unit": "Schuss",
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+          "status": "verified"
+        }
+      },
+      "rules": {
+        "slots": [],
+        "maxAttachments": 0,
+        "apexSeparate": false,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": true,
+        "compatibilityComplete": true,
+        "modifiersComplete": true,
+        "stackingVerified": true,
+        "missing": [
+          "Schadens-/Bewegungsdaten; kein Standard-Gunsmith laut offizieller Übersicht"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 54.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    },
+    {
+      "id": "fss-carbon-edge-1095",
+      "name": "FSS Carbon Edge 1095",
+      "weaponClass": "melee",
+      "sourceIds": [
+        "official-weapons"
+      ],
+      "base": {},
+      "rules": {
+        "slots": [],
+        "maxAttachments": 0,
+        "apexSeparate": false,
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+        "sourceIds": [
+          "official-weapons"
+        ],
+        "longshotDistance": null
+      },
+      "coverage": {
+        "catalogComplete": true,
+        "compatibilityComplete": true,
+        "modifiersComplete": true,
+        "stackingVerified": true,
+        "missing": [
+          "Schadens-/Bewegungsdaten; kein Standard-Gunsmith laut offizieller Übersicht"
+        ],
+        "checkedAt": "2026-10-24T20:40:00.000Z"
+      },
+      "damageProfile": null,
+      "fireModel": null,
+      "interactions": [],
+      "snapshots": [],
+      "notes": [
+        "Offizieller Eintrag: Unlocked at Player Level 4.",
+        "Basismesswerte: Launch-Übersicht; kein erfundenes Schadensmodell."
+      ]
+    }
+  ],
+  "attachments": [
+    {
+      "id": "han-x20-skybreaker",
+      "name": "Han X20 Skybreaker",
+      "names": {
+        "en": "Han X20 Skybreaker",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "han-86"
+      ],
+      "unlock": {
+        "level": 72,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Airburst-System"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Optic",
+        "Stock",
+        "Barrel"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "m4-hurricane",
+      "name": "M4 Hurricane",
+      "names": {
+        "en": "M4 Hurricane",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": 72,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "5,7-mm-Umbau"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Barrel",
+        "Magazine"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "hyeon-hyperburst",
+      "name": "Hyeon Hyperburst",
+      "names": {
+        "en": "Hyeon Hyperburst",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "hyeon-burst"
+      ],
+      "unlock": {
+        "level": 68,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Hyperburst-Schussfolge"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "patriot-xmr-volt",
+      "name": "Patriot XMR Volt",
+      "names": {
+        "en": "Patriot XMR Volt",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "patriot-xmr"
+      ],
+      "unlock": {
+        "level": 72,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Elektro-Unterlauf"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Barrel"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "kastov-arc",
+      "name": "Kastov ARC",
+      "names": {
+        "en": "Kastov ARC",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "kastov-762"
+      ],
+      "unlock": {
+        "level": 68,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "RF-Störsystem"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Barrel"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "oden-sentinel",
+      "name": "Oden Sentinel",
+      "names": {
+        "en": "Oden Sentinel",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "oden"
+      ],
+      "unlock": {
+        "level": 65,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Halbautomatik-Umbau"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Barrel",
+        "Muzzle"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "axion-clearcut",
+      "name": "Axion Clearcut",
+      "names": {
+        "en": "Axion Clearcut",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "axion"
+      ],
+      "unlock": {
+        "level": 69,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Hipfire-Umbau"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Optic",
+        "Laser",
+        "Underbarrel",
+        "Stock",
+        "Rear Grip"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "cronen-maelstrom",
+      "name": "Cronen Maelstrom",
+      "names": {
+        "en": "Cronen Maelstrom",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "cronen-squall"
+      ],
+      "unlock": {
+        "level": 67,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Lenkrakete"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Laser",
+        "Underbarrel"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "iso-trace",
+      "name": "ISO Trace",
+      "names": {
+        "en": "ISO Trace",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "iso-nightshade"
+      ],
+      "unlock": {
+        "level": 64,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Zielmarkierung"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Optic",
+        "Ammunition"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "vel-46-snap",
+      "name": "VEL 46 Snap",
+      "names": {
+        "en": "VEL 46 Snap",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "vel-46"
+      ],
+      "unlock": {
+        "level": 60,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Quick Draw mit Overkill"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Stock"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "wz-55-striga-rampage",
+      "name": "WZ.55 Striga Rampage",
+      "names": {
+        "en": "WZ.55 Striga Rampage",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "wz-55-striga"
+      ],
+      "unlock": {
+        "level": 60,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Akimbo"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Optic",
+        "Stock",
+        "Underbarrel"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "ppsh-41-ember",
+      "name": "PPSh-41 Ember",
+      "names": {
+        "en": "PPSh-41 Ember",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "ppsh-41"
+      ],
+      "unlock": {
+        "level": 62,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Brand-Unterlauf"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Barrel",
+        "Underbarrel",
+        "Magazine"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "x-58-void",
+      "name": "X-58 Void",
+      "names": {
+        "en": "X-58 Void",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "x-58-nyx"
+      ],
+      "unlock": {
+        "level": 53,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Subsonischer Umbau"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Barrel",
+        "Ammunition"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "rezi-12-enforcer",
+      "name": "Rezi 12 Enforcer",
+      "names": {
+        "en": "Rezi 12 Enforcer",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "rezi-12"
+      ],
+      "unlock": {
+        "level": 60,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Explosive Slugs"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "warlord-lumen",
+      "name": "Warlord Lumen",
+      "names": {
+        "en": "Warlord Lumen",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "warlord"
+      ],
+      "unlock": {
+        "level": 60,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Stroboskop"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Optic",
+        "Laser"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "finn-adverse",
+      "name": "FiNN Adverse",
+      "names": {
+        "en": "FiNN Adverse",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "finn-lmg"
+      ],
+      "unlock": {
+        "level": 59,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Überhitzungsmechanik"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "type-73-assault",
+      "name": "Type 73 Assault",
+      "names": {
+        "en": "Type 73 Assault",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "type-73"
+      ],
+      "unlock": {
+        "level": 65,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Explosive Munition"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Magazine",
+        "Ammunition"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "apoc-338-praetor",
+      "name": "APOC-338 Praetor",
+      "names": {
+        "en": "APOC-338 Praetor",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "apoc-338"
+      ],
+      "unlock": {
+        "level": 56,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Halbautomatik-Gurt"
+      ],
+      "modifiers": [
+        {
+          "stat": "magazine",
+          "operation": "set",
+          "value": 10,
+          "unit": "Schuss",
+          "order": 0,
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+        }
+      ],
+      "effectsComplete": false,
+      "blocks": [
+        "Magazine"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "mar-9-auto",
+      "name": "MAR-9 Auto",
+      "names": {
+        "en": "MAR-9 Auto",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "mar-9"
+      ],
+      "unlock": {
+        "level": 73,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Vollautomatik"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Trigger Action"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "oris-8-6-razor",
+      "name": "Oris 8.6 Razor",
+      "names": {
+        "en": "Oris 8.6 Razor",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "oris-8-6"
+      ],
+      "unlock": {
+        "level": 70,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Wurfmesser"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Underbarrel"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "mosin-harpoon",
+      "name": "Mosin Harpoon",
+      "names": {
+        "en": "Mosin Harpoon",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "mosin-nagant"
+      ],
+      "unlock": {
+        "level": 69,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Ballistisches Bajonett"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Barrel",
+        "Muzzle"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "kg-7-drillcharge",
+      "name": "KG-7 Drillcharge",
+      "names": {
+        "en": "KG-7 Drillcharge",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "kg-7-vulcan"
+      ],
+      "unlock": {
+        "level": 75,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Bohrladungen"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "astaroth-57-infiltrator",
+      "name": "Astaroth .57 Infiltrator",
+      "names": {
+        "en": "Astaroth .57 Infiltrator",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "astaroth-57"
+      ],
+      "unlock": {
+        "level": 54,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Aufklärungsimpulse"
+      ],
+      "modifiers": [
+        {
+          "stat": "magazine",
+          "operation": "set",
+          "value": 1,
+          "unit": "Schuss",
+          "order": 0,
+          "sourceIds": [
+            "official-weapons"
+          ],
+          "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+        }
+      ],
+      "effectsComplete": false,
+      "blocks": [
+        "Optic"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "signal-inferno",
+      "name": "Signal Inferno",
+      "names": {
+        "en": "Signal Inferno",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "signal-50"
+      ],
+      "unlock": {
+        "level": 74,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Brandmunition"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Ammunition"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "sang-breach",
+      "name": "SANG Breach",
+      "names": {
+        "en": "SANG Breach",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "sang-9mm"
+      ],
+      "unlock": {
+        "level": 38,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Unterlauf-Schrotflinte"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Laser"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "krait-p68-commando",
+      "name": "Krait P68 Commando",
+      "names": {
+        "en": "Krait P68 Commando",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "krait-p68"
+      ],
+      "unlock": {
+        "level": 38,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Nahkampfmesser"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "gs-magna",
+      "name": "GS Magna",
+      "names": {
+        "en": "GS Magna",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "50-gs"
+      ],
+      "unlock": {
+        "level": 37,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Vollautomatik"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Trigger Action"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "mojave-lawless",
+      "name": "Mojave Lawless",
+      "names": {
+        "en": "Mojave Lawless",
+        "de": null
+      },
+      "slot": "Apex",
+      "weaponIds": [
+        "mojave-357"
+      ],
+      "unlock": {
+        "level": 44,
+        "condition": "Waffe vollständig leveln (allgemeine Apex-Regel); individuelle Live-Verfügbarkeit prüfen.",
+        "sourceIds": [
+          "official-weapons"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [
+        "Fächerschuss"
+      ],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [
+        "Trigger Action"
+      ],
+      "conflicts": [],
+      "sourceIds": [
+        "official-weapons",
+        "official-patch"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "verified",
+      "availability": null
+    },
+    {
+      "id": "m4-zlr-reverb90",
+      "name": "ZLR Reverb90",
+      "names": {
+        "en": "ZLR Reverb90",
+        "de": null
+      },
+      "slot": "Muzzle",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "esports-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "esports-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-18-le-crosswind",
+      "name": "18\" LE Crosswind",
+      "names": {
+        "en": "18\" LE Crosswind",
+        "de": null
+      },
+      "slot": "Barrel",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "esports-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "esports-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-fss-fireline-grip",
+      "name": "FSS Fireline Grip",
+      "names": {
+        "en": "FSS Fireline Grip",
+        "de": null
+      },
+      "slot": "Underbarrel",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "esports-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "esports-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-sa-laz-500",
+      "name": "SA LAZ-500",
+      "names": {
+        "en": "SA LAZ-500",
+        "de": null
+      },
+      "slot": "Laser",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "esports-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "esports-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-zlr-asp50-stock",
+      "name": "ZLR ASP50 Stock",
+      "names": {
+        "en": "ZLR ASP50 Stock",
+        "de": null
+      },
+      "slot": "Stock",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "esports-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "esports-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-slimline-elite",
+      "name": "Slimline Elite",
+      "names": {
+        "en": "Slimline Elite",
+        "de": null
+      },
+      "slot": "Optic",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "esports-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "esports-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-ftac-dominion-compensator",
+      "name": "FTAC Dominion Compensator",
+      "names": {
+        "en": "FTAC Dominion Compensator",
+        "de": null
+      },
+      "slot": "Muzzle",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "insider-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "insider-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-brace-dx-grip",
+      "name": "Brace DX Grip",
+      "names": {
+        "en": "Brace DX Grip",
+        "de": null
+      },
+      "slot": "Rear Grip",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "insider-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "insider-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-pf1-fixed-stock",
+      "name": "PF1 Fixed Stock",
+      "names": {
+        "en": "PF1 Fixed Stock",
+        "de": null
+      },
+      "slot": "Stock",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "insider-m4"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "insider-m4"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "status": "reported",
+      "availability": true
+    },
+    {
+      "id": "m4-fss-is300",
+      "name": "FSS IS300",
+      "names": {
+        "en": "FSS IS300",
+        "de": null
+      },
+      "slot": "Muzzle",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "dot-beta"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "dot-beta"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": null,
+      "status": "reported",
+      "availability": null
+    },
+    {
+      "id": "m4-ft-cannonade-7",
+      "name": "FT Cannonade 7\"",
+      "names": {
+        "en": "FT Cannonade 7\"",
+        "de": null
+      },
+      "slot": "Barrel",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "dot-beta"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "dot-beta"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": null,
+      "status": "reported",
+      "availability": null
+    },
+    {
+      "id": "m4-45-round-mag",
+      "name": "45 Round Mag",
+      "names": {
+        "en": "45 Round Mag",
+        "de": null
+      },
+      "slot": "Magazine",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "dot-beta"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "dot-beta"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": null,
+      "status": "reported",
+      "availability": null
+    },
+    {
+      "id": "m4-5-56-nato-armor-piercing",
+      "name": "5.56 NATO Armor Piercing",
+      "names": {
+        "en": "5.56 NATO Armor Piercing",
+        "de": null
+      },
+      "slot": "Ammunition",
+      "weaponIds": [
+        "m4"
+      ],
+      "unlock": {
+        "level": null,
+        "condition": "Nicht verifiziert",
+        "sourceIds": [
+          "dot-beta"
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "special": [],
+      "modifiers": [],
+      "effectsComplete": false,
+      "blocks": [],
+      "conflicts": [],
+      "sourceIds": [
+        "dot-beta"
+      ],
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": null,
+      "status": "reported",
+      "availability": null
+    }
+  ],
+  "community": [
+    {
+      "id": "m4-esports",
+      "weaponId": "m4",
+      "attachments": [
+        {
+          "slot": "Muzzle",
+          "attachmentId": "m4-zlr-reverb90"
+        },
+        {
+          "slot": "Barrel",
+          "attachmentId": "m4-18-le-crosswind"
+        },
+        {
+          "slot": "Underbarrel",
+          "attachmentId": "m4-fss-fireline-grip"
+        },
+        {
+          "slot": "Laser",
+          "attachmentId": "m4-sa-laz-500"
+        },
+        {
+          "slot": "Stock",
+          "attachmentId": "m4-zlr-asp50-stock"
+        }
+      ],
+      "sourceIds": [
+        "esports-m4"
+      ],
+      "publishedAt": "2026-10-21",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "mode": "multiplayer",
+      "reviewed": true,
+      "testSupported": false,
+      "note": "Redaktioneller Build; Kompatibilität berichtet, Leistung nicht isoliert vermessen. Zwei unterschiedliche Ansätze, kein Konsens."
+    },
+    {
+      "id": "m4-insider",
+      "weaponId": "m4",
+      "attachments": [
+        {
+          "slot": "Muzzle",
+          "attachmentId": "m4-ftac-dominion-compensator"
+        },
+        {
+          "slot": "Underbarrel",
+          "attachmentId": "m4-fss-fireline-grip"
+        },
+        {
+          "slot": "Rear Grip",
+          "attachmentId": "m4-brace-dx-grip"
+        },
+        {
+          "slot": "Stock",
+          "attachmentId": "m4-pf1-fixed-stock"
+        },
+        {
+          "slot": "Optic",
+          "attachmentId": "m4-slimline-elite"
+        }
+      ],
+      "sourceIds": [
+        "insider-m4"
+      ],
+      "publishedAt": "2026-10-23",
+      "checkedAt": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "mode": "multiplayer",
+      "reviewed": true,
+      "testSupported": false,
+      "note": "Redaktioneller Build; Kompatibilität berichtet, Leistung nicht isoliert vermessen. Zwei unterschiedliche Ansätze, kein Konsens."
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-10-24T20:40:00.000Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "summary": "33 Waffen systematisch geprüft; offizielle Basiswerte, 28 Apex-Datensätze und begrenzte M4-Quellen aufgenommen. Keine unbelegten Zahlen.",
+      "changedWeaponIds": [
+        "han-86",
+        "m4",
+        "hyeon-burst",
+        "patriot-xmr",
+        "kastov-762",
+        "oden",
+        "axion",
+        "cronen-squall",
+        "iso-nightshade",
+        "vel-46",
+        "wz-55-striga",
+        "ppsh-41",
+        "x-58-nyx",
+        "rezi-12",
+        "warlord",
+        "finn-lmg",
+        "type-73",
+        "apoc-338",
+        "mar-9",
+        "oris-8-6",
+        "mosin-nagant",
+        "kg-7-vulcan",
+        "astaroth-57",
+        "signal-50",
+        "sang-9mm",
+        "krait-p68",
+        "50-gs",
+        "mojave-357",
+        "pila",
+        "rpg-8",
+        "jokr",
+        "pm-40-anvil",
+        "fss-carbon-edge-1095"
+      ]
+    }
+  ]
+}

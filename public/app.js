@@ -41,10 +41,28 @@ import {
   download,
 } from "./ui.js";
 
+import {
+  validateDatabase,
+  METRICS,
+  configurationIssues,
+} from "./engine/database.js";
+import { calculateStats } from "./engine/calculator.js";
+import {
+  renderOptimizer,
+  renderCommunity,
+  renderDataCoverage,
+  statTable,
+  compareStats,
+} from "./engine-ui.js";
+let gunsmithDb = null,
+  engineCleanup = null;
 const TABS = [
-  ["attachments", "Aufsätze"],
-  ["meta", "Meta-Build"],
-  ["camo-build", "Camo-Build"],
+  ["meta", "META"],
+  ["community", "COMMUNITY"],
+  ["optimizer", "OPTIMIZER"],
+  ["camo-build", "CAMO-BUILDS"],
+  ["attachments", "EIGENER BUILD"],
+  ["comparison", "VERGLEICH"],
   ["camos", "Tarnungen"],
   ["challenges", "Herausforderungen"],
   ["tracker", "Tracker"],
@@ -112,7 +130,9 @@ const context = () => ({
   changedWeaponIds: state.lastChangedWeaponIds,
 });
 const draft = (weapon) => drafts.get(weapon.id) || [];
-const rules = (weapon) => presentation.weapons[weapon.id]?.rules;
+const rules = (weapon) =>
+  gunsmithDb?.weapons.find((w) => w.id === weapon.id)?.rules ??
+  presentation.weapons[weapon.id]?.rules;
 const asset = (weapon) => {
   const a = presentation.weapons[weapon.id]?.asset;
   return a?.license && a.sourceUrl && (a.image || a.model) ? a : null;
@@ -521,45 +541,43 @@ function renderArsenalGrid() {
 function renderStats(weapon) {
   const panel = node("aside", null, "stats-panel");
   panel.id = "weapon-statistics";
-  panel.append(node("div", "WAFFENWERTE", "eyebrow"));
-  const stats = verifiedStats(
-    weapon.id,
-    draft(weapon),
-    presentation,
-    state.patchRevision,
-  );
-  for (const [key, label] of [
-    ["damage", "Schaden"],
-    ["range", "Reichweite"],
-    ["accuracy", "Präzision"],
-    ["mobility", "Mobilität"],
-    ["handling", "Handling"],
+  panel.append(node("div", "ECHTE WAFFENWERTE", "eyebrow"));
+  const c = gunsmithDb
+    ? calculateStats(gunsmithDb, weapon.id, draft(weapon), state.patchRevision)
+    : null;
+  for (const key of [
+    "rpm",
+    "magazine",
+    "reserve",
+    "ads",
+    "sprintToFire",
+    "velocity",
+    "horizontalRecoil",
+    "reload",
   ]) {
-    const value = stats?.[key];
-    const row = node("div", null, "stat-line");
-    const meter = node("div", null, `stat-meter${value ? "" : " unknown"}`);
-    if (value?.scaleMax > 0) {
-      const fill = node("i");
-      fill.style.width = `${Math.min(100, (value.value / value.scaleMax) * 100)}%`;
-      meter.append(fill);
-    }
+    const [label, unit] = METRICS[key],
+      v = c?.values[key],
+      base = c?.base[key],
+      row = node("div", null, "real-stat-line");
     row.append(
       node("span", label),
-      meter,
       node(
-        "span",
-        value ? `${value.value} ${value.unit}` : "NICHT VERIFIZIERT",
-        "stat-value",
+        "strong",
+        v
+          ? Number(v.value.toFixed(2)).toLocaleString("de-DE") + " " + unit
+          : "—",
       ),
     );
+    if (base && draft(weapon).length)
+      row.append(node("small", "Basis: " + base.value + " " + unit));
     panel.append(row);
   }
   panel.append(
     node(
       "p",
-      stats
-        ? "Geprüfte Werte dieser exakten Konfiguration."
-        : "Keine geschätzten Balken. Aktuelle Messwerte und Aufsatzmodifikatoren sind noch nicht hinterlegt.",
+      draft(weapon).length
+        ? "— = Effekte oder Kombinationsregeln nicht verifiziert."
+        : "Basiswerte aus der offiziellen Launch-Übersicht. Weitere Werte: nicht verifiziert.",
       "stats-note",
     ),
   );
@@ -653,6 +671,38 @@ function renderWeapon(weapon, tab) {
       node("div", "Originalansicht · keine erfundene Tarnungsvisualisierung"),
     );
   visual.append(caption);
+  if (
+    gunsmithDb &&
+    ["optimizer", "attachments", "community", "comparison"].includes(tab)
+  ) {
+    const known = gunsmithDb.attachments.filter((a) =>
+      a.weaponIds.includes(weapon.id),
+    );
+    const picker = node("select");
+    picker.setAttribute("aria-label", "Aufsatzkategorie öffnen");
+    const first = node(
+      "option",
+      "AUFSATZDATENBANK · " + known.length + " EINTRÄGE",
+    );
+    first.value = "";
+    picker.append(first);
+    for (const slot of [...new Set(known.map((a) => a.slot))]) {
+      const o = node(
+        "option",
+        (SLOT_NAMES[slot] || slot) +
+          " · " +
+          known.filter((a) => a.slot === slot).length,
+      );
+      o.value = slot;
+      picker.append(o);
+    }
+    picker.addEventListener("change", () => {
+      if (picker.value) openAttachmentEditor(weapon, picker.value);
+      picker.value = "";
+    });
+    picker.className = "stage-attachment-picker";
+    title.append(picker);
+  }
   stage.append(title, visual, renderStats(weapon));
   screen.append(stage);
   if (a?.model) {
@@ -719,25 +769,107 @@ function renderWeapon(weapon, tab) {
   content.id = "submenu-panel";
   content.setAttribute("role", "tabpanel");
   content.setAttribute("aria-labelledby", `tab-${tab}`);
-  if (tab === "attachments") renderAttachments(weapon, content);
+  const actions = {
+    patch: state.patchRevision,
+    onCleanup: (fn) => (engineCleanup = fn),
+    apply: (refs) => {
+      const issues = configurationIssues(
+        gunsmithDb,
+        weapon.id,
+        refs,
+        state.patchRevision,
+      );
+      if (issues.length) {
+        toast(issues.join("; "));
+        return;
+      }
+      drafts.set(weapon.id, structuredClone(refs));
+      editingIds.delete(weapon.id);
+      weaponLink(weapon, "attachments");
+    },
+    save: (refs, name) => {
+      try {
+        if (!storageStatus.builds) throw Error("Buildspeicher nicht verfügbar");
+        const issues = configurationIssues(
+          gunsmithDb,
+          weapon.id,
+          refs,
+          state.patchRevision,
+        );
+        if (issues.length) throw Error(issues.join("; "));
+        const b = {
+          ...buildFromDraft(weapon, name.slice(0, 80)),
+          attachments: structuredClone(refs),
+        };
+        customBuilds = saveBuild(localStorage, customBuilds, b);
+        toast("Build lokal gespeichert.");
+      } catch (e) {
+        toast(e.message);
+      }
+    },
+  };
+  if (["community", "optimizer", "comparison"].includes(tab) && !gunsmithDb)
+    content.append(
+      notice(
+        "Gunsmith-Datenbank nicht verfügbar. Tracking bleibt erhalten.",
+        true,
+      ),
+    );
+  else if (tab === "community")
+    renderCommunity(gunsmithDb, weapon, content, actions);
+  else if (tab === "optimizer")
+    renderOptimizer(gunsmithDb, weapon, content, actions);
+  else if (tab === "comparison") {
+    content.append(
+      node("h3", "BUILD-VERGLEICH"),
+      compareStats(
+        gunsmithDb,
+        weapon.id,
+        [],
+        draft(weapon),
+        state.patchRevision,
+      ),
+      button(
+        "Zwei Builds auswählen",
+        () => openComparison(weapon),
+        "button primary",
+      ),
+    );
+  } else if (tab === "attachments") renderAttachments(weapon, content);
   else if (tab === "meta" || tab === "camo-build")
     renderRecommendedBuilds(weapon, content, tab === "meta" ? "meta" : "camo");
   else if (tab === "camos") renderCamos(weapon, content);
   else if (tab === "challenges") renderChallenges(weapon, content);
   else renderTracker(weapon, content);
+  if (gunsmithDb) {
+    const latest = gunsmithDb.history[0];
+    if (latest?.changedWeaponIds.includes(weapon.id))
+      content.append(
+        notice(
+          "Letzter Gunsmith-Datenstand: " +
+            date(latest.at) +
+            " · " +
+            latest.summary,
+        ),
+      );
+  }
+  if (gunsmithDb)
+    renderDataCoverage(gunsmithDb, weapon, content, state.patchRevision);
   screen.append(content);
 }
 
 function renderAttachments(weapon, content) {
   const r = rules(weapon),
     refs = draft(weapon);
-  const slots = r?.slots || [
-    ...new Set(
-      state.attachments
-        .filter((a) => a.weaponIds.includes(weapon.id))
-        .map((a) => a.slot),
-    ),
-  ];
+  const slots = r?.slots
+    ? [...r.slots, ...(r.apexSeparate ? ["Apex"] : [])]
+    : [
+        ...new Set(
+          state.attachments
+            .filter((a) => a.weaponIds.includes(weapon.id))
+            .map((a) => a.slot),
+        ),
+      ];
   if (slots.length) {
     const grid = node("div", null, "attachment-grid");
     slots.forEach((slot, i) => {
@@ -786,6 +918,8 @@ function renderAttachments(weapon, content) {
     content.append(
       external("Offizielle Slot-Quelle ↗", r.sourceUrl, "source-proof"),
     );
+  if (gunsmithDb)
+    content.append(statTable(gunsmithDb, weapon.id, refs, state.patchRevision));
   renderBuildWorkspace(weapon, content);
 }
 function openAttachmentEditor(weapon, slot) {
@@ -833,8 +967,55 @@ function openAttachmentEditor(weapon, slot) {
     b.append(
       node("h3", a.name),
       node("p", `${SLOT_NAMES[a.slot] || a.slot} · Kompatibilität laut Quelle`),
-      node("p", "Vorteile, Nachteile und Modifikatoren: nicht verifiziert."),
+      node(
+        "p",
+        [
+          ...(a.pros ?? []).map((x) => "+ " + x),
+          ...(a.cons ?? []).map((x) => "− " + x),
+          ...(a.special ?? []),
+          ...(a.blocks?.length ? ["Blockiert: " + a.blocks.join(", ")] : []),
+        ].join(" · ") || "Numerische Effekte: nicht verifiziert.",
+      ),
     );
+    if ("availability" in a && a.availability !== true) {
+      b.disabled = true;
+      b.append(
+        node("p", "Live-Verfügbarkeit nicht bestätigt · nur dokumentiert"),
+      );
+    }
+    for (const m of a.modifiers ?? [])
+      b.append(
+        node(
+          "p",
+          (METRICS[m.stat]?.[0] ?? m.stat) +
+            ": " +
+            (m.operation === "set"
+              ? "setzt auf "
+              : m.operation === "add"
+                ? "absolute Änderung "
+                : "Faktor ") +
+            m.value +
+            " " +
+            m.unit,
+        ),
+      );
+    if (a.unlock)
+      b.append(
+        node(
+          "p",
+          a.unlock.level
+            ? "Freischaltung: Waffenlevel " + a.unlock.level
+            : a.unlock.condition,
+        ),
+      );
+    if (gunsmithDb && a.sourceIds)
+      for (const id of a.sourceIds) {
+        const source = gunsmithDb.sources.find((s) => s.id === id);
+        if (source)
+          box.append(
+            external(source.title + " ↗", source.url, "source-proof"),
+          );
+      }
     b.addEventListener("click", () => {
       try {
         drafts.set(
@@ -1071,7 +1252,23 @@ function openComparison(weapon) {
   const box = $("#build-dialog-content");
   box.replaceChildren();
   const builds = [
+    { name: "Basiswaffe", attachments: [] },
     { ...buildFromDraft(weapon, "Aktueller Entwurf") },
+    ...(gunsmithDb?.community
+      .filter(
+        (c) =>
+          c.weaponId === weapon.id &&
+          c.reviewed &&
+          c.patchRevision === state.patchRevision,
+      )
+      .map((c) => ({
+        name: "Community · " + c.id,
+        attachments: c.attachments,
+      })) ?? []),
+    ...weapon.builds.map((b) => ({
+      name: b.kind + " · " + b.id,
+      attachments: b.attachments,
+    })),
     ...customBuilds.builds.filter((b) => b.weaponId === weapon.id),
   ];
   if (builds.length < 2) {
@@ -1142,38 +1339,60 @@ function openComparison(weapon) {
       table.append(row);
     }
     target.append(table);
-    const a = verifiedStats(
-        weapon.id,
-        left.attachments,
-        presentation,
-        state.patchRevision,
-      ),
-      b = verifiedStats(
-        weapon.id,
-        right.attachments,
-        presentation,
-        state.patchRevision,
-      );
-    if (!a || !b)
+    if (gunsmithDb)
       target.append(
-        notice(
-          "Statistikvergleich nicht verifiziert. Es werden keine Leistungsunterschiede geschätzt.",
+        compareStats(
+          gunsmithDb,
+          weapon.id,
+          left.attachments,
+          right.attachments,
+          state.patchRevision,
         ),
       );
-    else
-      for (const key of new Set([...Object.keys(a), ...Object.keys(b)]))
-        target.append(
-          node(
-            "p",
-            `${key}: ${a[key]?.value ?? "—"} ${a[key]?.unit ?? ""} → ${b[key]?.value ?? "—"} ${b[key]?.unit ?? ""}`,
-          ),
-        );
+    else target.append(notice("Statistikdatenbank nicht verfügbar."));
   }
   choices.forEach((s) => s.addEventListener("change", compare));
   compare();
   $("#build-dialog").showModal();
 }
 function renderRecommendedBuilds(weapon, content, kind) {
+  if (gunsmithDb && kind === "meta") {
+    const strip = node("div", null, "recommendation-strip");
+    for (const [label, text, target] of [
+      [
+        "CALCULATED",
+        "Mathematische Suche. Fehlende Messwerte verhindern eine belastbare Meta-Empfehlung.",
+        "optimizer",
+      ],
+      [
+        "COMMUNITY",
+        "Redaktionelle Empfehlungen mit Quellen, Datum und sichtbaren Widersprüchen.",
+        "community",
+      ],
+      [
+        "HYBRID",
+        "Nur verfügbar, wenn ein berechenbarer Kandidat aktuelle Community-Evidenz besitzt.",
+        "optimizer",
+      ],
+    ]) {
+      const item = node("div");
+      item.append(
+        node("h3", label),
+        node("p", text),
+        button("Öffnen", () => weaponLink(weapon, target), "button subtle"),
+      );
+      strip.append(item);
+    }
+    content.append(strip);
+  }
+  if (gunsmithDb && kind === "camo")
+    content.append(
+      button(
+        "Zielprofil im Optimierer wählen",
+        () => weaponLink(weapon, "optimizer"),
+        "button primary",
+      ),
+    );
   const builds = weapon.builds.filter((b) => b.kind === kind);
   if (!builds.length) {
     const box = node("div", null, "empty-build");
@@ -1892,6 +2111,7 @@ function renderIntel(tab = "status") {
   for (const [id, label] of [
     ["status", "Patch & Quellen"],
     ["changelog", "Änderungsverlauf"],
+    ["gunsmith", "Gunsmith-Datenbasis"],
     ["storage", "Mein Speicher"],
     ["credits", "Bildnachweise"],
   ]) {
@@ -1902,6 +2122,38 @@ function renderIntel(tab = "status") {
   screen.append(nav);
   if (tab === "changelog") {
     renderChangelog();
+    return;
+  }
+  if (tab === "gunsmith") {
+    if (!gunsmithDb) {
+      screen.append(notice("Gunsmith-Datenbank nicht verfügbar.", true));
+      return;
+    }
+    screen.append(
+      node("h3", "RECHERCHIERTE DATENBASIS"),
+      node(
+        "p",
+        gunsmithDb.weapons.length +
+          " Waffen · " +
+          gunsmithDb.attachments.length +
+          " dokumentierte Aufsätze · letzte Prüfung " +
+          date(gunsmithDb.reviewedAt),
+      ),
+    );
+    for (const source of gunsmithDb.sources) {
+      const item = node("article", null, "intel-panel");
+      item.append(
+        external(source.title + " ↗", source.url),
+        node("p", source.automation + " · " + source.note),
+      );
+      screen.append(item);
+    }
+    renderDataCoverage(
+      gunsmithDb,
+      state.weapons.find((w) => w.id === "m4") ?? state.weapons[0],
+      screen,
+      state.patchRevision,
+    );
     return;
   }
   if (tab === "credits") {
@@ -1993,6 +2245,31 @@ function renderIntel(tab = "status") {
   screen.append(layout);
 }
 function renderChangelog() {
+  if (gunsmithDb) {
+    screen.append(node("h3", "GUNSMITH · DATEN & BUILDS"));
+    for (const e of gunsmithDb.history) {
+      const details = node("details", null, "change-entry");
+      details.append(node("summary", date(e.at) + " · " + e.summary));
+      const names = e.changedWeaponIds.map(
+        (id) => state.weapons.find((w) => w.id === id)?.name ?? id,
+      );
+      details.append(node("p", names.join(", ")));
+      if (e.changes) {
+        const pre = node(
+          "pre",
+          JSON.stringify(e.changes, null, 2),
+          "historic-diff",
+        );
+        details.append(
+          node("p", "Vorher/Nachher einschließlich Quellenrevision:"),
+          pre,
+        );
+      }
+      screen.append(details);
+    }
+    screen.append(node("h3", "KERNKATALOG · PATCHNOTES"));
+  }
+
   for (const entry of state.changelog) {
     const details = node("details", null, "change-entry"),
       summary = node("summary"),
@@ -2135,6 +2412,8 @@ function renderCredits() {
   );
 }
 function render() {
+  engineCleanup?.();
+  engineCleanup = null;
   if (!state) return;
   viewer?.dispose();
   viewer = null;
@@ -2321,7 +2600,7 @@ document.addEventListener("keydown", (e) => {
     e.preventDefault();
     toggleFavorite(w);
   }
-  if (r.page === "weapon" && /^[1-6]$/.test(e.key)) {
+  if (r.page === "weapon" && /^[1-9]$/.test(e.key)) {
     e.preventDefault();
     weaponLink(w, TABS[Number(e.key) - 1][0]);
   }
@@ -2369,6 +2648,21 @@ try {
     toast(
       "Vorschaudaten konnten nicht geladen werden. Tracking bleibt verfügbar.",
     );
+  }
+  try {
+    const r = await fetch(new URL("./data/gunsmith.json", import.meta.url), {
+      cache: "no-cache",
+    });
+    if (!r.ok) throw Error("Datenbank nicht erreichbar");
+    gunsmithDb = validateDatabase(await r.json(), state);
+    state.attachments = [
+      ...new Map(
+        [...state.attachments, ...gunsmithDb.attachments].map((a) => [a.id, a]),
+      ).values(),
+    ];
+  } catch (e) {
+    gunsmithDb = null;
+    toast("Gunsmith-Datenbank konnte nicht geladen werden: " + e.message);
   }
   if (!state.weapons.some((w) => w.id === selectedId))
     selectedId = state.weapons[0].id;
