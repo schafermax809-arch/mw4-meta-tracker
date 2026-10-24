@@ -1,0 +1,5976 @@
+{
+  "schemaVersion": 1,
+  "gameId": "cod-mw4-2026",
+  "pages": [
+    {
+      "weaponId": "m4",
+      "title": "M4",
+      "url": "https://metka.gg/en/weapons/mw4/m4/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 811,
+          "unit": "RPM",
+          "raw": "811 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 240,
+          "unit": "ms",
+          "raw": "240 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 120,
+          "unit": "Schuss",
+          "raw": "120"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 2600,
+          "unit": "ms",
+          "raw": "2.6 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.2,
+          "unit": "×",
+          "raw": "× 1.2"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 72,
+          "unit": "Level",
+          "raw": "72"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 590,
+          "unit": "m/s",
+          "raw": "590 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 34,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 46,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 48,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 69,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 63,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 25,
+              "damage": 28,
+              "shots": 4
+            },
+            {
+              "from": 25,
+              "to": 60,
+              "damage": 23,
+              "shots": 5
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 25,
+              "damage": 23,
+              "shots": 5
+            },
+            {
+              "from": 25,
+              "to": 60,
+              "damage": 19,
+              "shots": 6
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Balanced",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FSS IS300",
+              "level": 4
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 38
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Brace DX Grip",
+              "level": 10
+            },
+            {
+              "slot": "stock",
+              "name": "PF1 Fixed Stock",
+              "level": 14
+            },
+            {
+              "slot": "laser",
+              "name": "SA LAZ-500",
+              "level": 24
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "1",
+          "title": "Mid/long range",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FSS IS300",
+              "level": 4
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 38
+            },
+            {
+              "slot": "rear-grip",
+              "name": "ZLR Phase Grip",
+              "level": 55
+            },
+            {
+              "slot": "stock",
+              "name": "ZLR ASP50 Stock",
+              "level": 44
+            },
+            {
+              "slot": "laser",
+              "name": "SA LAZ-500",
+              "level": 24
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "2",
+          "title": "Close range",
+          "parts": [
+            {
+              "slot": "optic",
+              "name": "Iota-D",
+              "level": 66
+            },
+            {
+              "slot": "muzzle",
+              "name": "FSS IS300",
+              "level": 4
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 38
+            },
+            {
+              "slot": "stock",
+              "name": "Hurricane Stock",
+              "level": 68
+            },
+            {
+              "slot": "laser",
+              "name": "SA LAZ-500",
+              "level": 24
+            }
+          ],
+          "apex": {
+            "name": "M4 Hurricane",
+            "level": 72
+          }
+        },
+        {
+          "id": "3",
+          "title": "Low level",
+          "parts": [
+            {
+              "slot": "optic",
+              "name": "Slimline Elite",
+              "level": 13
+            },
+            {
+              "slot": "muzzle",
+              "name": "FSS IS300",
+              "level": 4
+            },
+            {
+              "slot": "stock",
+              "name": "PF1 Fixed Stock",
+              "level": 14
+            },
+            {
+              "slot": "laser",
+              "name": "SZ Gen.6 PEQ",
+              "level": 2
+            },
+            {
+              "slot": "ammunition",
+              "name": "5.56 NATO Overpressured",
+              "level": 3
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "S",
+      "hash": "45bf86977a04e0b3b755f1504ad32c6b2366a4e7b794e5e82d41e453fddebc10"
+    },
+    {
+      "weaponId": "kastov-762",
+      "title": "Kastov 762",
+      "url": "https://metka.gg/en/weapons/mw4/kastov-762/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 600,
+          "unit": "RPM",
+          "raw": "600 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 280,
+          "unit": "ms",
+          "raw": "280 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 120,
+          "unit": "Schuss",
+          "raw": "120"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3470,
+          "unit": "ms",
+          "raw": "3.47 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 68,
+          "unit": "Level",
+          "raw": "68"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 560,
+          "unit": "m/s",
+          "raw": "560 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 40,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 42,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 36,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 62,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 59,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 24,
+              "damage": 39,
+              "shots": 3
+            },
+            {
+              "from": 24,
+              "to": 40,
+              "damage": 31,
+              "shots": 4
+            },
+            {
+              "from": 40,
+              "to": 60,
+              "damage": 29,
+              "shots": 4
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 24,
+              "damage": 32,
+              "shots": 4
+            },
+            {
+              "from": 24,
+              "to": 40,
+              "damage": 25,
+              "shots": 4
+            },
+            {
+              "from": 40,
+              "to": 60,
+              "damage": 23,
+              "shots": 5
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Balanced 7.62",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "Gauge-12 Mono",
+              "level": 34
+            },
+            {
+              "slot": "barrel",
+              "name": "Haebang MT-414mm",
+              "level": 14
+            },
+            {
+              "slot": "rear-grip",
+              "name": "FJX Kastov Grip",
+              "level": 17
+            },
+            {
+              "slot": "stock",
+              "name": "Hanbit 655L-M Stock",
+              "level": 33
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 53
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "1",
+          "title": "Close range",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "Gauge-12 Mono",
+              "level": 34
+            },
+            {
+              "slot": "barrel",
+              "name": "Hanbit 74U 206mm",
+              "level": 57
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 3
+            },
+            {
+              "slot": "stock",
+              "name": "Kastov Combat Lite",
+              "level": 27
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 53
+            }
+          ],
+          "apex": {
+            "name": "Kastov 545",
+            "level": null
+          }
+        },
+        {
+          "id": "2",
+          "title": "Long range",
+          "parts": [
+            {
+              "slot": "optic",
+              "name": "Cronen Zero-K",
+              "level": 35
+            },
+            {
+              "slot": "barrel",
+              "name": "FJX Ghostfire 16.3\"",
+              "level": 61
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS TAC90 Grip",
+              "level": 47
+            },
+            {
+              "slot": "stock",
+              "name": "Kastov Dogfighter 27",
+              "level": 42
+            },
+            {
+              "slot": "laser",
+              "name": "Schlager VISIV-5",
+              "level": 30
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "S",
+      "hash": "66bd16d5532e91b93caa89474d817cd92c1ed2acab5d4b1a57122013c3ce29d7"
+    },
+    {
+      "weaponId": "iso-nightshade",
+      "title": "ISO Nightshade",
+      "url": "https://metka.gg/en/weapons/mw4/iso-nightshade/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 923,
+          "unit": "RPM",
+          "raw": "923 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 240,
+          "unit": "ms",
+          "raw": "240 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 110,
+          "unit": "ms",
+          "raw": "110 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 120,
+          "unit": "Schuss",
+          "raw": "120"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3270,
+          "unit": "ms",
+          "raw": "3.27 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 64,
+          "unit": "Level",
+          "raw": "64"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 530,
+          "unit": "m/s",
+          "raw": "530 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 32,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 35,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 38,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 79,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 71,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 27,
+              "shots": 4
+            },
+            {
+              "from": 11,
+              "to": 20,
+              "damage": 22,
+              "shots": 5
+            },
+            {
+              "from": 20,
+              "to": 28,
+              "damage": 19,
+              "shots": 6
+            },
+            {
+              "from": 28,
+              "to": 60,
+              "damage": 16,
+              "shots": 7
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 21,
+              "shots": 5
+            },
+            {
+              "from": 11,
+              "to": 20,
+              "damage": 17,
+              "shots": 6
+            },
+            {
+              "from": 20,
+              "to": 28,
+              "damage": 15,
+              "shots": 7
+            },
+            {
+              "from": 28,
+              "to": 60,
+              "damage": 13,
+              "shots": 8
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Balanced",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FSS Crackdown",
+              "level": 4
+            },
+            {
+              "slot": "barrel",
+              "name": "ZLR Carbon-900",
+              "level": 41
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS TAC90 Grip",
+              "level": 55
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Demo STP-1",
+              "level": 6
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 33
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "1",
+          "title": "Run and gun",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "TA Lightning R3M",
+              "level": 11
+            },
+            {
+              "slot": "barrel",
+              "name": "ZLR Carbon-900",
+              "level": 41
+            },
+            {
+              "slot": "stock",
+              "name": "No Stock",
+              "level": 28
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Demo STP-1",
+              "level": 6
+            },
+            {
+              "slot": "ammunition",
+              "name": "9mm Parabellum Overpressured",
+              "level": 49
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "2",
+          "title": "Close range",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FSS Crackdown",
+              "level": 4
+            },
+            {
+              "slot": "barrel",
+              "name": "ZLR Carbon-900",
+              "level": 41
+            },
+            {
+              "slot": "stock",
+              "name": "No Stock",
+              "level": 28
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Demo STP-1",
+              "level": 6
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 33
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "3",
+          "title": "Stock version",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FSS Crackdown",
+              "level": 4
+            },
+            {
+              "slot": "barrel",
+              "name": "ZLR Carbon-900",
+              "level": 41
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Demo STP-1",
+              "level": 6
+            },
+            {
+              "slot": "stock",
+              "name": "GI-80 Milspec Stock",
+              "level": 16
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 33
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "4",
+          "title": "Stability",
+          "parts": [
+            {
+              "slot": "barrel",
+              "name": "ZLR Carbon-900",
+              "level": 41
+            },
+            {
+              "slot": "muzzle",
+              "name": "Haebang ORC70",
+              "level": 37
+            },
+            {
+              "slot": "stock",
+              "name": "EXP G2-44 Stock",
+              "level": 5
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Demo STP-1",
+              "level": 6
+            },
+            {
+              "slot": "ammunition",
+              "name": "9mm Parabellum Overpressured",
+              "level": 49
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "5",
+          "title": "Trace Apex",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "XRK Herder 40",
+              "level": 17
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 23
+            },
+            {
+              "slot": "magazine",
+              "name": "40 Round Mag",
+              "level": 10
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Demo STP-1",
+              "level": 6
+            },
+            {
+              "slot": "stock",
+              "name": "EXP G2-44 Stock",
+              "level": 5
+            }
+          ],
+          "apex": {
+            "name": "ISO Trace",
+            "level": 64
+          }
+        }
+      ],
+      "tier": "S",
+      "hash": "295851d8886036e816209fa75a2ff641a2ec4ae34864863cdd4e4a984c2977a5"
+    },
+    {
+      "weaponId": "oris-8-6",
+      "title": "Oris 8.6",
+      "url": "https://metka.gg/en/weapons/mw4/oris-8-6/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 90,
+          "unit": "RPM",
+          "raw": "90 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 260,
+          "unit": "ms",
+          "raw": "260 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 150,
+          "unit": "ms",
+          "raw": "150 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 10,
+          "unit": "Schuss",
+          "raw": "10"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 40,
+          "unit": "Schuss",
+          "raw": "40"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3000,
+          "unit": "ms",
+          "raw": "3 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.6,
+          "unit": "×",
+          "raw": "× 1.6"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 70,
+          "unit": "Level",
+          "raw": "70"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 570,
+          "unit": "m/s",
+          "raw": "570 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Oris 8.6 Razor",
+          "unit": "Quellenangabe",
+          "raw": "Oris 8.6 Razor"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 75,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 50,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 68,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 71,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 60,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 19,
+              "damage": 152,
+              "shots": 1
+            },
+            {
+              "from": 19,
+              "to": 30,
+              "damage": 134,
+              "shots": 1
+            },
+            {
+              "from": 30,
+              "to": 46,
+              "damage": 112,
+              "shots": 1
+            },
+            {
+              "from": 46,
+              "to": 60,
+              "damage": 92,
+              "shots": 2
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 19,
+              "damage": 104,
+              "shots": 1
+            },
+            {
+              "from": 19,
+              "to": 30,
+              "damage": 92,
+              "shots": 2
+            },
+            {
+              "from": 30,
+              "to": 46,
+              "damage": 77,
+              "shots": 2
+            },
+            {
+              "from": 46,
+              "to": 60,
+              "damage": 63,
+              "shots": 2
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": "S",
+      "hash": "33c523f77e81b7eb9c9af2a1d28a0c1c92edd322ed52eeac39df443936934eab"
+    },
+    {
+      "weaponId": "rezi-12",
+      "title": "Rezi 12",
+      "url": "https://metka.gg/en/weapons/mw4/rezi-12/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 150,
+          "unit": "RPM",
+          "raw": "150 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 340,
+          "unit": "ms",
+          "raw": "340 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 160,
+          "unit": "ms",
+          "raw": "160 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 6,
+          "unit": "Schuss",
+          "raw": "6"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 6130,
+          "unit": "ms",
+          "raw": "6.13 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1,
+          "unit": "×",
+          "raw": "× 1"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 60,
+          "unit": "Level",
+          "raw": "60"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 340,
+          "unit": "m/s",
+          "raw": "340 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 72,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 26,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 28,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 76,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 53,
+          "unit": "/100"
+        }
+      ],
+      "zones": [],
+      "health": null,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Standard",
+          "parts": [
+            {
+              "slot": "laser",
+              "name": "Schlager VISIV-5",
+              "level": 5
+            },
+            {
+              "slot": "bolt",
+              "name": "ZLR Competition-B6",
+              "level": 47
+            },
+            {
+              "slot": "muzzle",
+              "name": "EXP Firelite 12",
+              "level": 24
+            },
+            {
+              "slot": "stock",
+              "name": "No Stock",
+              "level": 18
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Bruen R12-SH",
+              "level": 38
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "S",
+      "hash": "4bd6db7eab6f917ba8852e91580f24c0db8b4c6747a278a691af2f9c4b4fb2de"
+    },
+    {
+      "weaponId": "han-86",
+      "title": "Han 86",
+      "url": "https://metka.gg/en/weapons/mw4/han-86/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 741,
+          "unit": "RPM",
+          "raw": "741 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 250,
+          "unit": "ms",
+          "raw": "250 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 120,
+          "unit": "Schuss",
+          "raw": "120"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3130,
+          "unit": "ms",
+          "raw": "3.13 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.2,
+          "unit": "×",
+          "raw": "× 1.2"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 72,
+          "unit": "Level",
+          "raw": "72"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 615,
+          "unit": "m/s",
+          "raw": "615 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto, Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto, Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 33,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 45,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 57,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 67,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 64,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 28,
+              "damage": 28,
+              "shots": 4
+            },
+            {
+              "from": 28,
+              "to": 60,
+              "damage": 23,
+              "shots": 5
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 28,
+              "damage": 25,
+              "shots": 4
+            },
+            {
+              "from": 28,
+              "to": 60,
+              "damage": 20,
+              "shots": 5
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Long range",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FSS IS300",
+              "level": 6
+            },
+            {
+              "slot": "optic",
+              "name": "ZLR Type C",
+              "level": 27
+            },
+            {
+              "slot": "stock",
+              "name": "EXP Umbral Pro 7",
+              "level": 61
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 16
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 3
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "A",
+      "hash": "638cfbd329ad231cb4f6f5d14292c096f9e027363af89be980219dba1141a07f"
+    },
+    {
+      "weaponId": "hyeon-burst",
+      "title": "Hyeon Burst",
+      "url": "https://metka.gg/en/weapons/mw4/hyeon-burst/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 375,
+          "unit": "RPM",
+          "raw": "375 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 275,
+          "unit": "ms",
+          "raw": "275 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 120,
+          "unit": "Schuss",
+          "raw": "120"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3400,
+          "unit": "ms",
+          "raw": "3.4 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 68,
+          "unit": "Level",
+          "raw": "68"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 775,
+          "unit": "m/s",
+          "raw": "775 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Burst",
+          "unit": "Quellenangabe",
+          "raw": "Burst"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 42,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 52,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 56,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 63,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 61,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 21,
+              "damage": 41,
+              "shots": 3
+            },
+            {
+              "from": 21,
+              "to": 43,
+              "damage": 31,
+              "shots": 4
+            },
+            {
+              "from": 43,
+              "to": 60,
+              "damage": 28,
+              "shots": 4
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 21,
+              "damage": 34,
+              "shots": 3
+            },
+            {
+              "from": 21,
+              "to": 43,
+              "damage": 26,
+              "shots": 4
+            },
+            {
+              "from": 43,
+              "to": 60,
+              "damage": 24,
+              "shots": 5
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Close/mid Hyperburst",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FSS IS300",
+              "level": 67
+            },
+            {
+              "slot": "barrel",
+              "name": "Mugi Ingoem 559mm",
+              "level": 46
+            },
+            {
+              "slot": "optic",
+              "name": "Slimline Elite",
+              "level": 17
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Mugi Un-R5 Grip",
+              "level": 43
+            },
+            {
+              "slot": "laser",
+              "name": "SA LAZ-500",
+              "level": 51
+            }
+          ],
+          "apex": {
+            "name": "Hyeon Hyperburst",
+            "level": 68
+          }
+        },
+        {
+          "id": "1",
+          "title": "Long range",
+          "parts": [
+            {
+              "slot": "optic",
+              "name": "Iota-D",
+              "level": 35
+            },
+            {
+              "slot": "muzzle",
+              "name": "FSS IS300",
+              "level": 67
+            },
+            {
+              "slot": "barrel",
+              "name": "Mugi Ingoem 559mm",
+              "level": 46
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS TAC90 Grip",
+              "level": 41
+            },
+            {
+              "slot": "laser",
+              "name": "SZ Gen.6 PEQ",
+              "level": 4
+            }
+          ],
+          "apex": {
+            "name": "Hyeon Hyperburst",
+            "level": 68
+          }
+        }
+      ],
+      "tier": "A",
+      "hash": "ea16c74f03ab08672723125e51b4ee2968bb797f102c0b5d0c4fef790cf1e4f4"
+    },
+    {
+      "weaponId": "vel-46",
+      "title": "VEL 46",
+      "url": "https://metka.gg/en/weapons/mw4/vel-46/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 952,
+          "unit": "RPM",
+          "raw": "952 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 230,
+          "unit": "ms",
+          "raw": "230 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 110,
+          "unit": "ms",
+          "raw": "110 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 40,
+          "unit": "Schuss",
+          "raw": "40"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 160,
+          "unit": "Schuss",
+          "raw": "160"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 2630,
+          "unit": "ms",
+          "raw": "2.63 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 60,
+          "unit": "Level",
+          "raw": "60"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 565,
+          "unit": "m/s",
+          "raw": "565 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 31,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 37,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 37,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 78,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 73,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 10,
+              "damage": 26,
+              "shots": 4
+            },
+            {
+              "from": 10,
+              "to": 17,
+              "damage": 22,
+              "shots": 5
+            },
+            {
+              "from": 17,
+              "to": 25,
+              "damage": 19,
+              "shots": 6
+            },
+            {
+              "from": 25,
+              "to": 60,
+              "damage": 16,
+              "shots": 7
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 10,
+              "damage": 20,
+              "shots": 5
+            },
+            {
+              "from": 10,
+              "to": 17,
+              "damage": 17,
+              "shots": 6
+            },
+            {
+              "from": 17,
+              "to": 25,
+              "damage": 15,
+              "shots": 7
+            },
+            {
+              "from": 25,
+              "to": 60,
+              "damage": 13,
+              "shots": 8
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Competitive",
+          "parts": [
+            {
+              "slot": "barrel",
+              "name": "Long Barrel",
+              "level": 3
+            },
+            {
+              "slot": "muzzle",
+              "name": "TA TacPro-56",
+              "level": 42
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS TAC90 Grip",
+              "level": 46
+            },
+            {
+              "slot": "stock",
+              "name": "VEL 46 Extended",
+              "level": 20
+            },
+            {
+              "slot": "rear-grip",
+              "name": "LM Combat Grip",
+              "level": 40
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "1",
+          "title": "Aggressive",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "XRK Herder 40",
+              "level": 51
+            },
+            {
+              "slot": "barrel",
+              "name": "Long Barrel",
+              "level": 3
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 10
+            },
+            {
+              "slot": "rear-grip",
+              "name": "V46 R-Skel Grip",
+              "level": 9
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 39
+            }
+          ],
+          "apex": {
+            "name": "VEL 46 Snap",
+            "level": 60
+          }
+        }
+      ],
+      "tier": "A",
+      "hash": "0b61c89b00bcee4b21ae7e999411bfcdcac0a40f1d6acb12ae3cdc363a08726a"
+    },
+    {
+      "weaponId": "x-58-nyx",
+      "title": "X-58 Nyx",
+      "url": "https://metka.gg/en/weapons/mw4/x-58-nyx/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 800,
+          "unit": "RPM",
+          "raw": "800 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 255,
+          "unit": "ms",
+          "raw": "255 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 110,
+          "unit": "ms",
+          "raw": "110 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 40,
+          "unit": "Schuss",
+          "raw": "40"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 160,
+          "unit": "Schuss",
+          "raw": "160"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 2770,
+          "unit": "ms",
+          "raw": "2.77 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 53,
+          "unit": "Level",
+          "raw": "53"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 450,
+          "unit": "m/s",
+          "raw": "450 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 33,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 33,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 49,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 77,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 70,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 27,
+              "shots": 4
+            },
+            {
+              "from": 11,
+              "to": 20,
+              "damage": 22,
+              "shots": 5
+            },
+            {
+              "from": 20,
+              "to": 30,
+              "damage": 18,
+              "shots": 6
+            },
+            {
+              "from": 30,
+              "to": 60,
+              "damage": 16,
+              "shots": 7
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 22,
+              "shots": 5
+            },
+            {
+              "from": 11,
+              "to": 20,
+              "damage": 18,
+              "shots": 6
+            },
+            {
+              "from": 20,
+              "to": 30,
+              "damage": 15,
+              "shots": 7
+            },
+            {
+              "from": 30,
+              "to": 60,
+              "damage": 13,
+              "shots": 8
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Balanced",
+          "parts": [
+            {
+              "slot": "barrel",
+              "name": "LX3-V 409mm",
+              "level": 44
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 19
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Bok-980",
+              "level": 20
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 38
+            },
+            {
+              "slot": "ammunition",
+              "name": "5.8x21mm Overpressured",
+              "level": 8
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "1",
+          "title": "Close range",
+          "parts": [
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 19
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Bok-980",
+              "level": 20
+            },
+            {
+              "slot": "stock",
+              "name": "No Stock",
+              "level": 17
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 38
+            },
+            {
+              "slot": "ammunition",
+              "name": "5.8x21mm Overpressured",
+              "level": 8
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "A",
+      "hash": "6c2511ab43578740d4b5118af228fd4aa28831000ca2e565fbcc9ac5feffb9b3"
+    },
+    {
+      "weaponId": "ppsh-41",
+      "title": "PPSh-41",
+      "url": "https://metka.gg/en/weapons/mw4/ppsh-41/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 1110,
+          "unit": "RPM",
+          "raw": "1,110 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 300,
+          "unit": "ms",
+          "raw": "300 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 110,
+          "unit": "ms",
+          "raw": "110 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 71,
+          "unit": "Schuss",
+          "raw": "71"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 142,
+          "unit": "Schuss",
+          "raw": "142"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3900,
+          "unit": "ms",
+          "raw": "3.9 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 62,
+          "unit": "Level",
+          "raw": "62"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 550,
+          "unit": "m/s",
+          "raw": "550 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 29,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 34,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 35,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 74,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 68,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 23,
+              "shots": 5
+            },
+            {
+              "from": 11,
+              "to": 20,
+              "damage": 19,
+              "shots": 6
+            },
+            {
+              "from": 20,
+              "to": 29,
+              "damage": 16,
+              "shots": 7
+            },
+            {
+              "from": 29,
+              "to": 60,
+              "damage": 15,
+              "shots": 7
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 18,
+              "shots": 6
+            },
+            {
+              "from": 11,
+              "to": 20,
+              "damage": 15,
+              "shots": 7
+            },
+            {
+              "from": 20,
+              "to": 29,
+              "damage": 13,
+              "shots": 8
+            },
+            {
+              "from": 29,
+              "to": 60,
+              "damage": 12,
+              "shots": 9
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Balanced, suppressed",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "FTAC Silent Recon",
+              "level": 12
+            },
+            {
+              "slot": "barrel",
+              "name": "Hanbit RDR-Tiger 50-XL",
+              "level": 15
+            },
+            {
+              "slot": "magazine",
+              "name": "53 Round Mag",
+              "level": 3
+            },
+            {
+              "slot": "laser",
+              "name": "Schlager VISIV-5",
+              "level": 4
+            },
+            {
+              "slot": "ammunition",
+              "name": "7.62 Tokarev Overpressured",
+              "level": 9
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "1",
+          "title": "Recoil control",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "L980-S Comp",
+              "level": 6
+            },
+            {
+              "slot": "barrel",
+              "name": "Hanbit RDR-Tiger 50",
+              "level": 33
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 61
+            },
+            {
+              "slot": "stock",
+              "name": "Hanbit RDW7-F",
+              "level": 8
+            },
+            {
+              "slot": "magazine",
+              "name": "53 Round Mag",
+              "level": 3
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "2",
+          "title": "Objective",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "1/2x28 Dual Port",
+              "level": 29
+            },
+            {
+              "slot": "laser",
+              "name": "XRK Clutch-LS",
+              "level": 21
+            },
+            {
+              "slot": "optic",
+              "name": "SZ Prima-4 Dot",
+              "level": 40
+            },
+            {
+              "slot": "magazine",
+              "name": "53 Round Mag",
+              "level": 3
+            },
+            {
+              "slot": "stock",
+              "name": "MT-L5 Jinhwa",
+              "level": 41
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "A",
+      "hash": "5160d75c2226a762c2ec1b1f024242bf81b3e31b7ef47f36954f33047a8bbf46"
+    },
+    {
+      "weaponId": "patriot-xmr",
+      "title": "Patriot XMR",
+      "url": "https://metka.gg/en/weapons/mw4/patriot-xmr/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 645,
+          "unit": "RPM",
+          "raw": "645 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 280,
+          "unit": "ms",
+          "raw": "280 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 25,
+          "unit": "Schuss",
+          "raw": "25"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 125,
+          "unit": "Schuss",
+          "raw": "125"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3330,
+          "unit": "ms",
+          "raw": "3.33 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 72,
+          "unit": "Level",
+          "raw": "72"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 620,
+          "unit": "m/s",
+          "raw": "620 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 43,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 44,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 29,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 59,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 56,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 31,
+              "damage": 39,
+              "shots": 3
+            },
+            {
+              "from": 31,
+              "to": 50,
+              "damage": 31,
+              "shots": 4
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 28,
+              "shots": 4
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 31,
+              "damage": 30,
+              "shots": 4
+            },
+            {
+              "from": 31,
+              "to": 50,
+              "damage": 24,
+              "shots": 5
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 22,
+              "shots": 5
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Long range",
+          "parts": [
+            {
+              "slot": "optic",
+              "name": "FJX 708 Pro",
+              "level": 19
+            },
+            {
+              "slot": "muzzle",
+              "name": "EXP Undertow Gen. 2",
+              "level": 25
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 33
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Schlager Attack-7 Grip",
+              "level": 30
+            },
+            {
+              "slot": "laser",
+              "name": "SA LAZ-500",
+              "level": 12
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "1",
+          "title": "Balanced",
+          "parts": [
+            {
+              "slot": "muzzle",
+              "name": "EXP Undertow Gen. 2",
+              "level": 25
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 33
+            },
+            {
+              "slot": "magazine",
+              "name": "35 Round Mag",
+              "level": 44
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Schlager Attack-7 Grip",
+              "level": 30
+            },
+            {
+              "slot": "laser",
+              "name": "SA LAZ-500",
+              "level": 12
+            }
+          ],
+          "apex": null
+        },
+        {
+          "id": "2",
+          "title": "Objective",
+          "parts": [
+            {
+              "slot": "barrel",
+              "name": "EXP Raid Tac 18.5\"",
+              "level": 15
+            },
+            {
+              "slot": "muzzle",
+              "name": "Bruen R12 Gen. 4",
+              "level": 29
+            },
+            {
+              "slot": "magazine",
+              "name": "50 Round Drum Mag",
+              "level": 10
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS Fireline Grip",
+              "level": 33
+            },
+            {
+              "slot": "optic",
+              "name": "SZ Helios Holo",
+              "level": 21
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "B",
+      "hash": "44563ca2d22c6a64a2e4e067e6ed91fff3f23554a8d099984d4dcd0ee8f9468e"
+    },
+    {
+      "weaponId": "mar-9",
+      "title": "MAR-9",
+      "url": "https://metka.gg/en/weapons/mw4/mar-9/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 316,
+          "unit": "RPM",
+          "raw": "316 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 330,
+          "unit": "ms",
+          "raw": "330 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 249,
+          "unit": "ms",
+          "raw": "249 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 20,
+          "unit": "Schuss",
+          "raw": "20"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 80,
+          "unit": "Schuss",
+          "raw": "80"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 2930,
+          "unit": "ms",
+          "raw": "2.93 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 2,
+          "unit": "×",
+          "raw": "× 2"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 73,
+          "unit": "Level",
+          "raw": "73"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 670,
+          "unit": "m/s",
+          "raw": "670 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 59,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 53,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 64,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 54,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 51,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 20,
+              "damage": 100,
+              "shots": 1
+            },
+            {
+              "from": 20,
+              "to": 29,
+              "damage": 84,
+              "shots": 2
+            },
+            {
+              "from": 29,
+              "to": 60,
+              "damage": 74,
+              "shots": 2
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 20,
+              "damage": 55,
+              "shots": 2
+            },
+            {
+              "from": 20,
+              "to": 29,
+              "damage": 46,
+              "shots": 3
+            },
+            {
+              "from": 29,
+              "to": 60,
+              "damage": 40,
+              "shots": 3
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Standard",
+          "parts": [
+            {
+              "slot": "laser",
+              "name": "SA LAZ-500",
+              "level": 35
+            },
+            {
+              "slot": "optic",
+              "name": "SZ Lonewolf Holo",
+              "level": 34
+            },
+            {
+              "slot": "barrel",
+              "name": "Bruen Reaper-X",
+              "level": 22
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Hanbit Wrap 76",
+              "level": 38
+            },
+            {
+              "slot": "underbarrel",
+              "name": "FSS TAC90 Grip",
+              "level": 4
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "B",
+      "hash": "c6d74fde39d7c6660e4a062672bfd8ac1420db137522795812ac08dcd3675446"
+    },
+    {
+      "weaponId": "kg-7-vulcan",
+      "title": "KG-7 Vulcan",
+      "url": "https://metka.gg/en/weapons/mw4/kg-7-vulcan/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 41,
+          "unit": "RPM",
+          "raw": "41 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 550,
+          "unit": "ms",
+          "raw": "550 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 270,
+          "unit": "ms",
+          "raw": "270 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 10,
+          "unit": "Schuss",
+          "raw": "10"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 4370,
+          "unit": "ms",
+          "raw": "4.37 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 2.6,
+          "unit": "×",
+          "raw": "× 2.6"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 75,
+          "unit": "Level",
+          "raw": "75"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 740,
+          "unit": "m/s",
+          "raw": "740 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 85,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 76,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 74,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 30,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 34,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 60,
+              "damage": 269,
+              "shots": 1
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 60,
+              "damage": 168,
+              "shots": 1
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Standard",
+          "parts": [
+            {
+              "slot": "barrel",
+              "name": "Haebang Naseon V.5 26\"",
+              "level": 22
+            },
+            {
+              "slot": "laser",
+              "name": "Schlager VISIV-5",
+              "level": 7
+            },
+            {
+              "slot": "bolt",
+              "name": "KT76 Light Bolt",
+              "level": 63
+            },
+            {
+              "slot": "stock",
+              "name": "TT G76-RP Stock",
+              "level": 47
+            },
+            {
+              "slot": "comb",
+              "name": "Haebang YNC-45",
+              "level": 34
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "B",
+      "hash": "b5728de5adcd56b67febaefa954de4e21538581fe30966b8d811c43d82cecd7a"
+    },
+    {
+      "weaponId": "signal-50",
+      "title": "Signal 50",
+      "url": "https://metka.gg/en/weapons/mw4/signal-50/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 111,
+          "unit": "RPM",
+          "raw": "111 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 590,
+          "unit": "ms",
+          "raw": "590 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 283,
+          "unit": "ms",
+          "raw": "283 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 7,
+          "unit": "Schuss",
+          "raw": "7"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 28,
+          "unit": "Schuss",
+          "raw": "28"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 4970,
+          "unit": "ms",
+          "raw": "4.97 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 2.3,
+          "unit": "×",
+          "raw": "× 2.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 74,
+          "unit": "Level",
+          "raw": "74"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 600,
+          "unit": "m/s",
+          "raw": "600 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Signal Inferno",
+          "unit": "Quellenangabe",
+          "raw": "Signal Inferno"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto, Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto, Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 82,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 70,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 70,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 25,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 31,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 34,
+              "damage": 284,
+              "shots": 1
+            },
+            {
+              "from": 34,
+              "to": 49,
+              "damage": 276,
+              "shots": 1
+            },
+            {
+              "from": 49,
+              "to": 60,
+              "damage": 223,
+              "shots": 1
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 34,
+              "damage": 132,
+              "shots": 1
+            },
+            {
+              "from": 34,
+              "to": 49,
+              "damage": 128,
+              "shots": 1
+            },
+            {
+              "from": 49,
+              "to": 60,
+              "damage": 104,
+              "shots": 1
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": "B",
+      "hash": "009d323288c2c9bf1af169d41d464832d9705c7eb88d20271a0091532f53f20f"
+    },
+    {
+      "weaponId": "type-73",
+      "title": "Type 73",
+      "url": "https://metka.gg/en/weapons/mw4/type-73/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 821,
+          "unit": "RPM",
+          "raw": "821 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 460,
+          "unit": "ms",
+          "raw": "460 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 245,
+          "unit": "ms",
+          "raw": "245 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 60,
+          "unit": "Schuss",
+          "raw": "60"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 120,
+          "unit": "Schuss",
+          "raw": "120"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 6770,
+          "unit": "ms",
+          "raw": "6.77 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.2,
+          "unit": "×",
+          "raw": "× 1.2"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 65,
+          "unit": "Level",
+          "raw": "65"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 690,
+          "unit": "m/s",
+          "raw": "690 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 39,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 51,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 36,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 41,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 37,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 25,
+              "damage": 27,
+              "shots": 4
+            },
+            {
+              "from": 25,
+              "to": 47,
+              "damage": 26,
+              "shots": 4
+            },
+            {
+              "from": 47,
+              "to": 60,
+              "damage": 23,
+              "shots": 5
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 25,
+              "damage": 24,
+              "shots": 5
+            },
+            {
+              "from": 25,
+              "to": 47,
+              "damage": 23,
+              "shots": 5
+            },
+            {
+              "from": 47,
+              "to": 60,
+              "damage": 20,
+              "shots": 5
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Standard",
+          "parts": [
+            {
+              "slot": "laser",
+              "name": "Schlager VISIV-5",
+              "level": 27
+            },
+            {
+              "slot": "optic",
+              "name": "Iota-D",
+              "level": 38
+            },
+            {
+              "slot": "barrel",
+              "name": "Haebang ET-9D 772mm",
+              "level": 37
+            },
+            {
+              "slot": "muzzle",
+              "name": "Gauge-12 Mono",
+              "level": 43
+            },
+            {
+              "slot": "stock",
+              "name": "FTAC RZR0 Stock",
+              "level": 22
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "B",
+      "hash": "926394775bf378ec1ddb80ac46e5828c652cea3097aa503fd1648e7e8713bb8c"
+    },
+    {
+      "weaponId": "finn-lmg",
+      "title": "FiNN LMG",
+      "url": "https://metka.gg/en/weapons/mw4/finn-lmg/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 588,
+          "unit": "RPM",
+          "raw": "588 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 400,
+          "unit": "ms",
+          "raw": "400 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 237,
+          "unit": "ms",
+          "raw": "237 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 100,
+          "unit": "Schuss",
+          "raw": "100"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 200,
+          "unit": "Schuss",
+          "raw": "200"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 6270,
+          "unit": "ms",
+          "raw": "6.27 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 59,
+          "unit": "Level",
+          "raw": "59"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 710,
+          "unit": "m/s",
+          "raw": "710 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Finn Adverse",
+          "unit": "Quellenangabe",
+          "raw": "Finn Adverse"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 45,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 49,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 37,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 48,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 46,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 22,
+              "damage": 39,
+              "shots": 3
+            },
+            {
+              "from": 22,
+              "to": 44,
+              "damage": 36,
+              "shots": 3
+            },
+            {
+              "from": 44,
+              "to": 60,
+              "damage": 33,
+              "shots": 4
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 22,
+              "damage": 33,
+              "shots": 4
+            },
+            {
+              "from": 22,
+              "to": 44,
+              "damage": 30,
+              "shots": 4
+            },
+            {
+              "from": 44,
+              "to": 60,
+              "damage": 28,
+              "shots": 4
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": "B",
+      "hash": "422ee9880a9be741a19567256d3c0180938599ad59e008924f1ae56f975c25c2"
+    },
+    {
+      "weaponId": "krait-p68",
+      "title": "Krait P68",
+      "url": "https://metka.gg/en/weapons/mw4/krait-p68/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 261,
+          "unit": "RPM",
+          "raw": "261 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 180,
+          "unit": "ms",
+          "raw": "180 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 80,
+          "unit": "ms",
+          "raw": "80 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 10,
+          "unit": "Schuss",
+          "raw": "10"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 50,
+          "unit": "Schuss",
+          "raw": "50"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 2970,
+          "unit": "ms",
+          "raw": "2.97 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 38,
+          "unit": "Level",
+          "raw": "38"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 250,
+          "unit": "m/s",
+          "raw": "250 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 48,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 31,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 58,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 88,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 79,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 9,
+              "damage": 59,
+              "shots": 2
+            },
+            {
+              "from": 9,
+              "to": 20,
+              "damage": 50,
+              "shots": 2
+            },
+            {
+              "from": 20,
+              "to": 37,
+              "damage": 44,
+              "shots": 3
+            },
+            {
+              "from": 37,
+              "to": 60,
+              "damage": 39,
+              "shots": 3
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 9,
+              "damage": 50,
+              "shots": 2
+            },
+            {
+              "from": 9,
+              "to": 20,
+              "damage": 42,
+              "shots": 3
+            },
+            {
+              "from": 20,
+              "to": 37,
+              "damage": 37,
+              "shots": 3
+            },
+            {
+              "from": 37,
+              "to": 60,
+              "damage": 33,
+              "shots": 4
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [
+        {
+          "id": "0",
+          "title": "Standard",
+          "parts": [
+            {
+              "slot": "barrel",
+              "name": "XRK DOC-40 6\"",
+              "level": 23
+            },
+            {
+              "slot": "muzzle",
+              "name": "SFO Proto-33",
+              "level": 29
+            },
+            {
+              "slot": "laser",
+              "name": "GW MDL-2",
+              "level": 3
+            },
+            {
+              "slot": "trigger-action",
+              "name": "P68 Tapper 9",
+              "level": 33
+            },
+            {
+              "slot": "rear-grip",
+              "name": "Magtac .45",
+              "level": 5
+            }
+          ],
+          "apex": null
+        }
+      ],
+      "tier": "C",
+      "hash": "3f5376e029e0b31529861151ec251fbaf3e827e3d763cf6e08bcb48c67c59ba6"
+    },
+    {
+      "weaponId": "50-gs",
+      "title": ".50 GS",
+      "url": "https://metka.gg/en/weapons/mw4/50-gs/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 167,
+          "unit": "RPM",
+          "raw": "167 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 200,
+          "unit": "ms",
+          "raw": "200 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 80,
+          "unit": "ms",
+          "raw": "80 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 7,
+          "unit": "Schuss",
+          "raw": "7"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 28,
+          "unit": "Schuss",
+          "raw": "28"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 2330,
+          "unit": "ms",
+          "raw": "2.33 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.5,
+          "unit": "×",
+          "raw": "× 1.5"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 37,
+          "unit": "Level",
+          "raw": "37"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 460,
+          "unit": "m/s",
+          "raw": "460 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "GS Magna",
+          "unit": "Quellenangabe",
+          "raw": "GS Magna"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 65,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 40,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 53,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 85,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 77,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 22,
+              "damage": 105,
+              "shots": 1
+            },
+            {
+              "from": 22,
+              "to": 42,
+              "damage": 87,
+              "shots": 2
+            },
+            {
+              "from": 42,
+              "to": 60,
+              "damage": 67,
+              "shots": 2
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 22,
+              "damage": 77,
+              "shots": 2
+            },
+            {
+              "from": 22,
+              "to": 42,
+              "damage": 63,
+              "shots": 2
+            },
+            {
+              "from": 42,
+              "to": 60,
+              "damage": 49,
+              "shots": 3
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": "C",
+      "hash": "364ec4965b7ecc025972ef50d678b575b1573590bdf3092b56b3cd4d4fe85880"
+    },
+    {
+      "weaponId": "pila",
+      "title": "PILA",
+      "url": "https://metka.gg/en/weapons/mw4/pila/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 9,
+          "unit": "RPM",
+          "raw": "9 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 680,
+          "unit": "ms",
+          "raw": "680 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 250,
+          "unit": "ms",
+          "raw": "250 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 1,
+          "unit": "Schuss",
+          "raw": "1"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 2,
+          "unit": "Schuss",
+          "raw": "2"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 5930,
+          "unit": "ms",
+          "raw": "5.93 s"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 46,
+          "unit": "Level",
+          "raw": "46"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 63.5,
+          "unit": "m/s",
+          "raw": "63.5 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 95,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 83,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 78,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 32,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 31,
+          "unit": "/100"
+        }
+      ],
+      "zones": [],
+      "health": null,
+      "builds": [],
+      "tier": "C",
+      "hash": "572412d6fa85aa804135303751b51f57564fe242e1d5a840f38e54cf027ba139"
+    },
+    {
+      "weaponId": "axion",
+      "title": "Axion",
+      "url": "https://metka.gg/en/weapons/mw4/axion/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 706,
+          "unit": "RPM",
+          "raw": "706 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 260,
+          "unit": "ms",
+          "raw": "260 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 30,
+          "unit": "Schuss",
+          "raw": "30"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 120,
+          "unit": "Schuss",
+          "raw": "120"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3330,
+          "unit": "ms",
+          "raw": "3.33 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 69,
+          "unit": "Level",
+          "raw": "69"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 400,
+          "unit": "m/s",
+          "raw": "400 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Axion Clearcut",
+          "unit": "Quellenangabe",
+          "raw": "Axion Clearcut"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 35,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 43,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 40,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 65,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 62,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 23,
+              "damage": 32,
+              "shots": 4
+            },
+            {
+              "from": 23,
+              "to": 34,
+              "damage": 29,
+              "shots": 4
+            },
+            {
+              "from": 34,
+              "to": 60,
+              "damage": 27,
+              "shots": 4
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 23,
+              "damage": 26,
+              "shots": 4
+            },
+            {
+              "from": 23,
+              "to": 34,
+              "damage": 24,
+              "shots": 5
+            },
+            {
+              "from": 34,
+              "to": 60,
+              "damage": 22,
+              "shots": 5
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "f452345a19c035909b1d1937301bb2f3f227bcfd7a2228325e07d0c5828d38e7"
+    },
+    {
+      "weaponId": "cronen-squall",
+      "title": "Cronen Squall",
+      "url": "https://metka.gg/en/weapons/mw4/cronen-squall/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 674,
+          "unit": "RPM",
+          "raw": "674 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 305,
+          "unit": "ms",
+          "raw": "305 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 20,
+          "unit": "Schuss",
+          "raw": "20"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 100,
+          "unit": "Schuss",
+          "raw": "100"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3530,
+          "unit": "ms",
+          "raw": "3.53 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 67,
+          "unit": "Level",
+          "raw": "67"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 660,
+          "unit": "m/s",
+          "raw": "660 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Cronen Maelstrom",
+          "unit": "Quellenangabe",
+          "raw": "Cronen Maelstrom"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 41,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 47,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 43,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 60,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 58,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 26,
+              "damage": 37,
+              "shots": 3
+            },
+            {
+              "from": 26,
+              "to": 37,
+              "damage": 35,
+              "shots": 3
+            },
+            {
+              "from": 37,
+              "to": 60,
+              "damage": 29,
+              "shots": 4
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 26,
+              "damage": 30,
+              "shots": 4
+            },
+            {
+              "from": 26,
+              "to": 37,
+              "damage": 28,
+              "shots": 4
+            },
+            {
+              "from": 37,
+              "to": 60,
+              "damage": 24,
+              "shots": 5
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "db4b9aa86ee6b150a684cdfb5f1536f289640e8a3ce3edd642f7fbe27dcf297e"
+    },
+    {
+      "weaponId": "oden",
+      "title": "Oden",
+      "url": "https://metka.gg/en/weapons/mw4/oden/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 414,
+          "unit": "RPM",
+          "raw": "414 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 320,
+          "unit": "ms",
+          "raw": "320 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 20,
+          "unit": "Schuss",
+          "raw": "20"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 80,
+          "unit": "Schuss",
+          "raw": "80"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3300,
+          "unit": "ms",
+          "raw": "3.3 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 65,
+          "unit": "Level",
+          "raw": "65"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 690,
+          "unit": "m/s",
+          "raw": "690 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Oden Sentinel",
+          "unit": "Quellenangabe",
+          "raw": "Oden Sentinel"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 50,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 48,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 21,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 58,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 54,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 33,
+              "damage": 57,
+              "shots": 2
+            },
+            {
+              "from": 33,
+              "to": 50,
+              "damage": 50,
+              "shots": 2
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 44,
+              "shots": 3
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 33,
+              "damage": 49,
+              "shots": 3
+            },
+            {
+              "from": 33,
+              "to": 50,
+              "damage": 43,
+              "shots": 3
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 38,
+              "shots": 3
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "a85aaea7e22e83a09e30ec134956ad99b82a8a2cba8258a48a1be3e5e740e486"
+    },
+    {
+      "weaponId": "wz-55-striga",
+      "title": "WZ.55 Striga",
+      "url": "https://metka.gg/en/weapons/mw4/wz-55-striga/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 651,
+          "unit": "RPM",
+          "raw": "651 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 196,
+          "unit": "ms",
+          "raw": "196 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 96,
+          "unit": "ms",
+          "raw": "96 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 25,
+          "unit": "Schuss",
+          "raw": "25"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 100,
+          "unit": "Schuss",
+          "raw": "100"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3170,
+          "unit": "ms",
+          "raw": "3.17 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.4,
+          "unit": "×",
+          "raw": "× 1.4"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 60,
+          "unit": "Level",
+          "raw": "60"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 380,
+          "unit": "m/s",
+          "raw": "380 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "WZ.55 Striga Rampage",
+          "unit": "Quellenangabe",
+          "raw": "WZ.55 Striga Rampage"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 38,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 36,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 29,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 97,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 86,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 36,
+              "shots": 3
+            },
+            {
+              "from": 11,
+              "to": 21,
+              "damage": 32,
+              "shots": 4
+            },
+            {
+              "from": 21,
+              "to": 30,
+              "damage": 25,
+              "shots": 4
+            },
+            {
+              "from": 30,
+              "to": 60,
+              "damage": 24,
+              "shots": 5
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 11,
+              "damage": 26,
+              "shots": 4
+            },
+            {
+              "from": 11,
+              "to": 21,
+              "damage": 23,
+              "shots": 5
+            },
+            {
+              "from": 21,
+              "to": 30,
+              "damage": 18,
+              "shots": 6
+            },
+            {
+              "from": 30,
+              "to": 60,
+              "damage": 17,
+              "shots": 6
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "3ae3e8fb2254fa98eb44432740b00f38bc085660e96064d3abba9b22b90511da"
+    },
+    {
+      "weaponId": "mosin-nagant",
+      "title": "Mosin-Nagant",
+      "url": "https://metka.gg/en/weapons/mw4/mosin-nagant/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 44,
+          "unit": "RPM",
+          "raw": "44 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 350,
+          "unit": "ms",
+          "raw": "350 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 240,
+          "unit": "ms",
+          "raw": "240 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 5,
+          "unit": "Schuss",
+          "raw": "5"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 20,
+          "unit": "Schuss",
+          "raw": "20"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3330,
+          "unit": "ms",
+          "raw": "3.33 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.7,
+          "unit": "×",
+          "raw": "× 1.7"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 69,
+          "unit": "Level",
+          "raw": "69"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 700,
+          "unit": "m/s",
+          "raw": "700 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Mosin Harpoon",
+          "unit": "Quellenangabe",
+          "raw": "Mosin Harpoon"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 79,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 56,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 71,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 57,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 49,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 37,
+              "damage": 158,
+              "shots": 1
+            },
+            {
+              "from": 37,
+              "to": 56,
+              "damage": 146,
+              "shots": 1
+            },
+            {
+              "from": 56,
+              "to": 60,
+              "damage": 102,
+              "shots": 1
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 37,
+              "damage": 102,
+              "shots": 1
+            },
+            {
+              "from": 37,
+              "to": 56,
+              "damage": 94,
+              "shots": 2
+            },
+            {
+              "from": 56,
+              "to": 60,
+              "damage": 66,
+              "shots": 2
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "c277635b35d777e0f2dc7d2a6145aa095f5f0a3d8f336bef6393dcc6cd99e2d4"
+    },
+    {
+      "weaponId": "astaroth-57",
+      "title": "Astaroth .57",
+      "url": "https://metka.gg/en/weapons/mw4/astaroth-57/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 35,
+          "unit": "RPM",
+          "raw": "35 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 603,
+          "unit": "ms",
+          "raw": "603 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 500,
+          "unit": "ms",
+          "raw": "500 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 3,
+          "unit": "Schuss",
+          "raw": "3"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 12,
+          "unit": "Schuss",
+          "raw": "12"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 6530,
+          "unit": "ms",
+          "raw": "6.53 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 3.2,
+          "unit": "×",
+          "raw": "× 3.2"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 54,
+          "unit": "Level",
+          "raw": "54"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 620,
+          "unit": "m/s",
+          "raw": "620 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Astaroth .57 Infiltrator",
+          "unit": "Quellenangabe",
+          "raw": "Astaroth .57 Infiltrator"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 91,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 81,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 79,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 21,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 23,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 50,
+              "damage": 322,
+              "shots": 1
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 316,
+              "shots": 1
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 50,
+              "damage": 199,
+              "shots": 1
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 195,
+              "shots": 1
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "533e47d18a57852ed9454f5262986e01aab4d4463fbac3aa8c80010d97db3a7b"
+    },
+    {
+      "weaponId": "warlord",
+      "title": "Warlord",
+      "url": "https://metka.gg/en/weapons/mw4/warlord/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 106,
+          "unit": "RPM",
+          "raw": "106 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 340,
+          "unit": "ms",
+          "raw": "340 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 210,
+          "unit": "ms",
+          "raw": "210 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 14,
+          "unit": "Schuss",
+          "raw": "14"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 56,
+          "unit": "Schuss",
+          "raw": "56"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 20800,
+          "unit": "ms",
+          "raw": "20.8 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1,
+          "unit": "×",
+          "raw": "× 1"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 60,
+          "unit": "Level",
+          "raw": "60"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 325,
+          "unit": "m/s",
+          "raw": "325 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Warlord Lumen",
+          "unit": "Quellenangabe",
+          "raw": "Warlord Lumen"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 70,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 26,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 25,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 68,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 52,
+          "unit": "/100"
+        }
+      ],
+      "zones": [],
+      "health": null,
+      "builds": [],
+      "tier": null,
+      "hash": "4802ad62d199e62dc8c531c1e6d0e2d5acb317c0d43e07312f86b938d9545473"
+    },
+    {
+      "weaponId": "apoc-338",
+      "title": "APOC-338",
+      "url": "https://metka.gg/en/weapons/mw4/apoc-338/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 555,
+          "unit": "RPM",
+          "raw": "555 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 510,
+          "unit": "ms",
+          "raw": "510 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 250,
+          "unit": "ms",
+          "raw": "250 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 50,
+          "unit": "Schuss",
+          "raw": "50"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 150,
+          "unit": "Schuss",
+          "raw": "150"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 7100,
+          "unit": "ms",
+          "raw": "7.1 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.3,
+          "unit": "×",
+          "raw": "× 1.3"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 56,
+          "unit": "Level",
+          "raw": "56"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 730,
+          "unit": "m/s",
+          "raw": "730 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "APOC 338 Praetor",
+          "unit": "Quellenangabe",
+          "raw": "APOC 338 Praetor"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Full auto",
+          "unit": "Quellenangabe",
+          "raw": "Full auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 52,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 54,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 34,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 33,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 25,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 23,
+              "damage": 55,
+              "shots": 2
+            },
+            {
+              "from": 23,
+              "to": 50,
+              "damage": 51,
+              "shots": 2
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 47,
+              "shots": 3
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 23,
+              "damage": 45,
+              "shots": 3
+            },
+            {
+              "from": 23,
+              "to": 50,
+              "damage": 41,
+              "shots": 3
+            },
+            {
+              "from": 50,
+              "to": 60,
+              "damage": 38,
+              "shots": 3
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "56a57bb472f2362c1c9d40439dd04390e74b8bbb05cbbc2e4d273c040d2fde2a"
+    },
+    {
+      "weaponId": "sang-9mm",
+      "title": "Sang 9mm",
+      "url": "https://metka.gg/en/weapons/mw4/sang-9mm/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 370,
+          "unit": "RPM",
+          "raw": "370 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 170,
+          "unit": "ms",
+          "raw": "170 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 80,
+          "unit": "ms",
+          "raw": "80 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 13,
+          "unit": "Schuss",
+          "raw": "13"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 52,
+          "unit": "Schuss",
+          "raw": "52"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 2500,
+          "unit": "ms",
+          "raw": "2.5 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.5,
+          "unit": "×",
+          "raw": "× 1.5"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 38,
+          "unit": "Level",
+          "raw": "38"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 370,
+          "unit": "m/s",
+          "raw": "370 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Sang Breach",
+          "unit": "Quellenangabe",
+          "raw": "Sang Breach"
+        }
+      ],
+      "ratings": [],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 9,
+              "damage": 60,
+              "shots": 2
+            },
+            {
+              "from": 9,
+              "to": 19,
+              "damage": 49,
+              "shots": 3
+            },
+            {
+              "from": 19,
+              "to": 26,
+              "damage": 42,
+              "shots": 3
+            },
+            {
+              "from": 26,
+              "to": 60,
+              "damage": 36,
+              "shots": 3
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 9,
+              "damage": 48,
+              "shots": 3
+            },
+            {
+              "from": 9,
+              "to": 26,
+              "damage": 39,
+              "shots": 3
+            },
+            {
+              "from": 26,
+              "to": 60,
+              "damage": 28,
+              "shots": 4
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "8040555f8a191e3da1195cb86ce6d42c48380c5e82a2adea6f29f48bddd1f801"
+    },
+    {
+      "weaponId": "mojave-357",
+      "title": "Mojave .357",
+      "url": "https://metka.gg/en/weapons/mw4/mojave-357/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 142,
+          "unit": "RPM",
+          "raw": "142 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 190,
+          "unit": "ms",
+          "raw": "190 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 80,
+          "unit": "ms",
+          "raw": "80 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 8,
+          "unit": "Schuss",
+          "raw": "8"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 40,
+          "unit": "Schuss",
+          "raw": "40"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3700,
+          "unit": "ms",
+          "raw": "3.7 s"
+        },
+        {
+          "label": "Head multiplier",
+          "metric": "headMultiplier",
+          "value": 1.8,
+          "unit": "×",
+          "raw": "× 1.8"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 44,
+          "unit": "Level",
+          "raw": "44"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 400,
+          "unit": "m/s",
+          "raw": "400 m/s"
+        },
+        {
+          "label": "Apex attachment",
+          "metric": null,
+          "value": "Mojave .357 Lawless",
+          "unit": "Quellenangabe",
+          "raw": "Mojave .357 Lawless"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Semi-auto",
+          "unit": "Quellenangabe",
+          "raw": "Semi-auto"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 62,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 38,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 55,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 86,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 78,
+          "unit": "/100"
+        }
+      ],
+      "zones": [
+        {
+          "zone": "Head",
+          "bands": [
+            {
+              "from": 0,
+              "to": 25,
+              "damage": 115,
+              "shots": 1
+            },
+            {
+              "from": 25,
+              "to": 31,
+              "damage": 93,
+              "shots": 2
+            },
+            {
+              "from": 31,
+              "to": 40,
+              "damage": 86,
+              "shots": 2
+            },
+            {
+              "from": 40,
+              "to": 60,
+              "damage": 75,
+              "shots": 2
+            }
+          ]
+        },
+        {
+          "zone": "Body",
+          "bands": [
+            {
+              "from": 0,
+              "to": 25,
+              "damage": 76,
+              "shots": 2
+            },
+            {
+              "from": 25,
+              "to": 31,
+              "damage": 62,
+              "shots": 2
+            },
+            {
+              "from": 31,
+              "to": 40,
+              "damage": 57,
+              "shots": 2
+            },
+            {
+              "from": 40,
+              "to": 60,
+              "damage": 50,
+              "shots": 2
+            }
+          ]
+        }
+      ],
+      "health": 100,
+      "builds": [],
+      "tier": null,
+      "hash": "cac656beb492da492e8c442f6cc7897d4875cfe3dea243bce9b989b6bc2f6c27"
+    },
+    {
+      "weaponId": "jokr",
+      "title": "JOKR",
+      "url": "https://metka.gg/en/weapons/mw4/jokr/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 13,
+          "unit": "RPM",
+          "raw": "13 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 740,
+          "unit": "ms",
+          "raw": "740 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 250,
+          "unit": "ms",
+          "raw": "250 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 1,
+          "unit": "Schuss",
+          "raw": "1"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 2,
+          "unit": "Schuss",
+          "raw": "2"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 4030.0000000000005,
+          "unit": "ms",
+          "raw": "4.03 s"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 46,
+          "unit": "Level",
+          "raw": "46"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 30.5,
+          "unit": "m/s",
+          "raw": "30.5 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 90,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 90,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 100,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 27,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 28,
+          "unit": "/100"
+        }
+      ],
+      "zones": [],
+      "health": null,
+      "builds": [],
+      "tier": null,
+      "hash": "9607c60e9258ea4246c75740fa631aa52ee712695c210c23267555d31846bfa5"
+    },
+    {
+      "weaponId": "rpg-8",
+      "title": "RPG 8",
+      "url": "https://metka.gg/en/weapons/mw4/rpg-8/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 21,
+          "unit": "RPM",
+          "raw": "21 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 550,
+          "unit": "ms",
+          "raw": "550 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 500,
+          "unit": "ms",
+          "raw": "500 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 1,
+          "unit": "Schuss",
+          "raw": "1"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 2,
+          "unit": "Schuss",
+          "raw": "2"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 3300,
+          "unit": "ms",
+          "raw": "3.3 s"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 46,
+          "unit": "Level",
+          "raw": "46"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 52.1,
+          "unit": "m/s",
+          "raw": "52.1 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 88,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 81,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 73,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 40,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 32,
+          "unit": "/100"
+        }
+      ],
+      "zones": [],
+      "health": null,
+      "builds": [],
+      "tier": null,
+      "hash": "12e7a37de954f93b76162f046b5f4bf3db111aa40a28575be3985cca0290d611"
+    },
+    {
+      "weaponId": "pm-40-anvil",
+      "title": "PM-40 Anvil",
+      "url": "https://metka.gg/en/weapons/mw4/pm-40-anvil/",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "asOf": "2026-10-24",
+      "stats": [
+        {
+          "label": "Fire rate",
+          "metric": "rpm",
+          "value": 39,
+          "unit": "RPM",
+          "raw": "39 RPM"
+        },
+        {
+          "label": "ADS time",
+          "metric": "ads",
+          "value": 350,
+          "unit": "ms",
+          "raw": "350 ms"
+        },
+        {
+          "label": "Sprint-to-fire",
+          "metric": "sprintToFire",
+          "value": 250,
+          "unit": "ms",
+          "raw": "250 ms"
+        },
+        {
+          "label": "Magazine",
+          "metric": "magazine",
+          "value": 3,
+          "unit": "Schuss",
+          "raw": "3"
+        },
+        {
+          "label": "Reserve",
+          "metric": "reserve",
+          "value": 9,
+          "unit": "Schuss",
+          "raw": "9"
+        },
+        {
+          "label": "Reload",
+          "metric": "reload",
+          "value": 7030,
+          "unit": "ms",
+          "raw": "7.03 s"
+        },
+        {
+          "label": "Weapon levels",
+          "metric": "weaponLevels",
+          "value": 46,
+          "unit": "Level",
+          "raw": "46"
+        },
+        {
+          "label": "Bullet velocity",
+          "metric": "velocity",
+          "value": 790,
+          "unit": "m/s",
+          "raw": "790 m/s"
+        },
+        {
+          "label": "Fire mode",
+          "metric": null,
+          "value": "Single fire",
+          "unit": "Quellenangabe",
+          "raw": "Single fire"
+        }
+      ],
+      "ratings": [
+        {
+          "metric": "ratingDamage",
+          "value": 77,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingRange",
+          "value": 40,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingAccuracy",
+          "value": 42,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingMobility",
+          "value": 52,
+          "unit": "/100"
+        },
+        {
+          "metric": "ratingHandling",
+          "value": 49,
+          "unit": "/100"
+        }
+      ],
+      "zones": [],
+      "health": null,
+      "builds": [],
+      "tier": null,
+      "hash": "94d7ac842e5e56aa13b2de477d121323f6b586e2ecabb2c76dd2c228444b6af0"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://metka.gg/en/weapons/mw4/combat-knife/",
+      "reason": "Quellenname Combat Knife nicht ohne Identitätsbeleg mit FSS Carbon Edge 1095 gleichgesetzt."
+    },
+    {
+      "weaponId": "m4",
+      "url": "https://mw4stats.com/weapons/m4/",
+      "asOf": "2026-10-23",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "note": "Weitere Community-Quelle; widerspricht Metka bei Schaden und ADS. Einzelne Fakten mit Quellenangabe, keine vollständige Spiegelung der Datenbank.",
+      "observations": [
+        {
+          "label": "Schaden Oberkörper 0–10 m",
+          "value": 35,
+          "unit": "HP"
+        },
+        {
+          "label": "Schaden Oberkörper ab 30 m",
+          "value": 25,
+          "unit": "HP"
+        },
+        {
+          "label": "Schadensabfallbereich",
+          "value": "20–35",
+          "unit": "m"
+        },
+        {
+          "label": "ADS-Zeit",
+          "value": 225,
+          "unit": "ms"
+        },
+        {
+          "label": "Feuerrate",
+          "value": 810,
+          "unit": "RPM"
+        },
+        {
+          "label": "Magazin",
+          "value": 30,
+          "unit": "Schuss"
+        }
+      ]
+    },
+    {
+      "weaponId": "han-86",
+      "url": "https://mw4field.com/weapons/han-86/",
+      "asOf": null,
+      "mode": "unknown",
+      "stage": "unknown",
+      "note": "Widerspruch: Quelle nennt 60 Reserveschuss statt 90 offiziell bzw. 120 bei Metka. Modus/Patch nicht eindeutig; nur als weitere Quellenangabe anzeigen.",
+      "observations": [
+        {
+          "label": "Reservemunition",
+          "value": 60,
+          "unit": "Schuss"
+        },
+        {
+          "label": "Damage",
+          "value": 33,
+          "unit": "Quelle nennt pro Treffer; Kontext ungeklärt"
+        }
+      ]
+    }
+  ],
+  "hash": "43113ba3d1ae61f6d002038373000fe241b9eb0767de654b219105d71ebd6c2a",
+  "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+}

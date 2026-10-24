@@ -42,6 +42,7 @@ export function analyzeCommunity(db, weaponId, patch = db.patchRevision) {
   const builds = [...groups.values()]
     .map((g) => ({
       attachments: g.attachments,
+      label: g.records[0]?.note.split(" · ")[0].slice(0, 80) ?? "Quellen-Build",
       sourceIds: [...g.sourceIds],
       independentSources: g.independent.size,
       testSources: g.tests.size,

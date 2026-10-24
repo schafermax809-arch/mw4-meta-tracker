@@ -1,3 +1,9 @@
+import {
+  collectCommunityValues,
+  proposeCommunityValueRefresh,
+} from "./lib/community-values.mjs";
+import { validateCommunityValues } from "../public/engine/community-values.js";
+import { hash } from "./lib/model.mjs";
 import { collectResearch } from "./lib/research.mjs";
 import { proposeGunsmith } from "./lib/gunsmith-update.mjs";
 import { mkdir, writeFile, appendFile } from "node:fs/promises";
@@ -29,10 +35,20 @@ try {
     await readJson("config/research-sources.json"),
   );
   const engineResult = proposeGunsmith(db, baseline, docs, research, {
-    previous: previousGunsmith,
+    previous: previousGunsmith?.sourceFingerprint
+      ? { ...previousGunsmith, fingerprint: previousGunsmith.sourceFingerprint }
+      : previousGunsmith,
     catalog: (result?.state ?? current).weapons,
   });
-  const changed = Boolean(result || engineResult);
+  const oldValues = await readJson("public/data/community-values.json");
+  const newValues = validateCommunityValues(
+    await collectCommunityValues(
+      await readJson("config/community-values-sources.json"),
+    ),
+    result?.state ?? current,
+  );
+  const valuesChanged = hash(newValues) !== hash(oldValues);
+  const changed = Boolean(result || engineResult || valuesChanged);
   if (engineResult) {
     await atomicJson(
       "work/candidate/data/gunsmith.json",
@@ -83,9 +99,83 @@ try {
         result.state.patchRevision,
       ),
     );
+  if (changed) {
+    await atomicJson("work/candidate/data/community-values.json", newValues);
+    if (!result && !engineResult) {
+      for (const [name, value] of [
+        ["meta", current],
+        ["gunsmith", db],
+        ["research", baseline],
+      ])
+        await atomicJson("work/candidate/data/" + name + ".json", value);
+      await atomicJson("work/candidate/reviews/pending.json", {
+        schemaVersion: 1,
+        policy: "REVIEW_REQUIRED",
+        note: "Neue Community-Quellenwerte; offizieller Kernkatalog unverändert.",
+      });
+      const changedPages = newValues.pages.filter(
+        (p) => oldValues.pages.find((o) => o.url === p.url)?.hash !== p.hash,
+      );
+      await atomicJson("work/candidate/reviews/gunsmith-pending.json", {
+        schemaVersion: 1,
+        policy: "REVIEW_REQUIRED",
+        fingerprint: hash(newValues),
+        changedWeaponIds: changedPages.map((p) => p.weaponId),
+        communityValueChanges: changedPages.map((p) => ({
+          weaponId: p.weaponId,
+          url: p.url,
+          before: oldValues.pages.find((o) => o.url === p.url) ?? null,
+          after: p,
+        })),
+      });
+      await writeFile(
+        "work/pr-body.md",
+        "## Neue MW4-Community-Werte\n\n" +
+          changedPages.length +
+          " geänderte Waffen-Seiten. Zahlen bleiben als Community-Angaben gekennzeichnet. Offizielle Werte und persönlicher Camo-Fortschritt bleiben erhalten. reviews/gunsmith-pending.json enthält Vorher/Nachher.\n",
+      );
+    }
+    const refresh = proposeCommunityValueRefresh(
+      engineResult?.database ?? db,
+      oldValues,
+      newValues,
+      { previous: previousGunsmith },
+    );
+    const finalDb = refresh?.database ?? engineResult?.database ?? db;
+    if (refresh) {
+      const changedWeaponIds = [
+        ...new Set([
+          ...(engineResult?.review.changedWeaponIds ?? []),
+          ...refresh.review.changedWeaponIds,
+        ]),
+      ];
+      finalDb.history[0].changedWeaponIds = changedWeaponIds;
+      await atomicJson("work/candidate/data/gunsmith.json", finalDb);
+      const review = {
+        ...(engineResult?.review ?? {}),
+        ...refresh.review,
+        changedWeaponIds,
+        sourceFingerprint: engineResult?.review.fingerprint ?? null,
+      };
+      await atomicJson("work/candidate/reviews/gunsmith-pending.json", review);
+    }
+    await atomicJson(
+      "work/candidate/data/calculated.json",
+      (await import("./lib/gunsmith-update.mjs")).recompute(
+        finalDb,
+        result?.state.patchRevision ?? current.patchRevision,
+        newValues,
+      ),
+    );
+  }
   const report = {
     checkedAt: new Date().toISOString(),
     status: changed ? "review-required" : "unchanged",
+    communityValueSources: newValues.pages.map((p) => ({
+      url: p.url,
+      hash: p.hash,
+    })),
+    communityValuesChanged: valuesChanged,
     researchSources: research.map((d) => ({ url: d.url, hash: d.hash })),
     manualSources: db.sources
       .filter((s) => s.automation !== "allowed")
@@ -116,6 +206,11 @@ try {
         " geänderte offizielle Datensätze; " +
         engineResult.review.research.length +
         " neue/geänderte redaktionelle Quellen. Prüfe reviews/gunsmith-pending.json. Die vollständige Datenbasis bleibt bei Fehlern erhalten. Keine automatische Reddit-Analyse ohne autorisierten Zugang.\n",
+    );
+  if (changed && valuesChanged && (result || engineResult))
+    await appendFile(
+      "work/pr-body.md",
+      "\n### Community-Werte\n\nÖffentliche Waffenprofile wurden ebenfalls aktualisiert. Prüfe die Vorher-/Nachher-Werte in reviews/gunsmith-pending.json und public/data/community-values.json. Offizielle Basiswerte behalten Vorrang; Community-Werte bleiben gekennzeichnet.\n",
     );
   if (process.env.GITHUB_OUTPUT)
     await appendFile(process.env.GITHUB_OUTPUT, `changed=${changed}\n`);

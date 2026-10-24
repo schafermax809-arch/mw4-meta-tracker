@@ -1,4 +1,8 @@
 import {
+  validateCommunityValues,
+  hydrateCommunityValues,
+} from "./engine/community-values.js";
+import {
   loadProgress,
   saveProgress,
   validateProgress,
@@ -51,6 +55,7 @@ import {
   renderOptimizer,
   renderCommunity,
   renderDataCoverage,
+  renderSourceValues,
   statTable,
   compareStats,
 } from "./engine-ui.js";
@@ -123,11 +128,21 @@ const drafts = new Map(),
   editingIds = new Map(),
   draftNames = new Map();
 let viewer = null;
+const latestWeaponUpdate = () => {
+  const entry = gunsmithDb?.history[0];
+  return entry &&
+    Date.parse(entry.at) > Date.parse(state.lastChangedAt ?? "1970-01-01")
+    ? { at: entry.at, ids: entry.changedWeaponIds }
+    : { at: state.lastChangedAt, ids: state.lastChangedWeaponIds };
+};
 const context = () => ({
   progress,
   favorites: preferences.favorites,
   patchRevision: state.patchRevision,
-  changedWeaponIds: state.lastChangedWeaponIds,
+  changedWeaponIds: latestWeaponUpdate().ids,
+  reportedTiers: Object.fromEntries(
+    (gunsmithDb?.weapons ?? []).map((w) => [w.id, w.reportedTier ?? null]),
+  ),
 });
 const draft = (weapon) => drafts.get(weapon.id) || [];
 const rules = (weapon) =>
@@ -476,7 +491,9 @@ function renderArsenalGrid() {
   if (!weapons.some((w) => w.id === selectedId)) selectedId = weapons[0].id;
   for (const w of weapons) {
     const p = weaponProgress(w, progress),
-      tier = currentTier(w, state.patchRevision);
+      tier =
+        currentTier(w, state.patchRevision) ??
+        gunsmithDb?.weapons.find((x) => x.id === w.id)?.reportedTier;
     const b = node(
       "button",
       null,
@@ -506,7 +523,7 @@ function renderArsenalGrid() {
       ),
     );
     const badge = node("span", tier ? `TIER ${tier}` : "META —", "tile-badge");
-    if (state.lastChangedWeaponIds.includes(w.id)) badge.append(icon("check"));
+    if (latestWeaponUpdate().ids.includes(w.id)) badge.append(icon("check"));
     footer.append(title, badge);
     b.append(footer);
     if (favorited(w)) b.append(node("span", "★", "tile-favorite"));
@@ -541,22 +558,22 @@ function renderArsenalGrid() {
 function renderStats(weapon) {
   const panel = node("aside", null, "stats-panel");
   panel.id = "weapon-statistics";
-  panel.append(node("div", "ECHTE WAFFENWERTE", "eyebrow"));
+  panel.append(node("div", "WAFFENWERTE · QUELLEN", "eyebrow"));
   const c = gunsmithDb
     ? calculateStats(gunsmithDb, weapon.id, draft(weapon), state.patchRevision)
     : null;
   for (const key of [
     "rpm",
     "magazine",
-    "reserve",
+    "damage",
     "ads",
     "sprintToFire",
     "velocity",
-    "horizontalRecoil",
+    "range",
     "reload",
   ]) {
     const [label, unit] = METRICS[key],
-      v = c?.values[key],
+      v = c?.values[key] ?? c?.base[key],
       base = c?.base[key],
       row = node("div", null, "real-stat-line");
     row.append(
@@ -564,20 +581,30 @@ function renderStats(weapon) {
       node(
         "strong",
         v
-          ? Number(v.value.toFixed(2)).toLocaleString("de-DE") + " " + unit
+          ? Number(v.value.toFixed(2)).toLocaleString("de-DE") +
+              " " +
+              unit +
+              (v.status === "reported" ? " C" : "")
           : "—",
       ),
     );
     if (base && draft(weapon).length)
-      row.append(node("small", "Basis: " + base.value + " " + unit));
+      row.append(
+        node(
+          "small",
+          c?.values[key]
+            ? "Basis: " + base.value + " " + unit
+            : "Basiswert · Aufsatzwirkung unbekannt",
+        ),
+      );
     panel.append(row);
   }
   panel.append(
     node(
       "p",
       draft(weapon).length
-        ? "— = Effekte oder Kombinationsregeln nicht verifiziert."
-        : "Basiswerte aus der offiziellen Launch-Übersicht. Weitere Werte: nicht verifiziert.",
+        ? "C = Community-Quelle. Gezeigte Basiswerte enthalten keine unbekannten Aufsatzeffekte."
+        : "C = Community-Quelle. Andere Werte: offizielle Angaben. Quellen und Unterschiede stehen unter dem Menü.",
       "stats-note",
     ),
   );
@@ -637,12 +664,15 @@ function renderWeapon(weapon, tab) {
         : "Wähle dein Loadout. Unbekannte Spieldaten bleiben bis zur Quellenprüfung offen.",
     ),
   );
-  const tier = currentTier(weapon, state.patchRevision);
+  const officialTier = currentTier(weapon, state.patchRevision);
+  const tier =
+    officialTier ??
+    gunsmithDb?.weapons.find((w) => w.id === weapon.id)?.reportedTier;
   title.append(
     node(
       "span",
       tier
-        ? `VERIFIZIERT · TIER ${tier}`
+        ? `${officialTier ? "OFFIZIELL/GEPRÜFT" : "COMMUNITY"} · TIER ${tier}`
         : weapon.tier
           ? "META VERALTET · ERNEUT PRÜFEN"
           : "META · NICHT VERIFIZIERT",
@@ -855,6 +885,11 @@ function renderWeapon(weapon, tab) {
   }
   if (gunsmithDb)
     renderDataCoverage(gunsmithDb, weapon, content, state.patchRevision);
+  if (
+    gunsmithDb &&
+    ["attachments", "comparison", "community", "meta"].includes(tab)
+  )
+    renderSourceValues(gunsmithDb, weapon, content);
   screen.append(content);
 }
 
@@ -1393,6 +1428,34 @@ function renderRecommendedBuilds(weapon, content, kind) {
         "button primary",
       ),
     );
+  if (
+    kind === "meta" &&
+    gunsmithDb?.community.some((c) => c.weaponId === weapon.id)
+  ) {
+    renderCommunity(gunsmithDb, weapon, content, {
+      patch: state.patchRevision,
+      apply: (refs) => {
+        drafts.set(weapon.id, structuredClone(refs));
+        editingIds.delete(weapon.id);
+        weaponLink(weapon, "attachments");
+      },
+      save: (refs, name) => {
+        try {
+          if (!storageStatus.builds)
+            throw Error("Buildspeicher nicht verfügbar");
+          const b = {
+            ...buildFromDraft(weapon, name.slice(0, 80)),
+            attachments: structuredClone(refs),
+          };
+          customBuilds = saveBuild(localStorage, customBuilds, b);
+          toast("Build gespeichert.");
+        } catch (e) {
+          toast(e.message);
+        }
+      },
+    });
+    return;
+  }
   const builds = weapon.builds.filter((b) => b.kind === kind);
   if (!builds.length) {
     const box = node("div", null, "empty-build");
@@ -1989,13 +2052,16 @@ function renderTierlist() {
     heading(
       "MULTIPLAYER / META-ÜBERSICHT",
       "WAFFEN-TIERLIST",
-      "Nur für den aktuellen Patch geprüfte Einstufungen werden in S, A, B oder C einsortiert.",
+      "Offizielle Einstufungen haben Vorrang. Mit C markierte Waffen verwenden die veröffentlichte Community-Tierlist; die Quelle steht im Waffenmenü.",
     ),
   );
   const list = node("div", null, "tier-list");
-  for (const tier of ["S", "A", "B", "C", null]) {
+  for (const tier of ["S", "A", "B", "C", "D", null]) {
     const weapons = state.weapons.filter(
-      (w) => currentTier(w, state.patchRevision) === tier,
+      (w) =>
+        (currentTier(w, state.patchRevision) ??
+          gunsmithDb?.weapons.find((x) => x.id === w.id)?.reportedTier ??
+          null) === tier,
     );
     const row = node("section", null, "tier-row");
     row.append(node("h2", tier || "—", `tier-label${tier ? "" : " unknown"}`));
@@ -2009,7 +2075,7 @@ function renderTierlist() {
       );
     for (const w of weapons) {
       const b = button(
-        `${favorited(w) ? "★ " : ""}${w.name}`,
+        `${favorited(w) ? "★ " : ""}${w.name}${tier && !currentTier(w, state.patchRevision) ? " · C" : ""}`,
         () => weaponLink(w, "meta"),
         "text-button",
       );
@@ -2177,7 +2243,7 @@ function renderIntel(tab = "status") {
     ),
     node(
       "p",
-      `Letzte tatsächliche Waffenänderung: ${date(state.lastChangedAt)}. ${state.lastChangedWeaponIds.length} Waffen wurden dabei geändert.`,
+      `Letzte tatsächliche Waffenänderung: ${date(latestWeaponUpdate().at)}. ${latestWeaponUpdate().ids.length} Waffen wurden dabei geändert.`,
     ),
     node("div", `QUELLREVISION: ${state.patchRevision || "UNBEKANNT"}`, "mono"),
     node(
@@ -2189,7 +2255,7 @@ function renderIntel(tab = "status") {
   const updated = node("article", null, "intel-panel");
   updated.append(node("h3", "Zuletzt geänderte Waffen"));
   const names = node("div", null, "tier-items");
-  state.lastChangedWeaponIds.forEach((id) => {
+  latestWeaponUpdate().ids.forEach((id) => {
     const w = state.weapons.find((w) => w.id === id);
     if (w) names.append(button(w.name, () => weaponLink(w), "text-button"));
   });
@@ -2201,7 +2267,7 @@ function renderIntel(tab = "status") {
     node("h3", "Automatisch gefunden. Von dir freigegeben."),
     node(
       "p",
-      "Der Cloud-Workflow prüft offizielle Quellen täglich um 05:17 UTC (06:17 Uhr im Winter, 07:17 Uhr im Sommer). Veränderte Quellenstände erscheinen als Review-PR. Erst dein Merge veröffentlicht Änderungen.",
+      "Der Cloud-Workflow prüft offizielle Quellen und die registrierten Community-Waffenprofile täglich um 05:17 UTC (06:17 Uhr im Winter, 07:17 Uhr im Sommer). Veränderte Quellenstände erscheinen als Review-PR. Erst dein Merge veröffentlicht Änderungen.",
     ),
   );
   const ul = node("ul");
@@ -2254,6 +2320,16 @@ function renderChangelog() {
         (id) => state.weapons.find((w) => w.id === id)?.name ?? id,
       );
       details.append(node("p", names.join(", ")));
+      if (e.sourceValues) {
+        details.append(
+          node(
+            "p",
+            "Geänderte Community-Werte: " +
+              e.sourceValues.map((c) => c.weaponId).join(", "),
+          ),
+          node("pre", JSON.stringify(e.sourceValues, null, 2), "historic-diff"),
+        );
+      }
       if (e.changes) {
         const pre = node(
           "pre",
@@ -2655,6 +2731,20 @@ try {
     });
     if (!r.ok) throw Error("Datenbank nicht erreichbar");
     gunsmithDb = validateDatabase(await r.json(), state);
+    try {
+      const c = await fetch(
+        new URL("./data/community-values.json", import.meta.url),
+        { cache: "no-cache" },
+      );
+      if (c.ok)
+        gunsmithDb = hydrateCommunityValues(
+          gunsmithDb,
+          validateCommunityValues(await c.json(), state),
+          state.patchRevision,
+        );
+    } catch (e) {
+      toast("Community-Werte konnten nicht geladen werden: " + e.message);
+    }
     state.attachments = [
       ...new Map(
         [...state.attachments, ...gunsmithDb.attachments].map((a) => [a.id, a]),

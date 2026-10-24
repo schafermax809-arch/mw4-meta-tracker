@@ -86,8 +86,12 @@ export function filterWeapons(
         .includes(query.trim().toLocaleLowerCase("de")) &&
       (!tier ||
         (tier === "unknown"
-          ? !currentTier(w, context.patchRevision)
-          : currentTier(w, context.patchRevision) === tier)) &&
+          ? !(
+              currentTier(w, context.patchRevision) ??
+              context.reportedTiers?.[w.id]
+            )
+          : (currentTier(w, context.patchRevision) ??
+              context.reportedTiers?.[w.id]) === tier)) &&
       (!favoritesOnly || context.favorites.includes(w.id)) &&
       (!changedOnly || context.changedWeaponIds.includes(w.id)) &&
       (!progressFilter ||

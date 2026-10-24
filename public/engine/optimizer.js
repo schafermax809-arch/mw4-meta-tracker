@@ -90,14 +90,49 @@ export function optimize(
     exhaustiveLimit < 1
   )
     throw new Error("Ungültiges Suchbudget");
-  const unavailable = (reasons) => ({
-    status: "unavailable",
-    reasons,
-    results: [],
-    evaluated: 0,
-    algorithm: null,
-    patchRevision: patch,
-  });
+  const unavailable = (reasons) => {
+    const builds = db.communityValues
+      ? analyzeCommunity(db, weaponId, patch).builds.filter(
+          (b) => allowApex || !b.attachments.some((a) => a.slot === "Apex"),
+        )
+      : [];
+    const patterns = {
+      meta: /balanced|meta|versatile/i,
+      longshot: /long|distance|distanz/i,
+      headshot: /precision|accuracy|head/i,
+      hipfire: /hip|close/i,
+      multikill: /magazine|multikill|sustain/i,
+    };
+    const pattern = patterns[goal] ?? null;
+    const ranked = builds
+      .map((b) => {
+        const notes = db.community
+          .filter(
+            (c) =>
+              c.weaponId === weaponId &&
+              signature(c.attachments) === signature(b.attachments),
+          )
+          .map((c) => c.note)
+          .join(" ");
+        return { ...b, title: notes, goalMatch: pattern?.test(notes) ?? false };
+      })
+      .sort(
+        (a, b) =>
+          Number(b.goalMatch) - Number(a.goalMatch) ||
+          b.independentSources - a.independentSources,
+      );
+    return {
+      status: ranked.length ? "source-based" : "unavailable",
+      sourceBuild: ranked[0] ?? null,
+      reasons,
+      results: [],
+      evaluated: 0,
+      algorithm: null,
+      patchRevision: patch,
+      policy:
+        "Quellenempfehlung anhand des veröffentlichten Einsatzzwecks und unabhängiger Quellen. Numerische Slider-Gewichte werden ohne vollständige Aufsatz-Messwerte nicht ausgewertet. Keine mathematische Optimalitätsbehauptung.",
+    };
+  };
   if (w.rules.patchRevision !== patch || w.rules.maxAttachments === null)
     return unavailable(["Patchaktuelle Slot-Regeln oder Aufsatzlimit fehlen"]);
   if (goal === "longshot" && w.rules.longshotDistance?.patchRevision !== patch)
@@ -247,7 +282,17 @@ export function optimize(
       (a.availability !== true || a.patchRevision !== patch),
   );
   const coverage = w.coverage;
+  if (
+    db.communityValues &&
+    unknown > 0 &&
+    best.every((b) => !b.attachments.length)
+  )
+    return unavailable([
+      "Für Aufsätze fehlen vollständige Messwerte; stattdessen wird ein verfügbarer Quellen-Build empfohlen.",
+    ]);
+  const usesReported = required.some((k) => w.base[k]?.status === "reported");
   const certified =
+    !usesReported &&
     !unresolved &&
     algorithm === "exhaustive" &&
     !truncated &&
@@ -285,6 +330,9 @@ export function optimize(
     reasons: certified
       ? []
       : [
+          ...(usesReported
+            ? ["Berechnung verwendet ausgewiesene Community-Werte"]
+            : []),
           ...(unresolved
             ? ["Verfügbarkeit oder Patchstand einzelner Aufsätze ungeklärt"]
             : []),

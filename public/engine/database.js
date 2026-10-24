@@ -19,6 +19,15 @@ export const METRICS = {
   zoom: ["Vergrößerung", "×", 1],
   recenter: ["Nachzentrieren", "ms", -1],
   ttk: ["TTK", "ms", -1],
+  headMultiplier: ["Kopftreffer-Multiplikator", "×", 1],
+  weaponLevels: ["Maximales Waffenlevel", "Level", 1],
+  unlockLevel: ["Freischaltung Spielerlevel", "Level", -1],
+  adsOut: ["ADS verlassen", "ms", -1],
+  ratingDamage: ["Menüwert Schaden", "/100", 1],
+  ratingRange: ["Menüwert Reichweite", "/100", 1],
+  ratingAccuracy: ["Menüwert Präzision", "/100", 1],
+  ratingMobility: ["Menüwert Mobilität", "/100", 1],
+  ratingHandling: ["Menüwert Handling", "/100", 1],
 };
 export const signature = (refs) =>
   refs
@@ -484,7 +493,14 @@ export function validateDatabase(db, catalog = null) {
   for (const h of db.history) {
     exact(
       h,
-      ["at", "patchRevision", "summary", "changedWeaponIds", "changes"],
+      [
+        "at",
+        "patchRevision",
+        "summary",
+        "changedWeaponIds",
+        "changes",
+        "sourceValues",
+      ],
       "history",
     );
     assert(

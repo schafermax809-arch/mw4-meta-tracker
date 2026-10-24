@@ -7,6 +7,7 @@ import {
 import { calculateStats, timeToKill } from "./engine/calculator.js";
 import { objectiveWeights } from "./engine/optimizer.js";
 import { analyzeCommunity } from "./engine/community.js";
+import { communityTTK } from "./engine/community-values.js";
 const fmt = (v) => Number(v.toFixed(3)).toLocaleString("de-DE");
 export function statTable(db, weaponId, refs, patch) {
   const c = calculateStats(db, weaponId, refs, patch),
@@ -24,8 +25,18 @@ export function statTable(db, weaponId, refs, patch) {
       r = node("tr");
     r.append(
       node("th", label),
-      node("td", base ? `${fmt(base.value)} ${unit}` : "—"),
-      node("td", v ? `${fmt(v.value)} ${unit}` : "—"),
+      node(
+        "td",
+        base
+          ? `${fmt(base.value)} ${unit}${base.status === "reported" ? " C" : ""}`
+          : "—",
+      ),
+      node(
+        "td",
+        v
+          ? `${fmt(v.value)} ${unit}${v.status === "reported" ? " C" : ""}`
+          : "—",
+      ),
       node(
         "td",
         d ? `${d.absolute > 0 ? "+" : ""}${fmt(d.absolute)} ${unit}` : "—",
@@ -53,7 +64,7 @@ export function statTable(db, weaponId, refs, patch) {
     ),
     node(
       "p",
-      "— = nicht verifiziert. Zeitwerte in ms: kleiner ist schneller. Unvollständige Aufsatzeffekte machen betroffene Konfigurationen unberechenbar.",
+      "C = Community-Quelle. — = Aufsatzwirkung unbekannt. Zeitwerte in ms: kleiner ist schneller. Unvollständige Aufsatzeffekte machen betroffene Konfigurationen unberechenbar.",
       "stats-note",
     ),
   );
@@ -172,7 +183,7 @@ export function renderCommunity(db, weapon, box, actions) {
       weapon,
       b,
       actions,
-      `Community ${i + 1} · ${b.confidence === "high" ? "hohe" : b.confidence === "medium" ? "mittlere" : "geringe"} Evidenz`,
+      `Community ${i + 1} · ${b.label ?? "Build"} · ${b.confidence === "high" ? "hohe" : b.confidence === "medium" ? "mittlere" : "geringe"} Evidenz`,
     );
     card.append(
       node(
@@ -214,6 +225,169 @@ export function renderCommunity(db, weapon, box, actions) {
     refs.append(p);
   }
   box.append(refs);
+}
+export function renderSourceValues(db, weapon, box) {
+  const data = db.communityValues;
+  if (!data) return;
+  const pages = data.pages.filter((p) => p.weaponId === weapon.id),
+    refs = data.references.filter((r) => r.weaponId === weapon.id);
+  if (!pages.length && !refs.length) return;
+  const section = node("section", null, "source-values");
+  section.append(
+    node("h3", "ALLE GEFUNDENEN QUELLENWERTE"),
+    node(
+      "p",
+      "Offizielle Angaben und Community-Werte bleiben unterscheidbar. Unterschiede zwischen Quellen werden nicht gemittelt. Menübewertungen /100 sind keine physikalischen Messwerte.",
+      "stats-note",
+    ),
+  );
+  for (const p of pages) {
+    const details = node("details", null, "data-coverage");
+    details.open = true;
+    details.append(
+      node(
+        "summary",
+        `${p.title} · Community · ${p.mode} · ${p.stage} · ${date(p.asOf)}`,
+      ),
+      external("Metka · Originalquelle ↗", p.url, "source-proof"),
+    );
+    const table = node("table", null, "comparison-table"),
+      head = node("tr");
+    head.append(
+      node("th", "WERT"),
+      node("th", "QUELLE"),
+      node("th", "BEVORZUGTER BASISWERT"),
+    );
+    table.append(head);
+    for (const s of [
+      ...p.stats,
+      ...p.ratings.map((r) => ({
+        ...r,
+        label: METRICS[r.metric][0],
+        raw: r.value + " /100",
+      })),
+    ]) {
+      const chosen = db.weapons.find((w) => w.id === weapon.id)?.base[s.metric],
+        row = node("tr");
+      row.append(
+        node("td", s.label),
+        node(
+          "td",
+          typeof s.value === "number" ? `${fmt(s.value)} ${s.unit}` : s.value,
+        ),
+        node(
+          "td",
+          chosen
+            ? `${fmt(chosen.value)} ${chosen.unit}${chosen.status === "verified" ? " · offiziell" : " · Community"}`
+            : "—",
+        ),
+      );
+      if (chosen && typeof s.value === "number" && chosen.value !== s.value)
+        row.className = "source-conflict";
+      table.append(row);
+    }
+    const scroll = node("div", null, "stat-table-wrap");
+    scroll.append(table);
+    details.append(scroll);
+    for (const z of p.zones) {
+      details.append(node("h4", z.zone + " · Schadensprofil laut Quelle"));
+      for (const b of z.bands)
+        details.append(
+          node(
+            "p",
+            `${b.from}–${b.to} m: ${b.damage} HP · ${b.shots} Treffer bei ${p.health ?? "unbekannt"} HP laut Quelle`,
+          ),
+        );
+    }
+    const ttk = node("div", null, "ttk-tool"),
+      out = node("p"),
+      distance = node("input"),
+      health = node("input"),
+      zone = node("select");
+    distance.type = "number";
+    distance.min = 0;
+    distance.max = 10000;
+    distance.value = 10;
+    distance.setAttribute("aria-label", "TTK Entfernung");
+    health.type = "number";
+    health.min = 1;
+    health.max = 100000;
+    health.value = p.health ?? 100;
+    health.setAttribute("aria-label", "TTK Zielgesundheit");
+    zone.setAttribute("aria-label", "TTK Trefferzone");
+    for (const z of p.zones) {
+      const o = node("option", z.zone);
+      o.value = z.zone;
+      zone.append(o);
+    }
+    if (p.zones.some((z) => z.zone === "Body")) zone.value = "Body";
+    const update = () => {
+      const r = communityTTK(data, weapon.id, {
+        distance: Number(distance.value),
+        zone: zone.value,
+        health: Number(health.value),
+      });
+      out.textContent = r
+        ? `${fmt(r.ms)} ms · ${r.shots} Treffer · ${r.damage} HP pro Treffer · Quellenmodell ohne Aufsätze`
+        : "Für diese Entfernung/Schussfolge fehlt ein auswertbares Quellenprofil.";
+    };
+    if (p.zones.length) {
+      ttk.append(node("h4", "TTK / STK · COMMUNITY-SZENARIO"));
+      for (const [label, input] of [
+        ["Entfernung in m", distance],
+        ["Zielgesundheit in HP", health],
+        ["Trefferzone", zone],
+      ]) {
+        const l = node("label");
+        l.append(node("span", label), input);
+        ttk.append(l);
+        input.addEventListener("input", update);
+      }
+      ttk.append(
+        out,
+        node(
+          "p",
+          "Ab dem ersten Treffer, konstante Schussintervalle; ohne Flugzeit, Fehlschüsse und Aufsatzwirkung. Kein unabhängig bestätigter Spielwert.",
+          "stats-note",
+        ),
+      );
+      update();
+      details.append(ttk);
+    }
+    for (const b of p.builds) {
+      const build = node("details");
+      build.append(node("summary", "QUELLEN-KONFIGURATION · " + b.title));
+      for (const part of b.parts)
+        build.append(
+          node(
+            "p",
+            `${part.slot}: ${part.name}${part.level !== null ? " · Level " + part.level : ""}`,
+          ),
+        );
+      if (b.apex) build.append(node("p", "Apex: " + b.apex.name));
+      build.append(
+        node(
+          "p",
+          "Originalangabe der Quelle. Gültige Kombinationen lassen sich im Community-Menü übernehmen.",
+        ),
+      );
+      details.append(build);
+    }
+    section.append(details);
+  }
+  for (const ref of refs) {
+    const details = node("details", null, "data-coverage");
+    details.open = true;
+    details.append(
+      node("summary", "WEITERE QUELLE · " + new URL(ref.url).hostname),
+      external("Originalquelle ↗", ref.url),
+      node("p", ref.note),
+    );
+    for (const s of ref.observations ?? [])
+      details.append(node("p", `${s.label}: ${s.value} ${s.unit}`));
+    section.append(details);
+  }
+  box.append(section);
 }
 export function renderOptimizer(db, weapon, box, actions) {
   const row = node("div", null, "optimizer-heading");
@@ -259,7 +433,13 @@ export function renderOptimizer(db, weapon, box, actions) {
         ? { horizontalRecoil: 40, range: 30, ads: 20, movement: 10 }
         : objectiveWeights(goal.value, weapon.weaponClass);
     for (const [key, [label]] of Object.entries(METRICS)) {
-      if (["reserve", "rpm", "damage"].includes(key)) continue;
+      if (
+        ["reserve", "rpm", "damage", "weaponLevels", "unlockLevel"].includes(
+          key,
+        ) ||
+        key.startsWith("rating")
+      )
+        continue;
       weights[key] = defaults[key] ?? 0;
       const r = node("label", null, "weight-row"),
         s = node("input"),
@@ -381,14 +561,34 @@ export function renderOptimizer(db, weapon, box, actions) {
         result.append(
           node(
             "h3",
-            r.status === "optimal"
-              ? "CALCULATED · VOLLSTÄNDIG DURCHSUCHT"
-              : r.status === "partial"
-                ? "BEGRENZTES SUCHERGEBNIS"
-                : "BERECHNUNG NICHT VERFÜGBAR",
+            r.status === "source-based"
+              ? "QUELLEN-BUILD GEFUNDEN"
+              : r.status === "optimal"
+                ? "CALCULATED · VOLLSTÄNDIG DURCHSUCHT"
+                : r.status === "partial"
+                  ? "BEGRENZTES SUCHERGEBNIS"
+                  : "BERECHNUNG NICHT VERFÜGBAR",
           ),
         );
         for (const reason of r.reasons) result.append(notice(reason));
+        if (r.sourceBuild) {
+          const b = r.sourceBuild;
+          result.append(
+            buildCard(
+              db,
+              weapon,
+              b,
+              actions,
+              b.goalMatch
+                ? "Passende Quellenempfehlung"
+                : "Allgemeine Quellenempfehlung",
+            ),
+            node(
+              "p",
+              `${b.independentSources} unabhängige Quelle(n) · ${b.confidence} · ${b.goalMatch ? "Einsatzzweck passt zur Quelle" : "Kein spezieller Build für dieses Ziel belegt"}`,
+            ),
+          );
+        }
         if (r.algorithm)
           result.append(
             node(

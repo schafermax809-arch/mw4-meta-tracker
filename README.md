@@ -12,13 +12,15 @@ Statische Website für **Call of Duty: Modern Warfare 4 (2026), Multiplayer**. G
 
 Das Ingame-Menü integriert Waffenklassen, Suche/Filter, Favoriten, Tierlist, Grind Planner, Meta-/Camo-Builds und Camo-Tracking. Der Gunsmith hat META, COMMUNITY, OPTIMIZER, CAMO-BUILDS, EIGENER BUILD und VERGLEICH; Tarnungen, Herausforderungen und Tracker bleiben direkt erreichbar. Navigation per Hash ohne Seitenreload, Desktop-Tastatur, Touch-Menüs und responsive Ansichten.
 
-Alle 33 Launch-Waffen wurden systematisch recherchiert. Die neue Datenbasis enthält 95 offizielle Basiswerte, 28 dokumentierte Apex-Aufsätze, 13 zusätzliche M4-Standardaufsätze (davon vier historische Beta-Referenzen), zwei kleine numerische Apex-Magazinangaben und zwei unterschiedliche redaktionelle M4-Builds. Quellen, Modus, Datum, Patch, Einheiten, Freischaltung und Verifizierungsstatus stehen in JSON und in der UI. Ein Apex ist separat von den fünf Standard-Slots und kann Slots blockieren. Bei ungeklärter Live-Verfügbarkeit bleibt er als Dokumentation sichtbar und nicht auswählbar.
+Alle 33 Launch-Waffen sind erfasst. **Community-Werte werden standardmäßig angezeigt und sind mit C gekennzeichnet.** Die Datenbasis umfasst 161 offizielle Angaben einschließlich Waffen- und Freischaltlevels sowie 32 öffentliche Waffenprofile mit 328 zusätzlichen Spezifikationsangaben, 155 Menübewertungen und 163 Schadensintervallen für Kopf/Körper. 31 veröffentlichte Build-Varianten und zwei weitere M4-Empfehlungen sind dokumentiert; 32 Kombinationen erfüllen die aktuellen Slot-/Apex-Regeln und können übernommen werden. Der zusammengeführte Katalog enthält 150 dokumentierte Aufsätze. Die Quellenwerte enthalten auch abweichende Zahlen: etwa M4 mit 811 RPM in der Community gegenüber 810 offiziell. Beide bleiben mit Herkunft sichtbar.
 
-**Der gesamte Standard-Aufsatzkatalog, sämtliche numerischen Effekte und exakte Schadensprofile konnten nicht mit zulässigen, zugänglichen Quellen verifiziert werden. Es gibt deshalb derzeit für keine Waffe ein zertifiziertes mathematisches Meta-Optimum.** Die Engine ist implementiert und mit getrennten synthetischen Testfällen geprüft; sie gibt bei fehlenden Spieldaten ausdrücklich unbekannt / begrenzt / nicht verfügbar aus. Sie erfindet keine Werte oder Builds. DATENBASIS.md dokumentiert jede Waffe und alle Recherchegrenzen.
+Der Gunsmith nutzt gefundene ADS-, Sprint-to-Fire-, Nachlade-, Geschwindigkeits-, Schadens- und Reichweitenwerte sofort. Bei unbekannten Aufsatzeffekten zeigt er die bekannten Basiswerte weiter an. Community-Tiers stehen in Waffenmenü und Tierlist. Der Optimizer liefert einen zum Einsatzzweck passenden Quellenbuild, wenn die Daten keine numerische Optimierung erlauben; das Ergebnis lässt sich direkt übernehmen und speichern. Vollständig vermessene Aufsatzeffekte fehlen weiterhin bei vielen Einträgen, daher wird eine Quellenempfehlung ausdrücklich von einem mathematisch berechneten Optimum unterschieden.
+
+Die [Datenbasis](DATENBASIS.md) dokumentiert die Abdeckung jeder Waffe. Quellen, Datum, Spielmodus, Einheiten und Widersprüche sind direkt unter dem Waffenmenü einsehbar. Nicht sicher zuordenbare Waffenbezeichnungen bleiben als Quellenreferenz erhalten.
 
 ## Berechnung und Bedienung
 
-Der Stat-Rechner unterstützt explizite absolute Änderungen, Faktoren, gesetzte Werte, Reihenfolgen, Interaktionen und exakte Konfigurations-Snapshots. Nur vollständige, verifizierte Regeln erzeugen aktuelle Zahlen und absolute/prozentuale Deltas. TTK/STK benötigen Körperzonenschäden, Distanzintervalle, verifizierte Schussfolge und ein bestätigtes Gesundheitsszenario. Nicht modellierte Burst-/Pellet- oder modifizierte Schadensprofile werden abgelehnt.
+Der Stat-Rechner unterstützt explizite absolute Änderungen, Faktoren, gesetzte Werte, Reihenfolgen, Interaktionen und exakte Konfigurations-Snapshots. Veröffentlichte Community-Basiswerte ergänzen fehlende offizielle Zahlen. Build-Deltas benötigen vollständige Effekte und Kombinationsregeln. Das Quellenpanel berechnet zusätzlich Community-TTK/STK aus dem jeweiligen Schadensprofil, dessen RPM, Entfernung, Trefferzone und frei wählbarer Zielgesundheit. Es bleibt innerhalb des veröffentlichten Distanzfensters und verwendet keine Aufsatzeffekte. Der streng verifizierte Rechner verlangt weiterhin bestätigte Schussfolge und Gesundheitsszenario. Nicht modellierte Burst-/Pellet- oder modifizierte Schadensprofile werden abgelehnt.
 
 Der Optimierer sucht alle gültigen Kombinationen bei überschaubarem Raum, sonst begrenzt per Beam-Suche im Web Worker. Ziele: Meta, Longshot, Headshot, Hipfire, Multikill und eigene Slider-Gewichte. Leere Slots sind erlaubt. Klassengewichte, Bewertungsformel, Suchbudget und Unsicherheiten sind offen dokumentiert. Ein vollständiges Optimum wird nur bei vollständiger Datenabdeckung behauptet. Community vergleicht unabhängige Quellen, trennt alte Patches/Modi und macht Widersprüche sichtbar; Stimmen und Likes ersetzen keine Messungen. Hybrid verlangt tatsächliche Übereinstimmung von berechenbarem Kandidat und aktueller Community-Evidenz.
 
@@ -40,11 +42,13 @@ Offizielle Patchnotes-/Blog-Indexseiten und bekannte Kernartikel werden mit robo
 
 Änderungen werden zunächst in work/candidate vorbereitet und validiert. Der feste Branch automation/meta-update bekommt bei tatsächlichen Änderungen einen Commit und einen Review-PR. Erst ein Merge veröffentlicht den Datensatz. Identische offene Vorschläge erzeugen keinen weiteren Commit. Manuelle Änderungen am offenen Bot-Branch werden geschützt. Fehler lassen den veröffentlichten Stand unverändert; Reports und Kandidaten bleiben 30 Tage als Actions-Artefakt verfügbar. Der Workflow hat ausdrücklich contents:write und pull-requests:write; GitHub-Einstellung zum Erstellen von PRs muss erlaubt bleiben.
 
-Der Kandidat enthält meta.json, gunsmith.json, research.json, calculated.json und die beiden Review-Dateien. Der Workflow prüft Daten, Berechnungsfingerabdruck, Tests und Build vor dem Commit. Neue Patchnotes stempeln alte Messwerte nicht automatisch als aktuell. Geprüfte Änderungen erzeugen vollständige Vorher-/Nachher-Historie und neue Optimierer-Ergebnisse.
+Zusätzlich prüft der tägliche Lauf die 32 in config/community-values-sources.json registrierten öffentlichen Metka-Seiten mit moderatem Abrufabstand. Der Parser übernimmt einzelne Fakten und Build-Slots aus öffentlich ausgeliefertem HTML, ohne Artikeltexte, Grafiken oder Seitenlayouts zu spiegeln. Unklare Einheiten bleiben als Rohangabe sichtbar. Bei Layoutänderung, falscher Waffenidentität oder einem fehlgeschlagenen Abruf wird kein Teilbestand veröffentlicht. Zusätzliche Vergleichsquellen werden manuell gepflegt.
+
+Der Kandidat enthält meta.json, gunsmith.json, community-values.json, research.json, calculated.json und die beiden Review-Dateien. Der Workflow prüft Daten, Berechnungsfingerabdruck, Tests und Build vor dem Commit. Neue Patchnotes stempeln alte Messwerte nicht automatisch als aktuell. Geprüfte Änderungen erzeugen vollständige Vorher-/Nachher-Historie und neue Optimierer-Ergebnisse.
 
 ## Dateien und Freigabe
 
-public/data/meta.json bleibt der strikte Kernkatalog mit Camo-Definitionen, Tiers und klassischen verifizierten Builds. public/data/gunsmith.json ist der separate recherchierte Waffen-/Aufsatzdatensatz; research.json enthält Discovery-Baselines, calculated.json die an Datenbankhash/Patch gebundenen Ergebnisse. presentation.json bleibt das Asset-Register. Persönliche Werte befinden sich in keiner dieser Dateien.
+public/data/meta.json bleibt der strikte Kernkatalog mit Camo-Definitionen, Tiers und klassischen verifizierten Builds. public/data/gunsmith.json ist der separate recherchierte Waffen-/Aufsatzdatensatz; research.json enthält Discovery-Baselines, calculated.json die an Datenbankhash/Patch gebundenen Ergebnisse. public/data/community-values.json bewahrt die einzelnen Community-Profile, Quellen-Rohangaben, Ratings, Schadensintervalle und Varianten. Das Browser-Modul führt sie in einer Kopie mit dem offiziellen Datensatz zusammen; die offiziellen Werte werden dabei nicht überschrieben. presentation.json bleibt das Asset-Register. Persönliche Werte befinden sich in keiner dieser Dateien.
 
 Kernkatalog-Änderungen: reviews/approved.json mit baseStateHash, documents und operations. Erlaubte Operationen sind upsert-weapon und upsert-attachment mit vollständigen Datensätzen und abgerufenen Quellenbelegen. Keine Löschung, kein Fortschritt. Ausführen mit npm run apply-review -- --input reviews/approved.json; anschließend npm run recompute, Tests, Validierung und Build.
 
@@ -54,14 +58,14 @@ Gunsmith-Änderungen: reviews/gunsmith-approved.json mit baseHash, patchRevision
 
 Node.js 24 oder neuer:
 
-~~~sh
+```sh
 npm ci --ignore-scripts
 npm test
 npm run recompute
 npm run validate
 npm run build
 npm start
-~~~
+```
 
 Lokale Website: http://127.0.0.1:4173. Der statische Build liegt in dist/. GitHub Pages veröffentlicht über .github/workflows/pages.yml. Keine Secrets oder kostenpflichtigen Dienste erforderlich.
 

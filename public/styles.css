@@ -1126,6 +1126,58 @@ p {
 .negative {
   color: #e3ac85;
 }
+.source-values {
+  border-top: 1px solid var(--line, #303638);
+  margin-top: 24px;
+  padding-top: 20px;
+  min-width: 0;
+}
+.source-conflict td {
+  color: #ffba75;
+  background: rgba(255, 115, 26, 0.06);
+}
+.ttk-tool {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+  margin: 18px 0;
+  background: #101617;
+  border: 1px solid #333a3c;
+}
+.ttk-tool > h4,
+.ttk-tool > p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.ttk-tool label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: #abb3b4;
+  font-size: 12px;
+}
+.ttk-tool input,
+.ttk-tool select {
+  min-width: 0;
+  width: 100%;
+  border: 1px solid #4a5051;
+  padding: 10px;
+  color: #f3f4ed;
+  background: #080c0d;
+  font: inherit;
+  border-radius: 0;
+}
+.ttk-tool input:focus-visible,
+.ttk-tool select:focus-visible {
+  outline: 2px solid #ff7a1a;
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  .ttk-tool {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .data-coverage {
   border: 1px solid #475040;
   background: #11191488;
@@ -3385,6 +3437,64 @@ dialog::backdrop {
   }
   .filters .toggle-filter {
     min-height: 26px;
+  }
+}
+.detail-stage {
+  height: auto;
+  min-height: 345px;
+}
+.stats-panel {
+  min-width: 0;
+}
+@media (max-width: 600px) {
+  .detail-stage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 180px auto;
+    height: auto;
+    min-height: 0;
+    gap: 16px;
+  }
+  .weapon-title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .weapon-title p {
+    max-width: none;
+    font-size: 10px;
+  }
+  .weapon-visual {
+    grid-column: 1;
+    grid-row: 2;
+    height: 180px;
+  }
+  .stats-panel {
+    grid-column: 1;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 16px;
+    border-left: 0;
+    border-top: 1px solid #394345;
+    padding: 14px 0 8px;
+  }
+  .stats-panel .eyebrow,
+  .stats-panel .stats-note {
+    grid-column: 1 / -1;
+    font-size: 9px;
+  }
+  .stats-panel .eyebrow {
+    margin-bottom: 3px;
+  }
+  .real-stat-line {
+    min-width: 0;
+    margin: 0;
+    font-size: 10px;
+  }
+  .real-stat-line span {
+    overflow-wrap: normal;
+  }
+  .real-stat-line strong {
+    font-size: 11px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

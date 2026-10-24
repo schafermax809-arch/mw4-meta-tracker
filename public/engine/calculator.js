@@ -12,7 +12,12 @@ export function calculateStats(
   const issues = configurationIssues(db, weaponId, refs, patch);
   const base = Object.fromEntries(
     Object.entries(w.base)
-      .filter(([, v]) => v.patchRevision === patch && v.status === "verified")
+      .filter(
+        ([, v]) =>
+          v.patchRevision === patch &&
+          (v.status === "verified" ||
+            (db.communityValues && v.status === "reported")),
+      )
       .map(([k, v]) => [k, { ...v }]),
   );
   const snapshot = w.snapshots.find(
@@ -92,7 +97,11 @@ export function calculateStats(
             ...new Set([...(values[m.stat]?.sourceIds ?? []), ...m.sourceIds]),
           ],
           patchRevision: patch,
-          status: "verified",
+          status:
+            values[m.stat]?.status === "reported" ||
+            selected.some((a) => a.status === "reported")
+              ? "reported"
+              : "verified",
         };
       }
     }

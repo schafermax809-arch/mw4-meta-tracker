@@ -1,0 +1,206 @@
+{
+  "allowedOrigins": ["https://metka.gg"],
+  "timeoutMs": 20000,
+  "maxBytes": 2000000,
+  "requestDelayMs": 1500,
+  "pages": [
+    {
+      "weaponId": "m4",
+      "url": "https://metka.gg/en/weapons/mw4/m4/"
+    },
+    {
+      "weaponId": "kastov-762",
+      "url": "https://metka.gg/en/weapons/mw4/kastov-762/"
+    },
+    {
+      "weaponId": "iso-nightshade",
+      "url": "https://metka.gg/en/weapons/mw4/iso-nightshade/"
+    },
+    {
+      "weaponId": "oris-8-6",
+      "url": "https://metka.gg/en/weapons/mw4/oris-8-6/"
+    },
+    {
+      "weaponId": "rezi-12",
+      "url": "https://metka.gg/en/weapons/mw4/rezi-12/"
+    },
+    {
+      "weaponId": "han-86",
+      "url": "https://metka.gg/en/weapons/mw4/han-86/"
+    },
+    {
+      "weaponId": "hyeon-burst",
+      "url": "https://metka.gg/en/weapons/mw4/hyeon-burst/"
+    },
+    {
+      "weaponId": "vel-46",
+      "url": "https://metka.gg/en/weapons/mw4/vel-46/"
+    },
+    {
+      "weaponId": "x-58-nyx",
+      "url": "https://metka.gg/en/weapons/mw4/x-58-nyx/"
+    },
+    {
+      "weaponId": "ppsh-41",
+      "url": "https://metka.gg/en/weapons/mw4/ppsh-41/"
+    },
+    {
+      "weaponId": "patriot-xmr",
+      "url": "https://metka.gg/en/weapons/mw4/patriot-xmr/"
+    },
+    {
+      "weaponId": "mar-9",
+      "url": "https://metka.gg/en/weapons/mw4/mar-9/"
+    },
+    {
+      "weaponId": "kg-7-vulcan",
+      "url": "https://metka.gg/en/weapons/mw4/kg-7-vulcan/"
+    },
+    {
+      "weaponId": "signal-50",
+      "url": "https://metka.gg/en/weapons/mw4/signal-50/"
+    },
+    {
+      "weaponId": "type-73",
+      "url": "https://metka.gg/en/weapons/mw4/type-73/"
+    },
+    {
+      "weaponId": "finn-lmg",
+      "url": "https://metka.gg/en/weapons/mw4/finn-lmg/"
+    },
+    {
+      "weaponId": "krait-p68",
+      "url": "https://metka.gg/en/weapons/mw4/krait-p68/"
+    },
+    {
+      "weaponId": "50-gs",
+      "url": "https://metka.gg/en/weapons/mw4/50-gs/"
+    },
+    {
+      "weaponId": "pila",
+      "url": "https://metka.gg/en/weapons/mw4/pila/"
+    },
+    {
+      "weaponId": "axion",
+      "url": "https://metka.gg/en/weapons/mw4/axion/"
+    },
+    {
+      "weaponId": "cronen-squall",
+      "url": "https://metka.gg/en/weapons/mw4/cronen-squall/"
+    },
+    {
+      "weaponId": "oden",
+      "url": "https://metka.gg/en/weapons/mw4/oden/"
+    },
+    {
+      "weaponId": "wz-55-striga",
+      "url": "https://metka.gg/en/weapons/mw4/wz-55-striga/"
+    },
+    {
+      "weaponId": "mosin-nagant",
+      "url": "https://metka.gg/en/weapons/mw4/mosin-nagant/"
+    },
+    {
+      "weaponId": "astaroth-57",
+      "url": "https://metka.gg/en/weapons/mw4/astaroth-57/"
+    },
+    {
+      "weaponId": "warlord",
+      "url": "https://metka.gg/en/weapons/mw4/warlord/"
+    },
+    {
+      "weaponId": "apoc-338",
+      "url": "https://metka.gg/en/weapons/mw4/apoc-338/"
+    },
+    {
+      "weaponId": "sang-9mm",
+      "url": "https://metka.gg/en/weapons/mw4/sang-9mm/"
+    },
+    {
+      "weaponId": "mojave-357",
+      "url": "https://metka.gg/en/weapons/mw4/mojave-357/"
+    },
+    {
+      "weaponId": "jokr",
+      "url": "https://metka.gg/en/weapons/mw4/jokr/"
+    },
+    {
+      "weaponId": "rpg-8",
+      "url": "https://metka.gg/en/weapons/mw4/rpg-8/"
+    },
+    {
+      "weaponId": "pm-40-anvil",
+      "url": "https://metka.gg/en/weapons/mw4/pm-40-anvil/"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://metka.gg/en/weapons/mw4/combat-knife/",
+      "reason": "Quellenname Combat Knife nicht ohne Identitätsbeleg mit FSS Carbon Edge 1095 gleichgesetzt."
+    },
+    {
+      "weaponId": "m4",
+      "url": "https://mw4stats.com/weapons/m4/",
+      "asOf": "2026-10-23",
+      "mode": "multiplayer",
+      "stage": "launch",
+      "note": "Weitere Community-Quelle; widerspricht Metka bei Schaden und ADS. Einzelne Fakten mit Quellenangabe, keine vollständige Spiegelung der Datenbank.",
+      "observations": [
+        {
+          "label": "Schaden Oberkörper 0–10 m",
+          "value": 35,
+          "unit": "HP"
+        },
+        {
+          "label": "Schaden Oberkörper ab 30 m",
+          "value": 25,
+          "unit": "HP"
+        },
+        {
+          "label": "Schadensabfallbereich",
+          "value": "20–35",
+          "unit": "m"
+        },
+        {
+          "label": "ADS-Zeit",
+          "value": 225,
+          "unit": "ms"
+        },
+        {
+          "label": "Feuerrate",
+          "value": 810,
+          "unit": "RPM"
+        },
+        {
+          "label": "Magazin",
+          "value": 30,
+          "unit": "Schuss"
+        }
+      ]
+    },
+    {
+      "weaponId": "han-86",
+      "url": "https://mw4field.com/weapons/han-86/",
+      "asOf": null,
+      "mode": "unknown",
+      "stage": "unknown",
+      "note": "Widerspruch: Quelle nennt 60 Reserveschuss statt 90 offiziell bzw. 120 bei Metka. Modus/Patch nicht eindeutig; nur als weitere Quellenangabe anzeigen.",
+      "observations": [
+        {
+          "label": "Reservemunition",
+          "value": 60,
+          "unit": "Schuss"
+        },
+        {
+          "label": "Damage",
+          "value": 33,
+          "unit": "Quelle nennt pro Treffer; Kontext ungeklärt"
+        }
+      ]
+    }
+  ],
+  "termsUrl": "https://metka.gg/en/imprint/",
+  "reviewedOn": "2026-10-24",
+  "policy": "Individual factual numeric observations and attachment names only, with original-page attribution; no article text, table layout, artwork or website code republished. Modest once-daily source check obeying robots.txt. Community claims remain reported, never official.",
+  "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+}

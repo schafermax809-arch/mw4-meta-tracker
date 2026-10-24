@@ -1,6 +1,7 @@
 import { readJson, atomicJson } from "./lib/io.mjs";
 import { hash, canonical } from "./lib/model.mjs";
 import { validateDatabase } from "../public/engine/database.js";
+import { validateCommunityValues } from "../public/engine/community-values.js";
 import { recompute } from "./lib/gunsmith-update.mjs";
 export function applyGunsmithReview(
   current,
@@ -85,6 +86,14 @@ if (
     meta.patchRevision,
   );
   if (result) {
+    result.computed = recompute(
+      result.database,
+      meta.patchRevision,
+      validateCommunityValues(
+        await readJson("public/data/community-values.json"),
+        meta,
+      ),
+    );
     await atomicJson("public/data/calculated.json", result.computed);
     await atomicJson("public/data/gunsmith.json", result.database);
     console.log(

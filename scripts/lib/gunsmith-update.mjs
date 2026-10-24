@@ -1,17 +1,26 @@
 import { hash, canonical } from "./model.mjs";
 import { validateDatabase } from "../../public/engine/database.js";
 import { optimize, OBJECTIVES } from "../../public/engine/optimizer.js";
-export function recompute(db, patch = db.patchRevision) {
+import { hydrateCommunityValues } from "../../public/engine/community-values.js";
+export function recompute(
+  db,
+  patch = db.patchRevision,
+  communityValues = null,
+) {
+  const runtime = communityValues
+    ? hydrateCommunityValues(db, communityValues, patch)
+    : db;
   return {
     schemaVersion: 1,
     databaseHash: hash(db),
+    communityValuesHash: communityValues?.hash ?? null,
     patchRevision: patch,
-    weapons: db.weapons.map((w) => ({
+    weapons: runtime.weapons.map((w) => ({
       weaponId: w.id,
       objectives: Object.fromEntries(
         Object.keys(OBJECTIVES).map((goal) => [
           goal,
-          optimize(db, w.id, { goal, patch }),
+          optimize(runtime, w.id, { goal, patch }),
         ]),
       ),
     })),
