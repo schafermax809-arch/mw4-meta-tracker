@@ -1,0 +1,60 @@
+{
+  "reviewedOn": "2026-10-24",
+  "policy": "Manual verification against official launch documentation. No inferred Meta.",
+  "sources": {
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-intel-modern-warfare-4-launch-xbox-game-pass": {
+      "hash": "4e16723c9ffe25df60573d0e234609d73e47e3a661f19ae4299df67461be99c0",
+      "title": "Modern Warfare 4 Launches October 23 as a Standalone Release",
+      "publishedAt": "2026-10-15",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-campaign-early-access-live-now": {
+      "hash": "0d0314e63507759e954f4f9684a5f0c075593f8f52ec6c9d27096d4e9118526c",
+      "title": "Modern Warfare 4: Campaign Early Access Now Live",
+      "publishedAt": "2026-10-16",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-deep-dive-hajin": {
+      "hash": "add7ef259a36f33986e7c46ce2f64e7636d3a03161deee80fd55c7751ab79b4a",
+      "title": "DMZ Deep Dive, Part 1: Tour of Duty – Hajin Environments and Threats, Full Intel Guide",
+      "publishedAt": "2026-10-05",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-how-to-play-forward-operating-base-guide": {
+      "hash": "bd8772a051cb4e344c2bde5a713759879bb0dbc01c3698c0b133584866be888f",
+      "title": "DMZ Deep Dive, Part 2: How to Play – Forward Operating Base (FOB) Full Intel Guide",
+      "publishedAt": "2026-10-09",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class": {
+      "hash": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+      "title": "Ready for Launch: All Modern Warfare 4 Operators, Weapons, Equipment, and Multiplayer Create-a-Class Features",
+      "publishedAt": "2026-10-19",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-live-worldwide-now": {
+      "hash": "87a631209d4ce82115bf8ece1a56694ae62ac1416c461c05386c0b2701896330",
+      "title": "Call of Duty: Modern Warfare 4 is Live Worldwide — Play Now!",
+      "publishedAt": "2026-10-23",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-maps-modes": {
+      "hash": "a36b5c5bed7a075059d9ac98f03550cc6a730998ba872907e7ca2a8c6560dab2",
+      "title": "Ready for Launch: Multiplayer Maps and Modes Confirmed",
+      "publishedAt": "2026-10-21",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige": {
+      "hash": "1af56fbcfef96426e4d437c98ef3e8c940713d0c57ffd9ae4173db0c85a02470",
+      "title": "Ready for Launch: Modern Warfare 4 Progression and Prestige",
+      "publishedAt": "2026-10-19",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes": {
+      "hash": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "title": "Call of Duty: Modern Warfare 4 Launch Patch Notes",
+      "publishedAt": "2026-10-23",
+      "kind": "patch"
+    }
+  }
+}

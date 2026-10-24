@@ -1,0 +1,1535 @@
+{
+  "schemaVersion": 1,
+  "gameId": "cod-mw4-2026",
+  "patchVersion": "Call of Duty: Modern Warfare 4 Launch Patch Notes · 2026-10-23",
+  "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+  "lastSuccessfulUpdate": "2026-10-24T19:45:46.684Z",
+  "lastChangedAt": "2026-10-24T19:45:46.684Z",
+  "lastChangedWeaponIds": [
+    "han-86",
+    "m4",
+    "hyeon-burst",
+    "patriot-xmr",
+    "kastov-762",
+    "oden",
+    "axion",
+    "cronen-squall",
+    "iso-nightshade",
+    "vel-46",
+    "wz-55-striga",
+    "ppsh-41",
+    "x-58-nyx",
+    "rezi-12",
+    "warlord",
+    "finn-lmg",
+    "type-73",
+    "apoc-338",
+    "mar-9",
+    "oris-8-6",
+    "mosin-nagant",
+    "kg-7-vulcan",
+    "astaroth-57",
+    "signal-50",
+    "sang-9mm",
+    "krait-p68",
+    "50-gs",
+    "mojave-357",
+    "pila",
+    "rpg-8",
+    "jokr",
+    "pm-40-anvil",
+    "fss-carbon-edge-1095"
+  ],
+  "weapons": [
+    {
+      "id": "han-86",
+      "name": "Han 86",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [
+        {
+          "id": "military-1",
+          "name": "Military Camo 1",
+          "mode": "shared",
+          "requirement": "Waffenlevel 10 erreichen",
+          "target": 10,
+          "unit": "Waffenlevel",
+          "dependsOn": [],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        },
+        {
+          "id": "military-2",
+          "name": "Military Camo 2",
+          "mode": "shared",
+          "requirement": "Waffenlevel 18 erreichen",
+          "target": 18,
+          "unit": "Waffenlevel",
+          "dependsOn": [
+            "military-1"
+          ],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        },
+        {
+          "id": "military-3",
+          "name": "Military Camo 3",
+          "mode": "shared",
+          "requirement": "Waffenlevel 25 erreichen",
+          "target": 25,
+          "unit": "Waffenlevel",
+          "dependsOn": [
+            "military-2"
+          ],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        },
+        {
+          "id": "military-4",
+          "name": "Military Camo 4",
+          "mode": "shared",
+          "requirement": "Waffenlevel 34 erreichen",
+          "target": 34,
+          "unit": "Waffenlevel",
+          "dependsOn": [
+            "military-3"
+          ],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        },
+        {
+          "id": "military-5",
+          "name": "Military Camo 5",
+          "mode": "shared",
+          "requirement": "Waffenlevel 42 erreichen",
+          "target": 42,
+          "unit": "Waffenlevel",
+          "dependsOn": [
+            "military-4"
+          ],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        },
+        {
+          "id": "military-6",
+          "name": "Military Camo 6",
+          "mode": "shared",
+          "requirement": "Waffenlevel 50 erreichen",
+          "target": 50,
+          "unit": "Waffenlevel",
+          "dependsOn": [
+            "military-5"
+          ],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        },
+        {
+          "id": "military-7",
+          "name": "Military Camo 7",
+          "mode": "shared",
+          "requirement": "Waffenlevel 57 erreichen",
+          "target": 57,
+          "unit": "Waffenlevel",
+          "dependsOn": [
+            "military-6"
+          ],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        },
+        {
+          "id": "military-8",
+          "name": "Military Camo 8",
+          "mode": "shared",
+          "requirement": "Waffenlevel 65 erreichen",
+          "target": 65,
+          "unit": "Waffenlevel",
+          "dependsOn": [
+            "military-7"
+          ],
+          "sourceUrls": [
+            "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+      ]
+    },
+    {
+      "id": "m4",
+      "name": "M4",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "hyeon-burst",
+      "name": "Hyeon Burst",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "patriot-xmr",
+      "name": "Patriot XMR",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "kastov-762",
+      "name": "Kastov 762",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "oden",
+      "name": "Oden",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "axion",
+      "name": "Axion",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "cronen-squall",
+      "name": "Cronen Squall",
+      "weaponClass": "assault-rifle",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "iso-nightshade",
+      "name": "ISO Nightshade",
+      "weaponClass": "smg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "vel-46",
+      "name": "VEL 46",
+      "weaponClass": "smg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "wz-55-striga",
+      "name": "Wz.55 Striga",
+      "weaponClass": "smg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "ppsh-41",
+      "name": "PPSh-41",
+      "weaponClass": "smg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "x-58-nyx",
+      "name": "X-58 Nyx",
+      "weaponClass": "smg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "rezi-12",
+      "name": "Rezi 12",
+      "weaponClass": "shotgun",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "warlord",
+      "name": "Warlord",
+      "weaponClass": "shotgun",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "finn-lmg",
+      "name": "Finn LMG",
+      "weaponClass": "lmg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "type-73",
+      "name": "Type 73",
+      "weaponClass": "lmg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "apoc-338",
+      "name": "APOC-338",
+      "weaponClass": "lmg",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "mar-9",
+      "name": "MAR-9",
+      "weaponClass": "marksman",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "oris-8-6",
+      "name": "Oris 8.6",
+      "weaponClass": "marksman",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "mosin-nagant",
+      "name": "Mosin-Nagant",
+      "weaponClass": "marksman",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "kg-7-vulcan",
+      "name": "KG-7 Vulcan",
+      "weaponClass": "sniper",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "astaroth-57",
+      "name": "Astaroth .57",
+      "weaponClass": "sniper",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "signal-50",
+      "name": "Signal 50",
+      "weaponClass": "sniper",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "sang-9mm",
+      "name": "Sang 9mm",
+      "weaponClass": "pistol",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "krait-p68",
+      "name": "Krait P68",
+      "weaponClass": "pistol",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "50-gs",
+      "name": ".50 GS",
+      "weaponClass": "pistol",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "mojave-357",
+      "name": "Mojave .357",
+      "weaponClass": "pistol",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "pila",
+      "name": "PILA",
+      "weaponClass": "launcher",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "rpg-8",
+      "name": "RPG-8",
+      "weaponClass": "launcher",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "jokr",
+      "name": "JOKR",
+      "weaponClass": "launcher",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "pm-40-anvil",
+      "name": "PM-40 Anvil",
+      "weaponClass": "launcher",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
+    {
+      "id": "fss-carbon-edge-1095",
+      "name": "FSS Carbon Edge 1095",
+      "weaponClass": "melee",
+      "tier": null,
+      "tierRevision": null,
+      "builds": [],
+      "camos": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    }
+  ],
+  "attachments": [],
+  "documents": {
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-intel-modern-warfare-4-launch-xbox-game-pass": {
+      "hash": "4e16723c9ffe25df60573d0e234609d73e47e3a661f19ae4299df67461be99c0",
+      "title": "Modern Warfare 4 Launches October 23 as a Standalone Release",
+      "publishedAt": "2026-10-15",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-campaign-early-access-live-now": {
+      "hash": "0d0314e63507759e954f4f9684a5f0c075593f8f52ec6c9d27096d4e9118526c",
+      "title": "Modern Warfare 4: Campaign Early Access Now Live",
+      "publishedAt": "2026-10-16",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-deep-dive-hajin": {
+      "hash": "add7ef259a36f33986e7c46ce2f64e7636d3a03161deee80fd55c7751ab79b4a",
+      "title": "DMZ Deep Dive, Part 1: Tour of Duty – Hajin Environments and Threats, Full Intel Guide",
+      "publishedAt": "2026-10-05",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-how-to-play-forward-operating-base-guide": {
+      "hash": "bd8772a051cb4e344c2bde5a713759879bb0dbc01c3698c0b133584866be888f",
+      "title": "DMZ Deep Dive, Part 2: How to Play – Forward Operating Base (FOB) Full Intel Guide",
+      "publishedAt": "2026-10-09",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class": {
+      "hash": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+      "title": "Ready for Launch: All Modern Warfare 4 Operators, Weapons, Equipment, and Multiplayer Create-a-Class Features",
+      "publishedAt": "2026-10-19",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-live-worldwide-now": {
+      "hash": "87a631209d4ce82115bf8ece1a56694ae62ac1416c461c05386c0b2701896330",
+      "title": "Call of Duty: Modern Warfare 4 is Live Worldwide — Play Now!",
+      "publishedAt": "2026-10-23",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-maps-modes": {
+      "hash": "a36b5c5bed7a075059d9ac98f03550cc6a730998ba872907e7ca2a8c6560dab2",
+      "title": "Ready for Launch: Multiplayer Maps and Modes Confirmed",
+      "publishedAt": "2026-10-21",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige": {
+      "hash": "1af56fbcfef96426e4d437c98ef3e8c940713d0c57ffd9ae4173db0c85a02470",
+      "title": "Ready for Launch: Modern Warfare 4 Progression and Prestige",
+      "publishedAt": "2026-10-19",
+      "kind": "guide"
+    },
+    "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes": {
+      "hash": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "title": "Call of Duty: Modern Warfare 4 Launch Patch Notes",
+      "publishedAt": "2026-10-23",
+      "kind": "patch"
+    }
+  },
+  "changelog": [
+    {
+      "id": "d490cb383df433b2abcec3a94600bce456dde4e984a0a33d34a57689c706cec6",
+      "at": "2026-10-24T19:45:46.684Z",
+      "patchVersion": "Call of Duty: Modern Warfare 4 Launch Patch Notes · 2026-10-23",
+      "summary": "Ersteinrichtung: 33 offizielle Startwaffen und 8 belegte Han-86-Camo-Levelziele. Meta-Einstufungen noch unbekannt.",
+      "weaponChanges": [
+        {
+          "weaponId": "han-86",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "han-86",
+            "name": "Han 86",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [
+              {
+                "id": "military-1",
+                "name": "Military Camo 1",
+                "mode": "shared",
+                "requirement": "Waffenlevel 10 erreichen",
+                "target": 10,
+                "unit": "Waffenlevel",
+                "dependsOn": [],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              },
+              {
+                "id": "military-2",
+                "name": "Military Camo 2",
+                "mode": "shared",
+                "requirement": "Waffenlevel 18 erreichen",
+                "target": 18,
+                "unit": "Waffenlevel",
+                "dependsOn": [
+                  "military-1"
+                ],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              },
+              {
+                "id": "military-3",
+                "name": "Military Camo 3",
+                "mode": "shared",
+                "requirement": "Waffenlevel 25 erreichen",
+                "target": 25,
+                "unit": "Waffenlevel",
+                "dependsOn": [
+                  "military-2"
+                ],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              },
+              {
+                "id": "military-4",
+                "name": "Military Camo 4",
+                "mode": "shared",
+                "requirement": "Waffenlevel 34 erreichen",
+                "target": 34,
+                "unit": "Waffenlevel",
+                "dependsOn": [
+                  "military-3"
+                ],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              },
+              {
+                "id": "military-5",
+                "name": "Military Camo 5",
+                "mode": "shared",
+                "requirement": "Waffenlevel 42 erreichen",
+                "target": 42,
+                "unit": "Waffenlevel",
+                "dependsOn": [
+                  "military-4"
+                ],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              },
+              {
+                "id": "military-6",
+                "name": "Military Camo 6",
+                "mode": "shared",
+                "requirement": "Waffenlevel 50 erreichen",
+                "target": 50,
+                "unit": "Waffenlevel",
+                "dependsOn": [
+                  "military-5"
+                ],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              },
+              {
+                "id": "military-7",
+                "name": "Military Camo 7",
+                "mode": "shared",
+                "requirement": "Waffenlevel 57 erreichen",
+                "target": 57,
+                "unit": "Waffenlevel",
+                "dependsOn": [
+                  "military-6"
+                ],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              },
+              {
+                "id": "military-8",
+                "name": "Military Camo 8",
+                "mode": "shared",
+                "requirement": "Waffenlevel 65 erreichen",
+                "target": 65,
+                "unit": "Waffenlevel",
+                "dependsOn": [
+                  "military-7"
+                ],
+                "sourceUrls": [
+                  "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+                ]
+              }
+            ],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes",
+              "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+            ]
+          }
+        },
+        {
+          "weaponId": "m4",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "m4",
+            "name": "M4",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "hyeon-burst",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "hyeon-burst",
+            "name": "Hyeon Burst",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "patriot-xmr",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "patriot-xmr",
+            "name": "Patriot XMR",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "kastov-762",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "kastov-762",
+            "name": "Kastov 762",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "oden",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "oden",
+            "name": "Oden",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "axion",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "axion",
+            "name": "Axion",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "cronen-squall",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "cronen-squall",
+            "name": "Cronen Squall",
+            "weaponClass": "assault-rifle",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "iso-nightshade",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "iso-nightshade",
+            "name": "ISO Nightshade",
+            "weaponClass": "smg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "vel-46",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "vel-46",
+            "name": "VEL 46",
+            "weaponClass": "smg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "wz-55-striga",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "wz-55-striga",
+            "name": "Wz.55 Striga",
+            "weaponClass": "smg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "ppsh-41",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "ppsh-41",
+            "name": "PPSh-41",
+            "weaponClass": "smg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "x-58-nyx",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "x-58-nyx",
+            "name": "X-58 Nyx",
+            "weaponClass": "smg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "rezi-12",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "rezi-12",
+            "name": "Rezi 12",
+            "weaponClass": "shotgun",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "warlord",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "warlord",
+            "name": "Warlord",
+            "weaponClass": "shotgun",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "finn-lmg",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "finn-lmg",
+            "name": "Finn LMG",
+            "weaponClass": "lmg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "type-73",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "type-73",
+            "name": "Type 73",
+            "weaponClass": "lmg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "apoc-338",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "apoc-338",
+            "name": "APOC-338",
+            "weaponClass": "lmg",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "mar-9",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "mar-9",
+            "name": "MAR-9",
+            "weaponClass": "marksman",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "oris-8-6",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "oris-8-6",
+            "name": "Oris 8.6",
+            "weaponClass": "marksman",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "mosin-nagant",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "mosin-nagant",
+            "name": "Mosin-Nagant",
+            "weaponClass": "marksman",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "kg-7-vulcan",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "kg-7-vulcan",
+            "name": "KG-7 Vulcan",
+            "weaponClass": "sniper",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "astaroth-57",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "astaroth-57",
+            "name": "Astaroth .57",
+            "weaponClass": "sniper",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "signal-50",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "signal-50",
+            "name": "Signal 50",
+            "weaponClass": "sniper",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "sang-9mm",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "sang-9mm",
+            "name": "Sang 9mm",
+            "weaponClass": "pistol",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "krait-p68",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "krait-p68",
+            "name": "Krait P68",
+            "weaponClass": "pistol",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "50-gs",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "50-gs",
+            "name": ".50 GS",
+            "weaponClass": "pistol",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "mojave-357",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "mojave-357",
+            "name": "Mojave .357",
+            "weaponClass": "pistol",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "pila",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "pila",
+            "name": "PILA",
+            "weaponClass": "launcher",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "rpg-8",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "rpg-8",
+            "name": "RPG-8",
+            "weaponClass": "launcher",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "jokr",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "jokr",
+            "name": "JOKR",
+            "weaponClass": "launcher",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "pm-40-anvil",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "pm-40-anvil",
+            "name": "PM-40 Anvil",
+            "weaponClass": "launcher",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        },
+        {
+          "weaponId": "fss-carbon-edge-1095",
+          "fields": [
+            "id",
+            "name",
+            "weaponClass",
+            "builds",
+            "camos",
+            "sourceUrls"
+          ],
+          "before": null,
+          "after": {
+            "id": "fss-carbon-edge-1095",
+            "name": "FSS Carbon Edge 1095",
+            "weaponClass": "melee",
+            "tier": null,
+            "tierRevision": null,
+            "builds": [],
+            "camos": [],
+            "sourceUrls": [
+              "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+            ]
+          }
+        }
+      ],
+      "sourceUrls": [
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-intel-modern-warfare-4-launch-xbox-game-pass",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-campaign-early-access-live-now",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-deep-dive-hajin",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-how-to-play-forward-operating-base-guide",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-live-worldwide-now",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-maps-modes",
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige",
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    }
+  ]
+}

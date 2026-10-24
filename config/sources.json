@@ -1,0 +1,21 @@
+{
+  "gameId": "cod-mw4-2026",
+  "gameName": "Call of Duty: Modern Warfare 4 (2026)",
+  "allowedOrigins": ["https://www.callofduty.com"],
+  "indexes": ["https://www.callofduty.com/patchnotes", "https://www.callofduty.com/blog"],
+  "articles": [
+    "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+    "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige"
+  ],
+  "maxArticles": 30,
+  "discoveryFrom": "2026-10",
+  "maxBytes": 3000000,
+  "timeoutMs": 20000,
+  "requestDelayMs": 1200,
+  "terms": {
+    "url": "https://www.activision.com/legal/terms-of-use",
+    "reviewedOn": "2026-10-24",
+    "policy": "Public editorial pages only; once-daily low-volume requests; obey robots.txt; store links, hashes and factual catalog data, not full articles. No account endpoints, private APIs, anti-bot bypass or paywalls. Reassess permission before adding a source."
+  }
+}

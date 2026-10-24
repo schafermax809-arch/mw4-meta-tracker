@@ -1,0 +1,113 @@
+name: Daily verified meta review
+
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: meta-update
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      BASE_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test && npm run validate
+      - name: Preserve first detection time of an existing identical proposal
+        shell: bash
+        run: |
+          mkdir -p work
+          if git fetch origin automation/meta-update; then
+            git show origin/automation/meta-update:reviews/pending.json > work/previous-review.json
+          fi
+      - name: Fetch, compare and validate sources
+        id: update
+        run: npm run update
+      - name: Promote only validated candidate files
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          node scripts/validate.mjs work/candidate/data/meta.json
+          mkdir -p reviews
+          cp work/candidate/data/meta.json public/data/meta.json
+          cp work/candidate/reviews/pending.json reviews/pending.json
+          npm run validate
+          npm test
+          npm run build
+      - name: Commit actual changes and create or update review PR
+        if: steps.update.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git add -- public/data/meta.json reviews/pending.json
+          if git diff --cached --quiet; then exit 0; fi
+          TREE=$(git write-tree)
+          PR=$(gh pr list --head automation/meta-update --base "$BASE_BRANCH" --state open --json number --jq '.[0].number // empty')
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git rev-parse --verify origin/automation/meta-update >/dev/null 2>&1; then
+            OLD_TREE=$(git rev-parse 'origin/automation/meta-update^{tree}')
+            if [ "$TREE" = "$OLD_TREE" ]; then
+              echo 'Identical proposal already exists; no commit.'
+              if [ -z "$PR" ]; then gh pr create --base "$BASE_BRANCH" --head automation/meta-update --title 'MW4: Quellen- und Meta-Update zur Prüfung' --body-file work/pr-body.md; fi
+              exit 0
+            fi
+            # Preserve human edits. Bot-only proposals can advance normally without rewriting history.
+            if [ -n "$PR" ]; then
+              MANUAL=$(git log "origin/$BASE_BRANCH..origin/automation/meta-update" --format=%ae | grep -v '^41898282+github-actions\[bot\]@users.noreply.github.com$' || true)
+              if [ -n "$MANUAL" ]; then
+                echo 'Open proposal has manual edits; latest detection is retained in the run artifact.' >> "$GITHUB_STEP_SUMMARY"
+                exit 0
+              fi
+              PARENT=$(git rev-parse origin/automation/meta-update)
+              BASE=$(git rev-parse HEAD)
+              COMMIT=$(printf 'chore(meta): refresh verified source proposals\n' | git commit-tree "$TREE" -p "$PARENT" -p "$BASE")
+              git push origin "$COMMIT:refs/heads/automation/meta-update"
+              gh pr edit "$PR" --body-file work/pr-body.md
+              exit 0
+            fi
+            git branch -D automation/meta-update 2>/dev/null || true
+          fi
+          git switch -c automation/meta-update
+          git commit -m 'chore(meta): propose verified source revisions'
+          if git rev-parse --verify origin/automation/meta-update >/dev/null 2>&1; then
+            # Only replace a closed/merged proposal with an exact remote lease.
+            EXPECTED=$(git rev-parse origin/automation/meta-update)
+            git push --force-with-lease="refs/heads/automation/meta-update:$EXPECTED" origin HEAD:automation/meta-update
+          else
+            git push origin HEAD:automation/meta-update
+          fi
+          gh pr create --base "$BASE_BRANCH" --head automation/meta-update --title 'MW4: Quellen- und Meta-Update zur Prüfung' --body-file work/pr-body.md
+      - name: Retain report and staged proposals, including on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: meta-update-report
+          path: work/
+          retention-days: 30
+          if-no-files-found: ignore
+      - name: Run summary
+        if: always()
+        run: |
+          echo '## MW4 Quellenprüfung' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f work/run-report.json ]; then
+            cat work/run-report.json >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo 'Persönlicher Camo-Fortschritt ist kein Bestandteil des Workflows.' >> "$GITHUB_STEP_SUMMARY"
