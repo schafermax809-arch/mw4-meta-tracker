@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "weapons": {
+    "han-86": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "m4": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      },
+      "asset": {
+        "image": "./assets/weapons/m4.png",
+        "caption": "Referenzfoto eines realen M4A1 · kein MW4-Spielrender",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M4A1-flattop.png",
+        "author": "PEO Soldier; Freistellung: MathKnight",
+        "license": "Public Domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "changes": "Originaldatei unverändert"
+      }
+    },
+    "hyeon-burst": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "patriot-xmr": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "kastov-762": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "oden": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Comb",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "axion": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "cronen-squall": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "iso-nightshade": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "vel-46": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "wz-55-striga": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "ppsh-41": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Stock",
+          "Laser",
+          "Fire Mods"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      },
+      "asset": {
+        "image": "./assets/weapons/ppsh-41.png",
+        "caption": "Referenzfoto einer realen PPSh-41 · kein MW4-Spielrender",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PPSh-41_from_soviet_noBG.png",
+        "author": "Lposka; Freistellung: Auge=mit",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Originaldatei unverändert"
+      }
+    },
+    "x-58-nyx": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "rezi-12": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Bolt",
+          "Muzzle",
+          "Guard",
+          "Barrel",
+          "Underbarrel",
+          "Rear Grip",
+          "Comb",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "warlord": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Bolt",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "finn-lmg": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "type-73": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "apoc-338": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "mar-9": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "oris-8-6": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Bolt",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "mosin-nagant": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Bolt",
+          "Underbarrel",
+          "Magazine",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      },
+      "asset": {
+        "image": "./assets/weapons/mosin-nagant.png",
+        "caption": "Referenzfoto einer realen Mosin-Nagant M1891 · kein MW4-Spielrender",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mosin-Nagant_M1891_-_Ryssland_-_AM.032971_(NB)_(cropped).png",
+        "author": "Armémuseum / The Swedish Army Museum",
+        "license": "Public Domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "changes": "Originaldatei unverändert"
+      }
+    },
+    "kg-7-vulcan": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Bolt",
+          "Underbarrel",
+          "Magazine",
+          "Comb",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "astaroth-57": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "signal-50": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Stock",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "sang-9mm": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Magazine",
+          "Rear Grip",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "krait-p68": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Magazine",
+          "Rear Grip",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "50-gs": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Underbarrel",
+          "Magazine",
+          "Rear Grip",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "mojave-357": {
+      "rules": {
+        "slots": [
+          "Optic",
+          "Muzzle",
+          "Barrel",
+          "Rear Grip",
+          "Laser",
+          "Ammunition"
+        ],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "pila": {
+      "rules": {
+        "slots": [],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "rpg-8": {
+      "rules": {
+        "slots": [],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "jokr": {
+      "rules": {
+        "slots": [],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "pm-40-anvil": {
+      "rules": {
+        "slots": [],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    },
+    "fss-carbon-edge-1095": {
+      "rules": {
+        "slots": [],
+        "maxAttachments": null,
+        "sourceUrl": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "sourceRevision": "a9e1c0d76a8fd21ae09f39ba6d953dcced9c961e7009a0981bf7eaeae08bd7cc",
+        "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02"
+      }
+    }
+  },
+  "camoAssets": {}
+}

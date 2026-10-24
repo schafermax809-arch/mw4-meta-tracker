@@ -1,56 +1,116 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111214">
-  <meta name="description" content="Nachvollziehbare MW4 Waffen-Updates, Patch-Verlauf und privater Camo-Fortschritt.">
-  <title>MW4 Intel — Meta & Updates</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./app.js"></script>
-</head>
-<body>
-  <aside class="sidebar">
-    <a class="brand" href="#overview"><span class="brand-icon">M<span>4</span></span><span>MW4<span class="brand-sub">INTEL PLATFORM</span></span></a>
-    <div class="workspace-label">DEIN LOADOUT. DEIN VORSPRUNG.</div>
-    <nav aria-label="Hauptnavigation">
-      <a href="#overview" class="nav-link active"><span>◈</span> Übersicht</a>
-      <a href="#weapons" class="nav-link"><span>⊞</span> Waffenbibliothek <small id="nav-count">—</small></a>
-      <a href="#changelog" class="nav-link"><span>↺</span> Update-Verlauf</a>
-      <a href="#sources" class="nav-link"><span>◎</span> Quellen & Prüfung</a>
-    </nav>
-    <div class="sidebar-bottom"><span class="live-dot"></span> GITHUB ACTIONS<div>Tägliche Prüfung in der Cloud</div><a href="https://github.com/schafermax809-arch/mw4-meta-tracker/actions" target="_blank" rel="noreferrer">Workflow ansehen ↗</a></div>
-  </aside>
-  <div class="main-shell">
-    <header class="topbar"><div><span class="muted">Intel Platform</span><span class="slash">/</span> Multiplayer</div><div class="topbar-right"><span class="mode-chip">MW4 · 2026</span><span class="local-badge">◉ Fortschritt lokal</span></div></header>
-    <main>
-      <div id="load-error" class="notice error" role="alert" hidden></div>
-      <section id="overview">
-        <div class="eyebrow"><span class="live-dot"></span> VERIFIZIERTE DATEN. TÄGLICH IM BLICK.</div>
-        <div class="page-heading"><div><h1>Immer einen Patch voraus<span>.</span></h1><p>Waffen, Meta und Änderungen. Geprüft, nachvollziehbar und an einem Ort.</p></div><a class="button subtle" href="https://github.com/schafermax809-arch/mw4-meta-tracker/pulls" target="_blank" rel="noreferrer">Änderungen prüfen <span>↗</span></a></div>
-        <div class="stats-grid">
-          <article class="stat"><span class="stat-label">WAFFEN IM ARSENAL <span>⊞</span></span><strong id="weapon-count">—</strong><span class="stat-note">Aus offiziellen Quellen</span></article>
-          <article class="stat"><span class="stat-label">VERIFIZIERTE META-BUILDS <span>◈</span></span><strong id="build-count">—</strong><span class="stat-note" id="build-note">Keine Schätzungen, keine erfundenen Builds</span></article>
-          <article class="stat"><span class="stat-label">LETZTES DATENUPDATE <span>↻</span></span><strong class="date-value" id="last-update">—</strong><span class="stat-note" id="last-update-note">Erfolgreich übernommener Datenstand</span></article>
-          <article class="stat"><span class="stat-label">ZULETZT GEÄNDERTE WAFFEN <span>↗</span></span><strong id="changed-count">—</strong><span class="stat-note" id="changed-date">Beim letzten Waffenupdate</span></article>
-        </div>
-        <div class="update-strip"><div class="update-icon">↻</div><div><strong>Automatisch gefunden. Bewusst freigegeben.</strong><p>Neue Patchnotes werden täglich geprüft. Unsichere Meta-Änderungen warten im Pull Request auf deine Freigabe.</p></div><span class="review-badge">PRÜFUNG AKTIV</span></div>
-        <div class="overview-grid">
-          <article class="panel patch-panel"><div class="section-kicker">BERÜCKSICHTIGTER PATCH</div><div class="patch-icon">MW<span>4</span></div><h2 id="patch-name">Daten werden geladen</h2><p id="patch-revision" class="mono muted">Quellrevision wird geladen …</p><div class="divider"></div><div class="panel-footer"><span><span class="live-dot"></span> Offizielle Patchnotes</span><a id="patch-link" href="https://www.callofduty.com/patchnotes" target="_blank" rel="noreferrer">Quelle öffnen ↗</a></div></article>
-          <article class="panel"><div class="panel-heading"><div><div class="section-kicker">ÄNDERUNGEN AM ARSENAL</div><h2>Zuletzt aktualisiert</h2></div><a href="#changelog">Verlauf ↗</a></div><div id="recent-weapons" class="recent-list"></div></article>
-        </div>
-      </section>
-      <section id="weapons" class="content-section">
-        <div class="section-heading"><div><div class="section-kicker">DAS GESAMTE ARSENAL</div><h2>Waffenbibliothek <span id="result-count" class="count-label"></span></h2></div><span class="muted small">Unbekannte Daten sind ausdrücklich gekennzeichnet.</span></div>
-        <div class="filters"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Waffe suchen …" aria-label="Waffe suchen"></label><select id="class-filter" aria-label="Waffenklasse"><option value="">Alle Waffenklassen</option></select><select id="tier-filter" aria-label="Meta-Tier"><option value="">Alle Meta-Tiers</option><option>S</option><option>A</option><option>B</option><option>C</option><option value="unknown">Noch nicht verifiziert</option></select><label class="changed-filter"><input type="checkbox" id="changed-only"> Zuletzt geändert</label></div>
-        <div id="weapons-grid" class="weapons-grid" aria-live="polite"></div>
-      </section>
-      <section id="changelog" class="content-section"><div class="section-heading"><div><div class="section-kicker">JEDE ÄNDERUNG NACHVOLLZIEHBAR</div><h2>Update-Verlauf</h2></div><a class="small" href="./data/meta.json" download>Datensatz herunterladen ↓</a></div><div id="changelog-list" class="changelog-list"></div></section>
-      <section id="sources" class="content-section"><div class="section-heading"><div><div class="section-kicker">VERTRAUEN BRAUCHT QUELLEN</div><h2>Quellen & Datenqualität</h2></div></div><div class="source-grid"><article class="panel"><div class="source-logo">IW</div><h3>Offizielle Informationen</h3><p>Öffentliche Call-of-Duty-Patchnotes sowie Waffen- und Fortschrittsartikel. Die tägliche Prüfung berücksichtigt auch überarbeitete Artikel.</p><div id="source-links" class="source-links"></div></article><article class="panel"><div class="source-logo orange">✓</div><h3>Qualität vor Geschwindigkeit</h3><p>Tier-Einstufungen und Build-Empfehlungen benötigen Belege. Ein Balance-Patch allein beweist keine neue Meta.</p><ul class="quality-list"><li>Änderungen als Pull Request</li><li>Validierung vor dem Commit</li><li>Vorherige Daten bei Fehlern erhalten</li><li>Camo-Fortschritt bleibt in deinem Browser</li></ul><a href="https://github.com/schafermax809-arch/mw4-meta-tracker/actions" target="_blank" rel="noreferrer">Letzten Prüflauf ansehen ↗</a></article></div></section>
-      <footer><span><b>MW4 INTEL</b> · Unabhängiges Community-Projekt</span><span>Keine Verbindung zu Activision oder Infinity Ward.</span></footer>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080b0c" />
+    <meta
+      name="description"
+      content="Dein MW4-Arsenal: Gunsmith, Camo-Challenges und privater Fortschritt in einem Menü."
+    />
+    <title>MW4 Intel · Waffen & Gunsmith</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./vendor/three/build/three.module.js",
+          "three/addons/": "./vendor/three/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="workshop-environment" aria-hidden="true"></div>
+    <header class="gamebar">
+      <div class="mode-heading">
+        <button
+          id="global-back"
+          class="back-control"
+          aria-label="Zurück zur Waffenübersicht"
+        >
+          ‹</button
+        ><a href="#/arsenal" class="mode-name"
+          >MULTIPLAYER<span>MW4 <b>INTEL</b></span></a
+        >
+      </div>
+      <nav class="primary-nav" aria-label="Hauptmenü">
+        <a href="#/arsenal" data-section="arsenal">Waffen</a
+        ><a href="#/tierlist" data-section="tierlist">Tierlist</a
+        ><a href="#/planner" data-section="planner">Grind Planner</a
+        ><a href="#/intel" data-section="intel">Intel & Daten</a>
+      </nav>
+      <div class="player-status">
+        <i class="status-light"></i><span>LOKAL GESPEICHERT</span
+        ><button id="quick-favorites" aria-label="Favoriten anzeigen">
+          ☆ <span id="favorite-count">0</span>
+        </button>
+      </div>
+    </header>
+    <main id="screen" tabindex="-1">
+      <div class="loading-state">
+        <span class="loading-reticle"></span>ARSENAL WIRD GELADEN
+      </div>
     </main>
-  </div>
-  <dialog id="weapon-dialog"><div class="dialog-header"><div><div class="section-kicker" id="detail-class"></div><h2 id="detail-name"></h2></div><button class="icon-button" id="close-dialog" aria-label="Schließen">×</button></div><div id="detail-content"></div></dialog>
-  <div id="toast" role="status" hidden></div>
-</body>
+    <footer class="inputbar">
+      <div class="input-hints">
+        <button id="footer-back"><kbd>ESC</kbd> ZURÜCK</button
+        ><span><kbd>↑ ↓ ← →</kbd> NAVIGIEREN</span
+        ><span><kbd>ENTER</kbd> AUSWÄHLEN</span><span><kbd>F</kbd> FAVORIT</span
+        ><button id="search-shortcut"><kbd>/</kbd> SUCHE</button>
+      </div>
+      <a id="data-status" href="#/intel"
+        >DATEN WERDEN GELADEN <span>↗</span></a
+      >
+    </footer>
+    <dialog
+      id="attachment-dialog"
+      class="side-dialog"
+      aria-labelledby="attachment-title"
+    >
+      <div class="dialog-heading">
+        <div>
+          <div class="eyebrow">GUNSMITH / AUFSÄTZE</div>
+          <h2 id="attachment-title">AUFSATZ WÄHLEN</h2>
+        </div>
+        <button
+          class="icon-button"
+          data-close="attachment-dialog"
+          aria-label="Aufsatzauswahl schließen"
+        >
+          ×
+        </button>
+      </div>
+      <div id="attachment-content"></div>
+    </dialog>
+    <dialog
+      id="build-dialog"
+      class="build-dialog"
+      aria-labelledby="build-dialog-title"
+    >
+      <div class="dialog-heading">
+        <h2 id="build-dialog-title">BUILD</h2>
+        <button
+          class="icon-button"
+          data-close="build-dialog"
+          aria-label="Buildansicht schließen"
+        >
+          ×
+        </button>
+      </div>
+      <div id="build-dialog-content"></div>
+    </dialog>
+    <input
+      type="file"
+      id="import-progress"
+      accept="application/json,.json"
+      hidden
+    /><input
+      type="file"
+      id="import-build"
+      accept="application/json,.json"
+      hidden
+    />
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
 </html>

@@ -4,6 +4,24 @@ Statische Website und tägliche GitHub-Actions-Prüfung für **Call of Duty: Mod
 
 ## Betrieb
 
+### Waffenmenü und Gunsmith
+
+Die Oberfläche ist als zusammenhängendes Ingame-Menü gestaltet: vertikale Waffenklassen auf Desktop, kompakte Auswahl auf Mobilgeräten, kantige Waffen-Kacheln, orange Auswahl und eine große Waffenansicht. Die sechs Gunsmith-Untermenüs sind **Aufsätze, Meta-Build, Camo-Build, Tarnungen, Herausforderungen und Tracker**. Tierlist, Grind Planner, Quellen, Changelog und Speicherverwaltung verwenden dieselbe Menüstruktur. Es gibt keine separate Dashboard-Oberfläche mehr.
+
+Navigation erfolgt ohne Seitenneuladungen per URL-Hash, inklusive Zurück/Vorwärts im Browser. Alte Verweise auf `#weapons`, `#overview`, `#sources` und `#changelog` funktionieren weiterhin. Mit den Pfeiltasten wechselst du in der Waffenbibliothek die Auswahl, Enter öffnet den Gunsmith, F schaltet einen Favoriten, / öffnet die Suche und Escape führt zurück. Im Gunsmith wechseln Q/E die Waffe und 1–6 das Untermenü; die Tab-Leiste unterstützt auch Pfeiltasten, Pos1 und Ende. Eingabefelder und native Dialoge behalten ihre normale Tastaturbedienung. Animationen beachten `prefers-reduced-motion`.
+
+Der Camo-Speicherschlüssel und das Import-/Exportformat bleiben unverändert. Favoriten liegen separat unter `mw4-intel:preferences:v1`, eigene Builds unter `mw4-intel:custom-builds:v1`. Die neue UI migriert oder überschreibt bestehende Zähler nicht. Der Planner berücksichtigt ausschließlich bestätigte, offene Ziele und deren Voraussetzungen. Er behauptet keinen vollständigen Mastery-Fortschritt, wenn Camo-Daten fehlen.
+
+Eigene Builds können benannt, gespeichert, bearbeitet, gelöscht, als JSON exportiert/importiert und über einen Link geteilt werden. Ein geteilter Build wird zunächst nur als Entwurf geöffnet; der Link enthält keine Camo-Zähler. Beim Laden älterer Konfigurationen werden entfernte oder inkompatible Aufsätze markiert, ohne die gespeicherte Konfiguration zu löschen. Der Vergleich zeigt Aufsatzunterschiede; fehlende Leistungsdaten bleiben unbekannt.
+
+**Grenzen der vorhandenen Spieldaten:** Es sind weiterhin keine verifizierten Aufsatznamen oder Meta-Builds hinterlegt. Die Slot-Typen wurden separat aus dem offiziellen Waffenartikel übernommen (`public/data/presentation.json`). Nicht belegte Slot-Limits bleiben `null`; deshalb darf der Editor keine angeblich gültigen Kombinationen erfinden. Neue Aufsätze werden erst nach Bestätigung von Limit, Kompatibilität und Sonderregeln auswählbar. Ein Basis-Build ohne Aufsätze kann gespeichert werden. Bei einem neuen Patch werden Slot-Regeln, ältere Builds und Werte wieder prüfbedürftig.
+
+Die Statistikfunktion nutzt ausschließlich verifizierte Messwerte einer **exakten Aufsatzkombination für den aktuellen Patch**. Sie addiert keine geratenen Prozentwerte. Vorgesehene Daten: `presentation.weapons[weaponId].statistics = { patchRevision, sourceUrls, snapshots: [{ attachments, values: { damage: { value, unit, scaleMax? }, ... } }] }`. `scaleMax` darf nur für eine ebenfalls belegte Skala angegeben werden. Ohne passenden Snapshot bleibt die Anzeige „Nicht verifiziert“.
+
+Three.js, GLTFLoader und OrbitControls werden lokal gebündelt und erst bei einer registrierten, lizenzierten GLB-/GLTF-Datei geladen. Ein Asset benötigt `model`, `license` und `sourceUrl` im zugehörigen `asset`-Eintrag. Mit einem solchen Asset aktiviert die UI Drehung, Zoom, Verschieben, Touch-Gesten und Kamera-Reset. Aktuell sind **keine verifizierten MW4-3D-Modelle oder modularen Aufsatzmodelle vorhanden**. Es wird daher keine 3D-Inspektion oder visuelle Aufsatzänderung vorgetäuscht. Stattdessen gibt es ehrlich bezeichnete 2D-Fotos für drei reale Waffentypen. Für die übrigen Waffen und Camos bleibt die Vorschau als fehlend markiert. Lizenzdetails: `public/ASSET-LICENSES.md` sowie Intel → Bildnachweise.
+
+Die Tests unter `test/gunsmith.test.mjs` prüfen Fortschrittsübernahme, Voraussetzungen, Filter, Planner, getrennte Speicherbereiche, Aufsatzlimits, Kompatibilität, Slot-Blockierungen, veraltete Regeln, gespeicherte Builds, Unicode-Links und exakte Statistik-Snapshots. Die bisherigen Update-Tests laufen unverändert weiter.
+
 - Website: https://schafermax809-arch.github.io/mw4-meta-tracker/
 - Läufe und Fehlerberichte: https://github.com/schafermax809-arch/mw4-meta-tracker/actions
 - Vorgeschlagene Updates: https://github.com/schafermax809-arch/mw4-meta-tracker/pulls
