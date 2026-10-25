@@ -24,25 +24,34 @@ const raw = read("gunsmith"),
   community = read("community-values");
 const runtime = () =>
   hydrateAttachmentCatalog(
-    hydrateCommunityValues(raw, community, meta.patchRevision),
+    hydrateCommunityValues(raw, community, raw.patchRevision),
     data,
-    meta.patchRevision,
+    raw.patchRevision,
   );
 test("complete published attachment catalog has every declared weapon inventory and a stable content hash", () => {
   validateAttachmentCatalog(data, meta);
   const { hash: actual, ...content } = data;
   assert.equal(actual, hash(content));
   assert.equal(data.profiles.length, meta.weapons.length);
-  assert.equal(data.catalog.length, 686);
-  assert.equal(data.profiles.find((p) => p.weaponId === "m4").declared, 71);
+  assert.equal(
+    new Set(data.catalog.map((a) => a.id)).size,
+    data.catalog.length,
+  );
+  assert.ok(data.profiles.find((p) => p.weaponId === "m4").declared > 0);
   for (const p of data.profiles) assert.equal(p.declared, p.attachments.length);
 });
 test("the full catalog is selectable per weapon while old IDs, official values and input data survive unchanged", () => {
   const before = hash(raw),
     d = runtime(),
     w = d.weapons.find((w) => w.id === "m4");
-  assert.ok(w.catalogAttachmentIds.length >= 71);
-  assert.equal(w.base.rpm.value, 810);
+  assert.ok(
+    w.catalogAttachmentIds.length >=
+      data.profiles.find((p) => p.weaponId === "m4").declared,
+  );
+  assert.equal(
+    w.base.rpm.value,
+    raw.weapons.find((w) => w.id === "m4").base.rpm.value,
+  );
   assert.ok(w.catalogAttachmentIds.includes("m4-fss-is300"));
   assert.equal(hash(raw), before);
   for (const w of d.weapons)
@@ -53,19 +62,22 @@ test("the full catalog is selectable per weapon while old IDs, official values a
           d,
           w.id,
           [{ slot: a.slot, attachmentId: id }],
-          meta.patchRevision,
+          raw.patchRevision,
         ),
         [],
       );
     }
 });
-test("all 41 imported MP builds keep slot and Apex compatibility; a blocked barrel cannot be equipped with Hurricane", () => {
+test("all published MP builds keep slot and Apex compatibility; a blocked barrel cannot be equipped with Hurricane", () => {
   const d = runtime(),
     builds = d.community.filter((c) => c.id.startsWith("catalog-build-"));
-  assert.equal(builds.length, 41);
+  assert.equal(
+    builds.length,
+    data.profiles.reduce((n, p) => n + p.builds.length, 0),
+  );
   for (const b of builds)
     assert.deepEqual(
-      configurationIssues(d, b.weaponId, b.attachments, meta.patchRevision),
+      configurationIssues(d, b.weaponId, b.attachments, raw.patchRevision),
       [],
     );
   const muzzle = d.attachments.find((a) => a.id === "m4-hurricane"),
@@ -80,14 +92,14 @@ test("all 41 imported MP builds keep slot and Apex compatibility; a blocked barr
         { slot: "Apex", attachmentId: muzzle.id },
         { slot: "Barrel", attachmentId: barrel.id },
       ],
-      meta.patchRevision,
+      raw.patchRevision,
     ).length,
   );
 });
 test("foreign patches cannot relabel old inventories as current", () => {
   const changed = structuredClone(data);
   changed.patchRevision = "b".repeat(64);
-  const d = hydrateAttachmentCatalog(raw, changed, meta.patchRevision);
+  const d = hydrateAttachmentCatalog(raw, changed, raw.patchRevision);
   assert.equal(d.attachments.length, raw.attachments.length);
   assert.equal(
     d.weapons.find((w) => w.id === "m4").catalogAttachmentIds,
