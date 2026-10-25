@@ -163,7 +163,8 @@ Automatische Prüfungen decken alle 33 Waffen, alle importierten Slotzuordnungen
 
 ## Durchgeführte Prüfungen
 
-- 98 automatisierte Tests bestanden; Datenvalidierung und statischer Build erfolgreich.
+- 99 automatisierte Tests bestanden; Datenvalidierung und statischer Build erfolgreich.
+- Neue Waffen ohne geprüften Effektquellen-Vertrag werden als unbekannt vorgemerkt. Die Erkennung neuer Waffen und der Review-Vorschlag bleiben möglich, ohne Aufsatzwerte zu erfinden.
 - Alle 33 Waffen und sämtliche neuen Slotzuordnungen in den Datenprüfungen abgedeckt. Acht Slot-Widersprüche werden gesperrt und als Konflikt dokumentiert, nicht als bestätigte Kompatibilität ausgegeben.
 - Browser: M4/FSS Fireline Grip zeigt 260 ms ADS und 225 ms STF als Teilrechnung. Quellen, Einheiten und Prüfdatum am Aufsatz sichtbar.
 - Browser: lokaler Test-Build gespeichert, Seite neu geladen, Build wieder geladen; Aufsatz-ID und Teilrechnung erhalten. Vorhandene gespeicherte Builds weiterhin vorhanden.

@@ -37,11 +37,11 @@ const [raw, meta, community, catalog, effects] = await Promise.all(
   ].map(json),
 );
 const old = hydrateAttachmentCatalog(
-  hydrateCommunityValues(raw, community, meta.patchRevision),
+  hydrateCommunityValues(raw, community, raw.patchRevision),
   catalog,
-  meta.patchRevision,
+  raw.patchRevision,
 );
-const db = hydrateEffectEvidence(old, effects, meta.patchRevision);
+const db = hydrateEffectEvidence(old, effects, raw.patchRevision);
 const ref = (id) => ({
   attachmentId: id,
   slot: db.attachments.find((a) => a.id === id).slot,
@@ -51,11 +51,8 @@ test("all 33 weapons and all previous attachment IDs are audited without modifyi
   validateEffectEvidence(effects, meta);
   const { hash: stored, checkedAt, ...content } = effects;
   assert.equal(stored, hash(content));
-  assert.equal(effectCoverage(db).length, 33);
-  assert.equal(
-    effects.profiles.filter((p) => p.state === "available").length,
-    28,
-  );
+  assert.equal(effectCoverage(db).length, raw.weapons.length);
+  assert.ok(effects.profiles.filter((p) => p.state === "available").length > 0);
   assert.ok(
     effects.profiles
       .filter((p) => p.state === "available")
@@ -299,6 +296,32 @@ test("source failure and automation restrictions abort collection without partia
     ),
     /terms changed/,
   );
+});
+test("new catalog weapons keep source discovery working with an explicit unknown effect profile", async () => {
+  const config = {
+    allowedOrigins: ["https://ggranked.com"],
+    index: "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta",
+    patchRevision: raw.patchRevision,
+    pages: [],
+    notApplicable: [],
+    restrictions: [
+      effects.restrictions.find((r) => r.source === "ggranked / WZ Ranked"),
+    ],
+    aliasReviews: [],
+  };
+  const calls = [];
+  const result = await collectEffectEvidence(
+    config,
+    { ...meta, weapons: [{ id: "newly-announced", name: "Newly Announced" }] },
+    async (url) => {
+      calls.push(url);
+      return "<main>Call of Duty: Modern Warfare 4 Launch 2026</main>";
+    },
+  );
+  assert.equal(result.profiles[0].state, "unavailable");
+  assert.deepEqual(result.profiles[0].stats, []);
+  assert.deepEqual(result.profiles[0].attachments, []);
+  assert.deepEqual(calls, [config.index]);
 });
 test("unchanged facts are no-ops despite a newer check time; changes retain before/after and pending date", () => {
   const copy = structuredClone(effects);

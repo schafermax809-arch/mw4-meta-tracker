@@ -135,14 +135,14 @@ export async function collectEffectEvidence(
   for (const w of meta.weapons) {
     const page = config.pages.find((p) => p.weaponId === w.id);
     if (!page) {
-      if (!config.notApplicable.includes(w.id))
-        throw Error("Missing configured weapon " + w.id);
+      const notApplicable = config.notApplicable.includes(w.id);
       const p = {
         weaponId: w.id,
         url: null,
-        state: "not-applicable",
-        reason:
-          "Offizielle Waffenübersicht: keine Gunsmith-Aufsatzslots. Keine passende Seite im öffentlichen Launch-Index.",
+        state: notApplicable ? "not-applicable" : "unavailable",
+        reason: notApplicable
+          ? "Offizielle Waffenübersicht: keine Gunsmith-Aufsatzslots. Keine passende Seite im öffentlichen Launch-Index."
+          : "Neu entdeckte Waffe: noch kein geprüfter Effektquellen-Vertrag. Profil zur Prüfung vormerken; keine Werte oder Slotregeln erfinden.",
         asOf: null,
         stats: [],
         attachments: [],
