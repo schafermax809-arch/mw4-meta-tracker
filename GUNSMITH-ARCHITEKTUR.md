@@ -97,3 +97,13 @@ Vor dem Commit werden Kernkatalog, Gunsmith-Daten, Berechnungsfingerabdruck, Tes
 Es gibt keine kostenpflichtige KI und keine Behauptung einer automatischen Reddit-Analyse. Fehlende Zugangserlaubnis wird als `manual-only` ausgewiesen. Quellen mit Sammelverbot oder HTTP-Sperre werden nicht umgangen. Die vollständige Rechercheabdeckung und offenen Daten stehen in `DATENBASIS.md` und auf der Website unter Intel → Gunsmith-Datenbasis.
 
 Der bisherige Camo-Schlüssel `mw4-intel:camo-progress:v1` bleibt unverändert. Keine Engine- oder Update-Datei liest oder schreibt diesen Speicher. Builds und Favoriten liegen weiterhin getrennt. Bestehende Camo-Definitionen und persönliche Zähler werden durch Gunsmith-Updates nicht verändert.
+
+## Getrennte Effekt-Evidenz
+
+`effect-evidence.json` wird durch `validateEffectEvidence` geprüft und nach Community-Basiswerten sowie Katalog durch `hydrateEffectEvidence` in eine Laufzeitkopie eingebunden. Rohe Quellenangaben bleiben mit `kind` (absolute/additive/percent/factor/qualitative), Einheit, Zuordnung, Datum und Modus erhalten. Mehrdeutige Angaben besitzen `operation:null`. Die Rohdatenbank bleibt unverändert. Schreibweisen werden nur bei identischer alphanumerischer Normalform zugeordnet; Aliase bleiben erhalten. Ungeklärte Längen-/Apex-Namen stehen in `aliasReviews`.
+
+`calculateStats` trennt strikte `values` von unverbindlichen `preview`-Teilrechnungen. `previewMissing` erklärt widersprüchliche Grundlagen und unbelegte Stapelung. Weder TTK noch Optimizer verwenden Vorschauwerte. Verifizierte Kombinationen nutzen weiterhin explizite Reihenfolgen, Interaktionen und exakte Snapshots. Zeitprozente mit unklarer Speed-Semantik werden nicht konvertiert.
+
+TTK darf eine vollständig definierte Änderung der Feuerrate berücksichtigen. Das optionale, quellengebundene Feld `damageProfile.rangeScaling: "all-boundaries"` erlaubt die explizite proportionale Skalierung aller Entfernungsgrenzen. Ohne diese Regel bleiben Reichweitenumbauten für TTK gesperrt. Geänderte Körperzonen-/Schadensmodelle und nicht modellierte Burst-/Pellet-/Konversionsregeln bleiben gesperrt. Keine Produktionswaffe erhält diese Regeln ohne Beleg.
+
+`calculated.json` bindet Ergebnisse zusätzlich an `effectEvidenceHash`. Der Update-Adapter prüft den Fingerabdruck der manuell geprüften Nutzungsbedingungen vor dem Abruf. Geänderte Bedingungen, entfernte Slots, erheblich verkürzte Listen oder Ausfälle brechen die Sammlung ab. Die vorhandenen Dateien bleiben erhalten. Erfolgreiche Faktenänderungen erzeugen einen Kandidaten mit Vorher/Nachher und Review-PR.

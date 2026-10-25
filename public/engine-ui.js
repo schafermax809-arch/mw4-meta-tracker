@@ -8,21 +8,29 @@ import { calculateStats, timeToKill } from "./engine/calculator.js";
 import { objectiveWeights } from "./engine/optimizer.js";
 import { analyzeCommunity } from "./engine/community.js";
 import { communityTTK } from "./engine/community-values.js";
-import { privateCatalogSource } from "./engine/attachment-catalog.js";
+import { effectCoverage } from "./engine/effect-evidence.js";
 const fmt = (v) => Number(v.toFixed(3)).toLocaleString("de-DE");
 export function statTable(db, weaponId, refs, patch) {
   const c = calculateStats(db, weaponId, refs, patch),
     wrap = node("div", null, "stat-table-wrap"),
     table = node("table", null, "comparison-table");
   const h = node("tr");
-  for (const s of ["WAFFENWERT", "BASIS", "BUILD", "Δ ABS.", "Δ %"])
+  for (const s of [
+    "WAFFENWERT",
+    "BASIS",
+    "BUILD / TEILRECHNUNG*",
+    "Δ ABS.",
+    "Δ %",
+  ])
     h.append(node("th", s));
   table.append(h);
   for (const [key, [label, unit]] of Object.entries(METRICS)) {
-    if (key === "ttk" || (!c.base[key] && !c.values[key])) continue;
+    if (key === "ttk" || (!c.base[key] && !c.values[key] && !c.preview[key]))
+      continue;
     const base = c.base[key],
-      v = c.values[key],
-      d = c.deltas[key],
+      partial = !c.values[key] && c.preview[key],
+      v = c.values[key] ?? partial,
+      d = c.deltas[key] ?? c.previewDeltas[key],
       r = node("tr");
     r.append(
       node("th", label),
@@ -35,7 +43,7 @@ export function statTable(db, weaponId, refs, patch) {
       node(
         "td",
         v
-          ? `${fmt(v.value)} ${unit}${v.status === "reported" ? " C" : ""}`
+          ? `${fmt(v.value)} ${unit}${partial ? " *" : v.status === "reported" ? " C" : ""}`
           : "—",
       ),
       node(
@@ -65,10 +73,12 @@ export function statTable(db, weaponId, refs, patch) {
     ),
     node(
       "p",
-      "C = Community-Quelle. — = Aufsatzwirkung unbekannt. Zeitwerte in ms: kleiner ist schneller. Unvollständige Aufsatzeffekte machen betroffene Konfigurationen unberechenbar.",
+      "C = Community-Angabe, nicht unabhängig vermessen. * = Teilrechnung ausschließlich aus bekannten Einzelwirkungen; kein bestätigter Gesamtwert des Builds und keine Optimizer-Grundlage. — = unbekannt. Zeitwerte in ms: kleiner ist schneller. Mehrere Effekte auf denselben Wert bleiben ohne belegte Stapelregel offen.",
       "stats-note",
     ),
   );
+  for (const [key, reason] of Object.entries(c.previewMissing))
+    wrap.append(node("p", `${METRICS[key][0]}: ${reason}.`, "stats-note"));
   if (c.issues.length) wrap.append(notice(c.issues.join("; "), true));
   return wrap;
 }
@@ -124,7 +134,6 @@ export function compareStats(db, weaponId, left, right, patch) {
 }
 function sourceLinks(db, ids, box) {
   for (const id of [...new Set(ids)]) {
-    if (privateCatalogSource(id)) continue;
     const s = db.sources.find((s) => s.id === id);
     if (s)
       box.append(
@@ -193,6 +202,36 @@ export function renderCommunity(db, weapon, box, actions) {
         `${b.independentSources} unabhängige Quelle(n) · ${b.testSources} Quellen mit reproduzierbarem Test · geprüft ${date(b.checkedAt)}`,
       ),
     );
+    if (db.effectEvidence) {
+      const evidence = node("details");
+      evidence.append(
+        node("summary", "Bekannte Aufsatzwirkungen und Rechengrenzen"),
+      );
+      for (const r of b.attachments) {
+        const a = db.attachments.find((a) => a.id === r.attachmentId);
+        evidence.append(node("h4", a.name));
+        for (const e of a.evidence?.effects ?? [])
+          evidence.append(
+            node(
+              "p",
+              e.raw + (e.operation ? "" : " · numerisch nicht verrechnet"),
+              "effect-line",
+            ),
+          );
+        if (!a.evidence?.effects.length)
+          evidence.append(
+            node("p", "Keine zusätzliche Effekttabelle zugeordnet."),
+          );
+      }
+      evidence.append(
+        node(
+          "p",
+          "Einzelwirkungen zeigen mögliche Vor- und Nachteile. Ohne vollständige Stapelregeln ist kein belastbarer Gesamtvergleich mit einem Calculated Build möglich.",
+          "stats-note",
+        ),
+      );
+      card.append(evidence);
+    }
     box.append(card);
   }
   if (analysis.recurring.length) {
@@ -219,7 +258,6 @@ export function renderCommunity(db, weapon, box, actions) {
   const refs = node("details");
   refs.append(node("summary", "Quellenzugang und Recherchegrenzen"));
   for (const s of db.sources.filter((s) => s.kind !== "official")) {
-    if (privateCatalogSource(s.id)) continue;
     const p = node("p");
     p.append(
       external(s.title, s.url),
@@ -698,6 +736,8 @@ export function renderOptimizer(db, weapon, box, actions) {
 export function renderDataCoverage(db, weapon, box, patch) {
   const w = db.weapons.find((w) => w.id === weapon.id);
   if (!w) return;
+  if (!box.querySelector(".evidence-quality"))
+    box.append(evidenceQuality(db, weapon.id, patch));
   const details = node("details", null, "data-coverage");
   details.append(
     node(
@@ -717,6 +757,76 @@ export function renderDataCoverage(db, weapon, box, patch) {
   );
   sourceLinks(db, w.sourceIds, details);
   details.append(statTable(db, weapon.id, [], patch));
+  if (db.effectEvidence) {
+    const rows = effectCoverage(db, patch),
+      t = node("table", null, "comparison-table"),
+      head = node("tr");
+    for (const label of [
+      "WAFFE",
+      "AUFSÄTZE",
+      "QUELLEN-ZAHLEN",
+      "VERIF. ZAHLEN",
+      "UNVOLLST.",
+      "KONFLIKTE AUFSATZ / BASIS",
+      "VOLLST. %",
+    ])
+      head.append(node("th", label));
+    t.append(head);
+    for (const c of rows) {
+      const r = node("tr");
+      for (const value of [
+        c.name,
+        c.attachments,
+        c.numeric,
+        c.verifiedNumeric,
+        c.incomplete,
+        `${c.conflicting} / ${c.baseConflicts}`,
+        c.completeness === null ? "N/A" : c.completeness + " %",
+      ])
+        r.append(node("td", String(value)));
+      t.append(r);
+    }
+    const scroll = node("div", null, "stat-table-wrap");
+    scroll.append(t);
+    details.append(
+      scroll,
+      node(
+        "p",
+        "Verif. Zahlen = mindestens ein offizieller oder reproduzierbar getesteter numerischer Effekt. Quellen-Zahlen bleiben Community-Angaben. Vollständigkeit verlangt vollständige Effektlisten; N/A = keine Aufsatzslots.",
+        "stats-note",
+      ),
+    );
+    const conflicts = node("details");
+    conflicts.append(
+      node(
+        "summary",
+        `Basiswert-Konflikte: ${w.evidenceConflicts?.length ?? 0}`,
+      ),
+    );
+    for (const c of w.evidenceConflicts ?? [])
+      conflicts.append(
+        node(
+          "p",
+          `${METRICS[c.stat][0]}: bevorzugt ${fmt(c.before.value)} ${c.before.unit}; zusätzliche Quelle ${fmt(c.reported.value)} ${c.reported.unit}. Nicht gemittelt.`,
+        ),
+      );
+    sourceLinks(db, ["ggranked-" + weapon.id], conflicts);
+    details.append(conflicts);
+    const restrictions = node("details");
+    restrictions.append(
+      node("summary", "Recherchegrenzen und nicht zusammengeführte Namen"),
+    );
+    for (const r of db.effectEvidence.restrictions) {
+      const p = node("p", `${r.source}: ${r.reason} `);
+      p.append(external("Beleg ↗", r.url));
+      restrictions.append(p);
+    }
+    for (const a of db.effectEvidence.aliasReviews.filter(
+      (a) => a.weaponId === weapon.id,
+    ))
+      restrictions.append(node("p", a.names.join(" / ") + ": " + a.reason));
+    details.append(restrictions);
+  }
   const table = node("table", null, "comparison-table"),
     h = node("tr");
   for (const v of ["WAFFE", "BASISWERTE", "AUFSÄTZE", "KATALOG"])
@@ -751,4 +861,97 @@ export function renderDataCoverage(db, weapon, box, patch) {
     ),
   );
   box.append(details);
+}
+export function evidenceQuality(db, weaponId, patch = db.patchRevision) {
+  const c = effectCoverage(db, patch).find((w) => w.weaponId === weaponId),
+    box = node("div", null, "evidence-quality");
+  if (!c) return box;
+  box.append(
+    node(
+      "strong",
+      `DATENQUALITÄT · ${c.numeric}/${c.attachments} Aufsätze mit Zahlen`,
+    ),
+    node(
+      "span",
+      `${c.verifiedNumeric} mit offiziellen/Test-Zahlen · ${c.incomplete} unvollständig · ${c.conflicting} Aufsatzkonflikte · ${c.baseConflicts} Basiswert-Konflikte`,
+    ),
+    node(
+      "span",
+      c.attachments
+        ? `Numerische Abdeckung ${c.numericCoverage} % · vollständige Effektdatensätze ${c.completeness} %`
+        : "Keine Gunsmith-Aufsatzslots laut offizieller Übersicht.",
+    ),
+  );
+  if (db.effectEvidence?.patchRevision !== patch)
+    box.append(
+      node(
+        "span",
+        "Effekt-Recherche gehört zu einem älteren Patch. Neuprüfung erforderlich.",
+      ),
+    );
+  return box;
+}
+export function appendAttachmentEvidence(db, a, box) {
+  const data = a.evidence,
+    current = data?.patchRevision === db.patchRevision;
+  box.append(
+    node(
+      "p",
+      data
+        ? `MW4 · Multiplayer · geprüft ${date(data.checkedAt)} · Quellenstand ${date(data.asOf)} · ${current ? "gespeicherter Patchstand" : "Patch veraltet"} · Community-Angabe, nicht unabhängig vermessen.`
+        : `Geprüft ${date(a.checkedAt)} · keine zusätzliche numerische Quelle zugeordnet.`,
+      "stats-note",
+    ),
+  );
+  if (a.aliases?.length)
+    box.append(
+      node("p", "Schreibvarianten: " + a.aliases.join(", "), "stats-note"),
+    );
+  if (a.compatibilityConflict)
+    box.append(notice(a.compatibilityConflict, true));
+  if (data?.unlockLabel)
+    box.append(
+      node(
+        "p",
+        "Quellen-Freischaltung: " +
+          data.unlockLabel +
+          ". „Weapon Unlocks“ wird nicht ungeprüft als Waffenlevel interpretiert.",
+        "stats-note",
+      ),
+    );
+  for (const e of data?.effects ?? []) {
+    const kind = {
+      absolute: "absoluter Zielwert",
+      additive: "absolute Änderung",
+      percent: "Prozentangabe",
+      factor: "Faktor",
+      qualitative: "qualitativ",
+    }[e.kind];
+    box.append(
+      node(
+        "p",
+        `${e.raw} · ${kind}${e.reason && e.kind !== "qualitative" ? " · " + e.reason : ""}`,
+        "effect-line",
+      ),
+    );
+  }
+  if (
+    !data?.effects.some((e) => e.kind !== "qualitative") &&
+    !a.modifiers.length
+  )
+    box.append(
+      node(
+        "p",
+        "Numerische Werte: FEHLEN. Unbekannt bedeutet nicht 0.",
+        "stats-note",
+      ),
+    );
+  box.append(
+    node(
+      "p",
+      "Vollständige Effekte und Stapelregeln: nicht verifiziert.",
+      "stats-note",
+    ),
+  );
+  sourceLinks(db, a.sourceIds, box);
 }

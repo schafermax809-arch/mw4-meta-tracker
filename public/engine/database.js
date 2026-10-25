@@ -3,15 +3,15 @@ export const METRICS = {
   damage: ["Schaden", "HP", 1],
   range: ["Schadensreichweite", "m", 1],
   velocity: ["Geschossgeschwindigkeit", "m/s", 1],
-  horizontalRecoil: ["Horizontaler Rückstoß", "°", -1],
-  verticalRecoil: ["Vertikaler Rückstoß", "°", -1],
+  horizontalRecoil: ["Horizontaler ADS-Rückstoß", "°/s", -1],
+  verticalRecoil: ["Vertikaler ADS-Rückstoß", "°/s", -1],
   gunKick: ["Gun Kick", "°", -1],
   ads: ["ADS-Zeit", "ms", -1],
   sprintToFire: ["Sprint-to-Fire", "ms", -1],
   movement: ["Bewegung", "m/s", 1],
   adsMovement: ["ADS-Bewegung", "m/s", 1],
   hipSpread: ["Hüftfeuerstreuung", "°", -1],
-  stability: ["Zielschwanken", "°", -1],
+  stability: ["ADS-Zielschwanken", "°/s", -1],
   magazine: ["Magazinkapazität", "Schuss", 1],
   reserve: ["Reservemunition", "Schuss", 1],
   reload: ["Nachladezeit", "ms", -1],
@@ -28,6 +28,26 @@ export const METRICS = {
   ratingAccuracy: ["Menüwert Präzision", "/100", 1],
   ratingMobility: ["Menüwert Mobilität", "/100", 1],
   ratingHandling: ["Menüwert Handling", "/100", 1],
+  horizontalGunKick: ["Horizontaler ADS Gun Kick", "°/s", -1],
+  verticalGunKick: ["Vertikaler ADS Gun Kick", "°/s", -1],
+  adsGunBob: ["ADS Gun Bob", "°", -1],
+  hipHorizontalRecoil: ["Horizontaler Hüftfeuerrückstoß", "°/s", -1],
+  hipVerticalRecoil: ["Vertikaler Hüftfeuerrückstoß", "°/s", -1],
+  hipHorizontalGunKick: ["Horizontaler Hüftfeuer Gun Kick", "°/s", -1],
+  hipVerticalGunKick: ["Vertikaler Hüftfeuer Gun Kick", "°/s", -1],
+  hipIdleSway: ["Hüftfeuer-Zielschwanken", "°/s", -1],
+  hipGunBob: ["Hüftfeuer Gun Bob", "°", -1],
+  firingMovement: ["Bewegung beim Feuern", "m/s", 1],
+  strafeMovement: ["Seitwärtsbewegung", "m/s", 1],
+  crouchMovement: ["Bewegung geduckt", "m/s", 1],
+  sprint: ["Sprintgeschwindigkeit", "m/s", 1],
+  tacticalSprint: ["Taktischer Sprint", "m/s", 1],
+  preFire: ["Verzögerung vor dem Schuss", "ms", -1],
+  raise: ["Waffe heben", "ms", -1],
+  drop: ["Waffe senken", "ms", -1],
+  flinch: ["Eingehender Flinch", "×", -1],
+  flinchInfliction: ["Verursachter Flinch", "×", 1],
+  penetration: ["Durchschlagsleistung", "in", 1],
 };
 export const signature = (refs) =>
   refs
@@ -293,10 +313,15 @@ export function validateDatabase(db, catalog = null) {
     if (w.damageProfile !== null) {
       exact(
         w.damageProfile,
-        ["patchRevision", "sourceIds", "bands"],
+        ["patchRevision", "sourceIds", "bands", "rangeScaling"],
         "damage profile",
       );
       evidence(w.damageProfile.sourceIds);
+      assert(
+        w.damageProfile.rangeScaling === undefined ||
+          w.damageProfile.rangeScaling === "all-boundaries",
+        "Unsupported damage range scaling",
+      );
       assert(
         revision(w.damageProfile.patchRevision) &&
           Array.isArray(w.damageProfile.bands) &&

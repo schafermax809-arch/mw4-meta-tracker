@@ -18,7 +18,7 @@ Bestehende Aufsatz-IDs und gespeicherte Builds bleiben erhalten. Zusätzliche/hi
 
 Daneben enthält die Basis 161 offizielle Angaben, 328 Community-Spezifikationen, 155 Menübewertungen und 163 Kopf-/Körper-Schadensintervalle. Community-Basiswerte werden standardmäßig angezeigt und sind mit C markiert. Der Quellen-TTK-Rechner verwendet Entfernungsbänder, Trefferzone und frei wählbare Gesundheit. Der Optimizer bietet veröffentlichte Builds für passende Einsatzzwecke an, solange die Aufsatzeffekte keine numerische Suche erlauben. Eine vollständige mathematische Meta-Berechnung wird nur bei vollständigen Messwerten behauptet.
 
-Die Herkunft des freigegebenen Katalogs ist intern in den JSON-Dateien und der Konfiguration hinterlegt; entsprechend dem Nutzerwunsch erscheint dafür keine zusätzliche Quellenwerbung im Waffenmenü. Die Freigabe zur Übernahme wurde vom Nutzer am 25. Oktober 2026 bestätigt.
+Die Herkunft bleibt in den JSON-Dateien erhalten. Gemäß aktueller Transparenz-Anforderung zeigt jeder Aufsatz Quellen, Prüfdatum und Effektstatus. Die frühere Ausblendung zusätzlicher Kataloghinweise ist damit aufgehoben. Die Freigabe für den ursprünglichen Katalog wurde vom Nutzer am 25. Oktober 2026 bestätigt.
 
 ## Berechnung und Bedienung
 
@@ -48,7 +48,7 @@ Zusätzlich prüft der tägliche Lauf die 32 in config/community-values-sources.
 
 Der tägliche Lauf prüft zusätzlich den freigegebenen globalen Aufsatzkatalog und alle registrierten Waffenprofile. Er prüft sämtliche Zeilen- und Slot-Zähler und verwirft unvollständige Abrufe. Änderungen an Listen oder Builds erzeugen einen Review-PR mit Vorher/Nachher.
 
-Der Kandidat enthält meta.json, gunsmith.json, community-values.json, attachment-catalog.json, research.json, calculated.json und die beiden Review-Dateien. Der Workflow prüft Daten, Berechnungsfingerabdruck, Tests und Build vor dem Commit. Neue Patchnotes stempeln alte Messwerte nicht automatisch als aktuell. Geprüfte Änderungen erzeugen vollständige Vorher-/Nachher-Historie und neue Optimierer-Ergebnisse.
+Der Kandidat enthält meta.json, gunsmith.json, community-values.json, attachment-catalog.json, effect-evidence.json, research.json, calculated.json und die beiden Review-Dateien. Der Workflow prüft Daten, Berechnungsfingerabdruck, Tests und Build vor dem Commit. Neue Patchnotes stempeln alte Messwerte nicht automatisch als aktuell. Geprüfte Änderungen erzeugen vollständige Vorher-/Nachher-Historie und neue Optimierer-Ergebnisse.
 
 ## Dateien und Freigabe
 
@@ -80,3 +80,19 @@ Three.js/GLTFLoader/OrbitControls werden lokal gebündelt und nur bei registrier
 ## Zeitstempel
 
 lastSuccessfulUpdate im Kernkatalog bezeichnet den letzten übernommenen geänderten Quellenstand; ein unveränderter Lauf verändert ihn nicht. checkedAt jedes Actions-Laufs steht im Run-Report. patchRevision ist ein SHA-256-Fingerabdruck der offiziellen Patchnotes, keine offizielle numerische Buildversion. Gunsmith führt zusätzlich reviewedAt, Quellen-/Wertepatches und history mit betroffenen Waffen und Vorher-/Nachher-Daten.
+
+## Numerische Aufsatzeffekte – Recherche vom 25.10.2026
+
+[Prüfbericht für alle 33 Waffen](AUFSATZ-PRUEFBERICHT.md). Der Ausgangsbestand mit 799 waffenbezogenen Einträgen wurde vollständig abgeglichen: 742 exakte Namens-/Slotzuordnungen, 57 ungeklärte ältere Namen. Die öffentlichen ggranked-MW4-Multiplayer-Launchprofile enthalten 1.572 Zuordnungen. 830 zusätzliche explizite Zuordnungen ergeben nun 1.629 Einträge; bestehende IDs bleiben erhalten. 8.524 numerische Angaben sind gespeichert, davon 7.597 als eindeutige Einzeloperationen. 1.275 Aufsätze haben mindestens eine Zahlenangabe. Diese Zahlen sind Community-Angaben; weiterhin besitzen nur zwei Aufsätze einen offiziellen numerischen Einzelbeleg, und kein Aufsatz hat einen vollständig verifizierten Effektsatz.
+
+public/data/effect-evidence.json bewahrt Quelle, Spiel, Modus, Quellenstand, Prüfdatum, unveränderte Zahlenangaben, Einheiten und Interpretationsgrenzen. Das Browser-Modul ergänzt neue Zuordnungen in einer Kopie und überschreibt keine offiziellen Basiswerte. Der Stat-Rechner zeigt bekannte Einzelwirkungen mit \* als **Teilrechnung**, etwa M4/FSS Fireline Grip ADS 240 → 260 ms. Andere Effekte und Kombinationen bleiben unbekannt. Mehrere Modifikatoren desselben Werts werden ohne belegte Stapelregel nicht verrechnet. Prozentangaben zu „Speed“ werden nicht ungeprüft in Zeitprozente umgedeutet. Generisches „Recoil“ wird nicht automatisch einzelnen Rückstoßachsen zugewiesen.
+
+Der Optimizer verwendet solche Teilrechnungen nicht als bestätigte mathematische Grundlage. Für alle Produktionswaffen fehlen derzeit vollständige Effekte und Stapelregeln. Community Build, Calculated Build und Hybrid bleiben getrennte Typen. Der kombinatorische Algorithmus ist mit explizit synthetischen, vollständig definierten Testdaten geprüft; diese Werte werden niemals ausgeliefert.
+
+config/effect-evidence-sources.json registriert alle 28 öffentlichen Waffenprofile und fünf N/A-Waffen. Die tägliche Action prüft dieselben Profile unter Beachtung von robots.txt, Nutzungsbedingungen-Fingerabdruck, Abrufabstand, HTTPS-Allowlist, Größenlimit, Mindestumfang und vorhandenen Slotkategorien. Änderungen werden zur Review vorgeschlagen; unveränderte Zahlen ändern keinen veröffentlichten Zeitstempel. CODMunity und Reddit bleiben von automatisierter Sammlung ausgeschlossen.
+
+Den aktuellen Fortschrittsbericht und eine CSV mit jeder Zuordnung erzeugen:
+
+```sh
+node scripts/report-effects.mjs work/mw4-datenpruefung.md
+```

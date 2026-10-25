@@ -146,6 +146,7 @@ export function hydrateAttachmentCatalog(database, data, patch) {
   for (const p of data.profiles) {
     const w = db.weapons.find((w) => w.id === p.weaponId);
     if (!w) continue;
+    w.officialSlots ??= [...w.rules.slots];
     const sourceId = "catalog-source-" + w.id,
       checkedAt = db.reviewedAt;
     db.sources.push({
@@ -157,7 +158,7 @@ export function hydrateAttachmentCatalog(database, data, patch) {
       checkedAt,
       automation: "allowed",
       termsUrl: "https://warzoneloadout.games/terms",
-      note: "Datenübernahme vom Nutzer am 25.10.2026 als freigegeben bestätigt. Herkunft intern erhalten, ohne separate Quellenhinweise im Waffenmenü. Vollständige veröffentlichte Waffenliste, keine unabhängige Messung.",
+      note: "Datenübernahme vom Nutzer am 25.10.2026 als freigegeben bestätigt. Vollständige veröffentlichte Waffenliste, keine unabhängige Messung. Quellen werden gemäß aktueller Transparenz-Anforderung pro Aufsatz angezeigt.",
       independenceGroup: "codmunity",
     });
     w.coverage.reportedCatalogComplete = true;

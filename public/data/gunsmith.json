@@ -3,7 +3,7 @@
   "gameId": "cod-mw4-2026",
   "mode": "multiplayer",
   "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
-  "reviewedAt": "2026-10-24T22:23:02.331Z",
+  "reviewedAt": "2026-10-25T10:16:57.237Z",
   "sources": [
     {
       "id": "official-weapons",
@@ -4252,6 +4252,379 @@
     }
   ],
   "history": [
+    {
+      "at": "2026-10-25T10:16:57.237Z",
+      "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "summary": "Aufsatzeffekte für alle 33 Waffen geprüft: 1.572 öffentliche Launch-Zuordnungen, 8.524 numerische Quellenangaben; Einzelwirkungen und ungeklärte Regeln getrennt.",
+      "changedWeaponIds": [
+        "han-86",
+        "m4",
+        "hyeon-burst",
+        "patriot-xmr",
+        "kastov-762",
+        "oden",
+        "axion",
+        "cronen-squall",
+        "iso-nightshade",
+        "vel-46",
+        "wz-55-striga",
+        "ppsh-41",
+        "x-58-nyx",
+        "rezi-12",
+        "warlord",
+        "finn-lmg",
+        "type-73",
+        "apoc-338",
+        "mar-9",
+        "oris-8-6",
+        "mosin-nagant",
+        "kg-7-vulcan",
+        "astaroth-57",
+        "signal-50",
+        "sang-9mm",
+        "krait-p68",
+        "50-gs",
+        "mojave-357"
+      ],
+      "sourceValues": [
+        {
+          "weaponId": "han-86",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/han-86",
+          "before": null,
+          "after": {
+            "hash": "079e822d54ac0a2afb1012a6befe6e7c0b9d0c3b1f5759d9158cbeb85b8866d5",
+            "attachments": 67,
+            "numericEffects": 349,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "m4",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/m4",
+          "before": null,
+          "after": {
+            "hash": "9140c0f9a05adbc9241ac4644c089a81843f0e43ee560079fda91fd300828a6f",
+            "attachments": 69,
+            "numericEffects": 392,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "hyeon-burst",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/hyeon-burst",
+          "before": null,
+          "after": {
+            "hash": "71b4ddb99a0f64f3fcb939a69ed57ac3b9f11c158d0ead7e0533281024846b14",
+            "attachments": 62,
+            "numericEffects": 310,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "patriot-xmr",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/patriot-xmr",
+          "before": null,
+          "after": {
+            "hash": "bd024729972f93b815da3d0b6e35770138a086737d7607af029ae20cf6270c65",
+            "attachments": 63,
+            "numericEffects": 337,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "kastov-762",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/kastov-762",
+          "before": null,
+          "after": {
+            "hash": "52f7b53d61937f00dc2c32314c288e5d9405d4b18d8fea0be23d8d6d89df5cc2",
+            "attachments": 67,
+            "numericEffects": 354,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "oden",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/oden",
+          "before": null,
+          "after": {
+            "hash": "cd862ea5cc2bec1bce43a585073178966fa0de672e60445fe31b7a03935ac90c",
+            "attachments": 58,
+            "numericEffects": 289,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "axion",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/axion",
+          "before": null,
+          "after": {
+            "hash": "c6d06705d1edfaf61e4ee151bac40527fb0d92463de9ac21e37af0719c789d31",
+            "attachments": 65,
+            "numericEffects": 339,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "cronen-squall",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/cronen-squall",
+          "before": null,
+          "after": {
+            "hash": "b637f8f6a4965c514239aff5334a124ba22cb87b03052555f7a3c2215ed9a033",
+            "attachments": 64,
+            "numericEffects": 330,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "iso-nightshade",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/iso-nightshade",
+          "before": null,
+          "after": {
+            "hash": "1cc8fa8fa9654d0654ead255e49e49d8af4ddce1afd16bf696c42dbb072131f1",
+            "attachments": 55,
+            "numericEffects": 258,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "vel-46",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/vel-46",
+          "before": null,
+          "after": {
+            "hash": "c4aa36593efba9f6e0b4e30972fbd4b8292dc6a0f6c9114b22f8759f279fe78f",
+            "attachments": 55,
+            "numericEffects": 282,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "wz-55-striga",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/wz55-striga",
+          "before": null,
+          "after": {
+            "hash": "e833021f954d4b36476f079076e0656c554abc08a230dd1b828b52a1d703001c",
+            "attachments": 51,
+            "numericEffects": 265,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "ppsh-41",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/ppsh-41",
+          "before": null,
+          "after": {
+            "hash": "8ffea244076799045e2c1a36ab864ce933fd0d212ce1cecd2ecb80d87d03c333",
+            "attachments": 53,
+            "numericEffects": 261,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "x-58-nyx",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/x-58-nyx",
+          "before": null,
+          "after": {
+            "hash": "8e5c1b46973bdb905560978979461d73cfd2520f9d52e22da87859313f3a83a3",
+            "attachments": 46,
+            "numericEffects": 240,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "rezi-12",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/rezi-12",
+          "before": null,
+          "after": {
+            "hash": "ce7bb7c650e3dd1ac008368ec3cf7e7672b02bf4684964331c871ee8047ea594",
+            "attachments": 62,
+            "numericEffects": 286,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "warlord",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/warlord",
+          "before": null,
+          "after": {
+            "hash": "34265bbfd66b311992e21a1baaabe03314f1a8b8c740d006cac699d71a999f7a",
+            "attachments": 51,
+            "numericEffects": 233,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "finn-lmg",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/finn-lmg",
+          "before": null,
+          "after": {
+            "hash": "e4c677b543d9a6f60fb52f90a1e087332c549cb3a068bdcd42e42284b519aba3",
+            "attachments": 52,
+            "numericEffects": 278,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "type-73",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/type-73",
+          "before": null,
+          "after": {
+            "hash": "82899b1e61c5e8f504953051e91eb62b22e4d672ad39a80ef09f6c6ee33094c2",
+            "attachments": 56,
+            "numericEffects": 300,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "apoc-338",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/apoc-338",
+          "before": null,
+          "after": {
+            "hash": "83bda17f4d9ff0cb109617a08f2b8e28512cdfd54cbd722710a75adba1d9ce03",
+            "attachments": 55,
+            "numericEffects": 307,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "mar-9",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/mar-9",
+          "before": null,
+          "after": {
+            "hash": "5afb94e5ca157de90dbef5a4f6da9adacb54cfe229afc674f2618fccc3d7b2a6",
+            "attachments": 66,
+            "numericEffects": 359,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "oris-8-6",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/oris-86",
+          "before": null,
+          "after": {
+            "hash": "a2b2868bf154a75f81f4a4621d26a8d790436f88761ed78b875fad6b49113642",
+            "attachments": 67,
+            "numericEffects": 382,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "mosin-nagant",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/mosin-nagant",
+          "before": null,
+          "after": {
+            "hash": "b0d09d04d2aebb53c7bd2f3c181d9ec4801f71da6e5fb70692f82df597f0be61",
+            "attachments": 64,
+            "numericEffects": 367,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "kg-7-vulcan",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/kg-7-vulcan",
+          "before": null,
+          "after": {
+            "hash": "c1ae4dad157a673f6495f4d1540aff96b75778d005f7fc20cee236003234fa52",
+            "attachments": 70,
+            "numericEffects": 519,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "astaroth-57",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/astaroth-57",
+          "before": null,
+          "after": {
+            "hash": "204dc202b2dcc5068815fa8a198971f54296b2a16dd98f2e919be63e90e79203",
+            "attachments": 45,
+            "numericEffects": 311,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "signal-50",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/signal-50",
+          "before": null,
+          "after": {
+            "hash": "d1b4de8665494425606782a0bd94a8b2b9854846c90bf886f2fec33a681bd5a8",
+            "attachments": 69,
+            "numericEffects": 499,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "sang-9mm",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/sang-9mm",
+          "before": null,
+          "after": {
+            "hash": "292f391c02115419ccac69347f87378d71923cd6d949e9dd6b7e28a8fab207f4",
+            "attachments": 33,
+            "numericEffects": 161,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "krait-p68",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/krait-p68",
+          "before": null,
+          "after": {
+            "hash": "6e84b025a816707803f53cc2d84fdd8e77f2ced103c07eecad4747546f4d0a15",
+            "attachments": 32,
+            "numericEffects": 166,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "50-gs",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/50-gs",
+          "before": null,
+          "after": {
+            "hash": "02ab4def9152dcf141ad1377b1845c333bcd1f08c99fc39ce532d53045eaa215",
+            "attachments": 36,
+            "numericEffects": 200,
+            "status": "reported",
+            "complete": false
+          }
+        },
+        {
+          "weaponId": "mojave-357",
+          "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/mojave-357",
+          "before": null,
+          "after": {
+            "hash": "bdabb137231a6208c00dcef767b9e49e786fede7a64da7ced8c1cc7ffb432c5f",
+            "attachments": 39,
+            "numericEffects": 150,
+            "status": "reported",
+            "complete": false
+          }
+        }
+      ]
+    },
     {
       "at": "2026-10-24T22:23:02.331Z",
       "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",

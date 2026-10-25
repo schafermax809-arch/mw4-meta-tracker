@@ -46,7 +46,7 @@ jobs:
       - name: Promote only validated candidate files
         if: steps.update.outputs.changed == 'true'
         run: |
-          node scripts/validate.mjs work/candidate/data/meta.json work/candidate/data/gunsmith.json work/candidate/data/calculated.json work/candidate/data/community-values.json work/candidate/data/attachment-catalog.json
+          node scripts/validate.mjs work/candidate/data/meta.json work/candidate/data/gunsmith.json work/candidate/data/calculated.json work/candidate/data/community-values.json work/candidate/data/attachment-catalog.json work/candidate/data/effect-evidence.json
           mkdir -p reviews
           cp work/candidate/data/meta.json public/data/meta.json
           cp work/candidate/reviews/pending.json reviews/pending.json
@@ -56,6 +56,7 @@ jobs:
           cp work/candidate/data/calculated.json public/data/calculated.json
           cp work/candidate/data/community-values.json public/data/community-values.json
           cp work/candidate/data/attachment-catalog.json public/data/attachment-catalog.json
+          cp work/candidate/data/effect-evidence.json public/data/effect-evidence.json
           npm run validate
           npm test
           npm run build
@@ -63,7 +64,7 @@ jobs:
         if: steps.update.outputs.changed == 'true'
         shell: bash
         run: |
-          git add -- public/data/attachment-catalog.json public/data/community-values.json public/data/meta.json public/data/gunsmith.json public/data/research.json public/data/calculated.json reviews/pending.json reviews/gunsmith-pending.json
+          git add -- public/data/effect-evidence.json public/data/attachment-catalog.json public/data/community-values.json public/data/meta.json public/data/gunsmith.json public/data/research.json public/data/calculated.json reviews/pending.json reviews/gunsmith-pending.json
           if git diff --cached --quiet; then exit 0; fi
           TREE=$(git write-tree)
           PR=$(gh pr list --head automation/meta-update --base "$BASE_BRANCH" --state open --json number --jq '.[0].number // empty')

@@ -1,0 +1,583 @@
+{
+  "allowedOrigins": ["https://ggranked.com"],
+  "index": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta",
+  "timeoutMs": 20000,
+  "maxBytes": 5000000,
+  "requestDelayMs": 1500,
+  "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+  "pages": [
+    {
+      "weaponId": "ppsh-41",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/ppsh-41",
+      "minimumAttachments": 42,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "m4",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/m4",
+      "minimumAttachments": 55,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "han-86",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/han-86",
+      "minimumAttachments": 53,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "iso-nightshade",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/iso-nightshade",
+      "minimumAttachments": 44,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "vel-46",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/vel-46",
+      "minimumAttachments": 44,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "hyeon-burst",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/hyeon-burst",
+      "minimumAttachments": 49,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "patriot-xmr",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/patriot-xmr",
+      "minimumAttachments": 50,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "kastov-762",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/kastov-762",
+      "minimumAttachments": 53,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "oden",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/oden",
+      "minimumAttachments": 46,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Comb",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "axion",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/axion",
+      "minimumAttachments": 52,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "cronen-squall",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/cronen-squall",
+      "minimumAttachments": 51,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Comb",
+        "Rear Grip",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "wz-55-striga",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/wz55-striga",
+      "minimumAttachments": 40,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "x-58-nyx",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/x-58-nyx",
+      "minimumAttachments": 36,
+      "slots": [
+        "Optic",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "rezi-12",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/rezi-12",
+      "minimumAttachments": 49,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Rear Grip",
+        "Bolt",
+        "Comb",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Guard",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "warlord",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/warlord",
+      "minimumAttachments": 40,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Rear Grip",
+        "Bolt",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "finn-lmg",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/finn-lmg",
+      "minimumAttachments": 41,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "type-73",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/type-73",
+      "minimumAttachments": 44,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "apoc-338",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/apoc-338",
+      "minimumAttachments": 44,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "mar-9",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/mar-9",
+      "minimumAttachments": 52,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Trigger Action",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "oris-8-6",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/oris-86",
+      "minimumAttachments": 53,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Bolt",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "mosin-nagant",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/mosin-nagant",
+      "minimumAttachments": 51,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Bolt",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "kg-7-vulcan",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/kg-7-vulcan",
+      "minimumAttachments": 56,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Comb",
+        "Bolt",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "astaroth-57",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/astaroth-57",
+      "minimumAttachments": 36,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "signal-50",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/signal-50",
+      "minimumAttachments": 55,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Stock",
+        "Laser",
+        "Ammunition",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "sang-9mm",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/sang-9mm",
+      "minimumAttachments": 26,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Magazine",
+        "Rear Grip",
+        "Laser",
+        "Ammunition",
+        "Trigger Action",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "krait-p68",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/krait-p68",
+      "minimumAttachments": 25,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Magazine",
+        "Rear Grip",
+        "Laser",
+        "Ammunition",
+        "Trigger Action",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "50-gs",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/50-gs",
+      "minimumAttachments": 28,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Underbarrel",
+        "Magazine",
+        "Rear Grip",
+        "Laser",
+        "Ammunition",
+        "Trigger Action",
+        "Apex"
+      ]
+    },
+    {
+      "weaponId": "mojave-357",
+      "url": "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/mojave-357",
+      "minimumAttachments": 31,
+      "slots": [
+        "Optic",
+        "Muzzle",
+        "Barrel",
+        "Cylinder",
+        "Rear Grip",
+        "Laser",
+        "Ammunition",
+        "Trigger Action",
+        "Apex"
+      ]
+    }
+  ],
+  "notApplicable": [
+    "pila",
+    "rpg-8",
+    "jokr",
+    "pm-40-anvil",
+    "fss-carbon-edge-1095"
+  ],
+  "restrictions": [
+    {
+      "source": "ggranked / WZ Ranked",
+      "url": "https://ggranked.com/legal/terms",
+      "automation": "allowed",
+      "reason": "Öffentliche MP-Launchseiten, keine Anmeldung oder privaten APIs. Nutzungsbedingungen geprüft; keine Funktionsmanipulation. Robots-Allowlist wird vor jedem Lauf geprüft; zurückhaltender täglicher Abruf.",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "source": "CODMunity",
+      "url": "https://codmunity.gg/legal/codmunity/terms",
+      "automation": "manual-only",
+      "reason": "Automatisierte Datensammlung laut Acceptable Use untersagt. Öffentliche PPSh-Seite als Recherchehinweis geprüft, keine Tabellen importiert und kein täglicher Abruf. Sichtbare Werte sind nicht automatisch freigegebene Daten.",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "source": "Warzone Loadout",
+      "url": "https://warzoneloadout.games/mw4/attachments/fss-fireline-grip",
+      "automation": "allowed",
+      "reason": "Nutzer bestätigte Nutzung am 25.10.2026. Waffenlisten bereits erfasst. Geprüfte öffentliche Detailseite liefert Typ, Freischaltung und Builds, keine numerischen Änderungswerte.",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "source": "TrueGameData",
+      "url": "https://www.truegamedata.com/",
+      "automation": "unavailable",
+      "reason": "Öffentlicher Abruf enthält keine auslesbare MW4-Datenbank. Keine dokumentierte kostenlose MW4-API verifiziert, keine privaten Endpoints abgefragt.",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "source": "WZ Ranked Betaarchiv",
+      "url": "https://wzranked.com/games/call-of-duty-modern-warfare-4/meta",
+      "automation": "manual-only",
+      "reason": "Archiv ausdrücklich Open Beta, zuletzt 01.09.2026. Nicht als Launchwerte verwendet. Homepage verlinkt aktuelle MP-Daten bei ggranked.",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "source": "Reddit",
+      "url": "https://www.reddit.com/r/modernwarfare4/comments/1xeg4tq/can_we_get_some_reward_for_having_good_aim/",
+      "automation": "manual-only",
+      "reason": "Aktuelle Diskussion enthält widersprechende SMG-Eindrücke und unbelegte TTK-Tabelle. Keine isolierten Aufsatzmessungen, kein Patch-/Testprotokoll. Nicht als Zahlenbeleg oder zweiter unabhängiger Test importiert; keine automatisierte Sammlung.",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "source": "YouTube",
+      "url": "https://www.youtube.com/",
+      "automation": "unavailable",
+      "reason": "Gezielte Suche nach MW4/PPSh-41, M4 und TheXclusiveAce ergab keinen zugänglichen reproduzierbaren Launch-Test mit isolierten Modifikatoren. Kein Video als gesehen oder ausgewertet ausgegeben.",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "source": "Offizielle Launch-Waffenübersicht",
+      "url": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+      "automation": "allowed",
+      "reason": "33 Identitäten, Slotregeln und Apex-Funktionen belegt. Keine vollständigen Standardmodifikatoren oder Stapelformeln. Beta-Balancing wird nicht als Launchstand übernommen.",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "aliasReviews": [
+    {
+      "weaponId": "ppsh-41",
+      "names": ["Hanbit RDR-Tiger 50-XL", "Hanbit RDR-Tiger 50-X"],
+      "decision": "keep-separate",
+      "reason": "Neue Launchseite führt 50-XL, ältere Quelle führt 50-X. Kein expliziter Umbenennungsbeleg, deshalb keine Zusammenführung.",
+      "urls": [
+        "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/ppsh-41",
+        "https://warzoneloadout.games/mw4/ppsh-41"
+      ]
+    },
+    {
+      "weaponId": "han-86",
+      "names": ["Hanbit Lightning-7 464.82m", "Hanbit Lightning-7 465mm"],
+      "decision": "keep-separate",
+      "reason": "Offensichtlicher Einheitenverdacht reicht nicht zum Identitätsbeweis. Keine Gleichsetzung von Metern und Millimetern und keine automatische Rundungsaliasregel.",
+      "urls": [
+        "https://warzoneloadout.games/mw4/han-86",
+        "https://ggranked.com/games/call-of-duty-modern-warfare-4/meta/weapons/han-86"
+      ]
+    },
+    {
+      "weaponId": "signal-50",
+      "names": ["Signal Inferno", "Signal 50 Inferno"],
+      "decision": "keep-separate",
+      "reason": "Offiziell Signal Inferno, importierter Katalog führt Signal 50 Inferno. Ohne dokumentierte Umbenennung bleiben gespeicherte IDs gültig und getrennt.",
+      "urls": [
+        "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-launch-multiplayer-operators-weapons-equipment-create-a-class",
+        "https://warzoneloadout.games/mw4/signal-50"
+      ]
+    }
+  ],
+  "termsUrl": "https://ggranked.com/legal/terms",
+  "termsFingerprint": "cf8356db506a20c5038152900a745ed7fff3bfc3bc7042f46969836a0415ef8a"
+}

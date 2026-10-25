@@ -29,11 +29,25 @@ const attachmentCatalog = validateAttachmentCatalog(
   meta,
 );
 const { hash: catalogHash, ...catalogContent } = attachmentCatalog;
+const { validateEffectEvidence } = await import(
+  "../public/engine/effect-evidence.js"
+);
+const effects = validateEffectEvidence(
+  await readJson(process.argv[7] || "public/data/effect-evidence.json"),
+  meta,
+);
+const {
+  hash: effectsHash,
+  checkedAt: effectsCheckedAt,
+  ...effectsContent
+} = effects;
 if (
   calculated.databaseHash !== hash(db) ||
   calculated.patchRevision !== meta.patchRevision ||
   calculated.communityValuesHash !== community.hash ||
   calculated.attachmentCatalogHash !== catalogHash ||
+  calculated.effectEvidenceHash !== effectsHash ||
+  effectsHash !== hash(effectsContent) ||
   catalogHash !== hash(catalogContent) ||
   community.hash !== hash(community.pages)
 )

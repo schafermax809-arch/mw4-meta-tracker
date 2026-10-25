@@ -3,22 +3,27 @@ import { validateDatabase } from "../../public/engine/database.js";
 import { optimize, OBJECTIVES } from "../../public/engine/optimizer.js";
 import { hydrateCommunityValues } from "../../public/engine/community-values.js";
 import { hydrateAttachmentCatalog } from "../../public/engine/attachment-catalog.js";
+import { hydrateEffectEvidence } from "../../public/engine/effect-evidence.js";
 export function recompute(
   db,
   patch = db.patchRevision,
   communityValues = null,
   attachmentCatalog = null,
+  effectEvidence = null,
 ) {
   let runtime = communityValues
     ? hydrateCommunityValues(db, communityValues, patch)
     : db;
   if (attachmentCatalog)
     runtime = hydrateAttachmentCatalog(runtime, attachmentCatalog, patch);
+  if (effectEvidence)
+    runtime = hydrateEffectEvidence(runtime, effectEvidence, patch);
   return {
     schemaVersion: 1,
     databaseHash: hash(db),
     communityValuesHash: communityValues?.hash ?? null,
     attachmentCatalogHash: attachmentCatalog?.hash ?? null,
+    effectEvidenceHash: effectEvidence?.hash ?? null,
     patchRevision: patch,
     weapons: runtime.weapons.map((w) => ({
       weaponId: w.id,

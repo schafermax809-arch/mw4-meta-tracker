@@ -238,7 +238,7 @@ test("exact snapshots override missing combination rules only for that exact pat
     undefined,
   );
 });
-test("TTK uses body-zone distance bands and first-shot timing, refuses unknown/burst/modified profiles", () => {
+test("TTK uses body-zone distance bands and timing, rejects unmodelled effects and permits complete unchanged damage profiles", () => {
   const db = fixture(),
     w = db.weapons[0];
   w.damageProfile = {
@@ -271,7 +271,84 @@ test("TTK uses body-zone distance bands and first-shot timing, refuses unknown/b
   w.fireModel.type = "burst";
   assert.equal(timeToKill(db, "m4", [], c).available, false);
   w.fireModel.type = "continuous";
+  assert.equal(timeToKill(db, "m4", refs(db, "fast"), c).ms, 210);
+  db.attachments[0].effectsComplete = false;
   assert.equal(timeToKill(db, "m4", refs(db, "fast"), c).available, false);
+});
+test("verified fire-rate and explicitly sourced range scaling alter TTK; unmodelled damage changes fail closed", () => {
+  const db = fixture(),
+    w = db.weapons[0];
+  w.damageProfile = {
+    patchRevision: patch,
+    sourceIds: ["official-weapons"],
+    bands: [
+      { from: 0, to: 20, zones: { upperTorso: 50 } },
+      { from: 20, to: null, zones: { upperTorso: 25 } },
+    ],
+  };
+  w.fireModel = {
+    type: "continuous",
+    preFireMs: 10,
+    patchRevision: patch,
+    sourceIds: ["official-weapons"],
+  };
+  const context = {
+    distance: 25,
+    zone: "upperTorso",
+    health: 100,
+    healthVerified: true,
+  };
+  db.attachments[0].modifiers = [
+    {
+      stat: "rpm",
+      operation: "multiply",
+      value: 2,
+      unit: "factor",
+      order: 1,
+      sourceIds: ["official-weapons"],
+      patchRevision: patch,
+    },
+  ];
+  assert.equal(timeToKill(db, "m4", refs(db, "fast"), context).ms, 160);
+  w.base.range = {
+    value: 20,
+    unit: "m",
+    sourceIds: ["official-weapons"],
+    patchRevision: patch,
+    status: "verified",
+  };
+  db.attachments[0].modifiers = [
+    {
+      stat: "range",
+      operation: "multiply",
+      value: 2,
+      unit: "factor",
+      order: 1,
+      sourceIds: ["official-weapons"],
+      patchRevision: patch,
+    },
+  ];
+  assert.equal(
+    timeToKill(db, "m4", refs(db, "fast"), context).available,
+    false,
+  );
+  w.damageProfile.rangeScaling = "all-boundaries";
+  assert.equal(timeToKill(db, "m4", refs(db, "fast"), context).ms, 110);
+  db.attachments[0].modifiers = [
+    {
+      stat: "damage",
+      operation: "set",
+      value: 100,
+      unit: "HP",
+      order: 1,
+      sourceIds: ["official-weapons"],
+      patchRevision: patch,
+    },
+  ];
+  assert.equal(
+    timeToKill(db, "m4", refs(db, "fast"), context).available,
+    false,
+  );
 });
 test("exhaustive optimizer finds the global valid optimum, including separate Apex rules", () => {
   const db = fixture();

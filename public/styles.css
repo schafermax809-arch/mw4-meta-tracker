@@ -3497,6 +3497,49 @@ dialog::backdrop {
     font-size: 11px;
   }
 }
+.evidence-quality {
+  display: grid;
+  gap: 5px;
+  padding: 12px 0;
+  margin: 12px 0;
+  border-top: 1px solid #394345;
+  border-bottom: 1px solid #394345;
+  font-size: 12px;
+}
+.evidence-quality strong {
+  color: var(--accent, #ff7900);
+}
+.attachment-evidence-card {
+  min-width: 0;
+  border-bottom: 1px solid #394345;
+  padding-bottom: 12px;
+}
+.attachment-evidence-card .attachment-choice {
+  width: 100%;
+}
+.attachment-evidence {
+  padding: 8px 10px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.attachment-evidence summary {
+  cursor: pointer;
+  color: #ff9b42;
+}
+.attachment-evidence .source-proof {
+  display: block;
+  margin: 5px 0;
+  font-size: 11px;
+}
+.attachment-evidence .stats-note {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.effect-line {
+  margin: 4px 0;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *:before,

@@ -139,6 +139,14 @@ export function optimize(
   };
   if (w.rules.patchRevision !== patch || w.rules.maxAttachments === null)
     return unavailable(["Patchaktuelle Slot-Regeln oder Aufsatzlimit fehlen"]);
+  if (db.effectEvidence && w.rules.maxAttachments === 0)
+    return unavailable([
+      "Diese Waffe besitzt laut offizieller Übersicht keine Gunsmith-Aufsatzslots.",
+    ]);
+  if (db.effectEvidence && !w.coverage.stackingVerified)
+    return unavailable([
+      "Keine zuverlässige mathematische Optimierung möglich: Einzelwirkungen wurden recherchiert, aber vollständige Effekte, Stapelregeln und Wechselwirkungen sind nicht verifiziert. Community-Builds bleiben getrennte Empfehlungen.",
+    ]);
   if (goal === "longshot" && w.rules.longshotDistance?.patchRevision !== patch)
     return unavailable([
       "Die tatsächliche Longshot-Distanz dieser Klasse ist nicht verifiziert",
@@ -155,7 +163,11 @@ export function optimize(
       const t = timeToKill(db, weaponId, refs, context, patch);
       if (t.available) values.ttk = t.ms;
     }
-    return required.every((k) => Number.isFinite(values[k]))
+    return required.every(
+      (k) =>
+        Number.isFinite(values[k]) &&
+        (k === "ttk" || c.values[k]?.status === "verified"),
+    )
       ? { attachments: structuredClone(refs), values }
       : null;
   };

@@ -9,6 +9,10 @@ import {
   proposeCatalogRefresh,
 } from "./lib/attachment-catalog.mjs";
 import { validateAttachmentCatalog } from "../public/engine/attachment-catalog.js";
+import {
+  collectEffectEvidence,
+  proposeEffectRefresh,
+} from "./lib/effect-evidence.mjs";
 import { collectResearch } from "./lib/research.mjs";
 import { proposeGunsmith } from "./lib/gunsmith-update.mjs";
 import { mkdir, writeFile, appendFile } from "node:fs/promises";
@@ -62,8 +66,15 @@ try {
     result?.state ?? current,
   );
   const catalogChanged = newCatalog.hash !== oldCatalog.hash;
+  const oldEffects = await readJson("public/data/effect-evidence.json");
+  const collectedEffects = await collectEffectEvidence(
+    await readJson("config/effect-evidence-sources.json"),
+    result?.state ?? current,
+  );
+  const effectsChanged = oldEffects.hash !== collectedEffects.hash;
+  const newEffects = effectsChanged ? collectedEffects : oldEffects;
   const changed = Boolean(
-    result || engineResult || valuesChanged || catalogChanged,
+    result || engineResult || valuesChanged || catalogChanged || effectsChanged,
   );
   if (engineResult) {
     await atomicJson(
@@ -116,6 +127,7 @@ try {
       ),
     );
   if (changed) {
+    await atomicJson("work/candidate/data/effect-evidence.json", newEffects);
     await atomicJson("work/candidate/data/attachment-catalog.json", newCatalog);
     await atomicJson("work/candidate/data/community-values.json", newValues);
     if (!result && !engineResult) {
@@ -203,6 +215,31 @@ try {
         changedWeaponIds: ids,
       });
     }
+    const effectRefresh = proposeEffectRefresh(
+      finalDb,
+      oldEffects,
+      newEffects,
+      { previous: previousGunsmith },
+    );
+    if (effectRefresh) {
+      finalDb = effectRefresh.database;
+      const prior = await readJson(
+        "work/candidate/reviews/gunsmith-pending.json",
+      );
+      const ids = [
+        ...new Set([
+          ...(prior.changedWeaponIds ?? []),
+          ...effectRefresh.review.changedWeaponIds,
+        ]),
+      ];
+      finalDb.history[0].changedWeaponIds = ids;
+      await atomicJson("work/candidate/data/gunsmith.json", finalDb);
+      await atomicJson("work/candidate/reviews/gunsmith-pending.json", {
+        ...prior,
+        ...effectRefresh.review,
+        changedWeaponIds: ids,
+      });
+    }
     await atomicJson(
       "work/candidate/data/calculated.json",
       (await import("./lib/gunsmith-update.mjs")).recompute(
@@ -210,6 +247,7 @@ try {
         result?.state.patchRevision ?? current.patchRevision,
         newValues,
         newCatalog,
+        newEffects,
       ),
     );
   }
@@ -224,6 +262,14 @@ try {
     attachmentCatalogChanged: catalogChanged,
     attachmentCatalogEntries: newCatalog.catalog.length,
     attachmentCatalogProfiles: newCatalog.profiles.length,
+    effectEvidenceChanged: effectsChanged,
+    effectEvidenceHash: newEffects.hash,
+    effectEvidenceProfiles: newEffects.profiles.length,
+    effectEvidenceAttachments: newEffects.profiles.reduce(
+      (n, p) => n + p.attachments.length,
+      0,
+    ),
+    effectEvidenceRestrictions: newEffects.restrictions,
     researchSources: research.map((d) => ({ url: d.url, hash: d.hash })),
     manualSources: db.sources
       .filter((s) => s.automation !== "allowed")
@@ -264,6 +310,11 @@ try {
     await appendFile(
       "work/pr-body.md",
       `\n### Aufsatzkatalog\n\n${newCatalog.catalog.length} Einträge und ${newCatalog.profiles.length} Waffenprofile. Vollständige Listen und Build-Änderungen in reviews/gunsmith-pending.json prüfen. Persönlicher Fortschritt bleibt unverändert.\n`,
+    );
+  if (changed && effectsChanged)
+    await appendFile(
+      "work/pr-body.md",
+      "\n### Numerische Aufsatzeffekte\n\nÖffentliche MW4-Multiplayer-Launchprofile geändert. Absolute Zielwerte, additive Änderungen und Faktoren bleiben getrennt. Community-Angaben werden nicht als unabhängige Tests zertifiziert. Vorher/Nachher in reviews/gunsmith-pending.json prüfen. Rechner und Optimizer wurden mit dem neuen Datenfingerabdruck neu berechnet.\n",
     );
   if (process.env.GITHUB_OUTPUT)
     await appendFile(process.env.GITHUB_OUTPUT, `changed=${changed}\n`);

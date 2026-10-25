@@ -5,8 +5,11 @@ import {
 import {
   validateAttachmentCatalog,
   hydrateAttachmentCatalog,
-  privateCatalogSource,
 } from "./engine/attachment-catalog.js";
+import {
+  validateEffectEvidence,
+  hydrateEffectEvidence,
+} from "./engine/effect-evidence.js";
 import {
   loadProgress,
   saveProgress,
@@ -63,6 +66,8 @@ import {
   renderSourceValues,
   statTable,
   compareStats,
+  appendAttachmentEvidence,
+  evidenceQuality,
 } from "./engine-ui.js";
 let gunsmithDb = null,
   engineCleanup = null;
@@ -583,7 +588,8 @@ function renderStats(weapon) {
     "reload",
   ]) {
     const [label, unit] = METRICS[key],
-      v = c?.values[key] ?? c?.base[key],
+      partial = !c?.values[key] && c?.preview[key],
+      v = c?.values[key] ?? partial ?? c?.base[key],
       base = c?.base[key],
       row = node("div", null, "real-stat-line");
     row.append(
@@ -594,7 +600,7 @@ function renderStats(weapon) {
           ? Number(v.value.toFixed(2)).toLocaleString("de-DE") +
               " " +
               unit +
-              (v.status === "reported" ? " C" : "")
+              (partial ? " *" : v.status === "reported" ? " C" : "")
           : "—",
       ),
     );
@@ -602,9 +608,11 @@ function renderStats(weapon) {
       row.append(
         node(
           "small",
-          c?.values[key]
-            ? "Basis: " + base.value + " " + unit
-            : "Basiswert · Aufsatzwirkung unbekannt",
+          partial
+            ? "Teilrechnung · weitere Wirkungen offen"
+            : c?.values[key]
+              ? "Basis: " + base.value + " " + unit
+              : "Basiswert · Aufsatzwirkung unbekannt",
         ),
       );
     panel.append(row);
@@ -613,7 +621,7 @@ function renderStats(weapon) {
     node(
       "p",
       draft(weapon).length
-        ? "C = Community-Quelle. Gezeigte Basiswerte enthalten keine unbekannten Aufsatzeffekte."
+        ? "* = bekannte Einzelwirkungen, kein bestätigter Gesamtwert. C = Community-Quelle. Als Basiswert markierte Angaben enthalten keine Aufsatzeffekte."
         : "C = Community-Quelle. Andere Werte: offizielle Angaben. Quellen und Unterschiede stehen unter dem Menü.",
       "stats-note",
     ),
@@ -921,6 +929,8 @@ function renderWeapon(weapon, tab) {
 }
 
 function renderAttachments(weapon, content) {
+  if (gunsmithDb)
+    content.append(evidenceQuality(gunsmithDb, weapon.id, state.patchRevision));
   const r = rules(weapon),
     refs = draft(weapon);
   const slots = r?.slots
@@ -1050,6 +1060,7 @@ function openAttachmentEditor(weapon, slot, includeAdditional = false) {
     );
   for (const a of compatible) {
     const b = node("button", null, "attachment-choice");
+    const item = node("article", null, "attachment-evidence-card");
     b.append(
       node("h3", a.name),
       node("p", `${SLOT_NAMES[a.slot] || a.slot} · Kompatibilität laut Quelle`),
@@ -1063,6 +1074,10 @@ function openAttachmentEditor(weapon, slot, includeAdditional = false) {
         ].join(" · ") || "Numerische Effekte: nicht verifiziert.",
       ),
     );
+    for (const e of (a.evidence?.effects ?? [])
+      .filter((e) => e.operation)
+      .slice(0, 4))
+      b.append(node("p", e.raw, "effect-line"));
     if ("availability" in a && a.availability !== true) {
       b.disabled = true;
       b.append(
@@ -1094,15 +1109,6 @@ function openAttachmentEditor(weapon, slot, includeAdditional = false) {
             : a.unlock.condition,
         ),
       );
-    if (gunsmithDb && a.sourceIds)
-      for (const id of a.sourceIds) {
-        if (privateCatalogSource(id)) continue;
-        const source = gunsmithDb.sources.find((s) => s.id === id);
-        if (source)
-          box.append(
-            external(source.title + " ↗", source.url, "source-proof"),
-          );
-      }
     b.addEventListener("click", () => {
       try {
         drafts.set(
@@ -1123,7 +1129,19 @@ function openAttachmentEditor(weapon, slot, includeAdditional = false) {
         toast(e.message);
       }
     });
-    box.append(b);
+    item.append(b);
+    if (gunsmithDb) {
+      const evidence = node("details", null, "attachment-evidence");
+      evidence.append(
+        node(
+          "summary",
+          `${a.evidence?.effects.filter((e) => e.kind !== "qualitative").length ?? a.modifiers.length} Zahlenangaben · Effekte & Quellen`,
+        ),
+      );
+      appendAttachmentEvidence(gunsmithDb, a, evidence);
+      item.append(evidence);
+    }
+    box.append(item);
   }
   if (!Number.isInteger(rules(weapon)?.maxAttachments))
     box.append(
@@ -2268,7 +2286,6 @@ function renderIntel(tab = "status") {
       ),
     );
     for (const source of gunsmithDb.sources) {
-      if (privateCatalogSource(source.id)) continue;
       const item = node("article", null, "intel-panel");
       item.append(
         external(source.title + " ↗", source.url),
@@ -2383,10 +2400,19 @@ function renderAttachmentCatalog() {
     );
     return;
   }
+  const entries = gunsmithDb.effectEvidence
+    ? gunsmithDb.attachments.map((a) => ({
+        ...a,
+        unlockWeapon:
+          gunsmithDb.weapons.find((w) => a.weaponIds.includes(w.id))?.name ??
+          "Unbekannt",
+        unlockLevel: a.unlock?.level ?? null,
+      }))
+    : data.catalog;
   screen.append(
     node(
       "h3",
-      `${data.catalog.length} AUFSÄTZE · ${data.profiles.length} WAFFEN`,
+      `${entries.length} WAFFEN-AUFSATZZUORDNUNGEN · ${data.profiles.length} WAFFEN`,
     ),
   );
   const controls = node("div", null, "filters"),
@@ -2394,13 +2420,13 @@ function renderAttachmentCatalog() {
     slot = node("select"),
     count = node("p", null, "stats-note");
   search.type = "search";
-  search.placeholder = "Name oder Freischaltwaffe suchen";
+  search.placeholder = "Aufsatzname oder Waffe suchen";
   search.setAttribute("aria-label", "Aufsatzkatalog durchsuchen");
   search.className = "filter-select";
   search.style.maxWidth = "100%";
   slot.setAttribute("aria-label", "Aufsatzslot filtern");
   slot.className = "filter-select";
-  for (const key of ["", ...new Set(data.catalog.map((a) => a.slot))]) {
+  for (const key of ["", ...new Set(entries.map((a) => a.slot))]) {
     const option = node(
       "option",
       key ? (SLOT_NAMES[key] ?? key) : "Alle Slots",
@@ -2414,23 +2440,46 @@ function renderAttachmentCatalog() {
   const update = () => {
     table.replaceChildren();
     const h = node("tr");
-    for (const s of ["AUFSATZ", "SLOT", "FREISCHALTUNG ÜBER", "WAFFENLEVEL"])
+    for (const s of [
+      "AUFSATZ",
+      "SLOT",
+      "WAFFE",
+      "FREISCHALTANGABE",
+      "WERTEÄNDERUNGEN",
+    ])
       h.append(node("th", s));
     table.append(h);
     const q = search.value.toLowerCase().trim();
-    const rows = data.catalog.filter(
+    const rows = entries.filter(
       (a) =>
         (!slot.value || a.slot === slot.value) &&
         (!q || (a.name + " " + a.unlockWeapon).toLowerCase().includes(q)),
     );
-    count.textContent = rows.length + " / " + data.catalog.length + " Einträge";
+    count.textContent =
+      rows.length +
+      " / " +
+      entries.length +
+      " Zuordnungen · ursprünglicher globaler Katalog: " +
+      data.catalog.length +
+      " Einträge";
     for (const a of rows) {
       const row = node("tr");
       for (const s of [
         a.name,
         SLOT_NAMES[a.slot] ?? a.slot,
         a.unlockWeapon,
-        a.unlockLevel ?? "Unbekannt",
+        a.evidence?.unlockLabel ||
+          (a.unlockLevel !== null
+            ? "Waffenlevel " + a.unlockLevel
+            : "Unbekannt"),
+        a.evidence?.effects
+          .filter((e) => e.kind !== "qualitative")
+          .map((e) => e.raw)
+          .join(" · ") ||
+          a.modifiers
+            ?.map((m) => `${m.stat}: ${m.operation} ${m.value} ${m.unit}`)
+            .join(" · ") ||
+          "FEHLT",
       ])
         row.append(node("td", String(s)));
       table.append(row);
@@ -2443,7 +2492,7 @@ function renderAttachmentCatalog() {
     controls,
     count,
     notice(
-      "Die Freischaltwaffe ist keine vollständige Kompatibilitätsliste. Kompatible Auswahl und bekannte Sonderregeln findest du direkt im Gunsmith der jeweiligen Waffe.",
+      "Waffenbezogene Einträge einschließlich zusätzlicher und älterer Namen. Quellenangaben sind keine unabhängigen Messungen. FEHLT bedeutet unbekannt. Unterschiedliche Freischaltbegriffe und ungeklärte Aliase werden nicht automatisch gleichgesetzt.",
     ),
     wrap,
   );
@@ -2897,6 +2946,20 @@ try {
       );
     } catch (e) {
       toast("Aufsatzkatalog konnte nicht geladen werden: " + e.message);
+    }
+    try {
+      const r = await fetch(
+        new URL("./data/effect-evidence.json", import.meta.url),
+        { cache: "no-cache" },
+      );
+      if (!r.ok) throw Error("Effektdaten nicht erreichbar");
+      gunsmithDb = hydrateEffectEvidence(
+        gunsmithDb,
+        validateEffectEvidence(await r.json(), state),
+        state.patchRevision,
+      );
+    } catch (e) {
+      toast("Aufsatzeffekte konnten nicht geladen werden: " + e.message);
     }
     state.attachments = [
       ...new Map(
