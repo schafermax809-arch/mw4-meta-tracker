@@ -1,0 +1,7196 @@
+{
+  "schemaVersion": 1,
+  "fingerprint": "6066c5b5035bd091bd68bc84ece72d6ccaa566cc181bd23bf077e3a024ef7ba2",
+  "detectedAt": "2026-10-25T10:31:18.596Z",
+  "baseHash": "f74212efc326cafb6b1297ff1c1d88f3c31db5755a36c9c30f059a53eee492bb",
+  "policy": "REVIEW_REQUIRED",
+  "changedWeaponIds": [
+    "m4",
+    "hyeon-burst",
+    "rezi-12",
+    "warlord",
+    "finn-lmg",
+    "type-73",
+    "apoc-338",
+    "mar-9",
+    "oris-8-6",
+    "mosin-nagant",
+    "kg-7-vulcan",
+    "astaroth-57",
+    "signal-50",
+    "sang-9mm",
+    "krait-p68",
+    "50-gs",
+    "mojave-357"
+  ],
+  "weaponFacts": [],
+  "sourceChanges": [
+    {
+      "url": "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes",
+      "hash": "e898ae039a261b65e1867489812f6000d1366486632313fe69ec55f55f187ed0",
+      "signals": {
+        "weapons": true,
+        "camos": true,
+        "builds": true
+      }
+    }
+  ],
+  "research": [],
+  "manualSources": [
+    {
+      "url": "https://www.windowscentral.com/gaming/call-of-duty/infinity-ward-multiplayer-team-interview-call-of-duty-modern-warfare-4",
+      "status": "manual-only",
+      "note": "Primäres Entwicklerinterview; fünf Standard-Slots, Apex laut offizieller Launch-Quelle separat."
+    },
+    {
+      "url": "https://esports.gg/guides/call-of-duty/best-m4-loadout-in-modern-warfare-4-multiplayer/",
+      "status": "manual-only",
+      "note": "Redaktionelle Empfehlung, keine dokumentierten isolierten Stat-Messungen."
+    },
+    {
+      "url": "https://insider-gaming.com/best-m4-loadout-modern-warfare-4/",
+      "status": "manual-only",
+      "note": "Redaktionelle Empfehlung. Nur Aufsatznamen/Slots übernommen; veraltete Perk-Zuordnungen nicht übernommen."
+    },
+    {
+      "url": "https://dotesports.com/call-of-duty/guides/best-m4-loadout-mw4",
+      "status": "manual-only",
+      "note": "Beta: für Launch-Patch ausgeschlossen."
+    },
+    {
+      "url": "https://codmunity.gg/weapon/mw4/m4?game=mw4",
+      "status": "manual-only",
+      "note": "Kein Import: Nutzungsbedingungen untersagen automatisierte Datensammlung. Tabellen bezeichnen Attachment-Stats zudem als Warzone-Werte; keine Übernahme als MP-Werte."
+    },
+    {
+      "url": "https://wzranked.com/",
+      "status": "manual-only",
+      "note": "MW4-Verweis führt zu ggranked. Kein dokumentierter, freigegebener MW4-Stat-API-Vertrag gefunden."
+    },
+    {
+      "url": "https://www.truegamedata.com/",
+      "status": "unavailable",
+      "note": "Öffentlich abgerufene Startseite liefert keine auslesbare MW4-Datenbank; kein privater Endpoint verwendet."
+    },
+    {
+      "url": "https://www.reddit.com/r/ModernWarfare/",
+      "status": "manual-only",
+      "note": "Abruf nicht verfügbar; Subreddit-Titel allein ist kein Nachweis für MW4. Keine API-Freigabe für automatisierte Analyse."
+    },
+    {
+      "url": "https://www.reddit.com/r/CoDCompetitive/comments/1vusy98/mw4_first_impressions/",
+      "status": "manual-only",
+      "note": "Gefundene Diskussion betrifft Beta; keine Launch-Messwerte und kein reproduzierbarer Build-Test. Automatische Sammlung ohne autorisierte Vereinbarung nicht erlaubt; RSS-Unterstützung wird beendet."
+    },
+    {
+      "url": "https://www.reddit.com/r/CallOfDuty/",
+      "status": "manual-only",
+      "note": "Diskussionen geprüft; kein belastbarer aktueller Attachment-Messdatensatz. Upvotes sind keine Evidenz."
+    },
+    {
+      "url": "https://www.youtube.com/",
+      "status": "unavailable",
+      "note": "Suche gedrosselt; kein zugänglicher, reproduzierbarer Launch-Messdatensatz verifiziert. Keine Videos als getestet ausgegeben."
+    },
+    {
+      "url": "https://www.dexerto.com/wikis/modern-warfare-4/weapon-tier-list/",
+      "status": "manual-only",
+      "note": "Redaktionelle Tier-Einstufung, keine mathematische Optimierung. Nicht als objektive Meta in den Kernkatalog übernommen."
+    },
+    {
+      "url": "https://www.callofduty.com/blog/2026/09/call-of-duty-modern-warfare-4-preorder-bonus-inner-circuit-m4-blueprint",
+      "status": "manual-only",
+      "note": "Fünf konkret benannte M4-Aufsätze für den zum Launch vorgesehenen Vorbesteller-Bauplan. Keine vollständige Standardliste; individuelle Aufsatzeffekte nur qualitativ."
+    },
+    {
+      "url": "https://metka.gg/en/guides/attachments-and-apex/",
+      "status": "manual-only",
+      "note": "Explizite SZ-Micro-D-3-Zuordnung und Waffenlevel für Han 86, M4 und ISO Nightshade. Keine pauschale Kompatibilität mit anderen Waffen abgeleitet."
+    }
+  ],
+  "unresolved": [
+    "Neue Effekte, Verfügbarkeit, Konflikte, Longshot-Regeln und Stat-Stapelung nur mit Messbeleg freigeben.",
+    "Reddit benötigt autorisierten Zugang. Kein automatischer Reddit-Abruf und kein fingierter Tagescheck.",
+    "Neue Patchrevisionen machen alte Berechnungen ungültig; unveränderte Zahlen werden nicht ungeprüft neu gestempelt."
+  ],
+  "catalogFingerprint": "943daefd1152d4f734a96fc1e601b584f31acf54591e1c95a7edeabfb162f174",
+  "attachmentCatalogChanges": [
+    {
+      "weaponId": "catalog",
+      "url": "https://warzoneloadout.games/mw4/attachments",
+      "before": null,
+      "after": {
+        "changed": [],
+        "removed": []
+      }
+    },
+    {
+      "weaponId": "m4",
+      "url": "https://warzoneloadout.games/mw4/m4",
+      "before": {
+        "weaponId": "m4",
+        "url": "https://warzoneloadout.games/mw4/m4",
+        "title": "Best M4 Modern Warfare 4 Loadout & Builds",
+        "declared": 71,
+        "attachments": [
+          {
+            "slot": "Laser",
+            "name": "SZ Gen.6 PEQ",
+            "label": "Bright ADS Laser",
+            "level": 2
+          },
+          {
+            "slot": "Laser",
+            "name": "Corio 4DV-3",
+            "label": "Flashlight",
+            "level": 12
+          },
+          {
+            "slot": "Laser",
+            "name": "STOVL IRX-6",
+            "label": "Dim Hip Laser",
+            "level": 16
+          },
+          {
+            "slot": "Laser",
+            "name": "SA Laz-500",
+            "label": "Dim ADS Laser",
+            "level": 24
+          },
+          {
+            "slot": "Laser",
+            "name": "Expedite Intra-5b",
+            "label": "Canted Laser",
+            "level": 42
+          },
+          {
+            "slot": "Laser",
+            "name": "Bruen 22-LPW",
+            "label": "Bright Hip Laser",
+            "level": 49
+          },
+          {
+            "slot": "Laser",
+            "name": "Corio ODSPR+",
+            "label": "Canted Laser",
+            "level": 60
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Overpressured",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.7x28mm Overpressured",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Hollow Point",
+            "label": "",
+            "level": 20
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Armor Piercing",
+            "label": "",
+            "level": 27
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Frangible",
+            "label": "",
+            "level": 40
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO High Velocity",
+            "label": "",
+            "level": 57
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS IS300",
+            "label": "Heavy Silencer",
+            "level": 4
+          },
+          {
+            "slot": "Muzzle",
+            "name": "ZLR Reverb90",
+            "label": "Vertical Comp",
+            "level": 34
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TZL-110 V1",
+            "label": "Flash Hider",
+            "level": 41
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FTAC Dominion",
+            "label": "Balanced Comp",
+            "level": 45
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Corvus LVL-40",
+            "label": "Horizontal Comp",
+            "level": 53
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS IS40",
+            "label": "Light Silencer",
+            "level": 54
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Mil-Tac Suppressor",
+            "label": "Tactical Silencer",
+            "level": 65
+          },
+          {
+            "slot": "Muzzle",
+            "name": "B16 Helical",
+            "label": "Breacher",
+            "level": 67
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Mire-50 Tac Grip",
+            "label": "Vertical Grip",
+            "level": 5
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "AA54 V.3 Bipod",
+            "label": "Bipod",
+            "level": 11
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FSS Tac90 Grip",
+            "label": "Angled Short Grip",
+            "level": 17
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Miri 40mm",
+            "label": "Underbarrel Launcher",
+            "level": 30
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Underbarrel Grenade Launcher",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FSS Beargrip",
+            "label": "Bipod Grip",
+            "level": 36
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FSS Fireline Grip",
+            "label": "Angled Grip",
+            "level": 38
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "GW Domi-9",
+            "label": "Vertical Short Grip",
+            "level": 47
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "TV Judicator",
+            "label": "Underbarrel Shotgun",
+            "level": 62
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Hurricane Grip",
+            "label": "",
+            "level": 72
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo HVR2 Stock",
+            "label": "Heavy Stock",
+            "level": 6
+          },
+          {
+            "slot": "Stock",
+            "name": "PF1 Fixed Stock",
+            "label": "Assault Stock",
+            "level": 14
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo Dozer Stock",
+            "label": "Tactical Stock",
+            "level": 28
+          },
+          {
+            "slot": "Stock",
+            "name": "ZLR ASP50 Stock",
+            "label": "Light Stock",
+            "level": 44
+          },
+          {
+            "slot": "Stock",
+            "name": "No Stock",
+            "label": "",
+            "level": 64
+          },
+          {
+            "slot": "Stock",
+            "name": "Hurricane Stock",
+            "label": "",
+            "level": 72
+          },
+          {
+            "slot": "Barrel",
+            "name": "FT Cannonade 7",
+            "label": "Heavy Short Barrel",
+            "level": 7
+          },
+          {
+            "slot": "Barrel",
+            "name": "16 Highmark Barrel",
+            "label": "Heavy Barrel",
+            "level": 18
+          },
+          {
+            "slot": "Barrel",
+            "name": "18 LE Crosswind",
+            "label": "Long Barrel",
+            "level": 32
+          },
+          {
+            "slot": "Barrel",
+            "name": "11.5 Shortline Barrel",
+            "label": "Light Short Barrel",
+            "level": 48
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR Drift 16.5",
+            "label": "Light Barrel",
+            "level": 68
+          },
+          {
+            "slot": "Optic",
+            "name": "Corio Bisect",
+            "label": "4X Scope",
+            "level": 8
+          },
+          {
+            "slot": "Optic",
+            "name": "Slimline Elite",
+            "label": "Mini Reflex",
+            "level": 13
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ SRE-7",
+            "label": "Reflex",
+            "level": 15
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Helios Holo",
+            "label": "Holo",
+            "level": 19
+          },
+          {
+            "slot": "Optic",
+            "name": "VLK Trimmer",
+            "label": "Reflex",
+            "level": 21
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager 7x",
+            "label": "Rifle Scope",
+            "level": 23
+          },
+          {
+            "slot": "Optic",
+            "name": "GL K230",
+            "label": "4X Scope",
+            "level": 25
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Echelon Holo",
+            "label": "Holo",
+            "level": 29
+          },
+          {
+            "slot": "Optic",
+            "name": "RVX9 Thermo",
+            "label": "Rifle Scope",
+            "level": 31
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Prima-4 Dot",
+            "label": "Mini Reflex",
+            "level": 33
+          },
+          {
+            "slot": "Optic",
+            "name": "Bruen THRM-60 Optic",
+            "label": "Holo",
+            "level": 37
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Micro D-3",
+            "label": "Reflex",
+            "level": 43
+          },
+          {
+            "slot": "Optic",
+            "name": "Locus PX3 Canted",
+            "label": "Rifle Scope",
+            "level": 46
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Lonewolf Flip",
+            "label": "4X Scope",
+            "level": 50
+          },
+          {
+            "slot": "Optic",
+            "name": "ZLR Type C",
+            "label": "Mini Reflex",
+            "level": 52
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Lonewolf Holo",
+            "label": "Holo",
+            "level": 56
+          },
+          {
+            "slot": "Optic",
+            "name": "FJX 708 PRO",
+            "label": "Reflex",
+            "level": 58
+          },
+          {
+            "slot": "Optic",
+            "name": "VLK Rize-40",
+            "label": "Rifle Scope",
+            "level": 61
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Night View Pro",
+            "label": "4X Scope",
+            "level": 63
+          },
+          {
+            "slot": "Optic",
+            "name": "IOTA-D",
+            "label": "Mini Reflex",
+            "level": 66
+          },
+          {
+            "slot": "Optic",
+            "name": "KV Corsac Holo",
+            "label": "Holo",
+            "level": 69
+          },
+          {
+            "slot": "Optic",
+            "name": "Cronen R808",
+            "label": "4X Scope",
+            "level": 70
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Dogfight GI",
+            "label": "Rifle Scope",
+            "level": 71
+          },
+          {
+            "slot": "Magazine",
+            "name": "45 Round Mag",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Magazine",
+            "name": "60 Round Drum",
+            "label": "",
+            "level": 39
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Brace DX Grip",
+            "label": "Assault Grip",
+            "level": 10
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Schlager STB Grip",
+            "label": "Sniper Grip",
+            "level": 22
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "ZLR Phase Grip",
+            "label": "Skeleton Grip",
+            "level": 55
+          },
+          {
+            "slot": "Apex",
+            "name": "M4 Hurricane",
+            "label": "",
+            "level": 72
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "XRK Mil-Tac Suppressor"
+              },
+              {
+                "slot": "Barrel",
+                "name": "18 LE Crosswind"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "Demo Dozer Stock"
+              },
+              {
+                "slot": "Laser",
+                "name": "SA Laz-500"
+              }
+            ],
+            "tier": "S"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS IS40"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Underbarrel",
+                "name": "Hurricane Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              },
+              {
+                "slot": "Apex",
+                "name": "M4 Hurricane"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "S",
+        "hash": "d9916988c76c729287866f46f482856d7283f50add2a465609bbaf00d8ba4728"
+      },
+      "after": {
+        "weaponId": "m4",
+        "url": "https://warzoneloadout.games/mw4/m4",
+        "title": "Best M4 Modern Warfare 4 Loadout & Builds",
+        "declared": 71,
+        "attachments": [
+          {
+            "slot": "Laser",
+            "name": "SZ Gen.6 PEQ",
+            "label": "Bright ADS Laser",
+            "level": 2
+          },
+          {
+            "slot": "Laser",
+            "name": "Corio 4DV-3",
+            "label": "Flashlight",
+            "level": 12
+          },
+          {
+            "slot": "Laser",
+            "name": "STOVL IRX-6",
+            "label": "Dim Hip Laser",
+            "level": 16
+          },
+          {
+            "slot": "Laser",
+            "name": "SA Laz-500",
+            "label": "Dim ADS Laser",
+            "level": 24
+          },
+          {
+            "slot": "Laser",
+            "name": "Expedite Intra-5b",
+            "label": "Canted Laser",
+            "level": 42
+          },
+          {
+            "slot": "Laser",
+            "name": "Bruen 22-LPW",
+            "label": "Bright Hip Laser",
+            "level": 49
+          },
+          {
+            "slot": "Laser",
+            "name": "Corio ODSPR+",
+            "label": "Canted Laser",
+            "level": 60
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Overpressured",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.7x28mm Overpressured",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Hollow Point",
+            "label": "",
+            "level": 20
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Armor Piercing",
+            "label": "",
+            "level": 27
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO Frangible",
+            "label": "",
+            "level": 40
+          },
+          {
+            "slot": "Ammunition",
+            "name": "5.56 NATO High Velocity",
+            "label": "",
+            "level": 57
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS IS300",
+            "label": "Heavy Silencer",
+            "level": 4
+          },
+          {
+            "slot": "Muzzle",
+            "name": "ZLR Reverb90",
+            "label": "Vertical Comp",
+            "level": 34
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TZL-110 V1",
+            "label": "Flash Hider",
+            "level": 41
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FTAC Dominion",
+            "label": "Balanced Comp",
+            "level": 45
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Corvus LVL-40",
+            "label": "Horizontal Comp",
+            "level": 53
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS IS40",
+            "label": "Light Silencer",
+            "level": 54
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Mil-Tac Suppressor",
+            "label": "Tactical Silencer",
+            "level": 65
+          },
+          {
+            "slot": "Muzzle",
+            "name": "B16 Helical",
+            "label": "Breacher",
+            "level": 67
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Mire-50 Tac Grip",
+            "label": "Vertical Grip",
+            "level": 5
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "AA54 V.3 Bipod",
+            "label": "Bipod",
+            "level": 11
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FSS Tac90 Grip",
+            "label": "Angled Short Grip",
+            "level": 17
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Miri 40mm",
+            "label": "Underbarrel Launcher",
+            "level": 30
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Underbarrel Grenade Launcher",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FSS Beargrip",
+            "label": "Bipod Grip",
+            "level": 36
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FSS Fireline Grip",
+            "label": "Angled Grip",
+            "level": 38
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "GW Domi-9",
+            "label": "Vertical Short Grip",
+            "level": 47
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "TV Judicator",
+            "label": "Underbarrel Shotgun",
+            "level": 62
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Hurricane Grip",
+            "label": "",
+            "level": 72
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo HVR2 Stock",
+            "label": "Heavy Stock",
+            "level": 6
+          },
+          {
+            "slot": "Stock",
+            "name": "PF1 Fixed Stock",
+            "label": "Assault Stock",
+            "level": 14
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo Dozer Stock",
+            "label": "Tactical Stock",
+            "level": 28
+          },
+          {
+            "slot": "Stock",
+            "name": "ZLR ASP50 Stock",
+            "label": "Light Stock",
+            "level": 44
+          },
+          {
+            "slot": "Stock",
+            "name": "No Stock",
+            "label": "",
+            "level": 64
+          },
+          {
+            "slot": "Stock",
+            "name": "Hurricane Stock",
+            "label": "",
+            "level": 72
+          },
+          {
+            "slot": "Barrel",
+            "name": "FT Cannonade 7",
+            "label": "Heavy Short Barrel",
+            "level": 7
+          },
+          {
+            "slot": "Barrel",
+            "name": "16 Highmark Barrel",
+            "label": "Heavy Barrel",
+            "level": 18
+          },
+          {
+            "slot": "Barrel",
+            "name": "18 LE Crosswind",
+            "label": "Long Barrel",
+            "level": 32
+          },
+          {
+            "slot": "Barrel",
+            "name": "11.5 Shortline Barrel",
+            "label": "Light Short Barrel",
+            "level": 48
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR Drift 16.5",
+            "label": "Light Barrel",
+            "level": 68
+          },
+          {
+            "slot": "Optic",
+            "name": "Corio Bisect",
+            "label": "4X Scope",
+            "level": 8
+          },
+          {
+            "slot": "Optic",
+            "name": "Slimline Elite",
+            "label": "Mini Reflex",
+            "level": 13
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ SRE-7",
+            "label": "Reflex",
+            "level": 15
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Helios Holo",
+            "label": "Holo",
+            "level": 19
+          },
+          {
+            "slot": "Optic",
+            "name": "VLK Trimmer",
+            "label": "Reflex",
+            "level": 21
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager 7x",
+            "label": "Rifle Scope",
+            "level": 23
+          },
+          {
+            "slot": "Optic",
+            "name": "GL K230",
+            "label": "4X Scope",
+            "level": 25
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Echelon Holo",
+            "label": "Holo",
+            "level": 29
+          },
+          {
+            "slot": "Optic",
+            "name": "RVX9 Thermo",
+            "label": "Rifle Scope",
+            "level": 31
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Prima-4 Dot",
+            "label": "Mini Reflex",
+            "level": 33
+          },
+          {
+            "slot": "Optic",
+            "name": "Bruen THRM-60 Optic",
+            "label": "Holo",
+            "level": 37
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Micro D-3",
+            "label": "Reflex",
+            "level": 43
+          },
+          {
+            "slot": "Optic",
+            "name": "Locus PX3 Canted",
+            "label": "Rifle Scope",
+            "level": 46
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Lonewolf Flip",
+            "label": "4X Scope",
+            "level": 50
+          },
+          {
+            "slot": "Optic",
+            "name": "ZLR Type C",
+            "label": "Mini Reflex",
+            "level": 52
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Lonewolf Holo",
+            "label": "Holo",
+            "level": 56
+          },
+          {
+            "slot": "Optic",
+            "name": "FJX 708 PRO",
+            "label": "Reflex",
+            "level": 58
+          },
+          {
+            "slot": "Optic",
+            "name": "VLK Rize-40",
+            "label": "Rifle Scope",
+            "level": 61
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Night View Pro",
+            "label": "4X Scope",
+            "level": 63
+          },
+          {
+            "slot": "Optic",
+            "name": "IOTA-D",
+            "label": "Mini Reflex",
+            "level": 66
+          },
+          {
+            "slot": "Optic",
+            "name": "KV Corsac Holo",
+            "label": "Holo",
+            "level": 69
+          },
+          {
+            "slot": "Optic",
+            "name": "Cronen R808",
+            "label": "4X Scope",
+            "level": 70
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Dogfight GI",
+            "label": "Rifle Scope",
+            "level": 71
+          },
+          {
+            "slot": "Magazine",
+            "name": "45 Round Mag",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Magazine",
+            "name": "60 Round Drum",
+            "label": "",
+            "level": 39
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Brace DX Grip",
+            "label": "Assault Grip",
+            "level": 10
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Schlager STB Grip",
+            "label": "Sniper Grip",
+            "level": 22
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "ZLR Phase Grip",
+            "label": "Skeleton Grip",
+            "level": 55
+          },
+          {
+            "slot": "Apex",
+            "name": "M4 Hurricane",
+            "label": "",
+            "level": 72
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "XRK Mil-Tac Suppressor"
+              },
+              {
+                "slot": "Barrel",
+                "name": "18 LE Crosswind"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "Demo Dozer Stock"
+              },
+              {
+                "slot": "Laser",
+                "name": "SA Laz-500"
+              }
+            ],
+            "tier": "A"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS IS40"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Underbarrel",
+                "name": "Hurricane Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              },
+              {
+                "slot": "Apex",
+                "name": "M4 Hurricane"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "A",
+        "hash": "c65f522935fbf2ac5c9fbe7100561d62fd4aebbb2c4168c1b3b7c528ff31f5ea"
+      }
+    },
+    {
+      "weaponId": "hyeon-burst",
+      "url": "https://warzoneloadout.games/mw4/hyeon-burst",
+      "before": {
+        "weaponId": "hyeon-burst",
+        "url": "https://warzoneloadout.games/mw4/hyeon-burst",
+        "title": "Best Hyeon Burst Modern Warfare 4 Loadout & Builds",
+        "declared": 25,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "Mugi Hwando-Z3 520.7mm",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Hwando-Z3 521mm",
+            "label": "Light Barrel",
+            "level": 3
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Nullifier 482.6mm",
+            "label": "",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Nullifier 482mm",
+            "label": "Short Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Seungri-OP 609.6mm",
+            "label": "",
+            "level": 34
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Seungri-0P 609mm",
+            "label": "Long Barrel",
+            "level": 36
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Ingoem 558.8mm",
+            "label": "",
+            "level": 46
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Ingoem 559mm",
+            "label": "Heavy Barrel",
+            "level": 46
+          },
+          {
+            "slot": "Stock",
+            "name": "HVY-80 Stockpad",
+            "label": "Heavy Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "Mugi BAL-202 Stock",
+            "label": "Light Stock",
+            "level": 18
+          },
+          {
+            "slot": "Stock",
+            "name": "Hyeon Stockpad Tac",
+            "label": "Tactical Stock",
+            "level": 57
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "HYN-Meipeul",
+            "label": "Aim Grip",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "X-Vector 799 Grip",
+            "label": "Skeleton Grip",
+            "level": 27
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Mugi UN-R5 Grip",
+            "label": "Tactical Grip",
+            "level": 43
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Frangible",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Armor Piercing",
+            "label": "",
+            "level": 22
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Overpressured",
+            "label": "",
+            "level": 40
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm High Velocity",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Hollow Point",
+            "label": "",
+            "level": 66
+          },
+          {
+            "slot": "Magazine",
+            "name": "40 Round Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Magazine",
+            "name": "60 Round Drum Mag",
+            "label": "",
+            "level": 61
+          },
+          {
+            "slot": "Apex",
+            "name": "Hyeon Auto",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Apex",
+            "name": "Hyeon Hyperburst",
+            "label": "",
+            "level": 68
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Dogfight G1",
+            "label": "",
+            "level": 48
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Night View P1",
+            "label": "",
+            "level": 53
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS IS40"
+              },
+              {
+                "slot": "Stock",
+                "name": "Hyeon Stockpad Tac"
+              },
+              {
+                "slot": "Underbarrel",
+                "name": "FSS Fireline Grip"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Mugi UN-R5 Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "SA Laz-500"
+              }
+            ],
+            "tier": "A"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS IS40"
+              },
+              {
+                "slot": "Stock",
+                "name": "Mugi BAL-202 Stock"
+              },
+              {
+                "slot": "Underbarrel",
+                "name": "FSS Fireline Grip"
+              },
+              {
+                "slot": "Magazine",
+                "name": "40 Round Mag"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              },
+              {
+                "slot": "Apex",
+                "name": "Hyeon Hyperburst"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "A",
+        "hash": "68118ba88902751789dad69107f3cb77d2e1bfcd33057bcc59a8c00df436ae79"
+      },
+      "after": {
+        "weaponId": "hyeon-burst",
+        "url": "https://warzoneloadout.games/mw4/hyeon-burst",
+        "title": "Best Hyeon Burst Modern Warfare 4 Loadout & Builds",
+        "declared": 25,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "Mugi Hwando-Z3 520.7mm",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Hwando-Z3 521mm",
+            "label": "Light Barrel",
+            "level": 3
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Nullifier 482.6mm",
+            "label": "",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Nullifier 482mm",
+            "label": "Short Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Seungri-OP 609.6mm",
+            "label": "",
+            "level": 34
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Seungri-0P 609mm",
+            "label": "Long Barrel",
+            "level": 36
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Ingoem 558.8mm",
+            "label": "",
+            "level": 46
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Ingoem 559mm",
+            "label": "Heavy Barrel",
+            "level": 46
+          },
+          {
+            "slot": "Stock",
+            "name": "HVY-80 Stockpad",
+            "label": "Heavy Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "Mugi BAL-202 Stock",
+            "label": "Light Stock",
+            "level": 18
+          },
+          {
+            "slot": "Stock",
+            "name": "Hyeon Stockpad Tac",
+            "label": "Tactical Stock",
+            "level": 57
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "HYN-Meipeul",
+            "label": "Aim Grip",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "X-Vector 799 Grip",
+            "label": "Skeleton Grip",
+            "level": 27
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Mugi UN-R5 Grip",
+            "label": "Tactical Grip",
+            "level": 43
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Frangible",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Armor Piercing",
+            "label": "",
+            "level": 22
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Overpressured",
+            "label": "",
+            "level": 40
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm High Velocity",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Ammunition",
+            "name": "6.8x43mm Hollow Point",
+            "label": "",
+            "level": 66
+          },
+          {
+            "slot": "Magazine",
+            "name": "40 Round Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Magazine",
+            "name": "60 Round Drum Mag",
+            "label": "",
+            "level": 61
+          },
+          {
+            "slot": "Apex",
+            "name": "Hyeon Auto",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Apex",
+            "name": "Hyeon Hyperburst",
+            "label": "",
+            "level": 68
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Dogfight G1",
+            "label": "",
+            "level": 48
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Night View P1",
+            "label": "",
+            "level": 53
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS IS300"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Mugi Ingoem 559mm"
+              },
+              {
+                "slot": "Stock",
+                "name": "HVY-80 Stockpad"
+              },
+              {
+                "slot": "Underbarrel",
+                "name": "FSS Fireline Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "SA Laz-500"
+              },
+              {
+                "slot": "Apex",
+                "name": "Hyeon Hyperburst"
+              }
+            ],
+            "tier": "S"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS IS40"
+              },
+              {
+                "slot": "Stock",
+                "name": "Mugi BAL-202 Stock"
+              },
+              {
+                "slot": "Underbarrel",
+                "name": "FSS Fireline Grip"
+              },
+              {
+                "slot": "Magazine",
+                "name": "40 Round Mag"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              },
+              {
+                "slot": "Apex",
+                "name": "Hyeon Hyperburst"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "S",
+        "hash": "4f1e223572c1c864e9954f3b74ea5fba6bbec686902c7afe353d5a3a7b9dacf3"
+      }
+    },
+    {
+      "weaponId": "rezi-12",
+      "url": "https://warzoneloadout.games/mw4/rezi-12",
+      "before": {
+        "weaponId": "rezi-12",
+        "url": "https://warzoneloadout.games/mw4/rezi-12",
+        "title": "Best Rezi 12 Modern Warfare 4 Loadout & Builds",
+        "declared": 33,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "EXP FR67-U0",
+            "label": "Heavy Stock",
+            "level": 2
+          },
+          {
+            "slot": "Stock",
+            "name": "ZLR Tac12 Pro",
+            "label": "Tactical Stock",
+            "level": 34
+          },
+          {
+            "slot": "Stock",
+            "name": "TV XR-14 Kilo",
+            "label": "Light Rifle Stock",
+            "level": 58
+          },
+          {
+            "slot": "Optic",
+            "name": "ZLR Swordfish",
+            "label": "Shotgun Scope",
+            "level": 3
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Ribcage Gen.1",
+            "label": "Balanced Comp",
+            "level": 4
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Sakin Omega 13",
+            "label": "Tactical Silencer",
+            "level": 13
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi-X VIR0",
+            "label": "Breacher",
+            "level": 20
+          },
+          {
+            "slot": "Muzzle",
+            "name": "EXP Firelite 12",
+            "label": "Heavy Silencer",
+            "level": 24
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Haebang Bulsae-10",
+            "label": "Choke",
+            "level": 28
+          },
+          {
+            "slot": "Muzzle",
+            "name": "SA One Tap",
+            "label": "Flash Hider",
+            "level": 36
+          },
+          {
+            "slot": "Muzzle",
+            "name": "GW Slashtop V1",
+            "label": "Horizontal Comp",
+            "level": 40
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FTAC LTS-707",
+            "label": "Light Silencer",
+            "level": 45
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Spine Ripper",
+            "label": "Vertical Comp",
+            "level": 56
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR Rogue 90 25",
+            "label": "Heavy Long Barrel",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR 12GA Ported 21",
+            "label": "Heavy Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang 635R-7",
+            "label": "Long Barrel",
+            "level": 26
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR L48 Siege 13",
+            "label": "Short Barrel",
+            "level": 42
+          },
+          {
+            "slot": "Bolt",
+            "name": "U12G Match 9",
+            "label": "Heavy Bolt",
+            "level": 8
+          },
+          {
+            "slot": "Bolt",
+            "name": "ZLR Competition-B6",
+            "label": "Light Bolt",
+            "level": 47
+          },
+          {
+            "slot": "Bolt",
+            "name": "XRK Quad-80",
+            "label": "Speed Bolt",
+            "level": 49
+          },
+          {
+            "slot": "Comb",
+            "name": "Sakin V14 Tactical",
+            "label": "Heavy Comb",
+            "level": 9
+          },
+          {
+            "slot": "Comb",
+            "name": "LM Stock Sleeve",
+            "label": "Ergonomic Comb",
+            "level": 30
+          },
+          {
+            "slot": "Comb",
+            "name": "Bryson Sidewinder",
+            "label": "Ammo Comb",
+            "level": 54
+          },
+          {
+            "slot": "Ammunition",
+            "name": "12 Gauge Slug",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Ammunition",
+            "name": "12G Slug Rounds",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SA B40 Grip",
+            "label": "Assault Grip",
+            "level": 11
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "POM12-F Grip",
+            "label": "Aim Grip",
+            "level": 22
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen R12-SH",
+            "label": "Tactical Grip",
+            "level": 38
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Bygone-39",
+            "label": "Skeleton Grip",
+            "level": 51
+          },
+          {
+            "slot": "Apex",
+            "name": "Rezi 12 Enforcer",
+            "label": "",
+            "level": 60
+          },
+          {
+            "slot": "Guard",
+            "name": "Demo Service-12G",
+            "label": "Light Guard",
+            "level": 60
+          },
+          {
+            "slot": "Guard",
+            "name": "Rushline L-WATT20",
+            "label": "Tactical Guard",
+            "level": 63
+          },
+          {
+            "slot": "Guard",
+            "name": "XRK Warlord 700",
+            "label": "Heavy Guard",
+            "level": 63
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FTAC LTS-707"
+              },
+              {
+                "slot": "Stock",
+                "name": "ZLR Tac12 Pro"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "XRK Bygone-39"
+              },
+              {
+                "slot": "Apex",
+                "name": "Rezi 12 Enforcer"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "cc2b9ec6f8446585780ee397cc6dcc79a131162ef84ad05b3bf24dadc6456d3f"
+      },
+      "after": {
+        "weaponId": "rezi-12",
+        "url": "https://warzoneloadout.games/mw4/rezi-12",
+        "title": "Best Rezi 12 Modern Warfare 4 Loadout & Builds",
+        "declared": 33,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "EXP FR67-U0",
+            "label": "Heavy Stock",
+            "level": 2
+          },
+          {
+            "slot": "Stock",
+            "name": "ZLR Tac12 Pro",
+            "label": "Tactical Stock",
+            "level": 34
+          },
+          {
+            "slot": "Stock",
+            "name": "TV XR-14 Kilo",
+            "label": "Light Rifle Stock",
+            "level": 58
+          },
+          {
+            "slot": "Optic",
+            "name": "ZLR Swordfish",
+            "label": "Shotgun Scope",
+            "level": 3
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Ribcage Gen.1",
+            "label": "Balanced Comp",
+            "level": 4
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Sakin Omega 13",
+            "label": "Tactical Silencer",
+            "level": 13
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi-X VIR0",
+            "label": "Breacher",
+            "level": 20
+          },
+          {
+            "slot": "Muzzle",
+            "name": "EXP Firelite 12",
+            "label": "Heavy Silencer",
+            "level": 24
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Haebang Bulsae-10",
+            "label": "Choke",
+            "level": 28
+          },
+          {
+            "slot": "Muzzle",
+            "name": "SA One Tap",
+            "label": "Flash Hider",
+            "level": 36
+          },
+          {
+            "slot": "Muzzle",
+            "name": "GW Slashtop V1",
+            "label": "Horizontal Comp",
+            "level": 40
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FTAC LTS-707",
+            "label": "Light Silencer",
+            "level": 45
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Spine Ripper",
+            "label": "Vertical Comp",
+            "level": 56
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR Rogue 90 25",
+            "label": "Heavy Long Barrel",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR 12GA Ported 21",
+            "label": "Heavy Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang 635R-7",
+            "label": "Long Barrel",
+            "level": 26
+          },
+          {
+            "slot": "Barrel",
+            "name": "ZLR L48 Siege 13",
+            "label": "Short Barrel",
+            "level": 42
+          },
+          {
+            "slot": "Bolt",
+            "name": "U12G Match 9",
+            "label": "Heavy Bolt",
+            "level": 8
+          },
+          {
+            "slot": "Bolt",
+            "name": "ZLR Competition-B6",
+            "label": "Light Bolt",
+            "level": 47
+          },
+          {
+            "slot": "Bolt",
+            "name": "XRK Quad-80",
+            "label": "Speed Bolt",
+            "level": 49
+          },
+          {
+            "slot": "Comb",
+            "name": "Sakin V14 Tactical",
+            "label": "Heavy Comb",
+            "level": 9
+          },
+          {
+            "slot": "Comb",
+            "name": "LM Stock Sleeve",
+            "label": "Ergonomic Comb",
+            "level": 30
+          },
+          {
+            "slot": "Comb",
+            "name": "Bryson Sidewinder",
+            "label": "Ammo Comb",
+            "level": 54
+          },
+          {
+            "slot": "Ammunition",
+            "name": "12 Gauge Slug",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Ammunition",
+            "name": "12G Slug Rounds",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SA B40 Grip",
+            "label": "Assault Grip",
+            "level": 11
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "POM12-F Grip",
+            "label": "Aim Grip",
+            "level": 22
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen R12-SH",
+            "label": "Tactical Grip",
+            "level": 38
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Bygone-39",
+            "label": "Skeleton Grip",
+            "level": 51
+          },
+          {
+            "slot": "Apex",
+            "name": "Rezi 12 Enforcer",
+            "label": "",
+            "level": 60
+          },
+          {
+            "slot": "Guard",
+            "name": "Demo Service-12G",
+            "label": "Light Guard",
+            "level": 60
+          },
+          {
+            "slot": "Guard",
+            "name": "Rushline L-WATT20",
+            "label": "Tactical Guard",
+            "level": 63
+          },
+          {
+            "slot": "Guard",
+            "name": "XRK Warlord 700",
+            "label": "Heavy Guard",
+            "level": 63
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FTAC LTS-707"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Haebang 635R-7"
+              },
+              {
+                "slot": "Stock",
+                "name": "ZLR Tac12 Pro"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "XRK Bygone-39"
+              },
+              {
+                "slot": "Apex",
+                "name": "Rezi 12 Enforcer"
+              }
+            ],
+            "tier": "C"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FTAC LTS-707"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Haebang 635R-7"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "XRK Bygone-39"
+              },
+              {
+                "slot": "Apex",
+                "name": "Rezi 12 Enforcer"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "5897e9bfb92face2f4cb1b48e765e1dad5dc10e8bb6846ff482b74bcaf51e5a1"
+      }
+    },
+    {
+      "weaponId": "warlord",
+      "url": "https://warzoneloadout.games/mw4/warlord",
+      "before": {
+        "weaponId": "warlord",
+        "url": "https://warzoneloadout.games/mw4/warlord",
+        "title": "Best Warlord Modern Warfare 4 Loadout & Builds",
+        "declared": 22,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "SA One Tap v.3",
+            "label": "Flash Hider",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Ribcage-L Gen.4",
+            "label": "Balanced Comp",
+            "level": 11
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi-X VIR0-XL",
+            "label": "Breacher",
+            "level": 15
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Spine Ripper XL",
+            "label": "Vertical Comp",
+            "level": 20
+          },
+          {
+            "slot": "Muzzle",
+            "name": "GW Slashtop-LB V6",
+            "label": "Horizontal Comp",
+            "level": 26
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi Kalnal-H 12G",
+            "label": "Heavy Silencer",
+            "level": 34
+          },
+          {
+            "slot": "Muzzle",
+            "name": "WX-600 Choke",
+            "label": "Choke",
+            "level": 44
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi Kalnal-T 12G",
+            "label": "Tactical Silencer",
+            "level": 46
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi Kalnal-L 12G",
+            "label": "Light Silencer",
+            "level": 56
+          },
+          {
+            "slot": "Bolt",
+            "name": "Heavy Bolt",
+            "label": "",
+            "level": 4
+          },
+          {
+            "slot": "Bolt",
+            "name": "L-Strike Bolt",
+            "label": "Light Bolt",
+            "level": 31
+          },
+          {
+            "slot": "Bolt",
+            "name": "Light Bolt",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Bolt",
+            "name": "NK HEV-3 Bolt",
+            "label": "Heavy Bolt",
+            "level": 55
+          },
+          {
+            "slot": "Stock",
+            "name": "Mugi D40 Stock",
+            "label": "Light Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "Mugi Tac-717 Stock",
+            "label": "Tactical Stock",
+            "level": 31
+          },
+          {
+            "slot": "Stock",
+            "name": "MX Mae-IV Stock",
+            "label": "Assault Stock",
+            "level": 50
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Chujeok-800",
+            "label": "Light Barrel",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "NK Retribution-X Barrel",
+            "label": "Heavy Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "NK Gangta-12G",
+            "label": "Long Barrel",
+            "level": 40
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "DV3-Sinsok Grip",
+            "label": "Tactical Grip",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Simpan-7 grip",
+            "label": "Aim Grip",
+            "level": 38
+          },
+          {
+            "slot": "Apex",
+            "name": "Warlord Lumen",
+            "label": "",
+            "level": 59
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Mugi Kalnal-T 12G"
+              },
+              {
+                "slot": "Barrel",
+                "name": "NK Gangta-12G"
+              },
+              {
+                "slot": "Stock",
+                "name": "Mugi Tac-717 Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "DV3-Sinsok Grip"
+              },
+              {
+                "slot": "Apex",
+                "name": "Warlord Lumen"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "80c8f1aec3490b2c3de2417c58e5de090699599e59eeebde27b4b8de4edb55ba"
+      },
+      "after": {
+        "weaponId": "warlord",
+        "url": "https://warzoneloadout.games/mw4/warlord",
+        "title": "Best Warlord Modern Warfare 4 Loadout & Builds",
+        "declared": 22,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "SA One Tap v.3",
+            "label": "Flash Hider",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Ribcage-L Gen.4",
+            "label": "Balanced Comp",
+            "level": 11
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi-X VIR0-XL",
+            "label": "Breacher",
+            "level": 15
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Spine Ripper XL",
+            "label": "Vertical Comp",
+            "level": 20
+          },
+          {
+            "slot": "Muzzle",
+            "name": "GW Slashtop-LB V6",
+            "label": "Horizontal Comp",
+            "level": 26
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi Kalnal-H 12G",
+            "label": "Heavy Silencer",
+            "level": 34
+          },
+          {
+            "slot": "Muzzle",
+            "name": "WX-600 Choke",
+            "label": "Choke",
+            "level": 44
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi Kalnal-T 12G",
+            "label": "Tactical Silencer",
+            "level": 46
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi Kalnal-L 12G",
+            "label": "Light Silencer",
+            "level": 56
+          },
+          {
+            "slot": "Bolt",
+            "name": "Heavy Bolt",
+            "label": "",
+            "level": 4
+          },
+          {
+            "slot": "Bolt",
+            "name": "L-Strike Bolt",
+            "label": "Light Bolt",
+            "level": 31
+          },
+          {
+            "slot": "Bolt",
+            "name": "Light Bolt",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Bolt",
+            "name": "NK HEV-3 Bolt",
+            "label": "Heavy Bolt",
+            "level": 55
+          },
+          {
+            "slot": "Stock",
+            "name": "Mugi D40 Stock",
+            "label": "Light Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "Mugi Tac-717 Stock",
+            "label": "Tactical Stock",
+            "level": 31
+          },
+          {
+            "slot": "Stock",
+            "name": "MX Mae-IV Stock",
+            "label": "Assault Stock",
+            "level": 50
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mugi Chujeok-800",
+            "label": "Light Barrel",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "NK Retribution-X Barrel",
+            "label": "Heavy Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "NK Gangta-12G",
+            "label": "Long Barrel",
+            "level": 40
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "DV3-Sinsok Grip",
+            "label": "Tactical Grip",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Simpan-7 grip",
+            "label": "Aim Grip",
+            "level": 38
+          },
+          {
+            "slot": "Apex",
+            "name": "Warlord Lumen",
+            "label": "",
+            "level": 59
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Mugi Kalnal-T 12G"
+              },
+              {
+                "slot": "Barrel",
+                "name": "NK Gangta-12G"
+              },
+              {
+                "slot": "Stock",
+                "name": "Mugi Tac-717 Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "DV3-Sinsok Grip"
+              },
+              {
+                "slot": "Apex",
+                "name": "Warlord Lumen"
+              }
+            ],
+            "tier": "C"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Mugi Kalnal-T 12G"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Mugi Chujeok-800"
+              },
+              {
+                "slot": "Stock",
+                "name": "Mugi D40 Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "DV3-Sinsok Grip"
+              },
+              {
+                "slot": "Apex",
+                "name": "Warlord Lumen"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "d32af33fbb3c9795098d9bdd4f6132572c57c1e568ee5ee4690dae378d6113f9"
+      }
+    },
+    {
+      "weaponId": "finn-lmg",
+      "url": "https://warzoneloadout.games/mw4/finn-lmg",
+      "before": {
+        "weaponId": "finn-lmg",
+        "url": "https://warzoneloadout.games/mw4/finn-lmg",
+        "title": "Best FiNN LMG Modern Warfare 4 Loadout & Builds",
+        "declared": 22,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "FTAC MOD3-LK 15",
+            "label": "Light Barrel",
+            "level": 2
+          },
+          {
+            "slot": "Barrel",
+            "name": "FTAC Firebase-70 15\"",
+            "label": "",
+            "level": 2
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT Seongun 508mm",
+            "label": "Long Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "TA Sustain-99 20",
+            "label": "Heavy Long Barrel",
+            "level": 33
+          },
+          {
+            "slot": "Barrel",
+            "name": "TA N-VCX 18",
+            "label": "Heavy Barrel",
+            "level": 49
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FTAC Combat Grip",
+            "label": "Vertical Grip",
+            "level": 3
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Bruen Renegade Grip",
+            "label": "Angled Grip",
+            "level": 51
+          },
+          {
+            "slot": "Stock",
+            "name": "Hanbit Tech50 Gen.5",
+            "label": "Light Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "SAW Stock",
+            "label": "",
+            "level": 26
+          },
+          {
+            "slot": "Stock",
+            "name": "Hanbit Kumiho Gripset",
+            "label": "",
+            "level": 28
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP Bulldog-9",
+            "label": "Heavy Stock",
+            "level": 55
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Singularity-13",
+            "label": "Skeleton Grip",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Aura-5",
+            "label": "",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Schlager KM60-G",
+            "label": "Assault Grip",
+            "level": 25
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FTAC R7 Wrap",
+            "label": "Sniper Grip",
+            "level": 44
+          },
+          {
+            "slot": "Magazine",
+            "name": "150 Round Box Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Magazine",
+            "name": "75 Round Box Mag",
+            "label": "",
+            "level": 38
+          },
+          {
+            "slot": "Laser",
+            "name": "STOVL TRX-6",
+            "label": "",
+            "level": 21
+          },
+          {
+            "slot": "Laser",
+            "name": "Bruen 22-LW",
+            "label": "",
+            "level": 25
+          },
+          {
+            "slot": "Apex",
+            "name": "FiNN Adverse",
+            "label": "",
+            "level": 59
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Lodestar 556",
+            "label": "Flash Hider",
+            "level": null
+          },
+          {
+            "slot": "Muzzle",
+            "name": "EXP V-TAC Suppressor",
+            "label": "Custom Silencer",
+            "level": null
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "XRK Mil-Tac Suppressor"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "EXP Bulldog-9"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "XRK Singularity-13"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              }
+            ],
+            "tier": "B"
+          }
+        ],
+        "tier": "B",
+        "hash": "5e5a71a75685c19099128561bb5a4ab8ac526c8ee706c7e20f812c61bdb3c281"
+      },
+      "after": {
+        "weaponId": "finn-lmg",
+        "url": "https://warzoneloadout.games/mw4/finn-lmg",
+        "title": "Best FiNN LMG Modern Warfare 4 Loadout & Builds",
+        "declared": 22,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "FTAC MOD3-LK 15",
+            "label": "Light Barrel",
+            "level": 2
+          },
+          {
+            "slot": "Barrel",
+            "name": "FTAC Firebase-70 15\"",
+            "label": "",
+            "level": 2
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT Seongun 508mm",
+            "label": "Long Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "TA Sustain-99 20",
+            "label": "Heavy Long Barrel",
+            "level": 33
+          },
+          {
+            "slot": "Barrel",
+            "name": "TA N-VCX 18",
+            "label": "Heavy Barrel",
+            "level": 49
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "FTAC Combat Grip",
+            "label": "Vertical Grip",
+            "level": 3
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Bruen Renegade Grip",
+            "label": "Angled Grip",
+            "level": 51
+          },
+          {
+            "slot": "Stock",
+            "name": "Hanbit Tech50 Gen.5",
+            "label": "Light Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "SAW Stock",
+            "label": "",
+            "level": 26
+          },
+          {
+            "slot": "Stock",
+            "name": "Hanbit Kumiho Gripset",
+            "label": "",
+            "level": 28
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP Bulldog-9",
+            "label": "Heavy Stock",
+            "level": 55
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Singularity-13",
+            "label": "Skeleton Grip",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Aura-5",
+            "label": "",
+            "level": 8
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Schlager KM60-G",
+            "label": "Assault Grip",
+            "level": 25
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FTAC R7 Wrap",
+            "label": "Sniper Grip",
+            "level": 44
+          },
+          {
+            "slot": "Magazine",
+            "name": "150 Round Box Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Magazine",
+            "name": "75 Round Box Mag",
+            "label": "",
+            "level": 38
+          },
+          {
+            "slot": "Laser",
+            "name": "STOVL TRX-6",
+            "label": "",
+            "level": 21
+          },
+          {
+            "slot": "Laser",
+            "name": "Bruen 22-LW",
+            "label": "",
+            "level": 25
+          },
+          {
+            "slot": "Apex",
+            "name": "FiNN Adverse",
+            "label": "",
+            "level": 59
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Lodestar 556",
+            "label": "Flash Hider",
+            "level": null
+          },
+          {
+            "slot": "Muzzle",
+            "name": "EXP V-TAC Suppressor",
+            "label": "Custom Silencer",
+            "level": null
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "XRK Mil-Tac Suppressor"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "EXP Bulldog-9"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "XRK Singularity-13"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              }
+            ],
+            "tier": "B"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "XRK Mil-Tac Suppressor"
+              },
+              {
+                "slot": "Barrel",
+                "name": "FTAC MOD3-LK 15"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Schlager KM60-G"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              }
+            ],
+            "tier": "B"
+          }
+        ],
+        "tier": "B",
+        "hash": "6d9147e750f78c621086e4edf5dc4bd6c686c4fd3bf029a6e1afa60cbab7dcb9"
+      }
+    },
+    {
+      "weaponId": "type-73",
+      "url": "https://warzoneloadout.games/mw4/type-73",
+      "before": {
+        "weaponId": "type-73",
+        "url": "https://warzoneloadout.games/mw4/type-73",
+        "title": "Best Type 73 Modern Warfare 4 Loadout & Builds",
+        "declared": 20,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "RSS-40F 12",
+            "label": "Short Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Firerush 23.8",
+            "label": "Light Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Sentinel 30.4",
+            "label": "Heavy Barrel",
+            "level": 30
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang ET-9D 772.16mm",
+            "label": "",
+            "level": 34
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang ET-9D 772mm",
+            "label": "Long Barrel",
+            "level": 37
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Hollow Point",
+            "label": "",
+            "level": 5
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Frangible",
+            "label": "",
+            "level": 19
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Armor Piercing",
+            "label": "",
+            "level": 29
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR High Velocity",
+            "label": "",
+            "level": 46
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Overpressured",
+            "label": "",
+            "level": 63
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "XRK Sidewinder",
+            "label": "",
+            "level": 7
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "XRK Co-Ride 56",
+            "label": "Vertical Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "EXP ZBR-904",
+            "label": "Tactical Grip",
+            "level": 9
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Assault-L5 Grip",
+            "label": "Assault Grip",
+            "level": 44
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Assault-L9 Wood Grip",
+            "label": "Aim Grip",
+            "level": 51
+          },
+          {
+            "slot": "Magazine",
+            "name": "100 Round Box Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Ivanov OR600",
+            "label": "",
+            "level": 12
+          },
+          {
+            "slot": "Stock",
+            "name": "FTAC RZR0 Stock",
+            "label": "Tactical Stock",
+            "level": 22
+          },
+          {
+            "slot": "Stock",
+            "name": "ST v.1 Woodgrain",
+            "label": "Heavy Stock",
+            "level": 57
+          },
+          {
+            "slot": "Apex",
+            "name": "Type 73 Assault",
+            "label": "",
+            "level": 64
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Ivanov QR600"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "FTAC RZR0 Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Assault-L5 Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              },
+              {
+                "slot": "Apex",
+                "name": "Type 73 Assault"
+              }
+            ],
+            "tier": "A"
+          }
+        ],
+        "tier": "A",
+        "hash": "d6b64883c1bb80e8e05079dc1a8f070cfdbda2e151467264e82d29dfc27408c4"
+      },
+      "after": {
+        "weaponId": "type-73",
+        "url": "https://warzoneloadout.games/mw4/type-73",
+        "title": "Best Type 73 Modern Warfare 4 Loadout & Builds",
+        "declared": 20,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "RSS-40F 12",
+            "label": "Short Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Firerush 23.8",
+            "label": "Light Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Sentinel 30.4",
+            "label": "Heavy Barrel",
+            "level": 30
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang ET-9D 772.16mm",
+            "label": "",
+            "level": 34
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang ET-9D 772mm",
+            "label": "Long Barrel",
+            "level": 37
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Hollow Point",
+            "label": "",
+            "level": 5
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Frangible",
+            "label": "",
+            "level": 19
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Armor Piercing",
+            "label": "",
+            "level": 29
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR High Velocity",
+            "label": "",
+            "level": 46
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mmR Overpressured",
+            "label": "",
+            "level": 63
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "XRK Sidewinder",
+            "label": "",
+            "level": 7
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "XRK Co-Ride 56",
+            "label": "Vertical Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "EXP ZBR-904",
+            "label": "Tactical Grip",
+            "level": 9
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Assault-L5 Grip",
+            "label": "Assault Grip",
+            "level": 44
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Assault-L9 Wood Grip",
+            "label": "Aim Grip",
+            "level": 51
+          },
+          {
+            "slot": "Magazine",
+            "name": "100 Round Box Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Ivanov OR600",
+            "label": "",
+            "level": 12
+          },
+          {
+            "slot": "Stock",
+            "name": "FTAC RZR0 Stock",
+            "label": "Tactical Stock",
+            "level": 22
+          },
+          {
+            "slot": "Stock",
+            "name": "ST v.1 Woodgrain",
+            "label": "Heavy Stock",
+            "level": 57
+          },
+          {
+            "slot": "Apex",
+            "name": "Type 73 Assault",
+            "label": "",
+            "level": 64
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Ivanov QR600"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "FTAC RZR0 Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Assault-L5 Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              },
+              {
+                "slot": "Apex",
+                "name": "Type 73 Assault"
+              }
+            ],
+            "tier": "A"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Gauge-12 Mono"
+              },
+              {
+                "slot": "Barrel",
+                "name": "SA Firerush 23.8"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Assault-L5 Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "Schlager Visiv-5"
+              },
+              {
+                "slot": "Apex",
+                "name": "Type 73 Assault"
+              }
+            ],
+            "tier": "A"
+          }
+        ],
+        "tier": "A",
+        "hash": "d2789bebfe1d7b133e169fc43cae05487eee2edfcf717c1cf3aef2af78f771c3"
+      }
+    },
+    {
+      "weaponId": "apoc-338",
+      "url": "https://warzoneloadout.games/mw4/apoc-338",
+      "before": {
+        "weaponId": "apoc-338",
+        "url": "https://warzoneloadout.games/mw4/apoc-338",
+        "title": "Best APOC-338 Modern Warfare 4 Loadout & Builds",
+        "declared": 20,
+        "attachments": [
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Frangible",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Armor Piercing",
+            "label": "",
+            "level": 18
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Overpressured",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum High Velocity",
+            "label": "",
+            "level": 40
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Hollow Point",
+            "label": "",
+            "level": 53
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Trident 24.5",
+            "label": "Heavy Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP .388 XL 24.5",
+            "label": "Long Barrel",
+            "level": 12
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Trailpoint 16.3",
+            "label": "Short Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Slipstream 14.3",
+            "label": "Light Barrel",
+            "level": 36
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP Exodus-338 Stock",
+            "label": "Heavy Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo Bar-7 Stock",
+            "label": "Light Stock",
+            "level": 15
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP Arc-7 Stock",
+            "label": "Tactical Stock",
+            "level": 47
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FSS TCB-1 Grip",
+            "label": "Assault Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "EXP Dyna-3 Grip",
+            "label": "Sniper Grip",
+            "level": 26
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SA Winder-5 Grip",
+            "label": "Tactical Grip",
+            "level": 51
+          },
+          {
+            "slot": "Magazine",
+            "name": "30 Round Belt",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Muzzle",
+            "name": "EXP 450 RTL",
+            "label": "Light Silencer",
+            "level": 19
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Matuzek Ironcall 31",
+            "label": "Horizontal Comp",
+            "level": 24
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "APOC Bipod",
+            "label": "Bipod",
+            "level": 44
+          },
+          {
+            "slot": "Apex",
+            "name": "APOC 338 Praetor",
+            "label": "",
+            "level": 56
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "EXP 450 RTL"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "EXP Arc-7 Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "FSS TCB-1 Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "SA Laz-500"
+              }
+            ],
+            "tier": "B"
+          }
+        ],
+        "tier": "B",
+        "hash": "7713e874d10dc81bcfc26c8c7160752a30dd71ab437382bd2b07368cc0134e58"
+      },
+      "after": {
+        "weaponId": "apoc-338",
+        "url": "https://warzoneloadout.games/mw4/apoc-338",
+        "title": "Best APOC-338 Modern Warfare 4 Loadout & Builds",
+        "declared": 20,
+        "attachments": [
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Frangible",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Armor Piercing",
+            "label": "",
+            "level": 18
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Overpressured",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum High Velocity",
+            "label": "",
+            "level": 40
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".338 Magnum Hollow Point",
+            "label": "",
+            "level": 53
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Trident 24.5",
+            "label": "Heavy Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP .388 XL 24.5",
+            "label": "Long Barrel",
+            "level": 12
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Trailpoint 16.3",
+            "label": "Short Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Slipstream 14.3",
+            "label": "Light Barrel",
+            "level": 36
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP Exodus-338 Stock",
+            "label": "Heavy Stock",
+            "level": 5
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo Bar-7 Stock",
+            "label": "Light Stock",
+            "level": 15
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP Arc-7 Stock",
+            "label": "Tactical Stock",
+            "level": 47
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FSS TCB-1 Grip",
+            "label": "Assault Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "EXP Dyna-3 Grip",
+            "label": "Sniper Grip",
+            "level": 26
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SA Winder-5 Grip",
+            "label": "Tactical Grip",
+            "level": 51
+          },
+          {
+            "slot": "Magazine",
+            "name": "30 Round Belt",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Muzzle",
+            "name": "EXP 450 RTL",
+            "label": "Light Silencer",
+            "level": 19
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Matuzek Ironcall 31",
+            "label": "Horizontal Comp",
+            "level": 24
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "APOC Bipod",
+            "label": "Bipod",
+            "level": 44
+          },
+          {
+            "slot": "Apex",
+            "name": "APOC 338 Praetor",
+            "label": "",
+            "level": 56
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "EXP 450 RTL"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "EXP Arc-7 Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "FSS TCB-1 Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "SA Laz-500"
+              }
+            ],
+            "tier": "B"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "TV Multical-77"
+              },
+              {
+                "slot": "Optic",
+                "name": "ZLR Type C"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "FSS TCB-1 Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "SA Laz-500"
+              }
+            ],
+            "tier": "B"
+          }
+        ],
+        "tier": "B",
+        "hash": "3a7efa3021ff19d17c9389748c1f1f66a857163fe53357e43862a65394299374"
+      }
+    },
+    {
+      "weaponId": "mar-9",
+      "url": "https://warzoneloadout.games/mw4/mar-9",
+      "before": {
+        "weaponId": "mar-9",
+        "url": "https://warzoneloadout.games/mw4/mar-9",
+        "title": "Best MAR-9 Modern Warfare 4 Loadout & Builds",
+        "declared": 20,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "Bruen Mirelock 565",
+            "label": "Heavy Stock",
+            "level": 3
+          },
+          {
+            "slot": "Stock",
+            "name": "LM Scout VX-9",
+            "label": "Tactical Stock",
+            "level": 26
+          },
+          {
+            "slot": "Stock",
+            "name": "Schlager HVOX-80",
+            "label": "Light Stock",
+            "level": 66
+          },
+          {
+            "slot": "Magazine",
+            "name": "10 Round Mag",
+            "label": "",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "LM Class 6 HBL",
+            "label": "Heavy Barrel",
+            "level": 8
+          },
+          {
+            "slot": "Barrel",
+            "name": "Bruen Reaper-X",
+            "label": "Silenced Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "Bruen Ironhide 76",
+            "label": "Short Barrel",
+            "level": 50
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Schlager PLM-S9",
+            "label": "Sniper Grip",
+            "level": 9
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Hanbit Wrap 76",
+            "label": "Assault Grip",
+            "level": 38
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Hanbit AGRS-1 Pro",
+            "label": "Skeleton Grip",
+            "level": 56
+          },
+          {
+            "slot": "Optic",
+            "name": "Corio D51 Scope",
+            "label": "Marksman Scope",
+            "level": 13
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Indigo-RF",
+            "label": "Marksman Scope",
+            "level": 23
+          },
+          {
+            "slot": "Optic",
+            "name": "Expedite 308 DR2",
+            "label": "Marksman Scope",
+            "level": 28
+          },
+          {
+            "slot": "Optic",
+            "name": "Luca Stormwatch",
+            "label": "Marksman Scope",
+            "level": 49
+          },
+          {
+            "slot": "Optic",
+            "name": "Corvus Avis-0",
+            "label": "Marksman Scope",
+            "level": 60
+          },
+          {
+            "slot": "Optic",
+            "name": "GW Löwe-55",
+            "label": "Marksman Scope",
+            "level": 73
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Bruen BR 21 Bipod",
+            "label": "Bipod",
+            "level": 15
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "Mil-56.9 Heavy Trigger",
+            "label": "Heavy Trigger",
+            "level": 33
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "MG-Tac Trigger",
+            "label": "Light Trigger",
+            "level": 62
+          },
+          {
+            "slot": "Apex",
+            "name": "MAR-9 Auto",
+            "label": "",
+            "level": 73
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Barrel",
+                "name": "Bruen Reaper-X"
+              },
+              {
+                "slot": "Stock",
+                "name": "LM Scout VX-9"
+              },
+              {
+                "slot": "Magazine",
+                "name": "30 Round Mag"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Hanbit AGRS-1 Pro"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              },
+              {
+                "slot": "Apex",
+                "name": "MAR-9 Auto"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "922573f57a2b88d29cd2b1089621ee1d76867fa1c522ce2a55fc61c000db7ff2"
+      },
+      "after": {
+        "weaponId": "mar-9",
+        "url": "https://warzoneloadout.games/mw4/mar-9",
+        "title": "Best MAR-9 Modern Warfare 4 Loadout & Builds",
+        "declared": 20,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "Bruen Mirelock 565",
+            "label": "Heavy Stock",
+            "level": 3
+          },
+          {
+            "slot": "Stock",
+            "name": "LM Scout VX-9",
+            "label": "Tactical Stock",
+            "level": 26
+          },
+          {
+            "slot": "Stock",
+            "name": "Schlager HVOX-80",
+            "label": "Light Stock",
+            "level": 66
+          },
+          {
+            "slot": "Magazine",
+            "name": "10 Round Mag",
+            "label": "",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "LM Class 6 HBL",
+            "label": "Heavy Barrel",
+            "level": 8
+          },
+          {
+            "slot": "Barrel",
+            "name": "Bruen Reaper-X",
+            "label": "Silenced Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "Bruen Ironhide 76",
+            "label": "Short Barrel",
+            "level": 50
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Schlager PLM-S9",
+            "label": "Sniper Grip",
+            "level": 9
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Hanbit Wrap 76",
+            "label": "Assault Grip",
+            "level": 38
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Hanbit AGRS-1 Pro",
+            "label": "Skeleton Grip",
+            "level": 56
+          },
+          {
+            "slot": "Optic",
+            "name": "Corio D51 Scope",
+            "label": "Marksman Scope",
+            "level": 13
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Indigo-RF",
+            "label": "Marksman Scope",
+            "level": 23
+          },
+          {
+            "slot": "Optic",
+            "name": "Expedite 308 DR2",
+            "label": "Marksman Scope",
+            "level": 28
+          },
+          {
+            "slot": "Optic",
+            "name": "Luca Stormwatch",
+            "label": "Marksman Scope",
+            "level": 49
+          },
+          {
+            "slot": "Optic",
+            "name": "Corvus Avis-0",
+            "label": "Marksman Scope",
+            "level": 60
+          },
+          {
+            "slot": "Optic",
+            "name": "GW Löwe-55",
+            "label": "Marksman Scope",
+            "level": 73
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Bruen BR 21 Bipod",
+            "label": "Bipod",
+            "level": 15
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "Mil-56.9 Heavy Trigger",
+            "label": "Heavy Trigger",
+            "level": 33
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "MG-Tac Trigger",
+            "label": "Light Trigger",
+            "level": 62
+          },
+          {
+            "slot": "Apex",
+            "name": "MAR-9 Auto",
+            "label": "",
+            "level": 73
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Barrel",
+                "name": "Bruen Reaper-X"
+              },
+              {
+                "slot": "Stock",
+                "name": "LM Scout VX-9"
+              },
+              {
+                "slot": "Magazine",
+                "name": "30 Round Mag"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Hanbit AGRS-1 Pro"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              },
+              {
+                "slot": "Apex",
+                "name": "MAR-9 Auto"
+              }
+            ],
+            "tier": "C"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Barrel",
+                "name": "Bruen Reaper-X"
+              },
+              {
+                "slot": "Stock",
+                "name": "Schlager HVOX-80"
+              },
+              {
+                "slot": "Magazine",
+                "name": "30 Round Mag"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Hanbit AGRS-1 Pro"
+              },
+              {
+                "slot": "Laser",
+                "name": "SZ Gen.6 PEQ"
+              },
+              {
+                "slot": "Apex",
+                "name": "MAR-9 Auto"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "a4eb724f238831d32fd1733d8e4eaaf5174d4732b64b333225c985e11b947719"
+      }
+    },
+    {
+      "weaponId": "oris-8-6",
+      "url": "https://warzoneloadout.games/mw4/oris-8-6",
+      "before": {
+        "weaponId": "oris-8-6",
+        "url": "https://warzoneloadout.games/mw4/oris-8-6",
+        "title": "Best Oris 8.6 Modern Warfare 4 Loadout & Builds",
+        "declared": 19,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "EXP Fold-50 20",
+            "label": "Bipod Barrel",
+            "level": 5
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP Ripper 7.75",
+            "label": "Short Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP Crosstac 22",
+            "label": "Long Barrel",
+            "level": 37
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP Shadow-70 14",
+            "label": "Silenced Barrel",
+            "level": 55
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "OPS-45 XP Grip",
+            "label": "Skeleton Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen R7-TC Grip",
+            "label": "Aim Grip",
+            "level": 30
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen C-Wrap 60",
+            "label": "Assault Grip",
+            "level": 49
+          },
+          {
+            "slot": "Ammunition",
+            "name": "8.6mm Blackout Hollow Point",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Ammunition",
+            "name": "8.6mm Blackout Armor Piercing",
+            "label": "",
+            "level": 20
+          },
+          {
+            "slot": "Ammunition",
+            "name": "8.6mm Blackout Frangible",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Bolt",
+            "name": "VX86 Heavy Bolt",
+            "label": "Heavy Bolt",
+            "level": 10
+          },
+          {
+            "slot": "Bolt",
+            "name": "Lightfir-5 Quick Bolt",
+            "label": "",
+            "level": 42
+          },
+          {
+            "slot": "Bolt",
+            "name": "Lightfire-5 Quick Bolt",
+            "label": "Light Bolt",
+            "level": 45
+          },
+          {
+            "slot": "Magazine",
+            "name": "6 Round Mag",
+            "label": "",
+            "level": 11
+          },
+          {
+            "slot": "Stock",
+            "name": "BR7 Invader",
+            "label": "Tactical Stock",
+            "level": 23
+          },
+          {
+            "slot": "Stock",
+            "name": "Vectorlite-80S",
+            "label": "Light Stock",
+            "level": 42
+          },
+          {
+            "slot": "Stock",
+            "name": "SA Dynamo-90 Stock",
+            "label": "Heavy Stock",
+            "level": 66
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ CNT-R6 Optic",
+            "label": "Marksman Scope",
+            "level": 27
+          },
+          {
+            "slot": "Apex",
+            "name": "Oris 8.6 Razor",
+            "label": "",
+            "level": 70
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "EXP Undertow Gen. 2"
+              },
+              {
+                "slot": "Barrel",
+                "name": "EXP Crosstac 22"
+              },
+              {
+                "slot": "Optic",
+                "name": "Cronen R808"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Bruen R7-TC Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              },
+              {
+                "slot": "Apex",
+                "name": "Oris 8.6 Razor"
+              }
+            ],
+            "tier": "B"
+          }
+        ],
+        "tier": "B",
+        "hash": "08371ee3d65ccd6a763c42a7ef546422bf410d4b0be46b8c30557dc6f1b40a17"
+      },
+      "after": {
+        "weaponId": "oris-8-6",
+        "url": "https://warzoneloadout.games/mw4/oris-8-6",
+        "title": "Best Oris 8.6 Modern Warfare 4 Loadout & Builds",
+        "declared": 19,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "EXP Fold-50 20",
+            "label": "Bipod Barrel",
+            "level": 5
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP Ripper 7.75",
+            "label": "Short Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP Crosstac 22",
+            "label": "Long Barrel",
+            "level": 37
+          },
+          {
+            "slot": "Barrel",
+            "name": "EXP Shadow-70 14",
+            "label": "Silenced Barrel",
+            "level": 55
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "OPS-45 XP Grip",
+            "label": "Skeleton Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen R7-TC Grip",
+            "label": "Aim Grip",
+            "level": 30
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen C-Wrap 60",
+            "label": "Assault Grip",
+            "level": 49
+          },
+          {
+            "slot": "Ammunition",
+            "name": "8.6mm Blackout Hollow Point",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Ammunition",
+            "name": "8.6mm Blackout Armor Piercing",
+            "label": "",
+            "level": 20
+          },
+          {
+            "slot": "Ammunition",
+            "name": "8.6mm Blackout Frangible",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Bolt",
+            "name": "VX86 Heavy Bolt",
+            "label": "Heavy Bolt",
+            "level": 10
+          },
+          {
+            "slot": "Bolt",
+            "name": "Lightfir-5 Quick Bolt",
+            "label": "",
+            "level": 42
+          },
+          {
+            "slot": "Bolt",
+            "name": "Lightfire-5 Quick Bolt",
+            "label": "Light Bolt",
+            "level": 45
+          },
+          {
+            "slot": "Magazine",
+            "name": "6 Round Mag",
+            "label": "",
+            "level": 11
+          },
+          {
+            "slot": "Stock",
+            "name": "BR7 Invader",
+            "label": "Tactical Stock",
+            "level": 23
+          },
+          {
+            "slot": "Stock",
+            "name": "Vectorlite-80S",
+            "label": "Light Stock",
+            "level": 42
+          },
+          {
+            "slot": "Stock",
+            "name": "SA Dynamo-90 Stock",
+            "label": "Heavy Stock",
+            "level": 66
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ CNT-R6 Optic",
+            "label": "Marksman Scope",
+            "level": 27
+          },
+          {
+            "slot": "Apex",
+            "name": "Oris 8.6 Razor",
+            "label": "",
+            "level": 70
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "EXP Undertow Gen. 2"
+              },
+              {
+                "slot": "Barrel",
+                "name": "EXP Crosstac 22"
+              },
+              {
+                "slot": "Optic",
+                "name": "Cronen R808"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "Bruen R7-TC Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              },
+              {
+                "slot": "Apex",
+                "name": "Oris 8.6 Razor"
+              }
+            ],
+            "tier": "B"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "ZLR Cold Echo"
+              },
+              {
+                "slot": "Barrel",
+                "name": "EXP Crosstac 22"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Laser",
+                "name": "Schlager Visiv-5"
+              },
+              {
+                "slot": "Apex",
+                "name": "Oris 8.6 Razor"
+              }
+            ],
+            "tier": "B"
+          }
+        ],
+        "tier": "B",
+        "hash": "488ebf429d1dcee29c4cd2ae80dbc98494826159c8ba7fbf89a8f47cd02ff6ae"
+      }
+    },
+    {
+      "weaponId": "mosin-nagant",
+      "url": "https://warzoneloadout.games/mw4/mosin-nagant",
+      "before": {
+        "weaponId": "mosin-nagant",
+        "url": "https://warzoneloadout.games/mw4/mosin-nagant",
+        "title": "Best Mosin-Nagant Modern Warfare 4 Loadout & Builds",
+        "declared": 14,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "Mosin K025 Barrel",
+            "label": "Long Barrel",
+            "level": 3
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA LYR-762 Barrel",
+            "label": "Reinforced Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "762 Dozor Barrel",
+            "label": "Light Barrel",
+            "level": 41
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mosin S762 Barrel",
+            "label": "Short Barrel",
+            "level": 60
+          },
+          {
+            "slot": "Stock",
+            "name": "Usenko Shturm 76",
+            "label": "Tactical Stock",
+            "level": 6
+          },
+          {
+            "slot": "Stock",
+            "name": "Lockwood Eagle Stock",
+            "label": "Assault Stock",
+            "level": 27
+          },
+          {
+            "slot": "Stock",
+            "name": "Mosin Pistol Stock",
+            "label": "No Stock",
+            "level": 30
+          },
+          {
+            "slot": "Bolt",
+            "name": "MN-BCH3 Heavy Bolt",
+            "label": "Heavy Bolt",
+            "level": 8
+          },
+          {
+            "slot": "Bolt",
+            "name": "TV-Light 7-Bolt",
+            "label": "Light Bolt",
+            "level": 57
+          },
+          {
+            "slot": "Optic",
+            "name": "VLK 1940-R 9x",
+            "label": "Marksman Scope",
+            "level": 19
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ MN-Scout 9x",
+            "label": "Marksman Scope",
+            "level": 44
+          },
+          {
+            "slot": "Magazine",
+            "name": "7 Round Mag",
+            "label": "",
+            "level": 51
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Usenko KD-L2",
+            "label": "Horizontal Comp",
+            "level": 65
+          },
+          {
+            "slot": "Apex",
+            "name": "Mosin Harpoon",
+            "label": "",
+            "level": 69
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "330TC2 Gridlock"
+              },
+              {
+                "slot": "Barrel",
+                "name": "762 Dozor Barrel"
+              },
+              {
+                "slot": "Stock",
+                "name": "Lockwood Eagle Stock"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "e3250aa296c8a307f9d4eeaed66aac1182616ba50142d9d8b9df4f11a92e1f5c"
+      },
+      "after": {
+        "weaponId": "mosin-nagant",
+        "url": "https://warzoneloadout.games/mw4/mosin-nagant",
+        "title": "Best Mosin-Nagant Modern Warfare 4 Loadout & Builds",
+        "declared": 14,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "Mosin K025 Barrel",
+            "label": "Long Barrel",
+            "level": 3
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA LYR-762 Barrel",
+            "label": "Reinforced Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "762 Dozor Barrel",
+            "label": "Light Barrel",
+            "level": 41
+          },
+          {
+            "slot": "Barrel",
+            "name": "Mosin S762 Barrel",
+            "label": "Short Barrel",
+            "level": 60
+          },
+          {
+            "slot": "Stock",
+            "name": "Usenko Shturm 76",
+            "label": "Tactical Stock",
+            "level": 6
+          },
+          {
+            "slot": "Stock",
+            "name": "Lockwood Eagle Stock",
+            "label": "Assault Stock",
+            "level": 27
+          },
+          {
+            "slot": "Stock",
+            "name": "Mosin Pistol Stock",
+            "label": "No Stock",
+            "level": 30
+          },
+          {
+            "slot": "Bolt",
+            "name": "MN-BCH3 Heavy Bolt",
+            "label": "Heavy Bolt",
+            "level": 8
+          },
+          {
+            "slot": "Bolt",
+            "name": "TV-Light 7-Bolt",
+            "label": "Light Bolt",
+            "level": 57
+          },
+          {
+            "slot": "Optic",
+            "name": "VLK 1940-R 9x",
+            "label": "Marksman Scope",
+            "level": 19
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ MN-Scout 9x",
+            "label": "Marksman Scope",
+            "level": 44
+          },
+          {
+            "slot": "Magazine",
+            "name": "7 Round Mag",
+            "label": "",
+            "level": 51
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Usenko KD-L2",
+            "label": "Horizontal Comp",
+            "level": 65
+          },
+          {
+            "slot": "Apex",
+            "name": "Mosin Harpoon",
+            "label": "",
+            "level": 69
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "330TC2 Gridlock"
+              },
+              {
+                "slot": "Barrel",
+                "name": "762 Dozor Barrel"
+              },
+              {
+                "slot": "Stock",
+                "name": "Lockwood Eagle Stock"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              }
+            ],
+            "tier": "C"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "330TC2 Gridlock"
+              },
+              {
+                "slot": "Barrel",
+                "name": "762 Dozor Barrel"
+              },
+              {
+                "slot": "Stock",
+                "name": "No Stock"
+              },
+              {
+                "slot": "Laser",
+                "name": "Schlager Visiv-5"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "91bb1bb64f9be61f83ba557b29ff65b9c8b149272772603435f44fc969e857dd"
+      }
+    },
+    {
+      "weaponId": "kg-7-vulcan",
+      "url": "https://warzoneloadout.games/mw4/kg-7-vulcan",
+      "before": {
+        "weaponId": "kg-7-vulcan",
+        "url": "https://warzoneloadout.games/mw4/kg-7-vulcan",
+        "title": "Best KG-7 Vulcan Modern Warfare 4 Loadout & Builds",
+        "declared": 29,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "Hanbit RTR Mk. I",
+            "label": "Light Stock",
+            "level": 2
+          },
+          {
+            "slot": "Stock",
+            "name": "Bruen KG-7 Mk. IV",
+            "label": "Heavy Stock",
+            "level": 28
+          },
+          {
+            "slot": "Stock",
+            "name": "TT G76-RP Stock",
+            "label": "Tactical Stock",
+            "level": 47
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT Baem 12",
+            "label": "Short Barrel",
+            "level": 5
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang Naseon v.5 26",
+            "label": "Light Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang RMT762 29",
+            "label": "Long Barrel",
+            "level": 43
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT X541-2 26",
+            "label": "Reinforced Barrel",
+            "level": 58
+          },
+          {
+            "slot": "Comb",
+            "name": "TT Type 40 Comb",
+            "label": "Ergonomic Comb",
+            "level": 6
+          },
+          {
+            "slot": "Comb",
+            "name": "Haebang YNC-45",
+            "label": "Tactical Comb",
+            "level": 34
+          },
+          {
+            "slot": "Comb",
+            "name": "Hanbit CHK-1",
+            "label": "Heavy Comb",
+            "level": 51
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "KG-7 Bipod",
+            "label": "Bipod",
+            "level": 8
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Overpressured",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Hollow Point",
+            "label": "",
+            "level": 25
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Armor Piercing",
+            "label": "",
+            "level": 35
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Frangible",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm High Velocity",
+            "label": "",
+            "level": 68
+          },
+          {
+            "slot": "Bolt",
+            "name": "Twist76 Heavy Bolt",
+            "label": "Heavy Bolt",
+            "level": 10
+          },
+          {
+            "slot": "Bolt",
+            "name": "KT76 Light Bolt",
+            "label": "Light Bolt",
+            "level": 63
+          },
+          {
+            "slot": "Optic",
+            "name": "Hanbit 3080 Fireline",
+            "label": "Sniper Scope",
+            "level": 14
+          },
+          {
+            "slot": "Optic",
+            "name": "Custom Ironsights",
+            "label": "",
+            "level": 17
+          },
+          {
+            "slot": "Optic",
+            "name": "Astaroth .57 11.2x Scope",
+            "label": "Sniper Scope",
+            "level": 21
+          },
+          {
+            "slot": "Optic",
+            "name": "Signal 50 11.2x Scope",
+            "label": "Sniper Scope",
+            "level": 24
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Castaway",
+            "label": "Sniper Scope",
+            "level": 45
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Bigsky",
+            "label": "Sniper Scope",
+            "level": 57
+          },
+          {
+            "slot": "Optic",
+            "name": "Bruen Maestro",
+            "label": "Sniper Scope",
+            "level": 73
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TT Solgae F7",
+            "label": "Heavy Silencer",
+            "level": 38
+          },
+          {
+            "slot": "Magazine",
+            "name": "15 Round Mag",
+            "label": "",
+            "level": 68
+          },
+          {
+            "slot": "Apex",
+            "name": "KG-9 Drillcharge",
+            "label": "",
+            "level": 72
+          },
+          {
+            "slot": "Apex",
+            "name": "KG-7 Drillcharge",
+            "label": "",
+            "level": 75
+          }
+        ],
+        "builds": [
+          {
+            "label": "Sniper",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Ivanov QR600"
+              },
+              {
+                "slot": "Barrel",
+                "name": "TT Baem 12"
+              },
+              {
+                "slot": "Optic",
+                "name": "Schlager 7x"
+              },
+              {
+                "slot": "Apex",
+                "name": "KG-7 Drillcharge"
+              }
+            ],
+            "tier": "S"
+          }
+        ],
+        "tier": "S",
+        "hash": "0a7dcef20bd042b47a33a404683d888ebf075e8aa76a2a38eaee13c93b87cf4e"
+      },
+      "after": {
+        "weaponId": "kg-7-vulcan",
+        "url": "https://warzoneloadout.games/mw4/kg-7-vulcan",
+        "title": "Best KG-7 Vulcan Modern Warfare 4 Loadout & Builds",
+        "declared": 29,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "Hanbit RTR Mk. I",
+            "label": "Light Stock",
+            "level": 2
+          },
+          {
+            "slot": "Stock",
+            "name": "Bruen KG-7 Mk. IV",
+            "label": "Heavy Stock",
+            "level": 28
+          },
+          {
+            "slot": "Stock",
+            "name": "TT G76-RP Stock",
+            "label": "Tactical Stock",
+            "level": 47
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT Baem 12",
+            "label": "Short Barrel",
+            "level": 5
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang Naseon v.5 26",
+            "label": "Light Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "Haebang RMT762 29",
+            "label": "Long Barrel",
+            "level": 43
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT X541-2 26",
+            "label": "Reinforced Barrel",
+            "level": 58
+          },
+          {
+            "slot": "Comb",
+            "name": "TT Type 40 Comb",
+            "label": "Ergonomic Comb",
+            "level": 6
+          },
+          {
+            "slot": "Comb",
+            "name": "Haebang YNC-45",
+            "label": "Tactical Comb",
+            "level": 34
+          },
+          {
+            "slot": "Comb",
+            "name": "Hanbit CHK-1",
+            "label": "Heavy Comb",
+            "level": 51
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "KG-7 Bipod",
+            "label": "Bipod",
+            "level": 8
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Overpressured",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Hollow Point",
+            "label": "",
+            "level": 25
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Armor Piercing",
+            "label": "",
+            "level": 35
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm Frangible",
+            "label": "",
+            "level": 52
+          },
+          {
+            "slot": "Ammunition",
+            "name": "7.62x54mm High Velocity",
+            "label": "",
+            "level": 68
+          },
+          {
+            "slot": "Bolt",
+            "name": "Twist76 Heavy Bolt",
+            "label": "Heavy Bolt",
+            "level": 10
+          },
+          {
+            "slot": "Bolt",
+            "name": "KT76 Light Bolt",
+            "label": "Light Bolt",
+            "level": 63
+          },
+          {
+            "slot": "Optic",
+            "name": "Hanbit 3080 Fireline",
+            "label": "Sniper Scope",
+            "level": 14
+          },
+          {
+            "slot": "Optic",
+            "name": "Custom Ironsights",
+            "label": "",
+            "level": 17
+          },
+          {
+            "slot": "Optic",
+            "name": "Astaroth .57 11.2x Scope",
+            "label": "Sniper Scope",
+            "level": 21
+          },
+          {
+            "slot": "Optic",
+            "name": "Signal 50 11.2x Scope",
+            "label": "Sniper Scope",
+            "level": 24
+          },
+          {
+            "slot": "Optic",
+            "name": "SZ Castaway",
+            "label": "Sniper Scope",
+            "level": 45
+          },
+          {
+            "slot": "Optic",
+            "name": "Schlager Bigsky",
+            "label": "Sniper Scope",
+            "level": 57
+          },
+          {
+            "slot": "Optic",
+            "name": "Bruen Maestro",
+            "label": "Sniper Scope",
+            "level": 73
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TT Solgae F7",
+            "label": "Heavy Silencer",
+            "level": 38
+          },
+          {
+            "slot": "Magazine",
+            "name": "15 Round Mag",
+            "label": "",
+            "level": 68
+          },
+          {
+            "slot": "Apex",
+            "name": "KG-9 Drillcharge",
+            "label": "",
+            "level": 72
+          },
+          {
+            "slot": "Apex",
+            "name": "KG-7 Drillcharge",
+            "label": "",
+            "level": 75
+          }
+        ],
+        "builds": [
+          {
+            "label": "Sniper",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Ivanov QR600"
+              },
+              {
+                "slot": "Barrel",
+                "name": "TT Baem 12"
+              },
+              {
+                "slot": "Optic",
+                "name": "Schlager 7x"
+              },
+              {
+                "slot": "Apex",
+                "name": "KG-7 Drillcharge"
+              }
+            ],
+            "tier": "S"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Ivanov QR600"
+              },
+              {
+                "slot": "Barrel",
+                "name": "TT Baem 12"
+              },
+              {
+                "slot": "Optic",
+                "name": "Schlager 7x"
+              },
+              {
+                "slot": "Stock",
+                "name": "TT G76-RP Stock"
+              },
+              {
+                "slot": "Apex",
+                "name": "KG-7 Drillcharge"
+              }
+            ],
+            "tier": "A"
+          }
+        ],
+        "tier": "S",
+        "hash": "508eed9889a2f33780d48513e1394128f5023177f5e1e879801dbecc8dbf68a2"
+      }
+    },
+    {
+      "weaponId": "astaroth-57",
+      "url": "https://warzoneloadout.games/mw4/astaroth-57",
+      "before": {
+        "weaponId": "astaroth-57",
+        "url": "https://warzoneloadout.games/mw4/astaroth-57",
+        "title": "Best Astaroth.57 Modern Warfare 4 Loadout & Builds",
+        "declared": 21,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "Usenko V8-LKR",
+            "label": "Tactical Stock",
+            "level": 3
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo Ire-350",
+            "label": "Assault Stock",
+            "level": 11
+          },
+          {
+            "slot": "Stock",
+            "name": "Cronen Strand-BG Stock",
+            "label": "Heavy Stock",
+            "level": 28
+          },
+          {
+            "slot": "Barrel",
+            "name": "FTAC Crosswind 30",
+            "label": "Short Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "FTAC Harbinger 45",
+            "label": "Long Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Monument 32",
+            "label": "Heavy Barrel",
+            "level": 39
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS Moodkiller",
+            "label": "Light Silencer",
+            "level": 5
+          },
+          {
+            "slot": "Muzzle",
+            "name": "DS Op-67M Flash",
+            "label": "Flash Hider",
+            "level": 12
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Honeypot 670",
+            "label": "Vertical Comp",
+            "level": 15
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS DES-Tac70",
+            "label": "Tactical Silencer",
+            "level": 26
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Cronen JAB-60",
+            "label": "Breacher",
+            "level": 30
+          },
+          {
+            "slot": "Muzzle",
+            "name": "BL-A5 Comp",
+            "label": "Balanced Comp",
+            "level": 32
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Usenko 900 BL-X",
+            "label": "Custom Silencer",
+            "level": 33
+          },
+          {
+            "slot": "Muzzle",
+            "name": "LM Deadstop-99",
+            "label": "Horizontal Comp",
+            "level": 42
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FSS Centre Grip",
+            "label": "Assault Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FJX S-TAC Grip",
+            "label": "Sniper Grip",
+            "level": 44
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".57 Cal Frangible",
+            "label": "",
+            "level": 8
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".57 Cal Armor Piercing",
+            "label": "",
+            "level": 16
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".57 Cal High Velocity",
+            "label": "",
+            "level": 50
+          },
+          {
+            "slot": "Optic",
+            "name": "KG-7 Vulcan 11.2x Scope",
+            "label": "Sniper Scope",
+            "level": 38
+          },
+          {
+            "slot": "Apex",
+            "name": "Astaroth .57 Infiltrator",
+            "label": "",
+            "level": 54
+          }
+        ],
+        "builds": [
+          {
+            "label": "Sniper",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS Moodkiller"
+              },
+              {
+                "slot": "Barrel",
+                "name": "FTAC Crosswind 30"
+              },
+              {
+                "slot": "Optic",
+                "name": "Schlager 7x"
+              },
+              {
+                "slot": "Stock",
+                "name": "Usenko V8-LKR"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "FJX S-TAC Grip"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "045ad9c4fe5c5486e32c7fd1d06048476919ad624f8031d8f636ef67d8904500"
+      },
+      "after": {
+        "weaponId": "astaroth-57",
+        "url": "https://warzoneloadout.games/mw4/astaroth-57",
+        "title": "Best Astaroth.57 Modern Warfare 4 Loadout & Builds",
+        "declared": 21,
+        "attachments": [
+          {
+            "slot": "Stock",
+            "name": "Usenko V8-LKR",
+            "label": "Tactical Stock",
+            "level": 3
+          },
+          {
+            "slot": "Stock",
+            "name": "Demo Ire-350",
+            "label": "Assault Stock",
+            "level": 11
+          },
+          {
+            "slot": "Stock",
+            "name": "Cronen Strand-BG Stock",
+            "label": "Heavy Stock",
+            "level": 28
+          },
+          {
+            "slot": "Barrel",
+            "name": "FTAC Crosswind 30",
+            "label": "Short Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "FTAC Harbinger 45",
+            "label": "Long Barrel",
+            "level": 22
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Monument 32",
+            "label": "Heavy Barrel",
+            "level": 39
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS Moodkiller",
+            "label": "Light Silencer",
+            "level": 5
+          },
+          {
+            "slot": "Muzzle",
+            "name": "DS Op-67M Flash",
+            "label": "Flash Hider",
+            "level": 12
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Honeypot 670",
+            "label": "Vertical Comp",
+            "level": 15
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS DES-Tac70",
+            "label": "Tactical Silencer",
+            "level": 26
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Cronen JAB-60",
+            "label": "Breacher",
+            "level": 30
+          },
+          {
+            "slot": "Muzzle",
+            "name": "BL-A5 Comp",
+            "label": "Balanced Comp",
+            "level": 32
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Usenko 900 BL-X",
+            "label": "Custom Silencer",
+            "level": 33
+          },
+          {
+            "slot": "Muzzle",
+            "name": "LM Deadstop-99",
+            "label": "Horizontal Comp",
+            "level": 42
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FSS Centre Grip",
+            "label": "Assault Grip",
+            "level": 7
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FJX S-TAC Grip",
+            "label": "Sniper Grip",
+            "level": 44
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".57 Cal Frangible",
+            "label": "",
+            "level": 8
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".57 Cal Armor Piercing",
+            "label": "",
+            "level": 16
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".57 Cal High Velocity",
+            "label": "",
+            "level": 50
+          },
+          {
+            "slot": "Optic",
+            "name": "KG-7 Vulcan 11.2x Scope",
+            "label": "Sniper Scope",
+            "level": 38
+          },
+          {
+            "slot": "Apex",
+            "name": "Astaroth .57 Infiltrator",
+            "label": "",
+            "level": 54
+          }
+        ],
+        "builds": [
+          {
+            "label": "Sniper",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS Moodkiller"
+              },
+              {
+                "slot": "Barrel",
+                "name": "FTAC Crosswind 30"
+              },
+              {
+                "slot": "Optic",
+                "name": "Schlager 7x"
+              },
+              {
+                "slot": "Stock",
+                "name": "Usenko V8-LKR"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "FJX S-TAC Grip"
+              }
+            ],
+            "tier": "C"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS Moodkiller"
+              },
+              {
+                "slot": "Barrel",
+                "name": "FTAC Crosswind 30"
+              },
+              {
+                "slot": "Optic",
+                "name": "Schlager 7x"
+              },
+              {
+                "slot": "Stock",
+                "name": "Usenko V8-LKR"
+              },
+              {
+                "slot": "Laser",
+                "name": "Schlager Visiv-5"
+              }
+            ],
+            "tier": "C"
+          }
+        ],
+        "tier": "C",
+        "hash": "5a5b88c48ca34abee441490637981013ce8d6f856aca027ea5ed7fe139d5a062"
+      }
+    },
+    {
+      "weaponId": "signal-50",
+      "url": "https://warzoneloadout.games/mw4/signal-50",
+      "before": {
+        "weaponId": "signal-50",
+        "url": "https://warzoneloadout.games/mw4/signal-50",
+        "title": "Best Signal 50 Modern Warfare 4 Loadout & Builds",
+        "declared": 19,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "TV Guarddog 50CAL 27",
+            "label": "Heavy Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "MR50 Tyrant 29",
+            "label": "Long Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "S50-SB Gen.2 22",
+            "label": "Short Barrel",
+            "level": 38
+          },
+          {
+            "slot": "Barrel",
+            "name": "TV Icarus 50 24.5",
+            "label": "Light Barrel",
+            "level": 57
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "EXP Trim-54F",
+            "label": "Skeleton Grip",
+            "level": 5
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Corvus OP-One v.4",
+            "label": "Assault Grip",
+            "level": 22
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "GL Zero Drop 6",
+            "label": "Aim Grip",
+            "level": 63
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Cal Armor Piercing",
+            "label": "",
+            "level": 6
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Cal Frangible",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Cal High Velocity",
+            "label": "",
+            "level": 70
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Bipod",
+            "label": "Bipod",
+            "level": 7
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP T50-S Heavy",
+            "label": "Heavy Stock",
+            "level": 9
+          },
+          {
+            "slot": "Stock",
+            "name": "Cronen SN-Pad50",
+            "label": "Tactical Stock",
+            "level": 27
+          },
+          {
+            "slot": "Stock",
+            "name": "Lockwood Mobile-1",
+            "label": "Light Stock",
+            "level": 46
+          },
+          {
+            "slot": "Magazine",
+            "name": "8 Round Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Magazine",
+            "name": "5 Round Mag",
+            "label": "",
+            "level": 51
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS HOC-30",
+            "label": "Heavy Silencer",
+            "level": 60
+          },
+          {
+            "slot": "Apex",
+            "name": "Signal 50 Inferno",
+            "label": "",
+            "level": 73
+          },
+          {
+            "slot": "Apex",
+            "name": "Signal Inferno",
+            "label": "",
+            "level": 74
+          }
+        ],
+        "builds": [
+          {
+            "label": "Sniper",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS DES-Tac70"
+              },
+              {
+                "slot": "Optic",
+                "name": "Schlager 7x"
+              },
+              {
+                "slot": "Stock",
+                "name": "Cronen SN-Pad50"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "GL Zero Drop 6"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              }
+            ],
+            "tier": "A"
+          }
+        ],
+        "tier": "A",
+        "hash": "0430fa55a52cd5139979bdd5324bb1bd2b7ea3424b372e5a7940c4697278d79f"
+      },
+      "after": {
+        "weaponId": "signal-50",
+        "url": "https://warzoneloadout.games/mw4/signal-50",
+        "title": "Best Signal 50 Modern Warfare 4 Loadout & Builds",
+        "declared": 19,
+        "attachments": [
+          {
+            "slot": "Barrel",
+            "name": "TV Guarddog 50CAL 27",
+            "label": "Heavy Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "MR50 Tyrant 29",
+            "label": "Long Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "S50-SB Gen.2 22",
+            "label": "Short Barrel",
+            "level": 38
+          },
+          {
+            "slot": "Barrel",
+            "name": "TV Icarus 50 24.5",
+            "label": "Light Barrel",
+            "level": 57
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "EXP Trim-54F",
+            "label": "Skeleton Grip",
+            "level": 5
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Corvus OP-One v.4",
+            "label": "Assault Grip",
+            "level": 22
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "GL Zero Drop 6",
+            "label": "Aim Grip",
+            "level": 63
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Cal Armor Piercing",
+            "label": "",
+            "level": 6
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Cal Frangible",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Cal High Velocity",
+            "label": "",
+            "level": 70
+          },
+          {
+            "slot": "Underbarrel",
+            "name": "Bipod",
+            "label": "Bipod",
+            "level": 7
+          },
+          {
+            "slot": "Stock",
+            "name": "EXP T50-S Heavy",
+            "label": "Heavy Stock",
+            "level": 9
+          },
+          {
+            "slot": "Stock",
+            "name": "Cronen SN-Pad50",
+            "label": "Tactical Stock",
+            "level": 27
+          },
+          {
+            "slot": "Stock",
+            "name": "Lockwood Mobile-1",
+            "label": "Light Stock",
+            "level": 46
+          },
+          {
+            "slot": "Magazine",
+            "name": "8 Round Mag",
+            "label": "",
+            "level": 10
+          },
+          {
+            "slot": "Magazine",
+            "name": "5 Round Mag",
+            "label": "",
+            "level": 51
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FSS HOC-30",
+            "label": "Heavy Silencer",
+            "level": 60
+          },
+          {
+            "slot": "Apex",
+            "name": "Signal 50 Inferno",
+            "label": "",
+            "level": 73
+          },
+          {
+            "slot": "Apex",
+            "name": "Signal Inferno",
+            "label": "",
+            "level": 74
+          }
+        ],
+        "builds": [
+          {
+            "label": "Sniper",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS DES-Tac70"
+              },
+              {
+                "slot": "Optic",
+                "name": "Cronen R808"
+              },
+              {
+                "slot": "Stock",
+                "name": "Cronen SN-Pad50"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "GL Zero Drop 6"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              }
+            ],
+            "tier": "A"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FSS DES-Tac70"
+              },
+              {
+                "slot": "Optic",
+                "name": "Cronen R808"
+              },
+              {
+                "slot": "Stock",
+                "name": "Cronen SN-Pad50"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "EXP Trim-54F"
+              },
+              {
+                "slot": "Laser",
+                "name": "XRK Clutch-LS"
+              }
+            ],
+            "tier": "A"
+          }
+        ],
+        "tier": "A",
+        "hash": "e3fa1d8fd0732c61869677fce2c0259e00e2b06d29b65c54a3b2ba6c2b8ae861"
+      }
+    },
+    {
+      "weaponId": "sang-9mm",
+      "url": "https://warzoneloadout.games/mw4/sang-9mm",
+      "before": {
+        "weaponId": "sang-9mm",
+        "url": "https://warzoneloadout.games/mw4/sang-9mm",
+        "title": "Best SANG 9mm Modern Warfare 4 Loadout & Builds",
+        "declared": 26,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "FTAC Lonestar",
+            "label": "Light Silencer",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Chevron 90 Comp",
+            "label": "Horizontal Comp",
+            "level": 10
+          },
+          {
+            "slot": "Muzzle",
+            "name": "P45 Flash-M",
+            "label": "Flash Hider",
+            "level": 14
+          },
+          {
+            "slot": "Muzzle",
+            "name": "BAL-XC Gen. 0",
+            "label": "Balanced Comp",
+            "level": 16
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Savage 40",
+            "label": "Breacher",
+            "level": 19
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Expedite Drill L4",
+            "label": "Tactical Silencer",
+            "level": 23
+          },
+          {
+            "slot": "Muzzle",
+            "name": "NIL-P 40 Comp",
+            "label": "Vertical Comp",
+            "level": 31
+          },
+          {
+            "slot": "Muzzle",
+            "name": "SFO Proto-33",
+            "label": "Heavy Silencer",
+            "level": 36
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SANG Wood Grip",
+            "label": "Aim Grip",
+            "level": 3
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK M-Line Grip",
+            "label": "Tactical Grip",
+            "level": 11
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Akimbo",
+            "label": "",
+            "level": 20
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Sakin B7 Assault",
+            "label": "Assault Grip",
+            "level": 21
+          },
+          {
+            "slot": "Laser",
+            "name": "DCR-78 Laser",
+            "label": "Bright ADS Laser",
+            "level": 4
+          },
+          {
+            "slot": "Laser",
+            "name": "DCR-80 Laser",
+            "label": "Dim ADS Laser",
+            "level": 13
+          },
+          {
+            "slot": "Laser",
+            "name": "Hanbit 2BA-00",
+            "label": "Flashlight",
+            "level": 17
+          },
+          {
+            "slot": "Laser",
+            "name": "SZ DP1 Laser",
+            "label": "Dim Hip Laser",
+            "level": 29
+          },
+          {
+            "slot": "Laser",
+            "name": "SZ DP5 Laser",
+            "label": "Bright Hip Laser",
+            "level": 35
+          },
+          {
+            "slot": "Magazine",
+            "name": "17 Round Mag",
+            "label": "",
+            "level": 5
+          },
+          {
+            "slot": "Magazine",
+            "name": "24 Round Mag",
+            "label": "",
+            "level": 25
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT CP-9mm Barrel",
+            "label": "Long Barrel",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "XRK Vantage Barrel",
+            "label": "Heavy Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "Hanbit SK Elite 9",
+            "label": "Light Barrel",
+            "level": 28
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "SANG Highmatch",
+            "label": "Heavy Trigger",
+            "level": 9
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "SANG Insta-F Trigger",
+            "label": "Hair Trigger",
+            "level": 27
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "XRK Sideswipe",
+            "label": "Light Trigger",
+            "level": 33
+          },
+          {
+            "slot": "Apex",
+            "name": "Sang Breach",
+            "label": "",
+            "level": 38
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Expedite Drill L4"
+              },
+              {
+                "slot": "Barrel",
+                "name": "TT CP-9mm Barrel"
+              },
+              {
+                "slot": "Optic",
+                "name": "Z-Dot 9"
+              },
+              {
+                "slot": "Magazine",
+                "name": "17 Round Mag"
+              },
+              {
+                "slot": "Apex",
+                "name": "Sang Breach"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "07d9a983d03a532e3a2ff56e1368972380b2af2db37015527c9a1473cbc96f0d"
+      },
+      "after": {
+        "weaponId": "sang-9mm",
+        "url": "https://warzoneloadout.games/mw4/sang-9mm",
+        "title": "Best SANG 9mm Modern Warfare 4 Loadout & Builds",
+        "declared": 26,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "FTAC Lonestar",
+            "label": "Light Silencer",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Chevron 90 Comp",
+            "label": "Horizontal Comp",
+            "level": 10
+          },
+          {
+            "slot": "Muzzle",
+            "name": "P45 Flash-M",
+            "label": "Flash Hider",
+            "level": 14
+          },
+          {
+            "slot": "Muzzle",
+            "name": "BAL-XC Gen. 0",
+            "label": "Balanced Comp",
+            "level": 16
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Savage 40",
+            "label": "Breacher",
+            "level": 19
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Expedite Drill L4",
+            "label": "Tactical Silencer",
+            "level": 23
+          },
+          {
+            "slot": "Muzzle",
+            "name": "NIL-P 40 Comp",
+            "label": "Vertical Comp",
+            "level": 31
+          },
+          {
+            "slot": "Muzzle",
+            "name": "SFO Proto-33",
+            "label": "Heavy Silencer",
+            "level": 36
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SANG Wood Grip",
+            "label": "Aim Grip",
+            "level": 3
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK M-Line Grip",
+            "label": "Tactical Grip",
+            "level": 11
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Akimbo",
+            "label": "",
+            "level": 20
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Sakin B7 Assault",
+            "label": "Assault Grip",
+            "level": 21
+          },
+          {
+            "slot": "Laser",
+            "name": "DCR-78 Laser",
+            "label": "Bright ADS Laser",
+            "level": 4
+          },
+          {
+            "slot": "Laser",
+            "name": "DCR-80 Laser",
+            "label": "Dim ADS Laser",
+            "level": 13
+          },
+          {
+            "slot": "Laser",
+            "name": "Hanbit 2BA-00",
+            "label": "Flashlight",
+            "level": 17
+          },
+          {
+            "slot": "Laser",
+            "name": "SZ DP1 Laser",
+            "label": "Dim Hip Laser",
+            "level": 29
+          },
+          {
+            "slot": "Laser",
+            "name": "SZ DP5 Laser",
+            "label": "Bright Hip Laser",
+            "level": 35
+          },
+          {
+            "slot": "Magazine",
+            "name": "17 Round Mag",
+            "label": "",
+            "level": 5
+          },
+          {
+            "slot": "Magazine",
+            "name": "24 Round Mag",
+            "label": "",
+            "level": 25
+          },
+          {
+            "slot": "Barrel",
+            "name": "TT CP-9mm Barrel",
+            "label": "Long Barrel",
+            "level": 6
+          },
+          {
+            "slot": "Barrel",
+            "name": "XRK Vantage Barrel",
+            "label": "Heavy Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "Hanbit SK Elite 9",
+            "label": "Light Barrel",
+            "level": 28
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "SANG Highmatch",
+            "label": "Heavy Trigger",
+            "level": 9
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "SANG Insta-F Trigger",
+            "label": "Hair Trigger",
+            "level": 27
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "XRK Sideswipe",
+            "label": "Light Trigger",
+            "level": 33
+          },
+          {
+            "slot": "Apex",
+            "name": "Sang Breach",
+            "label": "",
+            "level": 38
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Expedite Drill L4"
+              },
+              {
+                "slot": "Barrel",
+                "name": "TT CP-9mm Barrel"
+              },
+              {
+                "slot": "Optic",
+                "name": "Z-Dot 9"
+              },
+              {
+                "slot": "Magazine",
+                "name": "17 Round Mag"
+              },
+              {
+                "slot": "Apex",
+                "name": "Sang Breach"
+              }
+            ],
+            "tier": "D"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Expedite Drill L4"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Hanbit SK Elite 9"
+              },
+              {
+                "slot": "Optic",
+                "name": "Z-Dot 9"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "XRK M-Line Grip"
+              },
+              {
+                "slot": "Apex",
+                "name": "Sang Breach"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "4aed3133e2d95cf0cf0b91d85bba1e4d0b3d5d49210014d96b33d40bafc1b7d5"
+      }
+    },
+    {
+      "weaponId": "krait-p68",
+      "url": "https://warzoneloadout.games/mw4/krait-p68",
+      "before": {
+        "weaponId": "krait-p68",
+        "url": "https://warzoneloadout.games/mw4/krait-p68",
+        "title": "Best Krait P68 Modern Warfare 4 Loadout & Builds",
+        "declared": 25,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "XRK Severance 68",
+            "label": "Balanced Comp",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Intra-K",
+            "label": "Vertical Comp",
+            "level": 10
+          },
+          {
+            "slot": "Muzzle",
+            "name": "KP68 Flash",
+            "label": "Flash Hider",
+            "level": 12
+          },
+          {
+            "slot": "Muzzle",
+            "name": "I-Comp .45 Auto",
+            "label": "Horizontal Comp",
+            "level": 19
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Demo Mallet 68",
+            "label": "Breacher",
+            "level": 21
+          },
+          {
+            "slot": "Laser",
+            "name": "GW MDL-2",
+            "label": "Bright Hip Laser",
+            "level": 3
+          },
+          {
+            "slot": "Laser",
+            "name": "GW 700-V",
+            "label": "Dim ADS Laser",
+            "level": 20
+          },
+          {
+            "slot": "Laser",
+            "name": "Corvus Aves-3",
+            "label": "Bright ADS Laser",
+            "level": 22
+          },
+          {
+            "slot": "Laser",
+            "name": "XT-100",
+            "label": "Flashlight",
+            "level": 25
+          },
+          {
+            "slot": "Laser",
+            "name": "FSS Phosphor 40",
+            "label": "Dim Hip Laser",
+            "level": 31
+          },
+          {
+            "slot": "Barrel",
+            "name": "Ballistarc GMA6 6",
+            "label": "Long Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Omni 5.5",
+            "label": "Light Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "XRK Doc-40 6",
+            "label": "Heavy Barrel",
+            "level": 23
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "MAGTAC .45",
+            "label": "Flared Grip",
+            "level": 5
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FTAC Gridlock 45",
+            "label": "Aim Grip",
+            "level": 15
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Response Grip",
+            "label": "Assault Grip",
+            "level": 26
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Shonay R-Wrap",
+            "label": "Tactical Grip",
+            "level": 35
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Hollow Point",
+            "label": "",
+            "level": 6
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Overpressured",
+            "label": "",
+            "level": 18
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Frangible",
+            "label": "",
+            "level": 27
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Armor Piercing",
+            "label": "",
+            "level": 32
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto High Velocity",
+            "label": "",
+            "level": 37
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "KP68 Curve-H",
+            "label": "Heavy Trigger",
+            "level": 9
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "P68 Tapper 9",
+            "label": "Light Trigger",
+            "level": 33
+          },
+          {
+            "slot": "Apex",
+            "name": "Krait P68 Commando",
+            "label": "",
+            "level": 38
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Expedite Drill L4"
+              },
+              {
+                "slot": "Barrel",
+                "name": "SA Omni 5.5"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "MAGTAC .45"
+              },
+              {
+                "slot": "Apex",
+                "name": "Krait P68 Commando"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "ef82e28120a184e331e6d9f441f5d6792263a5e76b5d487898cf809af17b1267"
+      },
+      "after": {
+        "weaponId": "krait-p68",
+        "url": "https://warzoneloadout.games/mw4/krait-p68",
+        "title": "Best Krait P68 Modern Warfare 4 Loadout & Builds",
+        "declared": 25,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "XRK Severance 68",
+            "label": "Balanced Comp",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Intra-K",
+            "label": "Vertical Comp",
+            "level": 10
+          },
+          {
+            "slot": "Muzzle",
+            "name": "KP68 Flash",
+            "label": "Flash Hider",
+            "level": 12
+          },
+          {
+            "slot": "Muzzle",
+            "name": "I-Comp .45 Auto",
+            "label": "Horizontal Comp",
+            "level": 19
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Demo Mallet 68",
+            "label": "Breacher",
+            "level": 21
+          },
+          {
+            "slot": "Laser",
+            "name": "GW MDL-2",
+            "label": "Bright Hip Laser",
+            "level": 3
+          },
+          {
+            "slot": "Laser",
+            "name": "GW 700-V",
+            "label": "Dim ADS Laser",
+            "level": 20
+          },
+          {
+            "slot": "Laser",
+            "name": "Corvus Aves-3",
+            "label": "Bright ADS Laser",
+            "level": 22
+          },
+          {
+            "slot": "Laser",
+            "name": "XT-100",
+            "label": "Flashlight",
+            "level": 25
+          },
+          {
+            "slot": "Laser",
+            "name": "FSS Phosphor 40",
+            "label": "Dim Hip Laser",
+            "level": 31
+          },
+          {
+            "slot": "Barrel",
+            "name": "Ballistarc GMA6 6",
+            "label": "Long Barrel",
+            "level": 4
+          },
+          {
+            "slot": "Barrel",
+            "name": "SA Omni 5.5",
+            "label": "Light Barrel",
+            "level": 14
+          },
+          {
+            "slot": "Barrel",
+            "name": "XRK Doc-40 6",
+            "label": "Heavy Barrel",
+            "level": 23
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "MAGTAC .45",
+            "label": "Flared Grip",
+            "level": 5
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "FTAC Gridlock 45",
+            "label": "Aim Grip",
+            "level": 15
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "XRK Response Grip",
+            "label": "Assault Grip",
+            "level": 26
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Shonay R-Wrap",
+            "label": "Tactical Grip",
+            "level": 35
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Hollow Point",
+            "label": "",
+            "level": 6
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Overpressured",
+            "label": "",
+            "level": 18
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Frangible",
+            "label": "",
+            "level": 27
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto Armor Piercing",
+            "label": "",
+            "level": 32
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".45 Auto High Velocity",
+            "label": "",
+            "level": 37
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "KP68 Curve-H",
+            "label": "Heavy Trigger",
+            "level": 9
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "P68 Tapper 9",
+            "label": "Light Trigger",
+            "level": 33
+          },
+          {
+            "slot": "Apex",
+            "name": "Krait P68 Commando",
+            "label": "",
+            "level": 38
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Expedite Drill L4"
+              },
+              {
+                "slot": "Barrel",
+                "name": "SA Omni 5.5"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "MAGTAC .45"
+              },
+              {
+                "slot": "Apex",
+                "name": "Krait P68 Commando"
+              }
+            ],
+            "tier": "D"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Expedite Drill L4"
+              },
+              {
+                "slot": "Barrel",
+                "name": "SA Omni 5.5"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "MAGTAC .45"
+              },
+              {
+                "slot": "Apex",
+                "name": "Krait P68 Commando"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "4efd4d037a3d11b77b900b29945f1b127e71425a9d3ad891921eddf27b6c80b9"
+      }
+    },
+    {
+      "weaponId": "50-gs",
+      "url": "https://warzoneloadout.games/mw4/50-gs",
+      "before": {
+        "weaponId": "50-gs",
+        "url": "https://warzoneloadout.games/mw4/50-gs",
+        "title": "Best.50 GS Modern Warfare 4 Loadout & Builds",
+        "declared": 28,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "TA SVG-50K",
+            "label": "Light Silencer",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "LM Tenderizer",
+            "label": "Breacher",
+            "level": 11
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi G30-Tac",
+            "label": "Horizontal Comp",
+            "level": 13
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Bruen Retort .50",
+            "label": "Tactical Silencer",
+            "level": 17
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Portmaster v2",
+            "label": "Balanced Comp",
+            "level": 23
+          },
+          {
+            "slot": "Muzzle",
+            "name": "ZLR Igni P5",
+            "label": "Vertical Comp",
+            "level": 27
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FTAC HVY-S50",
+            "label": "Heavy Silencer",
+            "level": 33
+          },
+          {
+            "slot": "Muzzle",
+            "name": "PCR90 Flash Hider",
+            "label": "Flash Hider",
+            "level": 45
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Hollow Point",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Frangible",
+            "label": "",
+            "level": 15
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Armor Piercing",
+            "label": "",
+            "level": 19
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Overpressured",
+            "label": "",
+            "level": 31
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol High Velocity",
+            "label": "",
+            "level": 47
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen Operator .50 Grip",
+            "label": "Assault Grip",
+            "level": 4
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "TT Iron Guard Kit",
+            "label": "",
+            "level": 21
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "ZLR Tact-99 Grip",
+            "label": "Aim Grip",
+            "level": 25
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "TT Bulkkot Grip",
+            "label": "Tactical Grip",
+            "level": 39
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "Schlager GS Match",
+            "label": "Heavy Trigger",
+            "level": 6
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "RCN-7X Light",
+            "label": "Light Trigger",
+            "level": 35
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "Corio Lightning N6",
+            "label": "Hair Trigger",
+            "level": 41
+          },
+          {
+            "slot": "Barrel",
+            "name": "TA Warlord",
+            "label": "Short Barrel",
+            "level": 8
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Monarch",
+            "label": "Heavy Long Barrel",
+            "level": 29
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Citadel",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Barrel",
+            "name": "FT Reckoner",
+            "label": "Long Barrel",
+            "level": 43
+          },
+          {
+            "slot": "Magazine",
+            "name": "14 Round Mag",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Magazine",
+            "name": "25 Round Drum Mag",
+            "label": "",
+            "level": 37
+          },
+          {
+            "slot": "Optic",
+            "name": "Bruen Field-Op",
+            "label": "",
+            "level": 18
+          },
+          {
+            "slot": "Apex",
+            "name": "GS Magna",
+            "label": "",
+            "level": 50
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "TA SVG-50K"
+              },
+              {
+                "slot": "Magazine",
+                "name": "14 Round Mag"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "TT Bulkkot Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "GW 700-V"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "9c5e8f06a49c312d65c7bf2b7031b426dca5bbb994b6d7040cbe4f7600f51490"
+      },
+      "after": {
+        "weaponId": "50-gs",
+        "url": "https://warzoneloadout.games/mw4/50-gs",
+        "title": "Best.50 GS Modern Warfare 4 Loadout & Builds",
+        "declared": 28,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "TA SVG-50K",
+            "label": "Light Silencer",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "LM Tenderizer",
+            "label": "Breacher",
+            "level": 11
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mugi G30-Tac",
+            "label": "Horizontal Comp",
+            "level": 13
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Bruen Retort .50",
+            "label": "Tactical Silencer",
+            "level": 17
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK Portmaster v2",
+            "label": "Balanced Comp",
+            "level": 23
+          },
+          {
+            "slot": "Muzzle",
+            "name": "ZLR Igni P5",
+            "label": "Vertical Comp",
+            "level": 27
+          },
+          {
+            "slot": "Muzzle",
+            "name": "FTAC HVY-S50",
+            "label": "Heavy Silencer",
+            "level": 33
+          },
+          {
+            "slot": "Muzzle",
+            "name": "PCR90 Flash Hider",
+            "label": "Flash Hider",
+            "level": 45
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Hollow Point",
+            "label": "",
+            "level": 3
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Frangible",
+            "label": "",
+            "level": 15
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Armor Piercing",
+            "label": "",
+            "level": 19
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol Overpressured",
+            "label": "",
+            "level": 31
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".50 Pistol High Velocity",
+            "label": "",
+            "level": 47
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "Bruen Operator .50 Grip",
+            "label": "Assault Grip",
+            "level": 4
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "TT Iron Guard Kit",
+            "label": "",
+            "level": 21
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "ZLR Tact-99 Grip",
+            "label": "Aim Grip",
+            "level": 25
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "TT Bulkkot Grip",
+            "label": "Tactical Grip",
+            "level": 39
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "Schlager GS Match",
+            "label": "Heavy Trigger",
+            "level": 6
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "RCN-7X Light",
+            "label": "Light Trigger",
+            "level": 35
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "Corio Lightning N6",
+            "label": "Hair Trigger",
+            "level": 41
+          },
+          {
+            "slot": "Barrel",
+            "name": "TA Warlord",
+            "label": "Short Barrel",
+            "level": 8
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Monarch",
+            "label": "Heavy Long Barrel",
+            "level": 29
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Citadel",
+            "label": "",
+            "level": 30
+          },
+          {
+            "slot": "Barrel",
+            "name": "FT Reckoner",
+            "label": "Long Barrel",
+            "level": 43
+          },
+          {
+            "slot": "Magazine",
+            "name": "14 Round Mag",
+            "label": "",
+            "level": 9
+          },
+          {
+            "slot": "Magazine",
+            "name": "25 Round Drum Mag",
+            "label": "",
+            "level": 37
+          },
+          {
+            "slot": "Optic",
+            "name": "Bruen Field-Op",
+            "label": "",
+            "level": 18
+          },
+          {
+            "slot": "Apex",
+            "name": "GS Magna",
+            "label": "",
+            "level": 50
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "TA SVG-50K"
+              },
+              {
+                "slot": "Magazine",
+                "name": "14 Round Mag"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "TT Bulkkot Grip"
+              },
+              {
+                "slot": "Laser",
+                "name": "GW 700-V"
+              }
+            ],
+            "tier": "D"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "FTAC HVY-S50"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Matuzek Monarch"
+              },
+              {
+                "slot": "Optic",
+                "name": "Bruen Field-Op"
+              },
+              {
+                "slot": "Magazine",
+                "name": "25 Round Drum Mag"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "TT Bulkkot Grip"
+              },
+              {
+                "slot": "Apex",
+                "name": "GS Magna"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "caa75af3eb65cab709d930e9496dcfd9888034a2893dc5dedee027f221a0778d"
+      }
+    },
+    {
+      "weaponId": "mojave-357",
+      "url": "https://warzoneloadout.games/mw4/mojave-357",
+      "before": {
+        "weaponId": "mojave-357",
+        "url": "https://warzoneloadout.games/mw4/mojave-357",
+        "title": "Best Mojave.357 Modern Warfare 4 Loadout & Builds",
+        "declared": 21,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "Matuzek H357-M Comp",
+            "label": "Vertical Comp",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK .357 Comp",
+            "label": "Horizontal Comp",
+            "level": 11
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mojave Flash",
+            "label": "Flash Hider",
+            "level": 17
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Dom-35",
+            "label": "Balanced Comp",
+            "level": 25
+          },
+          {
+            "slot": "Muzzle",
+            "name": ".357 Blackeye",
+            "label": "Breacher",
+            "level": 32
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SA Tyrant Grip",
+            "label": "Aim Grip",
+            "level": 3
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "CP37 Grip",
+            "label": "Tactical Grip",
+            "level": 35
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Armor Piercing",
+            "label": "",
+            "level": 4
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Frangible",
+            "label": "",
+            "level": 13
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Overpressured",
+            "label": "",
+            "level": 19
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Hollow Point",
+            "label": "",
+            "level": 27
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Snake Shot",
+            "label": "",
+            "level": 42
+          },
+          {
+            "slot": "Barrel",
+            "name": "XRK Greywolf 7.5",
+            "label": "Heavy Barrel",
+            "level": 7
+          },
+          {
+            "slot": "Barrel",
+            "name": "Bryson Snub 2",
+            "label": "Short Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Deputy 3.5",
+            "label": "Light Barrel",
+            "level": 30
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "M357 Heavy",
+            "label": "Heavy Trigger",
+            "level": 8
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "M357 Light",
+            "label": "Light Trigger",
+            "level": 23
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "M357 Shooter",
+            "label": "Hair Trigger",
+            "level": 37
+          },
+          {
+            "slot": "Cylinder",
+            "name": "Mojave Speed Cylinder",
+            "label": "Light Cylinder",
+            "level": 9
+          },
+          {
+            "slot": "Cylinder",
+            "name": "XRK H-CYL 6",
+            "label": "Heavy Cylinder",
+            "level": 39
+          },
+          {
+            "slot": "Apex",
+            "name": "Mojave .357 Lawless",
+            "label": "",
+            "level": 44
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Matuzek H357-M Comp"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Bryson Snub 2"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "CP37 Grip"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "b9eca66e05046188e1353ec28081f418fe87718f40001fd040758c067e2624c6"
+      },
+      "after": {
+        "weaponId": "mojave-357",
+        "url": "https://warzoneloadout.games/mw4/mojave-357",
+        "title": "Best Mojave.357 Modern Warfare 4 Loadout & Builds",
+        "declared": 21,
+        "attachments": [
+          {
+            "slot": "Muzzle",
+            "name": "Matuzek H357-M Comp",
+            "label": "Vertical Comp",
+            "level": 2
+          },
+          {
+            "slot": "Muzzle",
+            "name": "XRK .357 Comp",
+            "label": "Horizontal Comp",
+            "level": 11
+          },
+          {
+            "slot": "Muzzle",
+            "name": "Mojave Flash",
+            "label": "Flash Hider",
+            "level": 17
+          },
+          {
+            "slot": "Muzzle",
+            "name": "TA Dom-35",
+            "label": "Balanced Comp",
+            "level": 25
+          },
+          {
+            "slot": "Muzzle",
+            "name": ".357 Blackeye",
+            "label": "Breacher",
+            "level": 32
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "SA Tyrant Grip",
+            "label": "Aim Grip",
+            "level": 3
+          },
+          {
+            "slot": "Rear Grip",
+            "name": "CP37 Grip",
+            "label": "Tactical Grip",
+            "level": 35
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Armor Piercing",
+            "label": "",
+            "level": 4
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Frangible",
+            "label": "",
+            "level": 13
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Overpressured",
+            "label": "",
+            "level": 19
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Hollow Point",
+            "label": "",
+            "level": 27
+          },
+          {
+            "slot": "Ammunition",
+            "name": ".357 Magnum Snake Shot",
+            "label": "",
+            "level": 42
+          },
+          {
+            "slot": "Barrel",
+            "name": "XRK Greywolf 7.5",
+            "label": "Heavy Barrel",
+            "level": 7
+          },
+          {
+            "slot": "Barrel",
+            "name": "Bryson Snub 2",
+            "label": "Short Barrel",
+            "level": 15
+          },
+          {
+            "slot": "Barrel",
+            "name": "Matuzek Deputy 3.5",
+            "label": "Light Barrel",
+            "level": 30
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "M357 Heavy",
+            "label": "Heavy Trigger",
+            "level": 8
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "M357 Light",
+            "label": "Light Trigger",
+            "level": 23
+          },
+          {
+            "slot": "Trigger Action",
+            "name": "M357 Shooter",
+            "label": "Hair Trigger",
+            "level": 37
+          },
+          {
+            "slot": "Cylinder",
+            "name": "Mojave Speed Cylinder",
+            "label": "Light Cylinder",
+            "level": 9
+          },
+          {
+            "slot": "Cylinder",
+            "name": "XRK H-CYL 6",
+            "label": "Heavy Cylinder",
+            "level": 39
+          },
+          {
+            "slot": "Apex",
+            "name": "Mojave .357 Lawless",
+            "label": "",
+            "level": 44
+          }
+        ],
+        "builds": [
+          {
+            "label": "Versatile",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Matuzek H357-M Comp"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Bryson Snub 2"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "CP37 Grip"
+              }
+            ],
+            "tier": "D"
+          },
+          {
+            "label": "Mobility",
+            "parts": [
+              {
+                "slot": "Muzzle",
+                "name": "Matuzek H357-M Comp"
+              },
+              {
+                "slot": "Barrel",
+                "name": "Bryson Snub 2"
+              },
+              {
+                "slot": "Rear Grip",
+                "name": "SA Tyrant Grip"
+              },
+              {
+                "slot": "Apex",
+                "name": "Mojave .357 Lawless"
+              }
+            ],
+            "tier": "D"
+          }
+        ],
+        "tier": "D",
+        "hash": "57940d640c639bc95427d95f3b832febfc43189ae19cdfbd194701c9d3473943"
+      }
+    }
+  ],
+  "sourceFingerprint": "6066c5b5035bd091bd68bc84ece72d6ccaa566cc181bd23bf077e3a024ef7ba2",
+  "note": "Offizielle Patchnotes-Revision und Katalogänderungen zur Prüfung. Alte numerische Daten bleiben an ihren bisherigen Quellenstand gebunden; keine automatische Neuerklärung der Messwerte für die neue Revision."
+}

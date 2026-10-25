@@ -6202,7 +6202,7 @@
               "name": "SA Laz-500"
             }
           ],
-          "tier": "S"
+          "tier": "A"
         },
         {
           "label": "Mobility",
@@ -6235,8 +6235,8 @@
           "tier": "C"
         }
       ],
-      "tier": "S",
-      "hash": "d9916988c76c729287866f46f482856d7283f50add2a465609bbaf00d8ba4728"
+      "tier": "A",
+      "hash": "c65f522935fbf2ac5c9fbe7100561d62fd4aebbb2c4168c1b3b7c528ff31f5ea"
     },
     {
       "weaponId": "hyeon-burst",
@@ -6401,26 +6401,30 @@
           "parts": [
             {
               "slot": "Muzzle",
-              "name": "FSS IS40"
+              "name": "FSS IS300"
+            },
+            {
+              "slot": "Barrel",
+              "name": "Mugi Ingoem 559mm"
             },
             {
               "slot": "Stock",
-              "name": "Hyeon Stockpad Tac"
+              "name": "HVY-80 Stockpad"
             },
             {
               "slot": "Underbarrel",
               "name": "FSS Fireline Grip"
             },
             {
-              "slot": "Rear Grip",
-              "name": "Mugi UN-R5 Grip"
-            },
-            {
               "slot": "Laser",
               "name": "SA Laz-500"
+            },
+            {
+              "slot": "Apex",
+              "name": "Hyeon Hyperburst"
             }
           ],
-          "tier": "A"
+          "tier": "S"
         },
         {
           "label": "Mobility",
@@ -6453,8 +6457,8 @@
           "tier": "C"
         }
       ],
-      "tier": "A",
-      "hash": "68118ba88902751789dad69107f3cb77d2e1bfcd33057bcc59a8c00df436ae79"
+      "tier": "S",
+      "hash": "4f1e223572c1c864e9954f3b74ea5fba6bbec686902c7afe353d5a3a7b9dacf3"
     },
     {
       "weaponId": "patriot-xmr",
@@ -8662,8 +8666,38 @@
               "name": "FTAC LTS-707"
             },
             {
+              "slot": "Barrel",
+              "name": "Haebang 635R-7"
+            },
+            {
               "slot": "Stock",
               "name": "ZLR Tac12 Pro"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "XRK Bygone-39"
+            },
+            {
+              "slot": "Apex",
+              "name": "Rezi 12 Enforcer"
+            }
+          ],
+          "tier": "C"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "FTAC LTS-707"
+            },
+            {
+              "slot": "Barrel",
+              "name": "Haebang 635R-7"
+            },
+            {
+              "slot": "Stock",
+              "name": "No Stock"
             },
             {
               "slot": "Rear Grip",
@@ -8678,7 +8712,7 @@
         }
       ],
       "tier": "C",
-      "hash": "cc2b9ec6f8446585780ee397cc6dcc79a131162ef84ad05b3bf24dadc6456d3f"
+      "hash": "5897e9bfb92face2f4cb1b48e765e1dad5dc10e8bb6846ff482b74bcaf51e5a1"
     },
     {
       "weaponId": "warlord",
@@ -8845,10 +8879,36 @@
             }
           ],
           "tier": "C"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "Mugi Kalnal-T 12G"
+            },
+            {
+              "slot": "Barrel",
+              "name": "Mugi Chujeok-800"
+            },
+            {
+              "slot": "Stock",
+              "name": "Mugi D40 Stock"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "DV3-Sinsok Grip"
+            },
+            {
+              "slot": "Apex",
+              "name": "Warlord Lumen"
+            }
+          ],
+          "tier": "C"
         }
       ],
       "tier": "C",
-      "hash": "80c8f1aec3490b2c3de2417c58e5de090699599e59eeebde27b4b8de4edb55ba"
+      "hash": "d32af33fbb3c9795098d9bdd4f6132572c57c1e568ee5ee4690dae378d6113f9"
     },
     {
       "weaponId": "finn-lmg",
@@ -9015,10 +9075,36 @@
             }
           ],
           "tier": "B"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "XRK Mil-Tac Suppressor"
+            },
+            {
+              "slot": "Barrel",
+              "name": "FTAC MOD3-LK 15"
+            },
+            {
+              "slot": "Stock",
+              "name": "No Stock"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "Schlager KM60-G"
+            },
+            {
+              "slot": "Laser",
+              "name": "SZ Gen.6 PEQ"
+            }
+          ],
+          "tier": "B"
         }
       ],
       "tier": "B",
-      "hash": "5e5a71a75685c19099128561bb5a4ab8ac526c8ee706c7e20f812c61bdb3c281"
+      "hash": "6d9147e750f78c621086e4edf5dc4bd6c686c4fd3bf029a6e1afa60cbab7dcb9"
     },
     {
       "weaponId": "type-73",
@@ -9177,10 +9263,40 @@
             }
           ],
           "tier": "A"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "Gauge-12 Mono"
+            },
+            {
+              "slot": "Barrel",
+              "name": "SA Firerush 23.8"
+            },
+            {
+              "slot": "Stock",
+              "name": "No Stock"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "Assault-L5 Grip"
+            },
+            {
+              "slot": "Laser",
+              "name": "Schlager Visiv-5"
+            },
+            {
+              "slot": "Apex",
+              "name": "Type 73 Assault"
+            }
+          ],
+          "tier": "A"
         }
       ],
       "tier": "A",
-      "hash": "d6b64883c1bb80e8e05079dc1a8f070cfdbda2e151467264e82d29dfc27408c4"
+      "hash": "d2789bebfe1d7b133e169fc43cae05487eee2edfcf717c1cf3aef2af78f771c3"
     },
     {
       "weaponId": "apoc-338",
@@ -9335,10 +9451,36 @@
             }
           ],
           "tier": "B"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "TV Multical-77"
+            },
+            {
+              "slot": "Optic",
+              "name": "ZLR Type C"
+            },
+            {
+              "slot": "Stock",
+              "name": "No Stock"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "FSS TCB-1 Grip"
+            },
+            {
+              "slot": "Laser",
+              "name": "SA Laz-500"
+            }
+          ],
+          "tier": "B"
         }
       ],
       "tier": "B",
-      "hash": "7713e874d10dc81bcfc26c8c7160752a30dd71ab437382bd2b07368cc0134e58"
+      "hash": "3a7efa3021ff19d17c9389748c1f1f66a857163fe53357e43862a65394299374"
     },
     {
       "weaponId": "mar-9",
@@ -9497,10 +9639,40 @@
             }
           ],
           "tier": "C"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Barrel",
+              "name": "Bruen Reaper-X"
+            },
+            {
+              "slot": "Stock",
+              "name": "Schlager HVOX-80"
+            },
+            {
+              "slot": "Magazine",
+              "name": "30 Round Mag"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "Hanbit AGRS-1 Pro"
+            },
+            {
+              "slot": "Laser",
+              "name": "SZ Gen.6 PEQ"
+            },
+            {
+              "slot": "Apex",
+              "name": "MAR-9 Auto"
+            }
+          ],
+          "tier": "C"
         }
       ],
       "tier": "C",
-      "hash": "922573f57a2b88d29cd2b1089621ee1d76867fa1c522ce2a55fc61c000db7ff2"
+      "hash": "a4eb724f238831d32fd1733d8e4eaaf5174d4732b64b333225c985e11b947719"
     },
     {
       "weaponId": "oris-8-6",
@@ -9653,10 +9825,36 @@
             }
           ],
           "tier": "B"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "ZLR Cold Echo"
+            },
+            {
+              "slot": "Barrel",
+              "name": "EXP Crosstac 22"
+            },
+            {
+              "slot": "Stock",
+              "name": "No Stock"
+            },
+            {
+              "slot": "Laser",
+              "name": "Schlager Visiv-5"
+            },
+            {
+              "slot": "Apex",
+              "name": "Oris 8.6 Razor"
+            }
+          ],
+          "tier": "B"
         }
       ],
       "tier": "B",
-      "hash": "08371ee3d65ccd6a763c42a7ef546422bf410d4b0be46b8c30557dc6f1b40a17"
+      "hash": "488ebf429d1dcee29c4cd2ae80dbc98494826159c8ba7fbf89a8f47cd02ff6ae"
     },
     {
       "weaponId": "mosin-nagant",
@@ -9771,10 +9969,32 @@
             }
           ],
           "tier": "C"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "330TC2 Gridlock"
+            },
+            {
+              "slot": "Barrel",
+              "name": "762 Dozor Barrel"
+            },
+            {
+              "slot": "Stock",
+              "name": "No Stock"
+            },
+            {
+              "slot": "Laser",
+              "name": "Schlager Visiv-5"
+            }
+          ],
+          "tier": "C"
         }
       ],
       "tier": "C",
-      "hash": "e3250aa296c8a307f9d4eeaed66aac1182616ba50142d9d8b9df4f11a92e1f5c"
+      "hash": "91bb1bb64f9be61f83ba557b29ff65b9c8b149272772603435f44fc969e857dd"
     },
     {
       "weaponId": "kg-7-vulcan",
@@ -9979,10 +10199,36 @@
             }
           ],
           "tier": "S"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "Ivanov QR600"
+            },
+            {
+              "slot": "Barrel",
+              "name": "TT Baem 12"
+            },
+            {
+              "slot": "Optic",
+              "name": "Schlager 7x"
+            },
+            {
+              "slot": "Stock",
+              "name": "TT G76-RP Stock"
+            },
+            {
+              "slot": "Apex",
+              "name": "KG-7 Drillcharge"
+            }
+          ],
+          "tier": "A"
         }
       ],
       "tier": "S",
-      "hash": "0a7dcef20bd042b47a33a404683d888ebf075e8aa76a2a38eaee13c93b87cf4e"
+      "hash": "508eed9889a2f33780d48513e1394128f5023177f5e1e879801dbecc8dbf68a2"
     },
     {
       "weaponId": "astaroth-57",
@@ -10143,10 +10389,36 @@
             }
           ],
           "tier": "C"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "FSS Moodkiller"
+            },
+            {
+              "slot": "Barrel",
+              "name": "FTAC Crosswind 30"
+            },
+            {
+              "slot": "Optic",
+              "name": "Schlager 7x"
+            },
+            {
+              "slot": "Stock",
+              "name": "Usenko V8-LKR"
+            },
+            {
+              "slot": "Laser",
+              "name": "Schlager Visiv-5"
+            }
+          ],
+          "tier": "C"
         }
       ],
       "tier": "C",
-      "hash": "045ad9c4fe5c5486e32c7fd1d06048476919ad624f8031d8f636ef67d8904500"
+      "hash": "5a5b88c48ca34abee441490637981013ce8d6f856aca027ea5ed7fe139d5a062"
     },
     {
       "weaponId": "signal-50",
@@ -10279,7 +10551,7 @@
             },
             {
               "slot": "Optic",
-              "name": "Schlager 7x"
+              "name": "Cronen R808"
             },
             {
               "slot": "Stock",
@@ -10295,10 +10567,36 @@
             }
           ],
           "tier": "A"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "FSS DES-Tac70"
+            },
+            {
+              "slot": "Optic",
+              "name": "Cronen R808"
+            },
+            {
+              "slot": "Stock",
+              "name": "Cronen SN-Pad50"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "EXP Trim-54F"
+            },
+            {
+              "slot": "Laser",
+              "name": "XRK Clutch-LS"
+            }
+          ],
+          "tier": "A"
         }
       ],
       "tier": "A",
-      "hash": "0430fa55a52cd5139979bdd5324bb1bd2b7ea3424b372e5a7940c4697278d79f"
+      "hash": "e3fa1d8fd0732c61869677fce2c0259e00e2b06d29b65c54a3b2ba6c2b8ae861"
     },
     {
       "weaponId": "sang-9mm",
@@ -10489,10 +10787,36 @@
             }
           ],
           "tier": "D"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "Expedite Drill L4"
+            },
+            {
+              "slot": "Barrel",
+              "name": "Hanbit SK Elite 9"
+            },
+            {
+              "slot": "Optic",
+              "name": "Z-Dot 9"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "XRK M-Line Grip"
+            },
+            {
+              "slot": "Apex",
+              "name": "Sang Breach"
+            }
+          ],
+          "tier": "D"
         }
       ],
       "tier": "D",
-      "hash": "07d9a983d03a532e3a2ff56e1368972380b2af2db37015527c9a1473cbc96f0d"
+      "hash": "4aed3133e2d95cf0cf0b91d85bba1e4d0b3d5d49210014d96b33d40bafc1b7d5"
     },
     {
       "weaponId": "krait-p68",
@@ -10673,10 +10997,32 @@
             }
           ],
           "tier": "D"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "Expedite Drill L4"
+            },
+            {
+              "slot": "Barrel",
+              "name": "SA Omni 5.5"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "MAGTAC .45"
+            },
+            {
+              "slot": "Apex",
+              "name": "Krait P68 Commando"
+            }
+          ],
+          "tier": "D"
         }
       ],
       "tier": "D",
-      "hash": "ef82e28120a184e331e6d9f441f5d6792263a5e76b5d487898cf809af17b1267"
+      "hash": "4efd4d037a3d11b77b900b29945f1b127e71425a9d3ad891921eddf27b6c80b9"
     },
     {
       "weaponId": "50-gs",
@@ -10875,10 +11221,40 @@
             }
           ],
           "tier": "D"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "FTAC HVY-S50"
+            },
+            {
+              "slot": "Barrel",
+              "name": "Matuzek Monarch"
+            },
+            {
+              "slot": "Optic",
+              "name": "Bruen Field-Op"
+            },
+            {
+              "slot": "Magazine",
+              "name": "25 Round Drum Mag"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "TT Bulkkot Grip"
+            },
+            {
+              "slot": "Apex",
+              "name": "GS Magna"
+            }
+          ],
+          "tier": "D"
         }
       ],
       "tier": "D",
-      "hash": "9c5e8f06a49c312d65c7bf2b7031b426dca5bbb994b6d7040cbe4f7600f51490"
+      "hash": "caa75af3eb65cab709d930e9496dcfd9888034a2893dc5dedee027f221a0778d"
     },
     {
       "weaponId": "mojave-357",
@@ -11031,10 +11407,32 @@
             }
           ],
           "tier": "D"
+        },
+        {
+          "label": "Mobility",
+          "parts": [
+            {
+              "slot": "Muzzle",
+              "name": "Matuzek H357-M Comp"
+            },
+            {
+              "slot": "Barrel",
+              "name": "Bryson Snub 2"
+            },
+            {
+              "slot": "Rear Grip",
+              "name": "SA Tyrant Grip"
+            },
+            {
+              "slot": "Apex",
+              "name": "Mojave .357 Lawless"
+            }
+          ],
+          "tier": "D"
         }
       ],
       "tier": "D",
-      "hash": "b9eca66e05046188e1353ec28081f418fe87718f40001fd040758c067e2624c6"
+      "hash": "57940d640c639bc95427d95f3b832febfc43189ae19cdfbd194701c9d3473943"
     },
     {
       "weaponId": "pila",
@@ -11087,5 +11485,5 @@
       "hash": "db58621064820e6b14753a3048611e727814f37c1290f1fbaf9098d12e5548d0"
     }
   ],
-  "hash": "7c11909220d0223f8eda7adc94b61f63ae1760e161ce42259895a01644fd81ac"
+  "hash": "943daefd1152d4f734a96fc1e601b584f31acf54591e1c95a7edeabfb162f174"
 }

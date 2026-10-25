@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "fingerprint": "303df1006cc263742a7a6ccca3da084ba6d127d9dcc1c7677c04da931ad2dd48",
+  "detectedAt": "2026-10-25T10:28:15.416Z",
+  "baseStateHash": "6a02a1fd01d7c35cbb866d97019a93935e6579332cce9e5de9b4524100e3f6ba",
+  "policy": "REVIEW_REQUIRED",
+  "operations": [],
+  "documents": [
+    {
+      "url": "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes",
+      "hash": "e898ae039a261b65e1867489812f6000d1366486632313fe69ec55f55f187ed0",
+      "previousHash": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "title": "Call of Duty: Modern Warfare 4 Launch Patch Notes",
+      "publishedAt": "2026-10-24",
+      "kind": "patch",
+      "signals": {
+        "weapons": true,
+        "camos": true,
+        "builds": true
+      },
+      "headings": [
+        "Weapons",
+        "Apex Attachments",
+        "WEAPONS",
+        "PRIMARY WEAPONS",
+        "SECONDARY WEAPONS",
+        "WEAPON TUNING",
+        "WEAPON PROGRESSION",
+        "WEAPON PRESTIGE",
+        "PERK TUNING"
+      ],
+      "catalogCandidates": [],
+      "catalogConflicts": [],
+      "camoChanges": []
+    }
+  ],
+  "changedWeaponIds": [],
+  "unresolved": [
+    "Meta-Tiers und Aufsätze werden nicht aus Patchtexten abgeleitet.",
+    "Camo-Signale sind Prüfhinweise; konkrete Anforderungen nur nach Quellenprüfung eintragen."
+  ]
+}
