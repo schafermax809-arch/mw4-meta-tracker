@@ -53,3 +53,6 @@ if (
 )
   throw Error("Calculated results stale: run npm run recompute");
 console.log("Validated Gunsmith database and computed database fingerprint");
+const { validateResearch } = await import('../public/engine/local-research.js');
+validateResearch(await readJson('public/data/manual-research.json'));
+console.log('Validated manual research schema (no personal Camo data)');

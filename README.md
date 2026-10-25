@@ -7,6 +7,7 @@ Statische Website für **Call of Duty: Modern Warfare 4 (2026), Multiplayer**. G
 - [Update-Vorschläge](https://github.com/schafermax809-arch/mw4-meta-tracker/pulls)
 - [Recherchierte Datenbasis und Abdeckung jeder Waffe](DATENBASIS.md)
 - [Engine, Datenvertrag, Berechnung und Review-Anleitung](GUNSMITH-ARCHITEKTUR.md)
+- [Daten vervollständigen: eigener Werteeditor, Screenshots, lokale OCR und Repository-Import](DATEN-VERVOLLSTAENDIGEN.md)
 
 ## Was enthalten ist
 

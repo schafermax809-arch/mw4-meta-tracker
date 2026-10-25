@@ -10,6 +10,8 @@ import {
   validateEffectEvidence,
   hydrateEffectEvidence,
 } from "./engine/effect-evidence.js";
+import { RESEARCH_KEY, emptyResearch, loadResearch, saveResearch, validateResearch, hydrateLocalResearch } from './engine/local-research.js';
+import { renderResearch, researchDirty, discardResearchChanges } from './research-ui.js';
 import {
   loadProgress,
   saveProgress,
@@ -71,6 +73,7 @@ import {
 } from "./engine-ui.js";
 let gunsmithDb = null,
   engineCleanup = null;
+let publishedDb = null, localResearch = emptyResearch(), researchAudit = null;
 const TABS = [
   ["meta", "META"],
   ["community", "COMMUNITY"],
@@ -107,7 +110,8 @@ let state,
 let progress = { schemaVersion: 1, entries: {} },
   preferences = { schemaVersion: 1, favorites: [] },
   customBuilds = { schemaVersion: 1, builds: [] };
-const storageStatus = { progress: true, preferences: true, builds: true };
+const storageStatus = { progress: true, preferences: true, builds: true, research: true };
+try { localResearch = loadResearch(localStorage); } catch { storageStatus.research = false; }
 try {
   progress = loadProgress(localStorage);
 } catch {
@@ -574,6 +578,7 @@ function renderStats(weapon) {
   const panel = node("aside", null, "stats-panel");
   panel.id = "weapon-statistics";
   panel.append(node("div", "WAFFENWERTE · QUELLEN", "eyebrow"));
+  if (gunsmithDb?.localResearch?.active) panel.append(node('p', 'LOKALE MESSUNGEN AKTIV · * bleibt Teilrechnung', 'research-conflict'));
   const c = gunsmithDb
     ? calculateStats(gunsmithDb, weapon.id, draft(weapon), state.patchRevision)
     : null;
@@ -600,7 +605,7 @@ function renderStats(weapon) {
           ? Number(v.value.toFixed(2)).toLocaleString("de-DE") +
               " " +
               unit +
-              (partial ? " *" : v.status === "reported" ? " C" : "")
+              (partial ? " *" : v.local ? ' L' : v.status === "reported" ? " C" : "")
           : "—",
       ),
     );
@@ -622,7 +627,7 @@ function renderStats(weapon) {
       "p",
       draft(weapon).length
         ? "* = bekannte Einzelwirkungen, kein bestätigter Gesamtwert. C = Community-Quelle. Als Basiswert markierte Angaben enthalten keine Aufsatzeffekte."
-        : "C = Community-Quelle. Andere Werte: offizielle Angaben. Quellen und Unterschiede stehen unter dem Menü.",
+        : "L = lokale Messung. C = Community-Quelle. Andere Werte: offizielle Angaben. Quellen und Unterschiede stehen unter dem Menü.",
       "stats-note",
     ),
   );
@@ -2288,7 +2293,7 @@ function renderIntel(tab = "status") {
     for (const source of gunsmithDb.sources) {
       const item = node("article", null, "intel-panel");
       item.append(
-        external(source.title + " ↗", source.url),
+        source.url ? external(source.title + " ↗", source.url) : node('strong', source.title),
         node("p", source.automation + " · " + source.note),
       );
       screen.append(item);
@@ -2716,6 +2721,21 @@ function render() {
   } else if (r.page === "tierlist") renderTierlist();
   else if (r.page === "planner") renderPlanner();
   else if (r.page === "intel") renderIntel(r.tab);
+  else if (r.page === 'complete') {
+    if (!publishedDb) screen.append(notice('Die Gunsmith-Datenbank ist nicht verfügbar.', true));
+    else engineCleanup = renderResearch({
+      db: publishedDb, data: localResearch, container: screen, audit: researchAudit,
+      storageAvailable: storageStatus.research, go,
+      initialWeapon: location.hash.split('/')[2], initialAttachment: location.hash.split('/')[3],
+      onSave: next => {
+        if (storageStatus.research && JSON.stringify(loadResearch(localStorage)) !== JSON.stringify(localResearch)) throw Error('Ein anderer Tab hat die Recherche geändert. Eigene Angaben zuerst exportieren und die Seite neu laden.');
+        saveResearch(localStorage, next);
+        localResearch = next; storageStatus.research = true;
+        gunsmithDb = hydrateLocalResearch(publishedDb, localResearch, state.patchRevision);
+        requestAnimationFrame(render);
+      },
+    });
+  }
   else if (r.page === "shared") {
     try {
       const b = parseSharedBuild(r.shared);
@@ -2880,7 +2900,20 @@ document.addEventListener("keydown", (e) => {
     );
   }
 });
+let priorHash = location.hash, restoringResearchHash = false;
+window.addEventListener('storage', e => {
+  if (e.key !== RESEARCH_KEY || !publishedDb) return;
+  if (researchDirty()) { toast('Recherche wurde in einem anderen Tab geändert. Vor dem Neuladen eigene Angaben exportieren.'); return; }
+  try { localResearch = loadResearch(localStorage); gunsmithDb = hydrateLocalResearch(publishedDb, localResearch, state.patchRevision); render(); }
+  catch { storageStatus.research = false; toast('Geänderte Recherche ist ungültig. Aktuelle Ansicht bleibt erhalten.'); }
+});
 window.addEventListener("hashchange", () => {
+  if (restoringResearchHash) { restoringResearchHash = false; return; }
+  if (researchDirty() && priorHash.startsWith('#/complete') && !confirm('Ungespeicherte Rechercheänderungen verwerfen?')) {
+    restoringResearchHash = true; location.hash = priorHash; return;
+  }
+  discardResearchChanges();
+  priorHash = location.hash;
   render();
   window.scrollTo(0, 0);
   screen.focus({ preventScroll: true });
@@ -2961,6 +2994,19 @@ try {
     } catch (e) {
       toast("Aufsatzeffekte konnten nicht geladen werden: " + e.message);
     }
+    try {
+      const manual = await fetch(new URL('./data/manual-research.json', import.meta.url), { cache: 'no-cache' });
+      if (manual.ok) {
+        const reviewed = validateResearch(await manual.json());
+        if (reviewed.records.length) gunsmithDb = hydrateLocalResearch(gunsmithDb, reviewed, state.patchRevision, 'repository');
+      }
+    } catch (e) { toast('Repository-Recherche konnte nicht geladen werden: ' + e.message); }
+    publishedDb = structuredClone(gunsmithDb);
+    gunsmithDb = hydrateLocalResearch(publishedDb, localResearch, state.patchRevision);
+    try {
+      const audit = await fetch(new URL('./data/research-audit.json', import.meta.url));
+      if (audit.ok) researchAudit = await audit.json();
+    } catch { /* The live worklist is derived from the database. */ }
     state.attachments = [
       ...new Map(
         [...state.attachments, ...gunsmithDb.attachments].map((a) => [a.id, a]),

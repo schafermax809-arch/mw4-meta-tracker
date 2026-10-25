@@ -17,8 +17,11 @@
     "recompute": "node scripts/recompute.mjs"
   },
   "dependencies": {
+    "@tesseract.js-data/deu": "1.0.0",
+    "@tesseract.js-data/eng": "1.0.0",
     "cheerio": "1.1.2",
     "robots-parser": "3.0.1",
+    "tesseract.js": "6.0.1",
     "three": "0.186.1"
   }
 }

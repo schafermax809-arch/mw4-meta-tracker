@@ -67,6 +67,7 @@ export function optimize(
     maxEvaluations = 200000,
     context = {},
     allowApex = true,
+    useLocalResearch = false,
   } = {},
 ) {
   const w = db.weapons.find((w) => w.id === weaponId);
@@ -90,6 +91,7 @@ export function optimize(
     exhaustiveLimit < 1
   )
     throw new Error("Ungültiges Suchbudget");
+  if (useLocalResearch) return rankLocalResearch(db, weaponId, { weights, patch, allowApex });
   const unavailable = (reasons) => {
     const builds = db.communityValues
       ? analyzeCommunity(db, weaponId, patch).builds.filter(
@@ -384,4 +386,22 @@ export function optimize(
     policy:
       "Relative Änderung zur Basis, nach Prioritäten gewichtet. Keine Gewichtsumverteilung bei fehlenden Werten. TTK gilt nur für das angegebene Szenario. Hybrid: maximal 0,05 zusätzlicher Quellenbonus; kein mathematisches Optimum.",
   };
+}
+
+// Explicit experimental mode: compare SINGLE attachments. Unknown stacking
+// rules never become permission to optimize a fabricated multi-part build.
+export function rankLocalResearch(db, weaponId, { weights, patch = db.patchRevision, allowApex = true }) {
+  const required = Object.entries(weights).filter(([, v]) => v > 0).map(([k]) => k);
+  const candidates = [];
+  for (const a of db.attachments.filter(a => a.weaponIds.includes(weaponId) && a.availability === true && (allowApex || a.slot !== 'Apex') && a.localEffects?.some(m => m.weaponId === weaponId))) {
+    const refs = [{ slot: a.slot, attachmentId: a.id }];
+    const c = calculateStats(db, weaponId, refs, patch);
+    if (c.issues.length) continue;
+    const available = Object.fromEntries(Object.entries({ ...c.preview, ...c.values }).map(([k, v]) => [k, v.value]));
+    const missing = required.filter(k => !Number.isFinite(available[k]) || !c.base[k] || k === 'ttk');
+    const score = missing.length ? null : required.reduce((s, k) => s + weights[k] * METRICS[k][2] * (available[k] - c.base[k].value) / Math.max(Math.abs(c.base[k].value), 1e-9), 0) / Object.values(weights).reduce((s, v) => s + v, 0);
+    candidates.push({ attachments: refs, values: available, missing, score, previewMissing: c.previewMissing });
+  }
+  candidates.sort((a, b) => (b.score !== null) - (a.score !== null) || (b.score ?? 0) - (a.score ?? 0) || a.missing.length - b.missing.length);
+  return { status: 'local-partial', sourceBuild: null, reasons: ['LOKALER MESSWERT-VERGLEICH: eigene Angaben werden direkt berücksichtigt, bleiben aber ungeprüft und unveröffentlicht. Es werden nur einzelne Aufsätze verglichen; ohne belegte Stapelregeln kein optimaler Gesamt-Build.', ...(candidates.length ? [] : ['Keine verwendbaren lokalen Aufsatzmessungen für diese Waffe. Daten vervollständigen und Konflikte bestätigen.'])], results: [], localCandidates: candidates.slice(0, 12), evaluated: candidates.length, algorithm: null, patchRevision: patch, policy: 'Scores nur, wenn alle gewichteten Zielwerte samt Basis berechenbar sind. Fehlende Zielwerte werden nicht umgewichtet. TTK ist ohne vollständiges Schadens- und Kombinationsmodell gesperrt.' };
 }

@@ -3549,3 +3549,43 @@ dialog::backdrop {
     scroll-behavior: auto !important;
   }
 }
+.research-summary { display:flex; flex-wrap:wrap; border-block:1px solid var(--line); margin:18px 0; }
+.research-summary>div { flex:1 1 150px; padding:14px; border-right:1px solid var(--line); }
+.research-summary strong { display:block; font:700 30px 'Barlow Condensed',sans-serif; color:var(--orange); }
+.research-summary span { font-size:12px; color:var(--muted); }
+.research-filters { display:grid; grid-template-columns:1fr 1fr 1fr 1.2fr; gap:8px; margin:18px 0; }
+.research-layout { display:grid; grid-template-columns:minmax(240px, .72fr) minmax(0,1.7fr); gap:22px; align-items:start; }
+.research-layout>* { min-width:0; }
+.research-list { max-height:1100px; overflow-y:auto; padding-right:5px; }
+.research-row { text-align:left; width:100%; display:grid; gap:6px; background:#101617; border:1px solid var(--line); padding:12px; margin:0 0 6px; }
+.research-row.selected { border-color:var(--orange); box-shadow:inset 3px 0 var(--orange); background:#211a13; }
+.research-row strong { font:600 22px 'Barlow Condensed',sans-serif; }
+.research-row small { color:var(--muted); line-height:1.4; }
+.research-row span:not(.eyebrow) { font-size:12px; color:#efa96c; }
+.research-detail { padding:18px; border:1px solid var(--line); background:rgba(9,13,14,.92); overflow-wrap:anywhere; }
+.research-detail h2 { margin:6px 0 12px; font:700 34px 'Barlow Condensed',sans-serif; }
+.research-detail .action-row { flex-wrap:wrap; gap:6px; }
+.research-detail details, .research-field { border:1px solid var(--line); padding:12px; margin:12px 0; }
+.research-detail summary { cursor:pointer; font:600 18px 'Barlow Condensed',sans-serif; color:#f4d8bc; }
+.research-detail .check-control { display:flex; align-items:flex-start; gap:9px; line-height:1.5; margin:9px 0; }
+.research-detail input[type=checkbox] { flex:0 0 auto; width:17px; height:17px; margin-top:2px; }
+.research-field-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+.research-label { display:grid; gap:6px; min-width:0; font-size:12px; color:#aeb9b7; }
+.research-label input, .research-label select, .research-label textarea, .research-filters>* { width:100%; min-width:0; padding:10px; background:#0b1011; color:var(--text); border:1px solid #465052; }
+.research-label textarea, .research-ocr-candidates textarea, .research-media textarea { min-height:90px; resize:vertical; width:100%; background:#0b1011; color:var(--text); padding:10px; border:1px solid var(--line); font:inherit; }
+.research-label { margin:5px 0; }
+.research-conflict { color:#ffb085; font-size:12px; }
+.research-save { position:sticky; bottom:46px; background:#151817; padding:12px; border:1px solid var(--orange); display:flex; gap:6px; flex-wrap:wrap; z-index:2; }
+.research-existing { display:grid; gap:8px; padding:10px 0; border-bottom:1px solid var(--line); }
+.research-media-part img { display:block; max-width:100%; max-height:260px; object-fit:contain; margin:10px 0; }
+.research-media-part { padding:12px 0; border-bottom:1px solid var(--line); }
+.research-media-part .button { margin:4px; }
+.research-ocr-line { padding:12px; margin:8px 0; border:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px; }
+.research-ocr-line p { flex-basis:100%; }
+.research-ocr-line input { min-width:0; max-width:130px; }
+.research-weapons { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:5px; }
+.research-import { width:min(750px,95vw); max-height:85vh; overflow-y:auto; background:#101617; color:var(--text); border:1px solid var(--orange); padding:20px; }
+.research-import-row { border-bottom:1px solid var(--line); padding:8px; }
+@media(max-width:900px) { .research-layout { grid-template-columns:1fr; } .research-list { max-height:350px; } .research-filters { grid-template-columns:1fr 1fr; } }
+@media(max-width:480px) { .research-detail { padding:10px; } .research-field-grid { grid-template-columns:1fr; } .research-summary>div { flex-basis:120px; padding:10px; } .research-filters { grid-template-columns:1fr; } .research-save { position:static; } .research-detail .button { max-width:100%; white-space:normal; } }
+@media(max-width:850px) { .primary-nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); min-width:0; height:auto; width:100%; padding-bottom:8px; } .primary-nav>a { min-width:0; white-space:normal; padding:8px 5px; } .primary-nav a.active:after { bottom:0; } }

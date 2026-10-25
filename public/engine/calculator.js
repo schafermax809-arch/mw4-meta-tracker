@@ -20,9 +20,23 @@ export function calculateStats(
       )
       .map(([k, v]) => [k, { ...v }]),
   );
+  const localBaseProblems = {}, localBaseResolved = new Set();
+  for (const [key, rows] of Object.entries(w.localBaselines ?? {})) {
+    const current = rows.filter(r => r.patchRevision === patch);
+    if (!current.length) continue;
+    if (new Set(current.map(r => r.value)).size !== 1) {
+      delete base[key]; localBaseProblems[key] = 'Widersprüchliche lokale Basis-Messungen'; continue;
+    }
+    const local = current[0];
+    if (base[key] && base[key].value !== local.value && !current.every(r => r.replacePublished)) {
+      delete base[key]; localBaseProblems[key] = 'Lokaler Basiswert widerspricht der Quelle; Übernahme nicht bestätigt'; continue;
+    }
+    base[key] = { ...local, local: true };
+    if (current.every(r => r.replacePublished)) localBaseResolved.add(key);
+  }
   const snapshot = w.snapshots.find(
     (s) =>
-      s.patchRevision === patch && signature(s.attachments) === signature(refs),
+      s.patchRevision === patch && signature(s.attachments) === signature(refs) && !refs.some(r => db.attachments.find(a => a.id === r.attachmentId)?.localEffects?.some(m => m.weaponId === weaponId)),
   );
   let values = structuredClone(base);
   const missing = {};
@@ -41,7 +55,7 @@ export function calculateStats(
     );
     if (
       !w.coverage.stackingVerified ||
-      selected.some((a) => !a.effectsComplete)
+      selected.some((a) => !a.effectsComplete || a.localEffects?.some(m => m.weaponId === weaponId))
     ) {
       values = {};
       for (const k of Object.keys(METRICS))
@@ -125,7 +139,10 @@ export function calculateStats(
     const selected = refs.map((r) =>
       db.attachments.find((a) => a.id === r.attachmentId),
     );
-    const mods = selected.flatMap((a) => [
+    const mods = selected.flatMap((a) => {
+      const local = (a.localEffects ?? []).filter(m => m.weaponId === weaponId && m.patchRevision === patch);
+      const replaced = new Set(local.filter(m => m.replacePublished).map(m => m.stat));
+      const original = [
       ...a.modifiers.map((m) => ({ ...m, status: a.status })),
       ...(a.evidence?.patchRevision === patch
         ? (a.evidenceModifiers ?? [])
@@ -139,16 +156,22 @@ export function calculateStats(
               old.value === m.value,
           ),
       ),
-    ]);
+      ].filter(m => !replaced.has(m.stat));
+      return [...original, ...local.filter(m => !m.conflict || m.replacePublished).filter(m => m.replacePublished || !original.some(x => x.stat === m.stat && x.operation === m.operation && x.value === m.value))];
+    });
     for (const key of new Set(mods.map((m) => m.stat))) {
       if (values[key]) continue;
+      if (localBaseProblems[key]) { previewMissing[key] = localBaseProblems[key]; continue; }
+      if (selected.some(a => a.localEffects?.some(m => m.weaponId === weaponId && m.stat === key && m.conflict && !m.replacePublished))) {
+        previewMissing[key] = 'Lokaler Effekt widerspricht veröffentlichten Werten; Übernahme nicht bestätigt'; continue;
+      }
       const list = mods.filter((m) => m.stat === key);
       if (list.some((m) => m.patchRevision !== patch)) {
         previewMissing[key] = "Quellenstand veraltet";
         continue;
       }
       if (
-        selected.some((a) => a.modifierConflicts?.some((c) => c.stat === key))
+        selected.some((a) => a.modifierConflicts?.some((c) => c.stat === key) && !a.localEffects?.some(m => m.weaponId === weaponId && m.stat === key && m.replacePublished))
       ) {
         previewMissing[key] = "Widersprüchliche Aufsatzeffekte";
         continue;
@@ -166,7 +189,7 @@ export function calculateStats(
       }
       if (
         list.some((m) => m.operation !== "set") &&
-        w.evidenceConflicts?.some((c) => c.stat === key)
+        w.evidenceConflicts?.some((c) => c.stat === key) && !localBaseResolved.has(key)
       ) {
         previewMissing[key] =
           "Widersprüchliche Basiswerte; keine eindeutige Rechenbasis";
@@ -196,7 +219,7 @@ export function calculateStats(
         status: "reported",
         complete: false,
         reason:
-          "Teilrechnung aus veröffentlichten Einzelwirkungen. Weitere Wirkungen und Wechselwirkungen sind nicht vollständig belegt.",
+          db.localResearch?.active ? "Lokale Teilrechnung aus Quellen und eigenen Eingaben; nicht veröffentlicht oder unabhängig verifiziert. Stapelregeln können fehlen." : "Teilrechnung aus veröffentlichten Einzelwirkungen. Weitere Wirkungen und Wechselwirkungen sind nicht vollständig belegt.",
       };
     }
   }

@@ -37,13 +37,13 @@ export function statTable(db, weaponId, refs, patch) {
       node(
         "td",
         base
-          ? `${fmt(base.value)} ${unit}${base.status === "reported" ? " C" : ""}`
+          ? `${fmt(base.value)} ${unit}${base.local ? ' L' : base.status === "reported" ? " C" : ""}`
           : "—",
       ),
       node(
         "td",
         v
-          ? `${fmt(v.value)} ${unit}${partial ? " *" : v.status === "reported" ? " C" : ""}`
+          ? `${fmt(v.value)} ${unit}${partial ? " *" : v.local ? ' L' : v.status === "reported" ? " C" : ""}`
           : "—",
       ),
       node(
@@ -73,10 +73,21 @@ export function statTable(db, weaponId, refs, patch) {
     ),
     node(
       "p",
-      "C = Community-Angabe, nicht unabhängig vermessen. * = Teilrechnung ausschließlich aus bekannten Einzelwirkungen; kein bestätigter Gesamtwert des Builds und keine Optimizer-Grundlage. — = unbekannt. Zeitwerte in ms: kleiner ist schneller. Mehrere Effekte auf denselben Wert bleiben ohne belegte Stapelregel offen.",
+      "L = lokale Messung. C = Community-Angabe, nicht unabhängig vermessen. * = Teilrechnung ausschließlich aus bekannten Einzelwirkungen; kein bestätigter Gesamtwert des Builds und keine Grundlage für den verifizierten Optimizer. Lokaler Aufsatzvergleich separat verfügbar. — = unbekannt. Zeitwerte in ms: kleiner ist schneller. Mehrere Effekte auf denselben Wert bleiben ohne belegte Stapelregel offen.",
       "stats-note",
     ),
   );
+  if (db.localResearch?.active) wrap.prepend(notice('LOKALE ERGÄNZUNGEN AKTIV · Eigene Messungen können diese Teilrechnung verändern. Keine automatisch veröffentlichten oder unabhängig verifizierten Werte.'));
+  const research = node('a', 'Fehlende Aufsatzwerte recherchieren und ergänzen ↗', 'button');
+  research.href = `#/complete/${weaponId}${refs.length === 1 ? '/' + refs[0].attachmentId : ''}`; wrap.append(research);
+  if (refs.length) {
+    const selected = refs.map(r => db.attachments.find(a => a.id === r.attachmentId));
+    for (const a of selected.filter(Boolean)) {
+      const known = new Set([...a.modifiers, ...(a.evidence?.patchRevision === patch ? a.evidenceModifiers ?? [] : []), ...(a.localEffects ?? []).filter(m => m.weaponId === weaponId && (!m.conflict || m.replacePublished))].map(m => m.stat));
+      const fields = ['ads', 'sprintToFire', 'horizontalRecoil', 'verticalRecoil', 'gunKick', 'range', 'velocity', 'movement', 'hipSpread', 'magazine', 'reload'];
+      wrap.append(node('p', `${a.name} · Noch fehlende Einzelwirkungen: ${fields.filter(k => !known.has(k)).map(k => METRICS[k][0]).join(', ') || 'elf Messfelder vorhanden; weitere Effekte und Stapelregeln separat prüfen'}`, 'stats-note'));
+    }
+  }
   for (const [key, reason] of Object.entries(c.previewMissing))
     wrap.append(node("p", `${METRICS[key][0]}: ${reason}.`, "stats-note"));
   if (c.issues.length) wrap.append(notice(c.issues.join("; "), true));
@@ -135,6 +146,7 @@ export function compareStats(db, weaponId, left, right, patch) {
 function sourceLinks(db, ids, box) {
   for (const id of [...new Set(ids)]) {
     const s = db.sources.find((s) => s.id === id);
+    if (s?.kind === 'local' && !s.url) { box.append(node('p', `${s.title} · ${date(s.publishedAt)}`, 'source-proof')); continue; }
     if (s)
       box.append(
         external(
@@ -257,7 +269,7 @@ export function renderCommunity(db, weapon, box, actions) {
   }
   const refs = node("details");
   refs.append(node("summary", "Quellenzugang und Recherchegrenzen"));
-  for (const s of db.sources.filter((s) => s.kind !== "official")) {
+  for (const s of db.sources.filter((s) => s.kind !== "official" && s.kind !== 'local')) {
     const p = node("p");
     p.append(
       external(s.title, s.url),
@@ -462,6 +474,9 @@ export function renderOptimizer(db, weapon, box, actions) {
     node("span", "Verfügbare Apex berücksichtigen"),
   );
   config.append(apexLabel);
+  const useLocal = node('input'); useLocal.type = 'checkbox';
+  const localLabel = node('label', null, 'check-control'); localLabel.append(useLocal, node('span', 'Eigene Messwerte vergleichen (lokal, einzelne Aufsätze)')); config.append(localLabel);
+  const researchLink = node('a', 'Fehlende Werte ergänzen ↗', 'button'); researchLink.href = `#/complete/${weapon.id}`; config.append(researchLink);
   box.append(config);
   const sliders = node("div", null, "weight-sliders"),
     weights = {};
@@ -602,7 +617,7 @@ export function renderOptimizer(db, weapon, box, actions) {
         result.append(
           node(
             "h3",
-            r.status === "source-based"
+            r.status === 'local-partial' ? 'LOKALER AUFSATZVERGLEICH' : r.status === "source-based"
               ? "QUELLEN-BUILD GEFUNDEN"
               : r.status === "optimal"
                 ? "CALCULATED · VOLLSTÄNDIG DURCHSUCHT"
@@ -612,6 +627,13 @@ export function renderOptimizer(db, weapon, box, actions) {
           ),
         );
         for (const reason of r.reasons) result.append(notice(reason));
+        for (const candidate of r.localCandidates ?? []) {
+          const card = buildCard(db, weapon, candidate, actions, 'Lokale Messung · einzelner Aufsatz');
+          card.append(node('p', candidate.score === null ? 'Kein Score: gewichtete Zielwerte fehlen.' : `Lokaler Zielwert-Score ${fmt(candidate.score)} · keine Gesamtbuild-Optimalität`));
+          card.append(node('p', 'Fehlende Zielwerte: ' + (candidate.missing.map(k => METRICS[k][0]).join(', ') || 'keine für diese Gewichtung')));
+          card.append(statTable(db, weapon.id, candidate.attachments, actions.patch));
+          result.append(card);
+        }
         if (r.sourceBuild) {
           const b = r.sourceBuild;
           result.append(
@@ -713,6 +735,7 @@ export function renderOptimizer(db, weapon, box, actions) {
           weights: { ...weights },
           patch: actions.patch,
           allowApex: includeApex.checked,
+          useLocalResearch: useLocal.checked,
           context: {
             distance:
               inputs.distance.value === ""
@@ -892,6 +915,11 @@ export function evidenceQuality(db, weaponId, patch = db.patchRevision) {
   return box;
 }
 export function appendAttachmentEvidence(db, a, box) {
+  for (const m of a.localEffects ?? []) {
+    box.append(node('p', `LOKAL · ${METRICS[m.stat][0]}: ${m.operation} ${m.value} ${m.unit}${m.conflict ? m.replacePublished ? ' · Quellenabweichung nur lokal bestätigt' : ' · Widerspruch, inaktiv' : ''}`, 'effect-line'));
+    sourceLinks(db, m.sourceIds, box);
+  }
+  const edit = node('a', 'Daten dieses Aufsatzes vervollständigen ↗', 'button'); edit.href = `#/complete/${a.weaponIds[0]}/${a.id}`; box.append(edit);
   const data = a.evidence,
     current = data?.patchRevision === db.patchRevision;
   box.append(
