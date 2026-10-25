@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "gameId": "cod-mw4-2026",
-  "patchVersion": "Call of Duty: Modern Warfare 4 Launch Patch Notes · 2026-10-23",
-  "patchRevision": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
-  "lastSuccessfulUpdate": "2026-10-24T19:45:46.684Z",
+  "patchVersion": "Call of Duty: Modern Warfare 4 Launch Patch Notes · 2026-10-24",
+  "patchRevision": "e898ae039a261b65e1867489812f6000d1366486632313fe69ec55f55f187ed0",
+  "lastSuccessfulUpdate": "2026-10-25T10:28:15.416Z",
   "lastChangedAt": "2026-10-24T19:45:46.684Z",
   "lastChangedWeaponIds": [
     "han-86",
@@ -745,14 +745,24 @@
       ]
     },
     "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes": {
-      "hash": "95bfc35545847d1f09521845d8767e0c5d0e50eb791f82a5cd2aae39a5ccbb02",
+      "hash": "e898ae039a261b65e1867489812f6000d1366486632313fe69ec55f55f187ed0",
       "title": "Call of Duty: Modern Warfare 4 Launch Patch Notes",
-      "publishedAt": "2026-10-23",
+      "publishedAt": "2026-10-24",
       "kind": "patch",
       "camoCandidates": []
     }
   },
   "changelog": [
+    {
+      "id": "303df1006cc263742a7a6ccca3da084ba6d127d9dcc1c7677c04da931ad2dd48",
+      "at": "2026-10-25T10:28:15.416Z",
+      "patchVersion": "Call of Duty: Modern Warfare 4 Launch Patch Notes · 2026-10-24",
+      "summary": "1 neue Quellenrevision(en); keine verifizierten Waffen- oder Meta-Änderungen.",
+      "weaponChanges": [],
+      "sourceUrls": [
+        "https://www.callofduty.com/patchnotes/2026/10/call-of-duty-modern-warfare-4-launch-patch-notes"
+      ]
+    },
     {
       "id": "d490cb383df433b2abcec3a94600bce456dde4e984a0a33d34a57689c706cec6",
       "at": "2026-10-24T19:45:46.684Z",
