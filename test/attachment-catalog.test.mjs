@@ -6,7 +6,7 @@ import {
   hydrateAttachmentCatalog,
 } from "../public/engine/attachment-catalog.js";
 import { hydrateCommunityValues } from "../public/engine/community-values.js";
-import { configurationIssues } from "../public/engine/database.js";
+import { configurationIssues, signature } from "../public/engine/database.js";
 import {
   parseAttachmentIndex,
   parseWeaponInventory,
@@ -71,9 +71,26 @@ test("the full catalog is selectable per weapon while old IDs, official values a
 test("all published MP builds keep slot and Apex compatibility; a blocked barrel cannot be equipped with Hurricane", () => {
   const d = runtime(),
     builds = d.community.filter((c) => c.id.startsWith("catalog-build-"));
+  const valid = new Set(),
+    norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  for (const p of data.profiles)
+    for (const build of p.builds) {
+      const refs = build.parts.map((part) => ({
+        slot: part.slot,
+        attachmentId: d.attachments.find(
+          (a) =>
+            a.weaponIds.includes(p.weaponId) &&
+            a.slot === part.slot &&
+            norm(a.name) === norm(part.name),
+        ).id,
+      }));
+      if (!configurationIssues(d, p.weaponId, refs, raw.patchRevision).length)
+        valid.add(p.weaponId + "|" + signature(refs));
+    }
   assert.equal(
     builds.length,
-    data.profiles.reduce((n, p) => n + p.builds.length, 0),
+    valid.size,
+    "every distinct valid source configuration is imported exactly once",
   );
   for (const b of builds)
     assert.deepEqual(
